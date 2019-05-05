@@ -1,0 +1,41 @@
+LINI CR 1
+GNOME DRUID 1 XP 400
+Small humanoid (gnome) N
+Init +1; Senses low-light vision; Perception +9
+DEFENSE
+AC 14, touch 12, flat-footed 13 (+2 armor, +1 Dex, +1 size)
+hp 11 (1d8+3)
+Fort +5, Ref +1, Will +5; +2 vs. illusions
+Defensive Abilities defensive training (+4 dodge bonus to AC vs. giants)
+OFFENSE
+Speed 20 ft.
+Melee sickle –1 (1d4–2)
+Ranged sling +2 (1d3–2)
+Special Attacks +1 on attack rolls against goblinoid and reptilian
+humanoids
+Gnome Spell-Like Abilities (CL 1st; concentration +3)
+1/day—dancing lights, ghost sound (DC 13), prestidigitation,
+speak with animals
+Druid Spells Prepared (CL 1st; concentration +4)
+1st—entangle (DC 14), goodberry
+0 (at will)—detect magic, know direction, resistance
+TACTICS
+Before Combat Lini casts goodberry at the start of each day.
+During Combat Lini attempts to stay out of melee, sending her
+animal companion to fight while she uses her magic to heal,
+summon allies, and control the environment.
+STATISTICS
+Str 6, Dex 12, Con 16, Int 12, Wis 16, Cha 15
+Base Atk +0; CMB –3; CMD 8
+Feats Self-Sufficient
+Skills Craft (jewelry) +3, Handle Animal +6, Heal +9, Knowledge
+(geography) +5, Knowledge (nature) +7, Perception +9,
+Spellcraft +5, Survival +7
+Languages Common, Druidic, Gnome, Goblin, Sylvan
+SQ nature bond (animal companion, snow leopard named Droogami*),
+nature sense, wild empathy +3
+Combat Gear goodberries (5), scroll of cure light wounds, acid;
+Other Gear leather armor, sickle, sling with 10 bullets, belt pouch,
+mistletoe, spell component pouch, stick collection, sunrods (2),
+trail rations (2), 8 gp
+* Use the level 1 small cat on page 305 for animal companion stats.
