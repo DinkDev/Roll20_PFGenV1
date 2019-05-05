@@ -67,4 +67,32 @@ describe("StatBlockLexer ", () => {
     expect("CR").to.equal(actual[2].text);
     expect("1/3").to.equal(actual[3].text);
   });
+
+  it("can find XP line data 1", () => {
+
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input1 = "XP 3,200";
+    let actual = TestHelper.runLexer(lexer, input1);
+
+    expect(2).to.equal(actual.length);
+    expect("XP").to.equal(actual[0].text);
+    expect("3,200").to.equal(actual[1].text);
+  });
+  it("can find XP line data 2", () => {
+
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input1 = "GNOME DRUID 1 XP 400";
+    let actual = TestHelper.runLexer(lexer, input1);
+
+    expect(5).to.equal(actual.length);
+    expect("GNOME").to.equal(actual[0].text);
+    expect("DRUID").to.equal(actual[1].text);
+    expect("1").to.equal(actual[2].text);
+    expect("XP").to.equal(actual[3].text);
+    expect("400").to.equal(actual[4].text);
+  });  
 });
