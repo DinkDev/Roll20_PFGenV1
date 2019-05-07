@@ -95,4 +95,52 @@ describe("StatBlockLexer ", () => {
     expect("XP").to.equal(actual[3].text);
     expect("400").to.equal(actual[4].text);
   });  
+  it("can find Alignment, Size, and Type line data 1", () => {
+
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input1 = "NE Medium aberration";
+    let actual = TestHelper.runLexer(lexer, input1);
+
+    expect(3).to.equal(actual.length);
+    expect("NE").to.equal(actual[0].text);
+    expect("Medium").to.equal(actual[1].text);
+    expect("aberration").to.equal(actual[2].text);
+  });
+  it("can find Alignment, Size, and Type line data 2", () => {
+
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input1 = "NG* Huge dragon (extraplanar, good)";
+    let actual = TestHelper.runLexer(lexer, input1);
+
+    expect(9).to.equal(actual.length);
+    expect("NG").to.equal(actual[0].text);
+    expect("*").to.equal(actual[1].text);
+    expect("Huge").to.equal(actual[2].text);
+    expect("dragon").to.equal(actual[3].text);
+    expect("(").to.equal(actual[4].text);
+    expect("extraplanar").to.equal(actual[5].text);
+    expect(",").to.equal(actual[6].text);
+    expect("good").to.equal(actual[7].text);
+    expect(")").to.equal(actual[8].text);
+  }); 
+  it("can find Alignment, Size, and Type line data 3", () => {
+
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input1 = "Small humanoid (gnome) N";
+    let actual = TestHelper.runLexer(lexer, input1);
+
+    expect(6).to.equal(actual.length);
+    expect("Small").to.equal(actual[0].text);
+    expect("humanoid").to.equal(actual[1].text);
+    expect("(").to.equal(actual[2].text);
+    expect("gnome").to.equal(actual[3].text);
+    expect(")").to.equal(actual[4].text);
+    expect("N").to.equal(actual[5].text);
+  }); 
 });
