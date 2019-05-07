@@ -20,7 +20,8 @@ export class StatBlockLexer {
 
   //public alignment: RegExp;
   public alignmentList: string[];
-  public sizeWordList: string[];
+  public creatureSizeList: string[];
+  public creatureTypeList: string[];
   public word: RegExp;
   public wordHyphenated: RegExp;
 
@@ -48,9 +49,11 @@ export class StatBlockLexer {
 
     //this.alignment = /(?:(?:[LC][GNE])|(?:N[GE]?))/;
     this.alignmentList = ["LE", "LN", "LG", "NE", "N", "NG", "CE", "CN", "CG"];
-    this.sizeWordList = ["Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"];
+    this.creatureSizeList = ["Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"];
 
-    // TODO: add creature types: https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types/
+    // creature types: https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types/
+    this.creatureTypeList = ["aberration", "animal", "construct", "dragon", "fey", "humanoid", "magical beast",
+      "monstrous humanoid", "ooze", "outsider", "plant", "undead", "vermin"];
 
     this.word = /(?:[a-zA-Z]+(?:(?:'[tT])|(?:'[lL][lL])|(?:'[sS])|(?:[sS]'))?)/;
     this.wordHyphenated = /(?:[a-zA-Z]+[-][a-zA-Z]+)/;
@@ -69,7 +72,8 @@ export class StatBlockLexer {
       XpKey: this.xp_key,
 
       Alignment: this.alignmentList,
-      SizeWord: this.sizeWordList,
+      CreatureSize: this.creatureSizeList,
+      CreatureType: this.creatureTypeList,
 
       NumberWithDenominator: this.number_with_denominator,
       NumberWhole: this.number_whole,

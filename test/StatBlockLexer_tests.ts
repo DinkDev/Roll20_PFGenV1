@@ -142,5 +142,18 @@ describe("StatBlockLexer ", () => {
     expect("gnome").to.equal(actual[3].text);
     expect(")").to.equal(actual[4].text);
     expect("N").to.equal(actual[5].text);
-  }); 
+  });
+  it("can find Alignment, Size, and Type line data 4", () => {
+
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input1 = "CG Large magical beast";
+    let actual = TestHelper.runLexer(lexer, input1);
+
+    expect(3).to.equal(actual.length);
+    expect("CG").to.equal(actual[0].text);
+    expect("Large").to.equal(actual[1].text);
+    expect("magical beast").to.equal(actual[2].text);
+  });
 });
