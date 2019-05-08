@@ -283,4 +283,30 @@ describe("StatBlockLexer ", () => {
     expect(actual[10]).to.have.property("type", "NumberSigned");
     expect(actual[10]).to.have.property("value", "+14");
   });
+  it("can find Init/Senses/Perception data 3", () => {
+
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "Init +0; Senses Perception +13";
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(6);
+    expect(actual[0]).to.have.property("type", "InitKey");
+    expect(actual[0]).to.have.property("value", "Init");
+    
+    expect(actual[1]).to.have.property("type", "NumberSigned");
+    expect(actual[1]).to.have.property("value", "+0");
+    
+    expect(actual[2]).to.have.property("type", "SemiColon");
+    
+    expect(actual[3]).to.have.property("type", "SensesKey");
+    expect(actual[3]).to.have.property("value", "Senses");
+    
+    expect(actual[4]).to.have.property("type", "PerceptionKey");
+    expect(actual[4]).to.have.property("value", "Perception");
+    
+    expect(actual[5]).to.have.property("type", "NumberSigned");    
+    expect(actual[5]).to.have.property("value", "+13");    
+  });
 });
