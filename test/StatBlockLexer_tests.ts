@@ -117,15 +117,21 @@ describe("StatBlockLexer ", () => {
     let actual = TestHelper.runLexer(lexer, input1);
 
     expect(9).to.equal(actual.length);
-    expect("NG").to.equal(actual[0].text);
-    expect("*").to.equal(actual[1].text);
-    expect("Huge").to.equal(actual[2].text);
-    expect("dragon").to.equal(actual[3].text);
-    expect("(").to.equal(actual[4].text);
-    expect("extraplanar").to.equal(actual[5].text);
-    expect(",").to.equal(actual[6].text);
-    expect("good").to.equal(actual[7].text);
-    expect(")").to.equal(actual[8].text);
+;
+    expect(actual[0]).to.have.property("type", "Alignment");
+    expect(actual[0]).to.have.property("value", "NG");
+    expect(actual[1]).to.have.property("type", "Asterisk");
+    expect(actual[2]).to.have.property("type", "CreatureSize");
+    expect(actual[2]).to.have.property("value", "Huge");
+    expect(actual[3]).to.have.property("type", "CreatureType");
+    expect(actual[3]).to.have.property("value", "dragon");
+    expect(actual[4]).to.have.property("type", "LParen");
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "extraplanar");
+    expect(actual[6]).to.have.property("type", "Comma");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "good");
+    expect(actual[8]).to.have.property("type", "RParen");
   }); 
   it("can find Alignment, Size, and Type line data 3", () => {
 
@@ -135,25 +141,146 @@ describe("StatBlockLexer ", () => {
     const input1 = "Small humanoid (gnome) N";
     let actual = TestHelper.runLexer(lexer, input1);
 
-    expect(6).to.equal(actual.length);
-    expect("Small").to.equal(actual[0].text);
-    expect("humanoid").to.equal(actual[1].text);
-    expect("(").to.equal(actual[2].text);
-    expect("gnome").to.equal(actual[3].text);
-    expect(")").to.equal(actual[4].text);
-    expect("N").to.equal(actual[5].text);
+    expect(actual[0]).to.have.property("type", "CreatureSize");
+    expect(actual[0]).to.have.property("value", "Small");
+    expect(actual[1]).to.have.property("type", "CreatureType");
+    expect(actual[1]).to.have.property("value", "humanoid");
+    expect(actual[2]).to.have.property("type", "LParen");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "gnome");
+    expect(actual[4]).to.have.property("type", "RParen");
+    expect(actual[5]).to.have.property("type", "Alignment");
+    expect(actual[5]).to.have.property("value", "N");    
   });
   it("can find Alignment, Size, and Type line data 4", () => {
-
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
     const input1 = "CG Large magical beast";
     let actual = TestHelper.runLexer(lexer, input1);
 
-    expect(3).to.equal(actual.length);
-    expect("CG").to.equal(actual[0].text);
-    expect("Large").to.equal(actual[1].text);
-    expect("magical beast").to.equal(actual[2].text);
+    expect(actual.length).to.equal(3);
+    expect(actual[0]).to.have.property("type", "Alignment");
+    expect(actual[0]).to.have.property("value", "CG");
+    expect(actual[1]).to.have.property("type", "CreatureSize");
+    expect(actual[1]).to.have.property("value", "Large");
+    expect(actual[2]).to.have.property("type", "CreatureType");
+    expect(actual[2]).to.have.property("value", "magical beast");
+  });
+
+  it("can find Init/Senses/Perception data 1", () => {
+
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input1 = "Init +9; Senses all-around vision, darkvision 120 ft., low-light\r\nvision, see invisibility; Perception +28";
+    let actual = TestHelper.runLexer(lexer, input1);
+
+    expect(actual.length).to.equal(24);
+    expect(actual[0]).to.have.property("type", "InitKey");
+    expect(actual[0]).to.have.property("value", "Init");
+
+    expect(actual[1]).to.have.property("type", "NumberSigned");
+    expect(actual[1]).to.have.property("value", "+9");
+
+    expect(actual[2]).to.have.property("type", "SemiColon");
+
+    expect(actual[3]).to.have.property("type", "SensesKey");
+    expect(actual[3]).to.have.property("value", "Senses");
+
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "all");
+
+    expect(actual[5]).to.have.property("type", "Dash");
+    expect(actual[5]).to.have.property("value", "-");
+
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "around");
+
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "vision");
+
+    expect(actual[8]).to.have.property("type", "Comma");
+
+    expect(actual[9]).to.have.property("type", "Word");
+    expect(actual[9]).to.have.property("value", "darkvision");
+
+    expect(actual[10]).to.have.property("type", "NumberWhole");
+    expect(actual[10]).to.have.property("value", "120");
+
+    expect(actual[11]).to.have.property("type", "Word");
+    expect(actual[11]).to.have.property("value", "ft");
+
+    expect(actual[12]).to.have.property("type", "Period");
+
+    expect(actual[13]).to.have.property("type", "Comma");
+
+    expect(actual[14]).to.have.property("type", "Word");
+    expect(actual[14]).to.have.property("value", "low");
+
+    expect(actual[15]).to.have.property("type", "Dash");
+    expect(actual[15]).to.have.property("value", "-");
+
+    expect(actual[16]).to.have.property("type", "Word");
+    expect(actual[16]).to.have.property("value", "light");
+
+    expect(actual[17]).to.have.property("type", "Word");
+    expect(actual[17]).to.have.property("value", "vision");
+
+    expect(actual[18]).to.have.property("type", "Comma");
+
+    expect(actual[19]).to.have.property("type", "Word");
+    expect(actual[19]).to.have.property("value", "see");
+
+    expect(actual[20]).to.have.property("type", "Word");
+    expect(actual[20]).to.have.property("value", "invisibility");
+
+    expect(actual[21]).to.have.property("type", "SemiColon");
+
+    expect(actual[22]).to.have.property("type", "PerceptionKey");
+    expect(actual[22]).to.have.property("value", "Perception");
+
+    expect(actual[23]).to.have.property("type", "NumberSigned");
+    expect(actual[23]).to.have.property("value", "+28");
+  });
+
+  it("can find Init/Senses/Perception data 2", () => {
+
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input1 = "Init +5; Senses darkvision 60 ft.; Perception +14";
+    let actual = TestHelper.runLexer(lexer, input1);
+
+    expect(actual.length).to.equal(11);
+    expect(actual[0]).to.have.property("type", "InitKey");
+    expect(actual[0]).to.have.property("value", "Init");
+    
+    expect(actual[1]).to.have.property("type", "NumberSigned");
+    expect(actual[1]).to.have.property("value", "+5");
+    
+    expect(actual[2]).to.have.property("type", "SemiColon");
+    
+    expect(actual[3]).to.have.property("type", "SensesKey");
+    expect(actual[3]).to.have.property("value", "Senses");
+    
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "darkvision");
+    
+    expect(actual[5]).to.have.property("type", "NumberWhole");
+    expect(actual[5]).to.have.property("value", "60");
+    
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "ft");
+    
+    expect(actual[7]).to.have.property("type", "Period");
+    
+    expect(actual[8]).to.have.property("type", "SemiColon");
+    
+    expect(actual[9]).to.have.property("type", "PerceptionKey");
+    expect(actual[9]).to.have.property("value", "Perception");
+    
+    expect(actual[10]).to.have.property("type", "NumberSigned");
+    expect(actual[10]).to.have.property("value", "+14");
   });
 });
