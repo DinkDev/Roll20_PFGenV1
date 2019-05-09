@@ -176,7 +176,7 @@ describe("StatBlockLexer ", () => {
     const input1 = "Init +9; Senses all-around vision, darkvision 120 ft., low-light\r\nvision, see invisibility; Perception +28";
     let actual = TestHelper.runLexer(lexer, input1);
 
-    expect(actual.length).to.equal(24);
+    expect(actual.length).to.equal(22);
     expect(actual[0]).to.have.property("type", "InitKey");
     expect(actual[0]).to.have.property("value", "Init");
 
@@ -205,43 +205,38 @@ describe("StatBlockLexer ", () => {
     expect(actual[9]).to.have.property("type", "Word");
     expect(actual[9]).to.have.property("value", "darkvision");
 
-    expect(actual[10]).to.have.property("type", "NumberWhole");
-    expect(actual[10]).to.have.property("value", "120");
+    expect(actual[10]).to.have.property("type", "SizeValue");
+    expect(actual[10]).to.have.property("value", "120 ft.");
 
-    expect(actual[11]).to.have.property("type", "Word");
-    expect(actual[11]).to.have.property("value", "ft");
+    expect(actual[11]).to.have.property("type", "Comma");
 
-    expect(actual[12]).to.have.property("type", "Period");
+    expect(actual[12]).to.have.property("type", "Word");
+    expect(actual[12]).to.have.property("value", "low");
 
-    expect(actual[13]).to.have.property("type", "Comma");
+    expect(actual[13]).to.have.property("type", "Dash");
+    expect(actual[13]).to.have.property("value", "-");
 
     expect(actual[14]).to.have.property("type", "Word");
-    expect(actual[14]).to.have.property("value", "low");
+    expect(actual[14]).to.have.property("value", "light");
 
-    expect(actual[15]).to.have.property("type", "Dash");
-    expect(actual[15]).to.have.property("value", "-");
+    expect(actual[15]).to.have.property("type", "Word");
+    expect(actual[15]).to.have.property("value", "vision");
 
-    expect(actual[16]).to.have.property("type", "Word");
-    expect(actual[16]).to.have.property("value", "light");
+    expect(actual[16]).to.have.property("type", "Comma");
 
     expect(actual[17]).to.have.property("type", "Word");
-    expect(actual[17]).to.have.property("value", "vision");
+    expect(actual[17]).to.have.property("value", "see");
 
-    expect(actual[18]).to.have.property("type", "Comma");
+    expect(actual[18]).to.have.property("type", "Word");
+    expect(actual[18]).to.have.property("value", "invisibility");
 
-    expect(actual[19]).to.have.property("type", "Word");
-    expect(actual[19]).to.have.property("value", "see");
+    expect(actual[19]).to.have.property("type", "SemiColon");
 
-    expect(actual[20]).to.have.property("type", "Word");
-    expect(actual[20]).to.have.property("value", "invisibility");
+    expect(actual[20]).to.have.property("type", "PerceptionKey");
+    expect(actual[20]).to.have.property("value", "Perception");
 
-    expect(actual[21]).to.have.property("type", "SemiColon");
-
-    expect(actual[22]).to.have.property("type", "PerceptionKey");
-    expect(actual[22]).to.have.property("value", "Perception");
-
-    expect(actual[23]).to.have.property("type", "NumberSigned");
-    expect(actual[23]).to.have.property("value", "+28");
+    expect(actual[21]).to.have.property("type", "NumberSigned");
+    expect(actual[21]).to.have.property("value", "+28");
   });
 
   it("can find Init/Senses/Perception data 2", () => {
@@ -252,7 +247,7 @@ describe("StatBlockLexer ", () => {
     const input1 = "Init +5; Senses darkvision 60 ft.; Perception +14";
     let actual = TestHelper.runLexer(lexer, input1);
 
-    expect(actual.length).to.equal(11);
+    expect(actual.length).to.equal(9);
     expect(actual[0]).to.have.property("type", "InitKey");
     expect(actual[0]).to.have.property("value", "Init");
     
@@ -267,21 +262,16 @@ describe("StatBlockLexer ", () => {
     expect(actual[4]).to.have.property("type", "Word");
     expect(actual[4]).to.have.property("value", "darkvision");
     
-    expect(actual[5]).to.have.property("type", "NumberWhole");
-    expect(actual[5]).to.have.property("value", "60");
+    expect(actual[5]).to.have.property("type", "SizeValue");
+    expect(actual[5]).to.have.property("value", "60 ft.");
     
-    expect(actual[6]).to.have.property("type", "Word");
-    expect(actual[6]).to.have.property("value", "ft");
+    expect(actual[6]).to.have.property("type", "SemiColon");
     
-    expect(actual[7]).to.have.property("type", "Period");
+    expect(actual[7]).to.have.property("type", "PerceptionKey");
+    expect(actual[7]).to.have.property("value", "Perception");
     
-    expect(actual[8]).to.have.property("type", "SemiColon");
-    
-    expect(actual[9]).to.have.property("type", "PerceptionKey");
-    expect(actual[9]).to.have.property("value", "Perception");
-    
-    expect(actual[10]).to.have.property("type", "NumberSigned");
-    expect(actual[10]).to.have.property("value", "+14");
+    expect(actual[8]).to.have.property("type", "NumberSigned");
+    expect(actual[8]).to.have.property("value", "+14");
   });
   it("can find Init/Senses/Perception data 3", () => {
 
@@ -308,5 +298,33 @@ describe("StatBlockLexer ", () => {
     
     expect(actual[5]).to.have.property("type", "NumberSigned");    
     expect(actual[5]).to.have.property("value", "+13");    
+  });
+
+
+  it("can find Aura data 1", () => {
+
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "Aura unnatural aura (30 ft.)";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(6);
+    expect(actual[0]).to.have.property("type", "AuraKey");
+    expect(actual[0]).to.have.property("value", "Aura");
+    
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "unnatural");
+    
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "aura");
+
+    expect(actual[3]).to.have.property("type", "LParen");
+    
+    expect(actual[4]).to.have.property("type", "SizeValue");
+    expect(actual[4]).to.have.property("value", "30 ft.");
+    
+    expect(actual[5]).to.have.property("type", "RParen");    
   });
 });

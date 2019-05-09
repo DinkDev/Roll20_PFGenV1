@@ -24,11 +24,12 @@ export class StatBlockLexer {
   public creatureSizeList: string[];
   public creatureTypeList: string[];
 
+  public aura_key: string;
   public cr_key: RegExp;
-  public xp_key: RegExp;
   public init_key: string;
-  public senses_key: string;
   public perception_key: string;
+  public senses_key: string;
+  public xp_key: RegExp;
 
   public word: RegExp;
   public word_hyphenated: RegExp;
@@ -52,7 +53,6 @@ export class StatBlockLexer {
     this.number_whole = /(?:\d\d?\d?(?:,\d{3})*)/;
     this.number_with_sign = /(?:[\+\-]\d{1,2})/;
 
-    //this.alignment = /(?:(?:[LC][GNE])|(?:N[GE]?))/;
     this.alignmentList = ["LE", "LN", "LG", "NE", "N", "NG", "CE", "CN", "CG"];
     this.creatureSizeList = ["Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"];
 
@@ -60,11 +60,12 @@ export class StatBlockLexer {
     this.creatureTypeList = ["aberration", "animal", "construct", "dragon", "fey", "humanoid", "magical beast",
       "monstrous humanoid", "ooze", "outsider", "plant", "undead", "vermin"];
 
+    this.aura_key = "Aura";
     this.cr_key = /[cC][rR]/;
-    this.xp_key = /[xX][pP]/;
     this.init_key = "Init";
-    this.senses_key = "Senses";
     this.perception_key = "Perception";
+    this.senses_key = "Senses";
+    this.xp_key = /[xX][pP]/;
     
     this.word = /(?:[a-zA-Z]+(?:(?:'[tT])|(?:'[lL][lL])|(?:'[sS])|(?:[sS]'))?)/;
     this.word_hyphenated = /(?:[a-zA-Z]+[-][a-zA-Z]+)/;
@@ -75,25 +76,24 @@ export class StatBlockLexer {
 
   public getLexer(): moo.Lexer {
     return moo.compile({
-      WS: { match: /[ \t\n\r]+/, lineBreaks: true },
-
       // specific string matches
+      AuraKey: this.aura_key,
       CrKey: this.cr_key,
-      XpKey: this.xp_key,
 
       InitKey: this.init_key,
-      SensesKey: this.senses_key,
       PerceptionKey: this.perception_key,
+      SensesKey: this.senses_key,
+      XpKey: this.xp_key,
 
       Alignment: this.alignmentList,
       CreatureSize: this.creatureSizeList,
       CreatureType: this.creatureTypeList,
 
       NumberWithDenominator: this.number_with_denominator,
-      NumberWhole: this.number_whole,
       NumberSigned: this.number_with_sign,
       SizeValue: this.size_value,
-
+      NumberWhole: this.number_whole,
+       
       // punctuation
       Colon: this.colon,
       SemiColon: this.semi_colon,
@@ -112,6 +112,8 @@ export class StatBlockLexer {
       // constructs
       Word: this.word,
       WordHyphenated: this.word_hyphenated,
+
+      WS: { match: /[ \t\n\r]+/, lineBreaks: true },
     });
   }
 }

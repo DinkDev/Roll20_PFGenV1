@@ -5,10 +5,10 @@ export class TestHelper {
     lexer.reset(input);
 
     let tokens: Array<moo.Token> = [];
-    let token: moo.Token;
+    let token: moo.Token | undefined;
 
     while (token = lexer.next()) {
-      if (token.type !== "WS") {
+      if (token != undefined && token.type !== "WS") {
         tokens.push(token);
       }
     }
