@@ -4,6 +4,8 @@
   "description": "A roll20 API based Pathfinder 1 NPC/monster generator.",
   "main": "index.js",
   "scripts": {
+    "build": "npm run nearleyc && tsc -p ./tsconfig.json -d",
+    "nearleyc": "nearleyc ./grammar/pathfinder1.ne -o ./out/pathfinder1.ts",    
     "test": "mocha --require ts-node/register test/**/*.ts"
   },
   "repository": {

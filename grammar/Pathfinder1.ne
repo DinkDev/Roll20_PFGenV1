@@ -1,0 +1,3 @@
+@preprocessor typescript
+
+grammar -> "Dummy"
