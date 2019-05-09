@@ -26,6 +26,7 @@ export class StatBlockLexer {
 
   public aura_key: string;
   public cr_key: RegExp;
+  public defense_key: string;
   public init_key: string;
   public perception_key: string;
   public senses_key: string;
@@ -47,7 +48,7 @@ export class StatBlockLexer {
     this.l_paren = "(";
     this.r_paren = ")";
 
-    this.size_value = /(?:(?:\d+-\d\/)?\d+(?:(?: ft.)|(?:-foot)))/;
+    this.size_value = /(?:(?:\d+-\d\/)?\d+(?:(?: ft\.)|(?:[- ]foot)|(?:[- ]feet)))/;
 
     this.number_with_denominator = /(?:\d\/\d+)/;
     this.number_whole = /(?:\d\d?\d?(?:,\d{3})*)/;
@@ -62,6 +63,7 @@ export class StatBlockLexer {
 
     this.aura_key = "Aura";
     this.cr_key = /[cC][rR]/;
+    this.defense_key = "DEFENSE";
     this.init_key = "Init";
     this.perception_key = "Perception";
     this.senses_key = "Senses";
@@ -70,8 +72,6 @@ export class StatBlockLexer {
     this.word = /(?:[a-zA-Z]+(?:(?:'[tT])|(?:'[lL][lL])|(?:'[sS])|(?:[sS]'))?)/;
     this.word_hyphenated = /(?:[a-zA-Z]+[-][a-zA-Z]+)/;
     //this.alpha = /[a-zA-Z]+/;
-
-
   }
 
   public getLexer(): moo.Lexer {
@@ -79,7 +79,7 @@ export class StatBlockLexer {
       // specific string matches
       AuraKey: this.aura_key,
       CrKey: this.cr_key,
-
+      DefenseKey: this.defense_key,
       InitKey: this.init_key,
       PerceptionKey: this.perception_key,
       SensesKey: this.senses_key,

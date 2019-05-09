@@ -299,10 +299,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[5]).to.have.property("type", "NumberSigned");    
     expect(actual[5]).to.have.property("value", "+13");    
   });
-
-
   it("can find Aura data 1", () => {
-
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
@@ -327,4 +324,101 @@ describe("StatBlockLexer ", () => {
     
     expect(actual[5]).to.have.property("type", "RParen");    
   });
+  it("can find Aura data 2", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "Aura mucus cloud (5 feet)";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(6);
+    expect(actual[0]).to.have.property("type", "AuraKey");
+    expect(actual[0]).to.have.property("value", "Aura");
+    
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "mucus");
+    
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "cloud");
+
+    expect(actual[3]).to.have.property("type", "LParen");
+    
+    expect(actual[4]).to.have.property("type", "SizeValue");
+    expect(actual[4]).to.have.property("value", "5 feet");
+    
+    expect(actual[5]).to.have.property("type", "RParen");    
+  });
+  it("can find Aura data 3", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "Aura magic circle against evil (10 ft. radius)";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(9);
+    expect(actual[0]).to.have.property("type", "AuraKey");
+    expect(actual[0]).to.have.property("value", "Aura");
+    
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "magic");
+    
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "circle");
+
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "against");
+    
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "evil");
+
+    expect(actual[5]).to.have.property("type", "LParen");
+    
+    expect(actual[6]).to.have.property("type", "SizeValue");
+    expect(actual[6]).to.have.property("value", "10 ft.");
+    
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "radius");
+
+    expect(actual[8]).to.have.property("type", "RParen");    
+  });
+  it("can find Aura data 4", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    // Note: this should probably fail (need a size to set the aura)
+    const input = "Aura magic circle against evil";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(5);
+    expect(actual[0]).to.have.property("type", "AuraKey");
+    expect(actual[0]).to.have.property("value", "Aura");
+    
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "magic");
+    
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "circle");
+    
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "against");
+    
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "evil");
+  });
+  it("can find Defense key", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    // Note: this should probably fail (need a size to set the aura)
+    const input = "DEFENSE";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(1);
+    expect(actual[0]).to.have.property("type", "DefenseKey");
+  });
+
 });
