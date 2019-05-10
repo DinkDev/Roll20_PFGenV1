@@ -24,6 +24,9 @@ export class StatBlockLexer {
   public creatureSizeList: string[];
   public creatureTypeList: string[];
 
+  public ac_key: string;
+  public ac_touch_key: string;
+  public ac_flat_footed_key: string;
   public aura_key: string;
   public cr_key: RegExp;
   public defense_key: string;
@@ -61,6 +64,9 @@ export class StatBlockLexer {
     this.creatureTypeList = ["aberration", "animal", "construct", "dragon", "fey", "humanoid", "magical beast",
       "monstrous humanoid", "ooze", "outsider", "plant", "undead", "vermin"];
 
+    this.ac_key = "AC";
+    this.ac_touch_key = "touch";
+    this.ac_flat_footed_key = "flat-footed";
     this.aura_key = "Aura";
     this.cr_key = /[cC][rR]/;
     this.defense_key = "DEFENSE";
@@ -77,6 +83,9 @@ export class StatBlockLexer {
   public getLexer(): moo.Lexer {
     return moo.compile({
       // specific string matches
+      AcKey: this.ac_key,
+      AcTouchKey: this.ac_touch_key,
+      AcFlatFootedKey: this.ac_flat_footed_key,
       AuraKey: this.aura_key,
       CrKey: this.cr_key,
       DefenseKey: this.defense_key,
