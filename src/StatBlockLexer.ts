@@ -30,6 +30,7 @@ export class StatBlockLexer {
   public aura_key: string;
   public cr_key: RegExp;
   public defense_key: string;
+  public hp_key: string;
   public init_key: string;
   public perception_key: string;
   public senses_key: string;
@@ -55,7 +56,7 @@ export class StatBlockLexer {
 
     this.number_with_denominator = /(?:\d\/\d+)/;
     this.number_whole = /(?:\d\d?\d?(?:,\d{3})*)/;
-    this.number_with_sign = /(?:[\+\-]\d{1,2})/;
+    this.number_with_sign = /(?:[\+\-]\d{1,3})/;
 
     this.alignmentList = ["LE", "LN", "LG", "NE", "N", "NG", "CE", "CN", "CG"];
     this.creatureSizeList = ["Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"];
@@ -70,6 +71,7 @@ export class StatBlockLexer {
     this.aura_key = "Aura";
     this.cr_key = /[cC][rR]/;
     this.defense_key = "DEFENSE";
+    this.hp_key = "hp";
     this.init_key = "Init";
     this.perception_key = "Perception";
     this.senses_key = "Senses";
@@ -89,6 +91,7 @@ export class StatBlockLexer {
       AuraKey: this.aura_key,
       CrKey: this.cr_key,
       DefenseKey: this.defense_key,
+      HpKey: this.hp_key,
       InitKey: this.init_key,
       PerceptionKey: this.perception_key,
       SensesKey: this.senses_key,

@@ -412,7 +412,6 @@ describe("StatBlockLexer ", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
-    // Note: this should probably fail (need a size to set the aura)
     const input = "DEFENSE";
 
     let actual = TestHelper.runLexer(lexer, input);
@@ -612,4 +611,92 @@ describe("StatBlockLexer ", () => {
     expect(actual[25]).to.have.property("type", "RParen");
     expect(actual[25]).to.have.property("value", ")");
   });
+
+  it("can find hp line 1", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "hp 84 (13d8+26)";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(8);
+
+    expect(actual[0]).to.have.property("type", "HpKey");
+    expect(actual[0]).to.have.property("value", "hp");
+    expect(actual[1]).to.have.property("type", "NumberWhole");
+    expect(actual[1]).to.have.property("value", "84");
+    expect(actual[2]).to.have.property("type", "LParen");
+    expect(actual[2]).to.have.property("value", "(");
+    expect(actual[3]).to.have.property("type", "NumberWhole");
+    expect(actual[3]).to.have.property("value", "13");
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "d");
+    expect(actual[5]).to.have.property("type", "NumberWhole");
+    expect(actual[5]).to.have.property("value", "8");
+    expect(actual[6]).to.have.property("type", "NumberSigned");
+    expect(actual[6]).to.have.property("value", "+26");
+    expect(actual[7]).to.have.property("type", "RParen");
+    expect(actual[7]).to.have.property("value", ")");
+  });
+  it("can find hp line 2", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "hp 465 (30d12+270)";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(8);
+
+    expect(actual[0]).to.have.property("type", "HpKey");
+    expect(actual[0]).to.have.property("value", "hp");
+    expect(actual[1]).to.have.property("type", "NumberWhole");
+    expect(actual[1]).to.have.property("value", "465");
+    expect(actual[2]).to.have.property("type", "LParen");
+    expect(actual[2]).to.have.property("value", "(");
+    expect(actual[3]).to.have.property("type", "NumberWhole");
+    expect(actual[3]).to.have.property("value", "30");
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "d");
+    expect(actual[5]).to.have.property("type", "NumberWhole");
+    expect(actual[5]).to.have.property("value", "12");
+    expect(actual[6]).to.have.property("type", "NumberSigned");
+    expect(actual[6]).to.have.property("value", "+270");
+    expect(actual[7]).to.have.property("type", "RParen");
+    expect(actual[7]).to.have.property("value", ")");    
+  });
+
+  it("can find hp line 3", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    // Note: this should probably fail (need a size to set the aura)
+    const input = "hp 8 (1d10+2 plus 1)";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(10);
+    expect(actual[0]).to.have.property("type", "HpKey");
+    expect(actual[0]).to.have.property("value", "hp");
+    expect(actual[1]).to.have.property("type", "NumberWhole");
+    expect(actual[1]).to.have.property("value", "8");
+    expect(actual[2]).to.have.property("type", "LParen");
+    expect(actual[2]).to.have.property("value", "(");
+    expect(actual[3]).to.have.property("type", "NumberWhole");
+    expect(actual[3]).to.have.property("value", "1");
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "d");
+    expect(actual[5]).to.have.property("type", "NumberWhole");
+    expect(actual[5]).to.have.property("value", "10");
+    expect(actual[6]).to.have.property("type", "NumberSigned");
+    expect(actual[6]).to.have.property("value", "+2");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "plus");
+    expect(actual[8]).to.have.property("type", "NumberWhole");
+    expect(actual[8]).to.have.property("value", "1");
+    expect(actual[9]).to.have.property("type", "RParen");
+    expect(actual[9]).to.have.property("value", ")");
+  });
+
 });
