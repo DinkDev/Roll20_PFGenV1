@@ -1,6 +1,9 @@
 import * as moo from "moo";
 
 export class StatBlockLexer {
+
+  public versus: string;
+
   //public alpha: RegExp;
   public colon: string;
   public semi_colon: string;
@@ -30,16 +33,21 @@ export class StatBlockLexer {
   public aura_key: string;
   public cr_key: RegExp;
   public defense_key: string;
+  public fort_save_Key: string;
   public hp_key: string;
   public init_key: string;
   public perception_key: string;
+  public ref_save_key: string;
   public senses_key: string;
+  public will_save_key: string;
   public xp_key: RegExp;
 
   public word: RegExp;
   public word_hyphenated: RegExp;
 
   public constructor() {
+
+    this.versus = "vs.";
 
     this.colon = ":";
     this.semi_colon = ";";
@@ -71,10 +79,13 @@ export class StatBlockLexer {
     this.aura_key = "Aura";
     this.cr_key = /[cC][rR]/;
     this.defense_key = "DEFENSE";
+    this.fort_save_Key = "Fort";
     this.hp_key = "hp";
     this.init_key = "Init";
     this.perception_key = "Perception";
+    this.ref_save_key = "Ref";
     this.senses_key = "Senses";
+    this.will_save_key = "Will";
     this.xp_key = /[xX][pP]/;
     
     this.word = /(?:[a-zA-Z]+(?:(?:'[tT])|(?:'[lL][lL])|(?:'[sS])|(?:[sS]'))?)/;
@@ -91,10 +102,13 @@ export class StatBlockLexer {
       AuraKey: this.aura_key,
       CrKey: this.cr_key,
       DefenseKey: this.defense_key,
+      FortSaveKey: this.fort_save_Key,
       HpKey: this.hp_key,
       InitKey: this.init_key,
       PerceptionKey: this.perception_key,
+      RefSaveKey: this.ref_save_key,
       SensesKey: this.senses_key,
+      WillSaveKey: this.will_save_key,
       XpKey: this.xp_key,
 
       Alignment: this.alignmentList,
@@ -105,6 +119,8 @@ export class StatBlockLexer {
       NumberSigned: this.number_with_sign,
       SizeValue: this.size_value,
       NumberWhole: this.number_whole,
+
+      Versus: this.versus,
        
       // punctuation
       Colon: this.colon,

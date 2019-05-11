@@ -557,7 +557,7 @@ describe("StatBlockLexer ", () => {
 
     let actual = TestHelper.runLexer(lexer, input);
 
-    expect(actual.length).to.equal(26);
+    expect(actual.length).to.equal(25);
     expect(actual[0]).to.have.property("type", "AcKey");
     expect(actual[0]).to.have.property("value", "AC");
     expect(actual[1]).to.have.property("type", "NumberWhole");
@@ -602,14 +602,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[20]).to.have.property("value", "+2");
     expect(actual[21]).to.have.property("type", "Word");
     expect(actual[21]).to.have.property("value", "deflection");
-    expect(actual[22]).to.have.property("type", "Word");
-    expect(actual[22]).to.have.property("value", "vs");
-    expect(actual[23]).to.have.property("type", "Period");
-    expect(actual[23]).to.have.property("value", ".");
-    expect(actual[24]).to.have.property("type", "Word");
-    expect(actual[24]).to.have.property("value", "evil");
-    expect(actual[25]).to.have.property("type", "RParen");
-    expect(actual[25]).to.have.property("value", ")");
+    expect(actual[22]).to.have.property("type", "Versus");
+    expect(actual[22]).to.have.property("value", "vs.");
+    expect(actual[23]).to.have.property("type", "Word");
+    expect(actual[23]).to.have.property("value", "evil");
+    expect(actual[24]).to.have.property("type", "RParen");
+    expect(actual[24]).to.have.property("value", ")");
   });
 
   it("can find hp line 1", () => {
@@ -698,5 +696,97 @@ describe("StatBlockLexer ", () => {
     expect(actual[9]).to.have.property("type", "RParen");
     expect(actual[9]).to.have.property("value", ")");
   });
+  it("can find saving throws line 1", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
 
+    // Note: this should probably fail (need a size to set the aura)
+    const input = "Fort +6, Ref +9, Will +8";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(8);
+    expect(actual[0]).to.have.property("type", "FortSaveKey");
+    expect(actual[0]).to.have.property("value", "Fort");
+    expect(actual[1]).to.have.property("type", "NumberSigned");
+    expect(actual[1]).to.have.property("value", "+6");
+    expect(actual[2]).to.have.property("type", "Comma");
+    expect(actual[2]).to.have.property("value", ",");
+    expect(actual[3]).to.have.property("type", "RefSaveKey");
+    expect(actual[3]).to.have.property("value", "Ref");
+    expect(actual[4]).to.have.property("type", "NumberSigned");
+    expect(actual[4]).to.have.property("value", "+9");
+    expect(actual[5]).to.have.property("type", "Comma");
+    expect(actual[5]).to.have.property("value", ",");
+    expect(actual[6]).to.have.property("type", "WillSaveKey");
+    expect(actual[6]).to.have.property("value", "Will");
+    expect(actual[7]).to.have.property("type", "NumberSigned");
+    expect(actual[7]).to.have.property("value", "+8");
+  });
+
+  it("can find saving throws line 2", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    // Note: this should probably fail (need a size to set the aura)
+    const input = "Fort +26; Ref +19; Will +23";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(8);
+    expect(actual[0]).to.have.property("type", "FortSaveKey");
+    expect(actual[0]).to.have.property("value", "Fort");
+    expect(actual[1]).to.have.property("type", "NumberSigned");
+    expect(actual[1]).to.have.property("value", "+26");
+    expect(actual[2]).to.have.property("type", "SemiColon");
+    expect(actual[2]).to.have.property("value", ";");
+    expect(actual[3]).to.have.property("type", "RefSaveKey");
+    expect(actual[3]).to.have.property("value", "Ref");
+    expect(actual[4]).to.have.property("type", "NumberSigned");
+    expect(actual[4]).to.have.property("value", "+19");
+    expect(actual[5]).to.have.property("type", "SemiColon");
+    expect(actual[5]).to.have.property("value", ";");
+    expect(actual[6]).to.have.property("type", "WillSaveKey");
+    expect(actual[6]).to.have.property("value", "Will");
+    expect(actual[7]).to.have.property("type", "NumberSigned");
+    expect(actual[7]).to.have.property("value", "+23");
+  });
+
+  it("can find saving throws line 3", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    // Note: this should probably fail (need a size to set the aura)
+    const input = "Fort +7, Ref +7, Will +6; +2 resistance vs. evil";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(13);
+    expect(actual[0]).to.have.property("type", "FortSaveKey");
+    expect(actual[0]).to.have.property("value", "Fort");
+    expect(actual[1]).to.have.property("type", "NumberSigned");
+    expect(actual[1]).to.have.property("value", "+7");
+    expect(actual[2]).to.have.property("type", "Comma");
+    expect(actual[2]).to.have.property("value", ",");
+    expect(actual[3]).to.have.property("type", "RefSaveKey");
+    expect(actual[3]).to.have.property("value", "Ref");
+    expect(actual[4]).to.have.property("type", "NumberSigned");
+    expect(actual[4]).to.have.property("value", "+7");
+    expect(actual[5]).to.have.property("type", "Comma");
+    expect(actual[5]).to.have.property("value", ",");
+    expect(actual[6]).to.have.property("type", "WillSaveKey");
+    expect(actual[6]).to.have.property("value", "Will");
+    expect(actual[7]).to.have.property("type", "NumberSigned");
+    expect(actual[7]).to.have.property("value", "+6");
+    expect(actual[8]).to.have.property("type", "SemiColon");
+    expect(actual[8]).to.have.property("value", ";");
+    expect(actual[9]).to.have.property("type", "NumberSigned");
+    expect(actual[9]).to.have.property("value", "+2");
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "resistance");
+    expect(actual[11]).to.have.property("type", "Versus");
+    expect(actual[11]).to.have.property("value", "vs.");
+    expect(actual[12]).to.have.property("type", "Word");
+    expect(actual[12]).to.have.property("value", "evil");
+  });
 });
