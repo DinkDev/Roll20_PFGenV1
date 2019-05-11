@@ -789,4 +789,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[12]).to.have.property("type", "Word");
     expect(actual[12]).to.have.property("value", "evil");
   });
+
+
+  //this.defensive_abilities_key = "Defensive Abilities";
+  //this.damage_reduction_key = "DR";
+  //this.immune_key = "Immune";
+  //this.resistances_key = "Resist";
+  //this.spell_resistance_key = "SR"
+  //this.weaknesses_key = "Weaknesses";
 });

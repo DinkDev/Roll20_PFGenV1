@@ -27,20 +27,26 @@ export class StatBlockLexer {
   public creatureSizeList: string[];
   public creatureTypeList: string[];
 
-  public ac_key: string;
+  public ac_key: RegExp;
   public ac_touch_key: string;
   public ac_flat_footed_key: string;
   public aura_key: string;
   public cr_key: RegExp;
   public defense_key: string;
-  public fort_save_Key: string;
-  public hp_key: string;
-  public init_key: string;
+  public fort_save_Key: RegExp;
+  public hp_key: RegExp;
+  public init_key: RegExp;
   public perception_key: string;
-  public ref_save_key: string;
+  public ref_save_key: RegExp;
   public senses_key: string;
-  public will_save_key: string;
+  public will_save_key: RegExp;
   public xp_key: RegExp;
+  public defensive_abilities_key: string;
+  public damage_reduction_key: RegExp;
+  public immune_key: string;
+  public resistances_key: RegExp;
+  public spell_resistance_key: RegExp;
+  public weaknesses_key: string;    
 
   public word: RegExp;
   public word_hyphenated: RegExp;
@@ -73,20 +79,26 @@ export class StatBlockLexer {
     this.creatureTypeList = ["aberration", "animal", "construct", "dragon", "fey", "humanoid", "magical beast",
       "monstrous humanoid", "ooze", "outsider", "plant", "undead", "vermin"];
 
-    this.ac_key = "AC";
+    this.ac_key = /\bAC\b/;
     this.ac_touch_key = "touch";
     this.ac_flat_footed_key = "flat-footed";
     this.aura_key = "Aura";
-    this.cr_key = /[cC][rR]/;
+    this.cr_key = /\b[cC][rR]\b/;
     this.defense_key = "DEFENSE";
-    this.fort_save_Key = "Fort";
-    this.hp_key = "hp";
-    this.init_key = "Init";
+    this.fort_save_Key = /\bFort\b/;
+    this.hp_key = /\bhp\b/;
+    this.init_key = /\bInit\b/;
     this.perception_key = "Perception";
-    this.ref_save_key = "Ref";
+    this.ref_save_key = /\bRef\b/;
     this.senses_key = "Senses";
-    this.will_save_key = "Will";
-    this.xp_key = /[xX][pP]/;
+    this.will_save_key = /\bWill\b/;
+    this.xp_key = /\b[xX][pP]\b/;
+    this.defensive_abilities_key = "Defensive Abilities";
+    this.damage_reduction_key = /\bDR\b/;
+    this.immune_key = "Immune";
+    this.resistances_key = /\bResist\b/;
+    this.spell_resistance_key = /\bSR\b/;
+    this.weaknesses_key = "Weaknesses";
     
     this.word = /(?:[a-zA-Z]+(?:(?:'[tT])|(?:'[lL][lL])|(?:'[sS])|(?:[sS]'))?)/;
     this.word_hyphenated = /(?:[a-zA-Z]+[-][a-zA-Z]+)/;
@@ -110,6 +122,12 @@ export class StatBlockLexer {
       SensesKey: this.senses_key,
       WillSaveKey: this.will_save_key,
       XpKey: this.xp_key,
+      DefensiveAbilitiesKey: this.defensive_abilities_key,
+      DRKey: this.damage_reduction_key,
+      ImmuneKey: this.immune_key,
+      ResistKey: this.resistances_key,
+      SRKey: this.spell_resistance_key,
+      WeaknessesKey: this.weaknesses_key,
 
       Alignment: this.alignmentList,
       CreatureSize: this.creatureSizeList,
