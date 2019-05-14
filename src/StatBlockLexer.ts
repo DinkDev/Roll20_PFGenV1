@@ -37,6 +37,7 @@ export class StatBlockLexer {
   public fort_save_Key: RegExp;
   public hp_key: RegExp;
   public init_key: RegExp;
+  public offense_key: string;
   public perception_key: string;
   public ref_save_key: RegExp;
   public senses_key: string;
@@ -46,6 +47,7 @@ export class StatBlockLexer {
   public damage_reduction_key: RegExp;
   public immune_key: string;
   public resistances_key: RegExp;
+  public speed_key: string;
   public spell_resistance_key: RegExp;
   public weaknesses_key: string;    
 
@@ -87,6 +89,7 @@ export class StatBlockLexer {
     this.aura_key = "Aura";
     this.cr_key = /\b[cC][rR]\b/;
     this.defense_key = "DEFENSE";
+    this.offense_key = "OFFENSE";
     this.fort_save_Key = /\bFort\b/;
     this.hp_key = /\bhp\b/;
     this.init_key = /\bInit\b/;
@@ -99,6 +102,7 @@ export class StatBlockLexer {
     this.damage_reduction_key = /\bDR\b/;
     this.immune_key = "Immune";
     this.resistances_key = /\bResist\b/;
+    this.speed_key = "Speed";
     this.spell_resistance_key = /\bSR\b/;
     this.weaknesses_key = "Weaknesses";
     
@@ -116,20 +120,22 @@ export class StatBlockLexer {
       AuraKey: this.aura_key,
       CrKey: this.cr_key,
       DefenseKey: this.defense_key,
+      DefensiveAbilitiesKey: this.defensive_abilities_key,
+      DrKey: this.damage_reduction_key,      
       FortSaveKey: this.fort_save_Key,
-      HpKey: this.hp_key,
+      HpKey: this.hp_key,      
+      ImmuneKey: this.immune_key,
       InitKey: this.init_key,
+      OffenseKey: this.offense_key,
       PerceptionKey: this.perception_key,
       RefSaveKey: this.ref_save_key,
+      ResistKey: this.resistances_key,
       SensesKey: this.senses_key,
+      SpeedKey: this.speed_key,
+      SrKey: this.spell_resistance_key,
+      WeaknessesKey: this.weaknesses_key,
       WillSaveKey: this.will_save_key,
       XpKey: this.xp_key,
-      DefensiveAbilitiesKey: this.defensive_abilities_key,
-      DRKey: this.damage_reduction_key,
-      ImmuneKey: this.immune_key,
-      ResistKey: this.resistances_key,
-      SRKey: this.spell_resistance_key,
-      WeaknessesKey: this.weaknesses_key,
 
       Alignment: this.alignmentList,
       CreatureSize: this.creatureSizeList,

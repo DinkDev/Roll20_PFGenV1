@@ -408,6 +408,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[4]).to.have.property("type", "Word");
     expect(actual[4]).to.have.property("value", "evil");
   });
+
   it("can find Defense key", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
@@ -419,6 +420,7 @@ describe("StatBlockLexer ", () => {
     expect(actual.length).to.equal(1);
     expect(actual[0]).to.have.property("type", "DefenseKey");
   });
+
   it("can find AC line 1", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
@@ -786,7 +788,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[12]).to.have.property("value", "evil");
   });
 
-  it("Defensive Abilities line 1", () => {
+  it("can find Defensive Abilities line 1", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
@@ -822,7 +824,7 @@ describe("StatBlockLexer ", () => {
 
   });
 
-  it("Defensive Abilities line 2", () => {
+  it("can find Defensive Abilities line 2", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
@@ -845,7 +847,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[5]).to.have.property("value", "ferocity");
     expect(actual[6]).to.have.property("type", "SemiColon");
     expect(actual[6]).to.have.property("value", ";");
-    expect(actual[7]).to.have.property("type", "DRKey");
+    expect(actual[7]).to.have.property("type", "DrKey");
     expect(actual[7]).to.have.property("value", "DR");
     expect(actual[8]).to.have.property("type", "NumberWhole");
     expect(actual[8]).to.have.property("value", "1");
@@ -855,7 +857,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[10]).to.have.property("value", "\u2014");
   });
 
-  it("DR/Immune/SR line 1", () => {
+  it("can fine DR/Immune/SR line 1", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
@@ -864,7 +866,7 @@ describe("StatBlockLexer ", () => {
     let actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(11);
-    expect(actual[0]).to.have.property("type", "DRKey");
+    expect(actual[0]).to.have.property("type", "DrKey");
     expect(actual[0]).to.have.property("value", "DR");
     expect(actual[1]).to.have.property("type", "NumberWhole");
     expect(actual[1]).to.have.property("value", "5");
@@ -888,7 +890,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[10]).to.have.property("value", "poison");
   });
     
-  it("DR/Immune/SR line 2", () => {
+  it("can find DR/Immune/SR line 2", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
@@ -897,7 +899,7 @@ describe("StatBlockLexer ", () => {
     let actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(16);
-    expect(actual[0]).to.have.property("type", "DRKey");
+    expect(actual[0]).to.have.property("type", "DrKey");
     expect(actual[0]).to.have.property("value", "DR");
     expect(actual[1]).to.have.property("type", "NumberWhole");
     expect(actual[1]).to.have.property("value", "15");
@@ -925,13 +927,13 @@ describe("StatBlockLexer ", () => {
     expect(actual[12]).to.have.property("value", "sleep");
     expect(actual[13]).to.have.property("type", "SemiColon");
     expect(actual[13]).to.have.property("value", ";");
-    expect(actual[14]).to.have.property("type", "SRKey");
+    expect(actual[14]).to.have.property("type", "SrKey");
     expect(actual[14]).to.have.property("value", "SR");
     expect(actual[15]).to.have.property("type", "NumberWhole");
     expect(actual[15]).to.have.property("value", "29");    
   });
 
-  it("Resist line 1", () => {
+  it("can find Resist line 1", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
@@ -939,7 +941,7 @@ describe("StatBlockLexer ", () => {
     let actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(12);
-    expect(actual[0]).to.have.property("type", "DRKey");
+    expect(actual[0]).to.have.property("type", "DrKey");
     expect(actual[0]).to.have.property("value", "DR");
     expect(actual[1]).to.have.property("type", "NumberWhole");
     expect(actual[1]).to.have.property("value", "5");
@@ -965,7 +967,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[11]).to.have.property("value", "5");
   });
 
-  it("Resist line 2", () => {
+  it("can find Resist line 2", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
@@ -974,7 +976,7 @@ describe("StatBlockLexer ", () => {
     let actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(15);
-    expect(actual[0]).to.have.property("type", "DRKey");
+    expect(actual[0]).to.have.property("type", "DrKey");
     expect(actual[0]).to.have.property("value", "DR");
     expect(actual[1]).to.have.property("type", "NumberWhole");
     expect(actual[1]).to.have.property("value", "5");
@@ -1006,7 +1008,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[14]).to.have.property("value", "10");
   });
 
-  it("Weaknesses line 1", () => {
+  it("can find Weaknesses line 1", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
@@ -1025,7 +1027,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[3]).to.have.property("value", "electricity");
   });
 
-  it("Weaknesses line 2", () => {
+  it("can find Weaknesses line 2", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
@@ -1036,7 +1038,7 @@ Weaknesses vulnerability to protection from evil`;
     let actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(33);
-    expect(actual[0]).to.have.property("type", "DRKey");
+    expect(actual[0]).to.have.property("type", "DrKey");
     expect(actual[0]).to.have.property("value", "DR");
     expect(actual[1]).to.have.property("type", "NumberWhole");
     expect(actual[1]).to.have.property("value", "10");
@@ -1087,7 +1089,7 @@ Weaknesses vulnerability to protection from evil`;
     expect(actual[23]).to.have.property("value", "20");
     expect(actual[24]).to.have.property("type", "SemiColon");
     expect(actual[24]).to.have.property("value", ";");
-    expect(actual[25]).to.have.property("type", "SRKey");
+    expect(actual[25]).to.have.property("type", "SrKey");
     expect(actual[25]).to.have.property("value", "SR");
     expect(actual[26]).to.have.property("type", "NumberWhole");
     expect(actual[26]).to.have.property("value", "23");
@@ -1104,5 +1106,107 @@ Weaknesses vulnerability to protection from evil`;
     expect(actual[31]).to.have.property("value", "from");
     expect(actual[32]).to.have.property("type", "Word");
     expect(actual[32]).to.have.property("value", "evil");
+  });
+    
+  it("can find Offense key", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "OFFENSE";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(1);
+    expect(actual[0]).to.have.property("type", "OffenseKey");
+  });
+
+  it("can find Speed line 1", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = `Speed 5 ft., fly 50 ft. (good)`;
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(8);
+    expect(actual[0]).to.have.property("type", "SpeedKey");
+    expect(actual[0]).to.have.property("value", "Speed");
+    expect(actual[1]).to.have.property("type", "SizeValue");
+    expect(actual[1]).to.have.property("value", "5 ft.");
+    expect(actual[2]).to.have.property("type", "Comma");
+    expect(actual[2]).to.have.property("value", ",");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "fly");
+    expect(actual[4]).to.have.property("type", "SizeValue");
+    expect(actual[4]).to.have.property("value", "50 ft.");
+    expect(actual[5]).to.have.property("type", "LParen");
+    expect(actual[5]).to.have.property("value", "(");
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "good");
+    expect(actual[7]).to.have.property("type", "RParen");
+    expect(actual[7]).to.have.property("value", ")");
+  });
+  
+  it("can find Speed line 2", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = `Speed 40 ft.`;
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(2);
+    expect(actual[0]).to.have.property("type", "SpeedKey");
+    expect(actual[0]).to.have.property("value", "Speed");
+    expect(actual[1]).to.have.property("type", "SizeValue");
+    expect(actual[1]).to.have.property("value", "40 ft.");
+  });
+  
+  it("can find Speed line 3", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = `Speed 10 ft., swim 60 ft.`;
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(5);
+    expect(actual[0]).to.have.property("type", "SpeedKey");
+    expect(actual[0]).to.have.property("value", "Speed");
+    expect(actual[1]).to.have.property("type", "SizeValue");
+    expect(actual[1]).to.have.property("value", "10 ft.");
+    expect(actual[2]).to.have.property("type", "Comma");
+    expect(actual[2]).to.have.property("value", ",");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "swim");
+    expect(actual[4]).to.have.property("type", "SizeValue");
+    expect(actual[4]).to.have.property("value", "60 ft.");
+  });
+  
+  it("can find Speed line 4", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = `Speed 50 ft., fly 200 ft. (poor)`;
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(8);
+    expect(actual[0]).to.have.property("type", "SpeedKey");
+    expect(actual[0]).to.have.property("value", "Speed");
+    expect(actual[1]).to.have.property("type", "SizeValue");
+    expect(actual[1]).to.have.property("value", "50 ft.");
+    expect(actual[2]).to.have.property("type", "Comma");
+    expect(actual[2]).to.have.property("value", ",");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "fly");
+    expect(actual[4]).to.have.property("type", "SizeValue");
+    expect(actual[4]).to.have.property("value", "200 ft.");
+    expect(actual[5]).to.have.property("type", "LParen");
+    expect(actual[5]).to.have.property("value", "(");
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "poor");
+    expect(actual[7]).to.have.property("type", "RParen");
+    expect(actual[7]).to.have.property("value", ")");
   });
 });
