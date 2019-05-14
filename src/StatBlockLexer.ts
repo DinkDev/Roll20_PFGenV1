@@ -16,6 +16,7 @@ export class StatBlockLexer {
   
   public l_paren: string;
   public r_paren: string;
+  public forward_slash: string
 
   public size_value: RegExp;
   public number_with_denominator: RegExp;
@@ -65,6 +66,7 @@ export class StatBlockLexer {
     this.asterisk = "\*";
     this.l_paren = "(";
     this.r_paren = ")";
+    this.forward_slash = "/";
 
     this.size_value = /(?:(?:\d+-\d\/)?\d+(?:(?: ft\.)|(?:[- ]foot)|(?:[- ]feet)))/;
 
@@ -154,6 +156,8 @@ export class StatBlockLexer {
 
       LParen: this.l_paren,
       RParen: this.r_paren,
+
+      ForwardSlash: this.forward_slash,
 
       // constructs
       Word: this.word,

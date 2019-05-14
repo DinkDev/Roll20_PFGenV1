@@ -1,0 +1,54 @@
+BAGIENNIK CR 6
+XP 2,400
+CN Small fey (aquatic)
+Init +2; Senses disease scent; Perception +19
+DEFENSE
+AC 17, touch 13, flat-footed 15 (+2 Dex, +4 natural, +1 size)
+hp 66 (12d6+24)
+Fort +5, Ref +10, Will +8
+DR 5/cold iron; Resist acid 5, fire 5
+OFFENSE
+Speed 30 ft., swim 40 ft.
+Melee 2 claws +9 (1d4–1)
+Ranged nasal spray +10 touch (3d6 fire, 3d6 acid, and nasal burn)
+Spell-Like Abilities (CL 7th; concentration +10)
+3/day—cure light wounds, remove disease
+1/day—cure moderate wounds, remove blindness/deafness
+STATISTICS
+Str 8, Dex 14, Con 13, Int 15, Wis 10, Cha 17
+Base Atk +6; CMB +4; CMD 16
+Feats Alertness, Self-Sufficient, Skill Focus (Heal),
+Toughness, Weapon Finesse, Weapon Focus (nasal
+spray)
+Skills Bluff +10, Diplomacy +12, Escape Artist +9, Heal +22,
+Knowledge (arcana) +5, Knowledge (nature) +12,
+Perception +19, Sense Motive +11, Stealth +21, Survival +8,
+Swim +22, Use Magic Device +18
+Languages Common, Sylvan
+SQ amphibious
+ECOLOGY
+Environment cold rivers
+Organization solitary, pair, or gang (3–8)
+Treasure none
+SPECIAL ABILITIES
+Disease Scent (Ex) A bagiennik can smell
+a diseased creature as if using the scent
+ability. It can discern whether the diseased
+creature is the source of a disease or merely
+a carrier; in the latter case, the bagiennik
+often seeks out the creature and attempts to
+purge its maladies.
+Nasal Burn (Su) A bagiennik’s nasal spray deals 1d6 points
+of fire damage to victims in subsequent rounds after
+it strikes a target (as per the burn universal monster
+ability), but it can also cure other maladies. Each round
+in which a victim takes damage from a bagiennik’s nasal
+spray, that victim can attempt a DC 17 Fortitude save. If
+the victim succeeds at this save, it heals 1 point of ability
+damage to an ability score of its choice. If the result exceeds
+the DC by 5 or more, the victim can also attempt to remove a
+single disease or poison currently affecting her as per remove
+disease or neutralize poison (caster level 7th). If the damage
+from the bagiennik’s nasal burn is reduced or negated in any
+way, the victim can’t attempt this special Fortitude save that
+round. The save DC is Constitution-based.

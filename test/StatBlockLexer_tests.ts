@@ -669,7 +669,6 @@ describe("StatBlockLexer ", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
-    // Note: this should probably fail (need a size to set the aura)
     const input = "hp 8 (1d10+2 plus 1)";
 
     let actual = TestHelper.runLexer(lexer, input);
@@ -700,7 +699,6 @@ describe("StatBlockLexer ", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
-    // Note: this should probably fail (need a size to set the aura)
     const input = "Fort +6, Ref +9, Will +8";
 
     let actual = TestHelper.runLexer(lexer, input);
@@ -728,7 +726,6 @@ describe("StatBlockLexer ", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
-    // Note: this should probably fail (need a size to set the aura)
     const input = "Fort +26; Ref +19; Will +23";
 
     let actual = TestHelper.runLexer(lexer, input);
@@ -756,7 +753,6 @@ describe("StatBlockLexer ", () => {
     let sut = new StatBlockLexer();
     let lexer = sut.getLexer();
 
-    // Note: this should probably fail (need a size to set the aura)
     const input = "Fort +7, Ref +7, Will +6; +2 resistance vs. evil";
 
     let actual = TestHelper.runLexer(lexer, input);
@@ -790,11 +786,323 @@ describe("StatBlockLexer ", () => {
     expect(actual[12]).to.have.property("value", "evil");
   });
 
+  it("Defensive Abilities line 1", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
 
-  //this.defensive_abilities_key = "Defensive Abilities";
-  //this.damage_reduction_key = "DR";
-  //this.immune_key = "Immune";
-  //this.resistances_key = "Resist";
-  //this.spell_resistance_key = "SR"
-  //this.weaknesses_key = "Weaknesses";
+    const input = "Defensive Abilities defensive training (+4 dodge bonus to AC vs. giants)";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(12);
+    expect(actual[0]).to.have.property("type", "DefensiveAbilitiesKey");
+    expect(actual[0]).to.have.property("value", "Defensive Abilities");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "defensive");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "training");
+    expect(actual[3]).to.have.property("type", "LParen");
+    expect(actual[3]).to.have.property("value", "(");
+    expect(actual[4]).to.have.property("type", "NumberSigned");
+    expect(actual[4]).to.have.property("value", "+4");
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "dodge");
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "bonus");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "to");
+    expect(actual[8]).to.have.property("type", "AcKey");
+    expect(actual[8]).to.have.property("value", "AC");
+    expect(actual[9]).to.have.property("type", "Versus");
+    expect(actual[9]).to.have.property("value", "vs.");
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "giants");
+    expect(actual[11]).to.have.property("type", "RParen");
+    expect(actual[11]).to.have.property("value", ")");
+
+  });
+
+  it("Defensive Abilities line 2", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "Defensive Abilities blessing of Orcus, ferocity; DR 1/—";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(11);
+    expect(actual[0]).to.have.property("type", "DefensiveAbilitiesKey");
+    expect(actual[0]).to.have.property("value", "Defensive Abilities");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "blessing");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "of");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "Orcus");
+    expect(actual[4]).to.have.property("type", "Comma");
+    expect(actual[4]).to.have.property("value", ",");
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "ferocity");
+    expect(actual[6]).to.have.property("type", "SemiColon");
+    expect(actual[6]).to.have.property("value", ";");
+    expect(actual[7]).to.have.property("type", "DRKey");
+    expect(actual[7]).to.have.property("value", "DR");
+    expect(actual[8]).to.have.property("type", "NumberWhole");
+    expect(actual[8]).to.have.property("value", "1");
+    expect(actual[9]).to.have.property("type", "ForwardSlash");
+    expect(actual[9]).to.have.property("value", "/");
+    expect(actual[10]).to.have.property("type", "MDash");
+    expect(actual[10]).to.have.property("value", "\u2014");
+  });
+
+  it("DR/Immune/SR line 1", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "DR 5/magic; Immune cold, disease, poison";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(11);
+    expect(actual[0]).to.have.property("type", "DRKey");
+    expect(actual[0]).to.have.property("value", "DR");
+    expect(actual[1]).to.have.property("type", "NumberWhole");
+    expect(actual[1]).to.have.property("value", "5");
+    expect(actual[2]).to.have.property("type", "ForwardSlash");
+    expect(actual[2]).to.have.property("value", "/");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "magic");
+    expect(actual[4]).to.have.property("type", "SemiColon");
+    expect(actual[4]).to.have.property("value", ";");
+    expect(actual[5]).to.have.property("type", "ImmuneKey");
+    expect(actual[5]).to.have.property("value", "Immune");
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "cold");
+    expect(actual[7]).to.have.property("type", "Comma");
+    expect(actual[7]).to.have.property("value", ",");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "disease");
+    expect(actual[9]).to.have.property("type", "Comma");
+    expect(actual[9]).to.have.property("value", ",");
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "poison");
+  });
+    
+  it("DR/Immune/SR line 2", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "DR 15/evil; Immune fire, poison, paralysis, sleep; SR 29";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(16);
+    expect(actual[0]).to.have.property("type", "DRKey");
+    expect(actual[0]).to.have.property("value", "DR");
+    expect(actual[1]).to.have.property("type", "NumberWhole");
+    expect(actual[1]).to.have.property("value", "15");
+    expect(actual[2]).to.have.property("type", "ForwardSlash");
+    expect(actual[2]).to.have.property("value", "/");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "evil");
+    expect(actual[4]).to.have.property("type", "SemiColon");
+    expect(actual[4]).to.have.property("value", ";");
+    expect(actual[5]).to.have.property("type", "ImmuneKey");
+    expect(actual[5]).to.have.property("value", "Immune");
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "fire");
+    expect(actual[7]).to.have.property("type", "Comma");
+    expect(actual[7]).to.have.property("value", ",");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "poison");
+    expect(actual[9]).to.have.property("type", "Comma");
+    expect(actual[9]).to.have.property("value", ",");
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "paralysis");
+    expect(actual[11]).to.have.property("type", "Comma");
+    expect(actual[11]).to.have.property("value", ",");
+    expect(actual[12]).to.have.property("type", "Word");
+    expect(actual[12]).to.have.property("value", "sleep");
+    expect(actual[13]).to.have.property("type", "SemiColon");
+    expect(actual[13]).to.have.property("value", ";");
+    expect(actual[14]).to.have.property("type", "SRKey");
+    expect(actual[14]).to.have.property("value", "SR");
+    expect(actual[15]).to.have.property("type", "NumberWhole");
+    expect(actual[15]).to.have.property("value", "29");    
+  });
+
+  it("Resist line 1", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "DR 5/cold iron; Resist acid 5, fire 5"
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(12);
+    expect(actual[0]).to.have.property("type", "DRKey");
+    expect(actual[0]).to.have.property("value", "DR");
+    expect(actual[1]).to.have.property("type", "NumberWhole");
+    expect(actual[1]).to.have.property("value", "5");
+    expect(actual[2]).to.have.property("type", "ForwardSlash");
+    expect(actual[2]).to.have.property("value", "/");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "cold");
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "iron");    
+    expect(actual[5]).to.have.property("type", "SemiColon");
+    expect(actual[5]).to.have.property("value", ";");
+    expect(actual[6]).to.have.property("type", "ResistKey");
+    expect(actual[6]).to.have.property("value", "Resist");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "acid");
+    expect(actual[8]).to.have.property("type", "NumberWhole");
+    expect(actual[8]).to.have.property("value", "5");
+    expect(actual[9]).to.have.property("type", "Comma");
+    expect(actual[9]).to.have.property("value", ",");
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "fire");
+    expect(actual[11]).to.have.property("type", "NumberWhole");
+    expect(actual[11]).to.have.property("value", "5");
+  });
+
+  it("Resist line 2", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "DR 5/adamantine; Immune construct traits; Resist cold 10, fire 10";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(15);
+    expect(actual[0]).to.have.property("type", "DRKey");
+    expect(actual[0]).to.have.property("value", "DR");
+    expect(actual[1]).to.have.property("type", "NumberWhole");
+    expect(actual[1]).to.have.property("value", "5");
+    expect(actual[2]).to.have.property("type", "ForwardSlash");
+    expect(actual[2]).to.have.property("value", "/");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "adamantine");
+    expect(actual[4]).to.have.property("type", "SemiColon");
+    expect(actual[4]).to.have.property("value", ";");
+    expect(actual[5]).to.have.property("type", "ImmuneKey");
+    expect(actual[5]).to.have.property("value", "Immune");
+    expect(actual[6]).to.have.property("type", "CreatureType");
+    expect(actual[6]).to.have.property("value", "construct");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "traits");
+    expect(actual[8]).to.have.property("type", "SemiColon");
+    expect(actual[8]).to.have.property("value", ";");
+    expect(actual[9]).to.have.property("type", "ResistKey");
+    expect(actual[9]).to.have.property("value", "Resist");
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "cold");
+    expect(actual[11]).to.have.property("type", "NumberWhole");
+    expect(actual[11]).to.have.property("value", "10");
+    expect(actual[12]).to.have.property("type", "Comma");
+    expect(actual[12]).to.have.property("value", ",");
+    expect(actual[13]).to.have.property("type", "Word");
+    expect(actual[13]).to.have.property("value", "fire");
+    expect(actual[14]).to.have.property("type", "NumberWhole");
+    expect(actual[14]).to.have.property("value", "10");
+  });
+
+  it("Weaknesses line 1", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = "Weaknesses vulnerable to electricity";
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(4);
+    expect(actual[0]).to.have.property("type", "WeaknessesKey");
+    expect(actual[0]).to.have.property("value", "Weaknesses");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "vulnerable");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "to");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "electricity");
+  });
+
+  it("Weaknesses line 2", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = `DR 10/adamantine and magic; Immune fire, mind-affecting
+effects; Resist cold 20, electricity 20, sonic 20; SR 23
+Weaknesses vulnerability to protection from evil`;
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(33);
+    expect(actual[0]).to.have.property("type", "DRKey");
+    expect(actual[0]).to.have.property("value", "DR");
+    expect(actual[1]).to.have.property("type", "NumberWhole");
+    expect(actual[1]).to.have.property("value", "10");
+    expect(actual[2]).to.have.property("type", "ForwardSlash");
+    expect(actual[2]).to.have.property("value", "/");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "adamantine");
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "and");
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "magic");
+    expect(actual[6]).to.have.property("type", "SemiColon");
+    expect(actual[6]).to.have.property("value", ";");
+    expect(actual[7]).to.have.property("type", "ImmuneKey");
+    expect(actual[7]).to.have.property("value", "Immune");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "fire");
+    expect(actual[9]).to.have.property("type", "Comma");
+    expect(actual[9]).to.have.property("value", ",");
+    // TODO: what about common words like "mind-affecting"?
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "mind");
+    expect(actual[11]).to.have.property("type", "Dash");
+    expect(actual[11]).to.have.property("value", "-");
+    expect(actual[12]).to.have.property("type", "Word");
+    expect(actual[12]).to.have.property("value", "affecting");
+    expect(actual[13]).to.have.property("type", "Word");
+    expect(actual[13]).to.have.property("value", "effects");
+    expect(actual[14]).to.have.property("type", "SemiColon");
+    expect(actual[14]).to.have.property("value", ";");
+    expect(actual[15]).to.have.property("type", "ResistKey");
+    expect(actual[15]).to.have.property("value", "Resist");
+    expect(actual[16]).to.have.property("type", "Word");
+    expect(actual[16]).to.have.property("value", "cold");
+    expect(actual[17]).to.have.property("type", "NumberWhole");
+    expect(actual[17]).to.have.property("value", "20");
+    expect(actual[18]).to.have.property("type", "Comma");
+    expect(actual[18]).to.have.property("value", ",");
+    expect(actual[19]).to.have.property("type", "Word");
+    expect(actual[19]).to.have.property("value", "electricity");
+    expect(actual[20]).to.have.property("type", "NumberWhole");
+    expect(actual[20]).to.have.property("value", "20");
+    expect(actual[21]).to.have.property("type", "Comma");
+    expect(actual[21]).to.have.property("value", ",");
+    expect(actual[22]).to.have.property("type", "Word");
+    expect(actual[22]).to.have.property("value", "sonic");
+    expect(actual[23]).to.have.property("type", "NumberWhole");
+    expect(actual[23]).to.have.property("value", "20");
+    expect(actual[24]).to.have.property("type", "SemiColon");
+    expect(actual[24]).to.have.property("value", ";");
+    expect(actual[25]).to.have.property("type", "SRKey");
+    expect(actual[25]).to.have.property("value", "SR");
+    expect(actual[26]).to.have.property("type", "NumberWhole");
+    expect(actual[26]).to.have.property("value", "23");
+    // TODO: \n is like a ;, sometimes...
+    expect(actual[27]).to.have.property("type", "WeaknessesKey");
+    expect(actual[27]).to.have.property("value", "Weaknesses");
+    expect(actual[28]).to.have.property("type", "Word");
+    expect(actual[28]).to.have.property("value", "vulnerability");
+    expect(actual[29]).to.have.property("type", "Word");
+    expect(actual[29]).to.have.property("value", "to");
+    expect(actual[30]).to.have.property("type", "Word");
+    expect(actual[30]).to.have.property("value", "protection");
+    expect(actual[31]).to.have.property("type", "Word");
+    expect(actual[31]).to.have.property("value", "from");
+    expect(actual[32]).to.have.property("type", "Word");
+    expect(actual[32]).to.have.property("value", "evil");
+  });
 });
