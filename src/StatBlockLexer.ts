@@ -25,9 +25,10 @@ export class StatBlockLexer {
   public number_with_sign: RegExp;
 
   //public alignment: RegExp;
-  public alignmentList: string[];
-  public creatureSizeList: string[];
-  public creatureTypeList: string[];
+  public alignment_list: string[];
+  public attack_type_list: string[];
+  public creature_size_list: string[];
+  public creature_type_list: string[];
 
   public ac_key: RegExp;
   public ac_touch_key: string;
@@ -79,11 +80,12 @@ export class StatBlockLexer {
     this.number_whole = /(?:\d\d?\d?(?:,\d{3})*)/;
     this.number_with_sign = /(?:[\+\-\u2013]\d{1,3})/;
 
-    this.alignmentList = ["LE", "LN", "LG", "NE", "N", "NG", "CE", "CN", "CG"];
-    this.creatureSizeList = ["Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"];
+    this.alignment_list = ["LE", "LN", "LG", "NE", "N", "NG", "CE", "CN", "CG"];
+    this.attack_type_list = ["Melee", "Ranged", "Special Attacks"]
+    this.creature_size_list = ["Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"];
 
     // creature types: https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types/
-    this.creatureTypeList = ["aberration", "animal", "construct", "dragon", "fey", "humanoid", "magical beast",
+    this.creature_type_list = ["aberration", "animal", "construct", "dragon", "fey", "humanoid", "magical beast",
       "monstrous humanoid", "ooze", "outsider", "plant", "undead", "vermin"];
 
     this.ac_key = /\bAC\b/;
@@ -130,7 +132,7 @@ export class StatBlockLexer {
       HpKey: this.hp_key,      
       ImmuneKey: this.immune_key,
       InitKey: this.init_key,
-      MeleeKey: this.melee_key,
+      //MeleeKey: this.melee_key,
       OffenseKey: this.offense_key,
       PerceptionKey: this.perception_key,
       RefSaveKey: this.ref_save_key,
@@ -142,9 +144,10 @@ export class StatBlockLexer {
       WillSaveKey: this.will_save_key,
       XpKey: this.xp_key,
 
-      Alignment: this.alignmentList,
-      CreatureSize: this.creatureSizeList,
-      CreatureType: this.creatureTypeList,
+      Alignment: this.alignment_list,
+      AttackType: this.attack_type_list,
+      CreatureSize: this.creature_size_list,
+      CreatureType: this.creature_type_list,
 
       DiceRoll: this.dice_roll,
       //NumberWithDenominator: this.number_with_denominator,

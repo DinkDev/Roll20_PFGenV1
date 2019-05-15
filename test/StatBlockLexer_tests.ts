@@ -20,7 +20,7 @@ describe("StatBlockLexer ", () => {
 
     const input1 = "ZAZU CR —";
     let actual = TestHelper.runLexer(lexer, input1);
-
+// TODO: fix test
     expect(3).to.equal(actual.length);
     expect("ZAZU").to.equal(actual[0].text);
     expect("CR").to.equal(actual[1].text);
@@ -33,7 +33,7 @@ describe("StatBlockLexer ", () => {
     
     const input2 = "AATHERIEXA CR 7";
     let actual = TestHelper.runLexer(lexer, input2);
-
+// TODO: fix test
     expect(3).to.equal(actual.length);
     expect("AATHERIEXA").to.equal(actual[0].text);
     expect("CR").to.equal(actual[1].text);
@@ -84,9 +84,11 @@ describe("StatBlockLexer ", () => {
     const input1 = "XP 3,200";
     let actual = TestHelper.runLexer(lexer, input1);
 
-    expect(2).to.equal(actual.length);
-    expect("XP").to.equal(actual[0].text);
-    expect("3,200").to.equal(actual[1].text);
+    expect(actual.length).to.equal(2);
+    expect(actual[0]).to.have.property("type", "XpKey");
+    expect(actual[0]).to.have.property("value", "XP");
+    expect(actual[1]).to.have.property("type", "NumberWhole");
+    expect(actual[1]).to.have.property("value", "3,200");
   });
   it("can find XP line data 2", () => {
 
@@ -96,12 +98,17 @@ describe("StatBlockLexer ", () => {
     const input1 = "GNOME DRUID 1 XP 400";
     let actual = TestHelper.runLexer(lexer, input1);
 
-    expect(5).to.equal(actual.length);
-    expect("GNOME").to.equal(actual[0].text);
-    expect("DRUID").to.equal(actual[1].text);
-    expect("1").to.equal(actual[2].text);
-    expect("XP").to.equal(actual[3].text);
-    expect("400").to.equal(actual[4].text);
+    expect(actual.length).to.equal(5);
+    expect(actual[0]).to.have.property("type", "Word");
+    expect(actual[0]).to.have.property("value", "GNOME");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "DRUID");
+    expect(actual[2]).to.have.property("type", "NumberWhole");
+    expect(actual[2]).to.have.property("value", "1");
+    expect(actual[3]).to.have.property("type", "XpKey");
+    expect(actual[3]).to.have.property("value", "XP");
+    expect(actual[4]).to.have.property("type", "NumberWhole");
+    expect(actual[4]).to.have.property("value", "400");
   });  
   it("can find Alignment, Size, and Type line data 1", () => {
 
@@ -111,10 +118,13 @@ describe("StatBlockLexer ", () => {
     const input1 = "NE Medium aberration";
     let actual = TestHelper.runLexer(lexer, input1);
 
-    expect(3).to.equal(actual.length);
-    expect("NE").to.equal(actual[0].text);
-    expect("Medium").to.equal(actual[1].text);
-    expect("aberration").to.equal(actual[2].text);
+    expect(actual.length).to.equal(3);
+    expect(actual[0]).to.have.property("type", "Alignment");
+    expect(actual[0]).to.have.property("value", "NE");
+    expect(actual[1]).to.have.property("type", "CreatureSize");
+    expect(actual[1]).to.have.property("value", "Medium");
+    expect(actual[2]).to.have.property("type", "CreatureType");
+    expect(actual[2]).to.have.property("value", "aberration");
   });
   it("can find Alignment, Size, and Type line data 2", () => {
 
@@ -124,8 +134,7 @@ describe("StatBlockLexer ", () => {
     const input1 = "NG* Huge dragon (extraplanar, good)";
     let actual = TestHelper.runLexer(lexer, input1);
 
-    expect(9).to.equal(actual.length);
-
+    expect(actual.length).to.equal(9);
     expect(actual[0]).to.have.property("type", "Alignment");
     expect(actual[0]).to.have.property("value", "NG");
     expect(actual[1]).to.have.property("type", "Asterisk");
@@ -149,6 +158,7 @@ describe("StatBlockLexer ", () => {
     const input1 = "Small humanoid (gnome) N";
     let actual = TestHelper.runLexer(lexer, input1);
 
+    expect(actual.length).to.equal(6);
     expect(actual[0]).to.have.property("type", "CreatureSize");
     expect(actual[0]).to.have.property("value", "Small");
     expect(actual[1]).to.have.property("type", "CreatureType");
@@ -1213,7 +1223,7 @@ Weaknesses vulnerability to protection from evil`;
     const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(19);
-    expect(actual[0]).to.have.property("type", "MeleeKey");
+    expect(actual[0]).to.have.property("type", "AttackType");
     expect(actual[0]).to.have.property("value", "Melee");
     expect(actual[1]).to.have.property("type", "Word");
     expect(actual[1]).to.have.property("value", "bite");
@@ -1262,7 +1272,7 @@ Weaknesses vulnerability to protection from evil`;
     let actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(10);
-    expect(actual[0]).to.have.property("type", "MeleeKey");
+    expect(actual[0]).to.have.property("type", "AttackType");
     expect(actual[0]).to.have.property("value", "Melee");
     expect(actual[1]).to.have.property("type", "NumberWhole");
     expect(actual[1]).to.have.property("value", "4");
@@ -1293,7 +1303,7 @@ Weaknesses vulnerability to protection from evil`;
     const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(14);
-    expect(actual[0]).to.have.property("type", "MeleeKey");
+    expect(actual[0]).to.have.property("type", "AttackType");
     expect(actual[0]).to.have.property("value", "Melee");
     expect(actual[1]).to.have.property("type", "Word");
     expect(actual[1]).to.have.property("value", "mwk");
@@ -1332,7 +1342,7 @@ Weaknesses vulnerability to protection from evil`;
     let actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(7);
-    expect(actual[0]).to.have.property("type", "MeleeKey");
+    expect(actual[0]).to.have.property("type", "AttackType");
     expect(actual[0]).to.have.property("value", "Melee");
     expect(actual[1]).to.have.property("type", "Word");
     expect(actual[1]).to.have.property("value", "sickle");
@@ -1346,5 +1356,141 @@ Weaknesses vulnerability to protection from evil`;
     expect(actual[5]).to.have.property("value", "\u{2013}2");
     expect(actual[6]).to.have.property("type", "RParen");
     expect(actual[6]).to.have.property("value", ")");
+  });
+
+  it("can find Ranged line 1", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Ranged nasal spray +10 touch (3d6 fire, 3d6 acid, and nasal burn)`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(16);
+    expect(actual[0]).to.have.property("type", "AttackType");
+    expect(actual[0]).to.have.property("value", "Ranged");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "nasal");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "spray");
+    expect(actual[3]).to.have.property("type", "NumberSigned");
+    expect(actual[3]).to.have.property("value", "+10");
+    expect(actual[4]).to.have.property("type", "AcTouchKey");
+    expect(actual[4]).to.have.property("value", "touch");
+    expect(actual[5]).to.have.property("type", "LParen");
+    expect(actual[5]).to.have.property("value", "(");
+    expect(actual[6]).to.have.property("type", "DiceRoll");
+    expect(actual[6]).to.have.property("value", "3d6");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "fire");
+    expect(actual[8]).to.have.property("type", "Comma");
+    expect(actual[8]).to.have.property("value", ",");
+    expect(actual[9]).to.have.property("type", "DiceRoll");
+    expect(actual[9]).to.have.property("value", "3d6");
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "acid");
+    expect(actual[11]).to.have.property("type", "Comma");
+    expect(actual[11]).to.have.property("value", ",");
+    expect(actual[12]).to.have.property("type", "Word");
+    expect(actual[12]).to.have.property("value", "and");
+    expect(actual[13]).to.have.property("type", "Word");
+    expect(actual[13]).to.have.property("value", "nasal");
+    expect(actual[14]).to.have.property("type", "Word");
+    expect(actual[14]).to.have.property("value", "burn");
+    expect(actual[15]).to.have.property("type", "RParen");
+    expect(actual[15]).to.have.property("value", ")");
+  });
+
+  it("can find Ranged line 2", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = `Ranged sling +2 (1d3–2)`;
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(7);
+    expect(actual[0]).to.have.property("type", "AttackType");
+    expect(actual[0]).to.have.property("value", "Ranged");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "sling");
+    expect(actual[2]).to.have.property("type", "NumberSigned");
+    expect(actual[2]).to.have.property("value", "+2");
+    expect(actual[3]).to.have.property("type", "LParen");
+    expect(actual[3]).to.have.property("value", "(");
+    expect(actual[4]).to.have.property("type", "DiceRoll");
+    expect(actual[4]).to.have.property("value", "1d3");
+    expect(actual[5]).to.have.property("type", "NumberSigned");
+    expect(actual[5]).to.have.property("value", `\u{2013}2`);
+    expect(actual[6]).to.have.property("type", "RParen");
+    expect(actual[6]).to.have.property("value", ")");
+  });
+
+  it("can find Ranged line 3", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Ranged light crossbow +2 (1d8, 19–20/x2)`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(13);
+    expect(actual[0]).to.have.property("type", "AttackType");
+    expect(actual[0]).to.have.property("value", "Ranged");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "light");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "crossbow");
+    expect(actual[3]).to.have.property("type", "NumberSigned");
+    expect(actual[3]).to.have.property("value", "+2");
+    expect(actual[4]).to.have.property("type", "LParen");
+    expect(actual[4]).to.have.property("value", "(");
+    expect(actual[5]).to.have.property("type", "DiceRoll");
+    expect(actual[5]).to.have.property("value", "1d8");
+    expect(actual[6]).to.have.property("type", "Comma");
+    expect(actual[6]).to.have.property("value", ",");
+    expect(actual[7]).to.have.property("type", "NumberWhole");
+    expect(actual[7]).to.have.property("value", "19");
+    expect(actual[8]).to.have.property("type", "NumberSigned");
+    expect(actual[8]).to.have.property("value", `\u{2013}20`);
+    expect(actual[9]).to.have.property("type", "ForwardSlash");
+    expect(actual[9]).to.have.property("value", "/");
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "x");
+    expect(actual[11]).to.have.property("type", "NumberWhole");
+    expect(actual[11]).to.have.property("value", "2");
+    expect(actual[12]).to.have.property("type", "RParen");
+    expect(actual[12]).to.have.property("value", ")");
+  });
+
+  it("can find Ranged line 4", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = `Ranged light crossbow +6 (1d8/19–20)`;
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(10);
+    expect(actual[0]).to.have.property("type", "AttackType");
+    expect(actual[0]).to.have.property("value", "Ranged");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "light");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "crossbow");
+    expect(actual[3]).to.have.property("type", "NumberSigned");
+    expect(actual[3]).to.have.property("value", "+6");
+    expect(actual[4]).to.have.property("type", "LParen");
+    expect(actual[4]).to.have.property("value", "(");
+    expect(actual[5]).to.have.property("type", "DiceRoll");
+    expect(actual[5]).to.have.property("value", "1d8");
+    expect(actual[6]).to.have.property("type", "ForwardSlash");
+    expect(actual[6]).to.have.property("value", "/");
+    expect(actual[7]).to.have.property("type", "NumberWhole");
+    expect(actual[7]).to.have.property("value", "19");
+    expect(actual[8]).to.have.property("type", "NumberSigned");
+    expect(actual[8]).to.have.property("value", `\u{2013}20`);
+    expect(actual[9]).to.have.property("type", "RParen");
+    expect(actual[9]).to.have.property("value", ")");
   });
 });
