@@ -19,7 +19,8 @@ export class StatBlockLexer {
   public forward_slash: string
 
   public size_value: RegExp;
-  public number_with_denominator: RegExp;
+  public dice_roll: RegExp;
+  //public number_with_denominator: RegExp;
   public number_whole: RegExp;
   public number_with_sign: RegExp;
 
@@ -37,6 +38,7 @@ export class StatBlockLexer {
   public fort_save_Key: RegExp;
   public hp_key: RegExp;
   public init_key: RegExp;
+  public melee_key: string;
   public offense_key: string;
   public perception_key: string;
   public ref_save_key: RegExp;
@@ -71,10 +73,11 @@ export class StatBlockLexer {
     this.forward_slash = "/";
 
     this.size_value = /(?:(?:\d+-\d\/)?\d+(?:(?: ft\.)|(?:[- ]foot)|(?:[- ]feet)))/;
+    this.dice_roll = /\d+d\d+/;
 
-    this.number_with_denominator = /(?:\d\/\d+)/;
+    //this.number_with_denominator = /(?:\d\/\d+)/;
     this.number_whole = /(?:\d\d?\d?(?:,\d{3})*)/;
-    this.number_with_sign = /(?:[\+\-]\d{1,3})/;
+    this.number_with_sign = /(?:[\+\-\u2013]\d{1,3})/;
 
     this.alignmentList = ["LE", "LN", "LG", "NE", "N", "NG", "CE", "CN", "CG"];
     this.creatureSizeList = ["Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"];
@@ -88,23 +91,24 @@ export class StatBlockLexer {
     this.ac_flat_footed_key = "flat-footed";
     this.aura_key = "Aura";
     this.cr_key = /\b[cC][rR]\b/;
+    this.damage_reduction_key = /\bDR\b/;
     this.defense_key = "DEFENSE";
-    this.offense_key = "OFFENSE";
+    this.defensive_abilities_key = "Defensive Abilities";
     this.fort_save_Key = /\bFort\b/;
     this.hp_key = /\bhp\b/;
+    this.immune_key = "Immune";
     this.init_key = /\bInit\b/;
+    this.melee_key = "Melee";
+    this.offense_key = "OFFENSE";
     this.perception_key = "Perception";
     this.ref_save_key = /\bRef\b/;
-    this.senses_key = "Senses";
-    this.will_save_key = /\bWill\b/;
-    this.xp_key = /\b[xX][pP]\b/;
-    this.defensive_abilities_key = "Defensive Abilities";
-    this.damage_reduction_key = /\bDR\b/;
-    this.immune_key = "Immune";
     this.resistances_key = /\bResist\b/;
+    this.senses_key = "Senses";
     this.speed_key = "Speed";
     this.spell_resistance_key = /\bSR\b/;
     this.weaknesses_key = "Weaknesses";
+    this.will_save_key = /\bWill\b/;
+    this.xp_key = /\b[xX][pP]\b/;
     
     this.word = /(?:[a-zA-Z]+(?:(?:'[tT])|(?:'[lL][lL])|(?:'[sS])|(?:[sS]'))?)/;
     this.word_hyphenated = /(?:[a-zA-Z]+[-][a-zA-Z]+)/;
@@ -126,6 +130,7 @@ export class StatBlockLexer {
       HpKey: this.hp_key,      
       ImmuneKey: this.immune_key,
       InitKey: this.init_key,
+      MeleeKey: this.melee_key,
       OffenseKey: this.offense_key,
       PerceptionKey: this.perception_key,
       RefSaveKey: this.ref_save_key,
@@ -141,7 +146,8 @@ export class StatBlockLexer {
       CreatureSize: this.creatureSizeList,
       CreatureType: this.creatureTypeList,
 
-      NumberWithDenominator: this.number_with_denominator,
+      DiceRoll: this.dice_roll,
+      //NumberWithDenominator: this.number_with_denominator,
       NumberSigned: this.number_with_sign,
       SizeValue: this.size_value,
       NumberWhole: this.number_whole,
@@ -156,7 +162,7 @@ export class StatBlockLexer {
 
       Dash: this.dash,
       MDash: this.m_dash,
-      MNash: this.n_dash,
+      NDash: this.n_dash,
 
       Asterisk: this.asterisk,
 

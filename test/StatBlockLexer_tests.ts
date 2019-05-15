@@ -61,11 +61,19 @@ describe("StatBlockLexer ", () => {
     const input4 = "BLACK ORC CR 1/3";
     let actual = TestHelper.runLexer(lexer, input4);
 
-    expect(4).to.equal(actual.length);
-    expect("BLACK").to.equal(actual[0].text);
-    expect("ORC").to.equal(actual[1].text);
-    expect("CR").to.equal(actual[2].text);
-    expect("1/3").to.equal(actual[3].text);
+    expect(6).to.equal(actual.length);
+    expect(actual[0]).to.have.property("type", "Word");
+    expect(actual[0]).to.have.property("value", "BLACK");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "ORC");
+    expect(actual[2]).to.have.property("type", "CrKey");
+    expect(actual[2]).to.have.property("value", "CR");
+    expect(actual[3]).to.have.property("type", "NumberWhole");
+    expect(actual[3]).to.have.property("value", "1");
+    expect(actual[4]).to.have.property("type", "ForwardSlash");
+    expect(actual[4]).to.have.property("value", "/");
+    expect(actual[5]).to.have.property("type", "NumberWhole");
+    expect(actual[5]).to.have.property("value", "3");
   });
 
   it("can find XP line data 1", () => {
@@ -117,7 +125,7 @@ describe("StatBlockLexer ", () => {
     let actual = TestHelper.runLexer(lexer, input1);
 
     expect(9).to.equal(actual.length);
-;
+
     expect(actual[0]).to.have.property("type", "Alignment");
     expect(actual[0]).to.have.property("value", "NG");
     expect(actual[1]).to.have.property("type", "Asterisk");
@@ -555,11 +563,11 @@ describe("StatBlockLexer ", () => {
     let lexer = sut.getLexer();
 
     // Note: semicolon was common in Bestiary 1
-    const input = "AC 15, touch 12, flat-footed 12; (+3 Dex, +3 natural, –1 size; +2\r\ndeflection vs. evil)";
+    const input = "AC 15, touch 12, flat-footed 12; (+3 Dex, +3 natural, –1 size; +2\ndeflection vs. evil)";
 
     let actual = TestHelper.runLexer(lexer, input);
 
-    expect(actual.length).to.equal(25);
+    expect(actual.length).to.equal(24);
     expect(actual[0]).to.have.property("type", "AcKey");
     expect(actual[0]).to.have.property("value", "AC");
     expect(actual[1]).to.have.property("type", "NumberWhole");
@@ -592,24 +600,22 @@ describe("StatBlockLexer ", () => {
     expect(actual[14]).to.have.property("value", "natural");
     expect(actual[15]).to.have.property("type", "Comma");
     expect(actual[15]).to.have.property("value", ",");
-    expect(actual[16]).to.have.property("type", "MNash");
-    expect(actual[16]).to.have.property("value", "–");
-    expect(actual[17]).to.have.property("type", "NumberWhole");
-    expect(actual[17]).to.have.property("value", "1");
-    expect(actual[18]).to.have.property("type", "Word");
-    expect(actual[18]).to.have.property("value", "size");
-    expect(actual[19]).to.have.property("type", "SemiColon");
-    expect(actual[19]).to.have.property("value", ";");
-    expect(actual[20]).to.have.property("type", "NumberSigned");
-    expect(actual[20]).to.have.property("value", "+2");
-    expect(actual[21]).to.have.property("type", "Word");
-    expect(actual[21]).to.have.property("value", "deflection");
-    expect(actual[22]).to.have.property("type", "Versus");
-    expect(actual[22]).to.have.property("value", "vs.");
-    expect(actual[23]).to.have.property("type", "Word");
-    expect(actual[23]).to.have.property("value", "evil");
-    expect(actual[24]).to.have.property("type", "RParen");
-    expect(actual[24]).to.have.property("value", ")");
+    expect(actual[16]).to.have.property("type", "NumberSigned");
+    expect(actual[16]).to.have.property("value", "\u2013"+"1");
+    expect(actual[17]).to.have.property("type", "Word");
+    expect(actual[17]).to.have.property("value", "size");
+    expect(actual[18]).to.have.property("type", "SemiColon");
+    expect(actual[18]).to.have.property("value", ";");
+    expect(actual[19]).to.have.property("type", "NumberSigned");
+    expect(actual[19]).to.have.property("value", "+2");
+    expect(actual[20]).to.have.property("type", "Word");
+    expect(actual[20]).to.have.property("value", "deflection");
+    expect(actual[21]).to.have.property("type", "Versus");
+    expect(actual[21]).to.have.property("value", "vs.");
+    expect(actual[22]).to.have.property("type", "Word");
+    expect(actual[22]).to.have.property("value", "evil");
+    expect(actual[23]).to.have.property("type", "RParen");
+    expect(actual[23]).to.have.property("value", ")");
   });
 
   it("can find hp line 1", () => {
@@ -620,7 +626,7 @@ describe("StatBlockLexer ", () => {
 
     let actual = TestHelper.runLexer(lexer, input);
 
-    expect(actual.length).to.equal(8);
+    expect(actual.length).to.equal(6);
 
     expect(actual[0]).to.have.property("type", "HpKey");
     expect(actual[0]).to.have.property("value", "hp");
@@ -628,16 +634,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[1]).to.have.property("value", "84");
     expect(actual[2]).to.have.property("type", "LParen");
     expect(actual[2]).to.have.property("value", "(");
-    expect(actual[3]).to.have.property("type", "NumberWhole");
-    expect(actual[3]).to.have.property("value", "13");
-    expect(actual[4]).to.have.property("type", "Word");
-    expect(actual[4]).to.have.property("value", "d");
-    expect(actual[5]).to.have.property("type", "NumberWhole");
-    expect(actual[5]).to.have.property("value", "8");
-    expect(actual[6]).to.have.property("type", "NumberSigned");
-    expect(actual[6]).to.have.property("value", "+26");
-    expect(actual[7]).to.have.property("type", "RParen");
-    expect(actual[7]).to.have.property("value", ")");
+    expect(actual[3]).to.have.property("type", "DiceRoll");
+    expect(actual[3]).to.have.property("value", "13d8");
+    expect(actual[4]).to.have.property("type", "NumberSigned");
+    expect(actual[4]).to.have.property("value", "+26");
+    expect(actual[5]).to.have.property("type", "RParen");
+    expect(actual[5]).to.have.property("value", ")");
   });
   it("can find hp line 2", () => {
     let sut = new StatBlockLexer();
@@ -647,7 +649,7 @@ describe("StatBlockLexer ", () => {
 
     let actual = TestHelper.runLexer(lexer, input);
 
-    expect(actual.length).to.equal(8);
+    expect(actual.length).to.equal(6);
 
     expect(actual[0]).to.have.property("type", "HpKey");
     expect(actual[0]).to.have.property("value", "hp");
@@ -655,16 +657,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[1]).to.have.property("value", "465");
     expect(actual[2]).to.have.property("type", "LParen");
     expect(actual[2]).to.have.property("value", "(");
-    expect(actual[3]).to.have.property("type", "NumberWhole");
-    expect(actual[3]).to.have.property("value", "30");
-    expect(actual[4]).to.have.property("type", "Word");
-    expect(actual[4]).to.have.property("value", "d");
-    expect(actual[5]).to.have.property("type", "NumberWhole");
-    expect(actual[5]).to.have.property("value", "12");
-    expect(actual[6]).to.have.property("type", "NumberSigned");
-    expect(actual[6]).to.have.property("value", "+270");
-    expect(actual[7]).to.have.property("type", "RParen");
-    expect(actual[7]).to.have.property("value", ")");    
+    expect(actual[3]).to.have.property("type", "DiceRoll");
+    expect(actual[3]).to.have.property("value", "30d12");
+    expect(actual[4]).to.have.property("type", "NumberSigned");
+    expect(actual[4]).to.have.property("value", "+270");
+    expect(actual[5]).to.have.property("type", "RParen");
+    expect(actual[5]).to.have.property("value", ")");    
   });
 
   it("can find hp line 3", () => {
@@ -675,27 +673,23 @@ describe("StatBlockLexer ", () => {
 
     let actual = TestHelper.runLexer(lexer, input);
 
-    expect(actual.length).to.equal(10);
+    expect(actual.length).to.equal(8);
     expect(actual[0]).to.have.property("type", "HpKey");
     expect(actual[0]).to.have.property("value", "hp");
     expect(actual[1]).to.have.property("type", "NumberWhole");
     expect(actual[1]).to.have.property("value", "8");
     expect(actual[2]).to.have.property("type", "LParen");
     expect(actual[2]).to.have.property("value", "(");
-    expect(actual[3]).to.have.property("type", "NumberWhole");
-    expect(actual[3]).to.have.property("value", "1");
-    expect(actual[4]).to.have.property("type", "Word");
-    expect(actual[4]).to.have.property("value", "d");
-    expect(actual[5]).to.have.property("type", "NumberWhole");
-    expect(actual[5]).to.have.property("value", "10");
-    expect(actual[6]).to.have.property("type", "NumberSigned");
-    expect(actual[6]).to.have.property("value", "+2");
-    expect(actual[7]).to.have.property("type", "Word");
-    expect(actual[7]).to.have.property("value", "plus");
-    expect(actual[8]).to.have.property("type", "NumberWhole");
-    expect(actual[8]).to.have.property("value", "1");
-    expect(actual[9]).to.have.property("type", "RParen");
-    expect(actual[9]).to.have.property("value", ")");
+    expect(actual[3]).to.have.property("type", "DiceRoll");
+    expect(actual[3]).to.have.property("value", "1d10");
+    expect(actual[4]).to.have.property("type", "NumberSigned");
+    expect(actual[4]).to.have.property("value", "+2");
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "plus");
+    expect(actual[6]).to.have.property("type", "NumberWhole");
+    expect(actual[6]).to.have.property("value", "1");
+    expect(actual[7]).to.have.property("type", "RParen");
+    expect(actual[7]).to.have.property("value", ")");
   });
   it("can find saving throws line 1", () => {
     let sut = new StatBlockLexer();
@@ -1208,5 +1202,149 @@ Weaknesses vulnerability to protection from evil`;
     expect(actual[6]).to.have.property("value", "poor");
     expect(actual[7]).to.have.property("type", "RParen");
     expect(actual[7]).to.have.property("value", ")");
+  });
+
+  it("can find Melee line 1", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Melee bite +37 (2d8+15), 2 claws +37 (2d6+10), 2 wings +34`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(19);
+    expect(actual[0]).to.have.property("type", "MeleeKey");
+    expect(actual[0]).to.have.property("value", "Melee");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "bite");
+    expect(actual[2]).to.have.property("type", "NumberSigned");
+    expect(actual[2]).to.have.property("value", "+37");
+    expect(actual[3]).to.have.property("type", "LParen");
+    expect(actual[3]).to.have.property("value", "(");
+    expect(actual[4]).to.have.property("type", "DiceRoll");
+    expect(actual[4]).to.have.property("value", "2d8");
+    expect(actual[5]).to.have.property("type", "NumberSigned");
+    expect(actual[5]).to.have.property("value", "+15");
+    expect(actual[6]).to.have.property("type", "RParen");
+    expect(actual[6]).to.have.property("value", ")");
+    expect(actual[7]).to.have.property("type", "Comma");
+    expect(actual[7]).to.have.property("value", ",");
+    expect(actual[8]).to.have.property("type", "NumberWhole");
+    expect(actual[8]).to.have.property("value", "2");
+    expect(actual[9]).to.have.property("type", "Word");
+    expect(actual[9]).to.have.property("value", "claws");
+    expect(actual[10]).to.have.property("type", "NumberSigned");
+    expect(actual[10]).to.have.property("value", "+37");
+    expect(actual[11]).to.have.property("type", "LParen");
+    expect(actual[11]).to.have.property("value", "(");
+    expect(actual[12]).to.have.property("type", "DiceRoll");
+    expect(actual[12]).to.have.property("value", "2d6");
+    expect(actual[13]).to.have.property("type", "NumberSigned");
+    expect(actual[13]).to.have.property("value", "+10");
+    expect(actual[14]).to.have.property("type", "RParen");
+    expect(actual[14]).to.have.property("value", ")");
+    expect(actual[15]).to.have.property("type", "Comma");
+    expect(actual[15]).to.have.property("value", ",");
+    expect(actual[16]).to.have.property("type", "NumberWhole");
+    expect(actual[16]).to.have.property("value", "2");
+    expect(actual[17]).to.have.property("type", "Word");
+    expect(actual[17]).to.have.property("value", "wings");
+    expect(actual[18]).to.have.property("type", "NumberSigned");
+    expect(actual[18]).to.have.property("value", "+34");
+  });
+
+  it("can find Melee line 2", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = `Melee 4 tentacles +10 (1d6+5 plus slime)`;
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(10);
+    expect(actual[0]).to.have.property("type", "MeleeKey");
+    expect(actual[0]).to.have.property("value", "Melee");
+    expect(actual[1]).to.have.property("type", "NumberWhole");
+    expect(actual[1]).to.have.property("value", "4");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "tentacles");
+    expect(actual[3]).to.have.property("type", "NumberSigned");
+    expect(actual[3]).to.have.property("value", "+10");
+    expect(actual[4]).to.have.property("type", "LParen");
+    expect(actual[4]).to.have.property("value", "(");
+    expect(actual[5]).to.have.property("type", "DiceRoll");
+    expect(actual[5]).to.have.property("value", "1d6");
+    expect(actual[6]).to.have.property("type", "NumberSigned");
+    expect(actual[6]).to.have.property("value", "+5");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "plus");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "slime");
+    expect(actual[9]).to.have.property("type", "RParen");
+    expect(actual[9]).to.have.property("value", ")");
+  });
+
+  it("can find Melee line 3", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Melee mwk silver dagger +6/+1 (1d4–1/19–20)`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(14);
+    expect(actual[0]).to.have.property("type", "MeleeKey");
+    expect(actual[0]).to.have.property("value", "Melee");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "mwk");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "silver");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "dagger");
+    expect(actual[4]).to.have.property("type", "NumberSigned");
+    expect(actual[4]).to.have.property("value", "+6");
+    expect(actual[5]).to.have.property("type", "ForwardSlash");
+    expect(actual[5]).to.have.property("value", "/");
+    expect(actual[6]).to.have.property("type", "NumberSigned");
+    expect(actual[6]).to.have.property("value", "+1");
+    expect(actual[7]).to.have.property("type", "LParen");
+    expect(actual[7]).to.have.property("value", "(");
+    expect(actual[8]).to.have.property("type", "DiceRoll");
+    expect(actual[8]).to.have.property("value", "1d4");
+    expect(actual[9]).to.have.property("type", "NumberSigned");
+    expect(actual[9]).to.have.property("value", "\u{2013}1");
+    expect(actual[10]).to.have.property("type", "ForwardSlash");
+    expect(actual[10]).to.have.property("value", "/");
+    expect(actual[11]).to.have.property("type", "NumberWhole");
+    expect(actual[11]).to.have.property("value", "19");
+    expect(actual[12]).to.have.property("type", "NumberSigned");
+    expect(actual[12]).to.have.property("value", "\u{2013}20");
+    expect(actual[13]).to.have.property("type", "RParen");
+    expect(actual[13]).to.have.property("value", ")");
+  });
+
+  it("can find Melee line 4", () => {
+    let sut = new StatBlockLexer();
+    let lexer = sut.getLexer();
+
+    const input = `Melee sickle –1 (1d4–2)`;
+
+    let actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(7);
+    expect(actual[0]).to.have.property("type", "MeleeKey");
+    expect(actual[0]).to.have.property("value", "Melee");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "sickle");
+    expect(actual[2]).to.have.property("type", "NumberSigned");
+    expect(actual[2]).to.have.property("value", "\u{2013}1");
+    expect(actual[3]).to.have.property("type", "LParen");
+    expect(actual[3]).to.have.property("value", "(");
+    expect(actual[4]).to.have.property("type", "DiceRoll");
+    expect(actual[4]).to.have.property("value", "1d4");
+    expect(actual[5]).to.have.property("type", "NumberSigned");
+    expect(actual[5]).to.have.property("value", "\u{2013}2");
+    expect(actual[6]).to.have.property("type", "RParen");
+    expect(actual[6]).to.have.property("value", ")");
   });
 });
