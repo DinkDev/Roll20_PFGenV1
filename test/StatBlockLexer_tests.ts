@@ -5,61 +5,71 @@ import { TestHelper } from "./TestHelper";
 describe("StatBlockLexer ", () => {
   it("all works on words and periods", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "The quick brown fox\r\njumped over the lazy dog.";
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
-    expect(10).to.equal(actual.length);
+    expect(actual.length).to.equal(10);
   });  
   it("can find CR line data 1", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input1 = "ZAZU CR —";
-    let actual = TestHelper.runLexer(lexer, input1);
-// TODO: fix test
-    expect(3).to.equal(actual.length);
-    expect("ZAZU").to.equal(actual[0].text);
-    expect("CR").to.equal(actual[1].text);
-    expect("\u2014").to.equal(actual[2].text);
+    const input = "ZAZU CR —";
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(3);
+    expect(actual[0]).to.have.property("type", "Word");
+    expect(actual[0]).to.have.property("value", "ZAZU");
+    expect(actual[1]).to.have.property("type", "CrKey");
+    expect(actual[1]).to.have.property("value", "CR");
+    expect(actual[2]).to.have.property("type", "MDash");
+    expect(actual[2]).to.have.property("value", "\u2014");
   });  
   it("can find CR line data 2", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
     
-    const input2 = "AATHERIEXA CR 7";
-    let actual = TestHelper.runLexer(lexer, input2);
-// TODO: fix test
-    expect(3).to.equal(actual.length);
-    expect("AATHERIEXA").to.equal(actual[0].text);
-    expect("CR").to.equal(actual[1].text);
-    expect("7").to.equal(actual[2].text);
+    const input = "AATHERIEXA CR 7";
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(3);
+    expect(actual[0]).to.have.property("type", "Word");
+    expect(actual[0]).to.have.property("value", "AATHERIEXA");
+    expect(actual[1]).to.have.property("type", "CrKey");
+    expect(actual[1]).to.have.property("value", "CR");
+    expect(actual[2]).to.have.property("type", "NumberWhole");
+    expect(actual[2]).to.have.property("value", "7");
   });  
   it("can find CR line data 3", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input3 = "WRATH DRAGON CR 20";
-    let actual = TestHelper.runLexer(lexer, input3);
+    const input = "WRATH DRAGON CR 20";
+    const actual = TestHelper.runLexer(lexer, input);
 
-    expect(4).to.equal(actual.length);
-    expect("WRATH").to.equal(actual[0].text);
-    expect("DRAGON").to.equal(actual[1].text);
-    expect("CR").to.equal(actual[2].text);
-    expect("20").to.equal(actual[3].text);
+    expect(actual.length).to.equal(4);
+    expect(actual[0]).to.have.property("type", "Word");
+    expect(actual[0]).to.have.property("value", "WRATH");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "DRAGON");
+    expect(actual[2]).to.have.property("type", "CrKey");
+    expect(actual[2]).to.have.property("value", "CR");
+    expect(actual[3]).to.have.property("type", "NumberWhole");
+    expect(actual[3]).to.have.property("value", "20");
   });  
   it("can find CR line data 4", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input4 = "BLACK ORC CR 1/3";
-    let actual = TestHelper.runLexer(lexer, input4);
+    const input = "BLACK ORC CR 1/3";
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(6).to.equal(actual.length);
     expect(actual[0]).to.have.property("type", "Word");
@@ -78,11 +88,11 @@ describe("StatBlockLexer ", () => {
 
   it("can find XP line data 1", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input1 = "XP 3,200";
-    let actual = TestHelper.runLexer(lexer, input1);
+    const input = "XP 3,200";
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(2);
     expect(actual[0]).to.have.property("type", "XpKey");
@@ -92,11 +102,11 @@ describe("StatBlockLexer ", () => {
   });
   it("can find XP line data 2", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input1 = "GNOME DRUID 1 XP 400";
-    let actual = TestHelper.runLexer(lexer, input1);
+    const input = "GNOME DRUID 1 XP 400";
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(5);
     expect(actual[0]).to.have.property("type", "Word");
@@ -112,11 +122,11 @@ describe("StatBlockLexer ", () => {
   });  
   it("can find Alignment, Size, and Type line data 1", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input1 = "NE Medium aberration";
-    let actual = TestHelper.runLexer(lexer, input1);
+    const input = "NE Medium aberration";
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(3);
     expect(actual[0]).to.have.property("type", "Alignment");
@@ -128,11 +138,11 @@ describe("StatBlockLexer ", () => {
   });
   it("can find Alignment, Size, and Type line data 2", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input1 = "NG* Huge dragon (extraplanar, good)";
-    let actual = TestHelper.runLexer(lexer, input1);
+    const input = "NG* Huge dragon (extraplanar, good)";
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(9);
     expect(actual[0]).to.have.property("type", "Alignment");
@@ -152,11 +162,11 @@ describe("StatBlockLexer ", () => {
   }); 
   it("can find Alignment, Size, and Type line data 3", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input1 = "Small humanoid (gnome) N";
-    let actual = TestHelper.runLexer(lexer, input1);
+    const input = "Small humanoid (gnome) N";
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(6);
     expect(actual[0]).to.have.property("type", "CreatureSize");
@@ -171,11 +181,11 @@ describe("StatBlockLexer ", () => {
     expect(actual[5]).to.have.property("value", "N");    
   });
   it("can find Alignment, Size, and Type line data 4", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input1 = "CG Large magical beast";
-    let actual = TestHelper.runLexer(lexer, input1);
+    const input = "CG Large magical beast";
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(3);
     expect(actual[0]).to.have.property("type", "Alignment");
@@ -188,11 +198,11 @@ describe("StatBlockLexer ", () => {
 
   it("can find Init/Senses/Perception data 1", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input1 = "Init +9; Senses all-around vision, darkvision 120 ft., low-light\r\nvision, see invisibility; Perception +28";
-    let actual = TestHelper.runLexer(lexer, input1);
+    const input = "Init +9; Senses all-around vision, darkvision 120 ft., low-light\r\nvision, see invisibility; Perception +28";
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(22);
     expect(actual[0]).to.have.property("type", "InitKey");
@@ -259,11 +269,11 @@ describe("StatBlockLexer ", () => {
 
   it("can find Init/Senses/Perception data 2", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
-    const input1 = "Init +5; Senses darkvision 60 ft.; Perception +14";
-    let actual = TestHelper.runLexer(lexer, input1);
+    const input = "Init +5; Senses darkvision 60 ft.; Perception +14";
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(9);
     expect(actual[0]).to.have.property("type", "InitKey");
@@ -293,11 +303,11 @@ describe("StatBlockLexer ", () => {
   });
   it("can find Init/Senses/Perception data 3", () => {
 
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "Init +0; Senses Perception +13";
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(6);
     expect(actual[0]).to.have.property("type", "InitKey");
@@ -318,12 +328,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[5]).to.have.property("value", "+13");    
   });
   it("can find Aura data 1", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "Aura unnatural aura (30 ft.)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(6);
     expect(actual[0]).to.have.property("type", "AuraKey");
@@ -343,12 +353,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[5]).to.have.property("type", "RParen");    
   });
   it("can find Aura data 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "Aura mucus cloud (5 feet)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(6);
     expect(actual[0]).to.have.property("type", "AuraKey");
@@ -368,12 +378,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[5]).to.have.property("type", "RParen");    
   });
   it("can find Aura data 3", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "Aura magic circle against evil (10 ft. radius)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(9);
     expect(actual[0]).to.have.property("type", "AuraKey");
@@ -402,13 +412,13 @@ describe("StatBlockLexer ", () => {
     expect(actual[8]).to.have.property("type", "RParen");    
   });
   it("can find Aura data 4", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     // Note: this should probably fail (need a size to set the aura)
     const input = "Aura magic circle against evil";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(5);
     expect(actual[0]).to.have.property("type", "AuraKey");
@@ -428,24 +438,24 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find Defense key", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "DEFENSE";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(1);
     expect(actual[0]).to.have.property("type", "DefenseKey");
   });
 
   it("can find AC line 1", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "AC 21, touch 15, flat-footed 16 (+5 Dex, +6 natural)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(15);
 
@@ -481,12 +491,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[14]).to.have.property("value", ")");
   });
   it("can find AC line 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "AC 14, touch 12, flat-footed 13 (+2 armor, +1 Dex, +1 size)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(18);
 
@@ -528,12 +538,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[17]).to.have.property("value", ")");
   });
   it("can find AC line 3", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "AC 16, touch 13, flat-footed 16 (+3 armor, +3 deflection)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(15);
 
@@ -569,13 +579,13 @@ describe("StatBlockLexer ", () => {
     expect(actual[14]).to.have.property("value", ")");
   });
   it("can find AC line 4", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     // Note: semicolon was common in Bestiary 1
     const input = "AC 15, touch 12, flat-footed 12; (+3 Dex, +3 natural, –1 size; +2\ndeflection vs. evil)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(24);
     expect(actual[0]).to.have.property("type", "AcKey");
@@ -629,12 +639,12 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find hp line 1", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "hp 84 (13d8+26)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(6);
 
@@ -652,12 +662,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[5]).to.have.property("value", ")");
   });
   it("can find hp line 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "hp 465 (30d12+270)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(6);
 
@@ -676,12 +686,12 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find hp line 3", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "hp 8 (1d10+2 plus 1)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(8);
     expect(actual[0]).to.have.property("type", "HpKey");
@@ -702,12 +712,12 @@ describe("StatBlockLexer ", () => {
     expect(actual[7]).to.have.property("value", ")");
   });
   it("can find saving throws line 1", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "Fort +6, Ref +9, Will +8";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(8);
     expect(actual[0]).to.have.property("type", "FortSaveKey");
@@ -729,12 +739,12 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find saving throws line 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "Fort +26; Ref +19; Will +23";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(8);
     expect(actual[0]).to.have.property("type", "FortSaveKey");
@@ -756,12 +766,12 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find saving throws line 3", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "Fort +7, Ref +7, Will +6; +2 resistance vs. evil";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(13);
     expect(actual[0]).to.have.property("type", "FortSaveKey");
@@ -793,12 +803,12 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find Defensive Abilities line 1", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "Defensive Abilities defensive training (+4 dodge bonus to AC vs. giants)";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(12);
     expect(actual[0]).to.have.property("type", "DefensiveAbilitiesKey");
@@ -829,12 +839,12 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find Defensive Abilities line 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "Defensive Abilities blessing of Orcus, ferocity; DR 1/—";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(11);
     expect(actual[0]).to.have.property("type", "DefensiveAbilitiesKey");
@@ -862,12 +872,12 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can fine DR/Immune/SR line 1", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "DR 5/magic; Immune cold, disease, poison";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(11);
     expect(actual[0]).to.have.property("type", "DrKey");
@@ -895,12 +905,12 @@ describe("StatBlockLexer ", () => {
   });
     
   it("can find DR/Immune/SR line 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "DR 15/evil; Immune fire, poison, paralysis, sleep; SR 29";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(16);
     expect(actual[0]).to.have.property("type", "DrKey");
@@ -938,11 +948,11 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find Resist line 1", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "DR 5/cold iron; Resist acid 5, fire 5"
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(12);
     expect(actual[0]).to.have.property("type", "DrKey");
@@ -972,12 +982,12 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find Resist line 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "DR 5/adamantine; Immune construct traits; Resist cold 10, fire 10";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(15);
     expect(actual[0]).to.have.property("type", "DrKey");
@@ -1013,12 +1023,12 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find Weaknesses line 1", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "Weaknesses vulnerable to electricity";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(4);
     expect(actual[0]).to.have.property("type", "WeaknessesKey");
@@ -1032,14 +1042,14 @@ describe("StatBlockLexer ", () => {
   });
 
   it("can find Weaknesses line 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = `DR 10/adamantine and magic; Immune fire, mind-affecting
 effects; Resist cold 20, electricity 20, sonic 20; SR 23
 Weaknesses vulnerability to protection from evil`;
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(33);
     expect(actual[0]).to.have.property("type", "DrKey");
@@ -1113,24 +1123,24 @@ Weaknesses vulnerability to protection from evil`;
   });
     
   it("can find Offense key", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = "OFFENSE";
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(1);
     expect(actual[0]).to.have.property("type", "OffenseKey");
   });
 
   it("can find Speed line 1", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = `Speed 5 ft., fly 50 ft. (good)`;
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(8);
     expect(actual[0]).to.have.property("type", "SpeedKey");
@@ -1152,12 +1162,12 @@ Weaknesses vulnerability to protection from evil`;
   });
   
   it("can find Speed line 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = `Speed 40 ft.`;
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(2);
     expect(actual[0]).to.have.property("type", "SpeedKey");
@@ -1167,12 +1177,12 @@ Weaknesses vulnerability to protection from evil`;
   });
   
   it("can find Speed line 3", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = `Speed 10 ft., swim 60 ft.`;
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(5);
     expect(actual[0]).to.have.property("type", "SpeedKey");
@@ -1188,12 +1198,12 @@ Weaknesses vulnerability to protection from evil`;
   });
   
   it("can find Speed line 4", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = `Speed 50 ft., fly 200 ft. (poor)`;
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(8);
     expect(actual[0]).to.have.property("type", "SpeedKey");
@@ -1264,12 +1274,12 @@ Weaknesses vulnerability to protection from evil`;
   });
 
   it("can find Melee line 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = `Melee 4 tentacles +10 (1d6+5 plus slime)`;
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(10);
     expect(actual[0]).to.have.property("type", "AttackType");
@@ -1334,12 +1344,12 @@ Weaknesses vulnerability to protection from evil`;
   });
 
   it("can find Melee line 4", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = `Melee sickle –1 (1d4–2)`;
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(7);
     expect(actual[0]).to.have.property("type", "AttackType");
@@ -1402,12 +1412,12 @@ Weaknesses vulnerability to protection from evil`;
   });
 
   it("can find Ranged line 2", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = `Ranged sling +2 (1d3–2)`;
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(7);
     expect(actual[0]).to.have.property("type", "AttackType");
@@ -1464,12 +1474,12 @@ Weaknesses vulnerability to protection from evil`;
   });
 
   it("can find Ranged line 4", () => {
-    let sut = new StatBlockLexer();
-    let lexer = sut.getLexer();
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
 
     const input = `Ranged light crossbow +6 (1d8/19–20)`;
 
-    let actual = TestHelper.runLexer(lexer, input);
+    const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(10);
     expect(actual[0]).to.have.property("type", "AttackType");
@@ -1492,5 +1502,109 @@ Weaknesses vulnerability to protection from evil`;
     expect(actual[8]).to.have.property("value", `\u{2013}20`);
     expect(actual[9]).to.have.property("type", "RParen");
     expect(actual[9]).to.have.property("value", ")");
+  });
+
+  it("can find Space/Reach line 1", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Space 5 ft.; Reach 5 ft. (15 ft. with tentacles)`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(10);
+    expect(actual[0]).to.have.property("type", "SpaceKey");
+    expect(actual[0]).to.have.property("value", "Space");
+    expect(actual[1]).to.have.property("type", "SizeValue");
+    expect(actual[1]).to.have.property("value", "5 ft.");
+    expect(actual[2]).to.have.property("type", "SemiColon");
+    expect(actual[2]).to.have.property("value", ";");
+    expect(actual[3]).to.have.property("type", "ReachKey");
+    expect(actual[3]).to.have.property("value", "Reach");
+    expect(actual[4]).to.have.property("type", "SizeValue");
+    expect(actual[4]).to.have.property("value", "5 ft.");
+    expect(actual[5]).to.have.property("type", "LParen");
+    expect(actual[5]).to.have.property("value", "(");
+    expect(actual[6]).to.have.property("type", "SizeValue");
+    expect(actual[6]).to.have.property("value", "15 ft.");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "with");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "tentacles");
+    expect(actual[9]).to.have.property("type", "RParen");
+    expect(actual[9]).to.have.property("value", ")");
+  });
+
+  it("can find Space/Reach line 2", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Space 15 ft.; Reach 15 ft.`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(5);
+    expect(actual[0]).to.have.property("type", "SpaceKey");
+    expect(actual[0]).to.have.property("value", "Space");
+    expect(actual[1]).to.have.property("type", "SizeValue");
+    expect(actual[1]).to.have.property("value", "15 ft.");
+    expect(actual[2]).to.have.property("type", "SemiColon");
+    expect(actual[2]).to.have.property("value", ";");
+    expect(actual[3]).to.have.property("type", "ReachKey");
+    expect(actual[3]).to.have.property("value", "Reach");
+    expect(actual[4]).to.have.property("type", "SizeValue");
+    expect(actual[4]).to.have.property("value", "15 ft.");
+  });
+
+  it("can find Space/Reach line 3", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Space 15 ft.; Reach 10 ft. (15 ft. with bite)`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(10);
+    expect(actual[0]).to.have.property("type", "SpaceKey");
+    expect(actual[0]).to.have.property("value", "Space");
+    expect(actual[1]).to.have.property("type", "SizeValue");
+    expect(actual[1]).to.have.property("value", "15 ft.");
+    expect(actual[2]).to.have.property("type", "SemiColon");
+    expect(actual[2]).to.have.property("value", ";");
+    expect(actual[3]).to.have.property("type", "ReachKey");
+    expect(actual[3]).to.have.property("value", "Reach");
+    expect(actual[4]).to.have.property("type", "SizeValue");
+    expect(actual[4]).to.have.property("value", "10 ft.");
+    expect(actual[5]).to.have.property("type", "LParen");
+    expect(actual[5]).to.have.property("value", "(");
+    expect(actual[6]).to.have.property("type", "SizeValue");
+    expect(actual[6]).to.have.property("value", "15 ft.");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "with");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "bite");
+    expect(actual[9]).to.have.property("type", "RParen");
+    expect(actual[9]).to.have.property("value", ")");
+  });
+
+  it("can find Space/Reach line 4", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Space 10 ft.; Reach 5 ft.`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(5);
+    expect(actual[0]).to.have.property("type", "SpaceKey");
+    expect(actual[0]).to.have.property("value", "Space");
+    expect(actual[1]).to.have.property("type", "SizeValue");
+    expect(actual[1]).to.have.property("value", "10 ft.");
+    expect(actual[2]).to.have.property("type", "SemiColon");
+    expect(actual[2]).to.have.property("value", ";");
+    expect(actual[3]).to.have.property("type", "ReachKey");
+    expect(actual[3]).to.have.property("value", "Reach");
+    expect(actual[4]).to.have.property("type", "SizeValue");
+    expect(actual[4]).to.have.property("value", "5 ft.");
   });
 });

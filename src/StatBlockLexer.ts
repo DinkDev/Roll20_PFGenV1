@@ -30,29 +30,31 @@ export class StatBlockLexer {
   public creature_size_list: string[];
   public creature_type_list: string[];
 
+  public ac_flat_footed_key: string;
   public ac_key: RegExp;
   public ac_touch_key: string;
-  public ac_flat_footed_key: string;
   public aura_key: string;
   public cr_key: RegExp;
+  public damage_reduction_key: RegExp;
   public defense_key: string;
+  public defensive_abilities_key: string;
   public fort_save_Key: RegExp;
   public hp_key: RegExp;
+  public immune_key: string;
   public init_key: RegExp;
   public melee_key: string;
   public offense_key: string;
   public perception_key: string;
+  public reach_key: string;
   public ref_save_key: RegExp;
-  public senses_key: string;
-  public will_save_key: RegExp;
-  public xp_key: RegExp;
-  public defensive_abilities_key: string;
-  public damage_reduction_key: RegExp;
-  public immune_key: string;
   public resistances_key: RegExp;
+  public senses_key: string;
+  public space_key: string;
   public speed_key: string;
   public spell_resistance_key: RegExp;
   public weaknesses_key: string;    
+  public will_save_key: RegExp;
+  public xp_key: RegExp;
 
   public word: RegExp;
   public word_hyphenated: RegExp;
@@ -89,8 +91,8 @@ export class StatBlockLexer {
       "monstrous humanoid", "ooze", "outsider", "plant", "undead", "vermin"];
 
     this.ac_key = /\bAC\b/;
-    this.ac_touch_key = "touch";
     this.ac_flat_footed_key = "flat-footed";
+    this.ac_touch_key = "touch";
     this.aura_key = "Aura";
     this.cr_key = /\b[cC][rR]\b/;
     this.damage_reduction_key = /\bDR\b/;
@@ -103,9 +105,11 @@ export class StatBlockLexer {
     this.melee_key = "Melee";
     this.offense_key = "OFFENSE";
     this.perception_key = "Perception";
+    this.reach_key = `Reach`;
     this.ref_save_key = /\bRef\b/;
     this.resistances_key = /\bResist\b/;
     this.senses_key = "Senses";
+    this.space_key = `Space`;
     this.speed_key = "Speed";
     this.spell_resistance_key = /\bSR\b/;
     this.weaknesses_key = "Weaknesses";
@@ -135,9 +139,11 @@ export class StatBlockLexer {
       //MeleeKey: this.melee_key,
       OffenseKey: this.offense_key,
       PerceptionKey: this.perception_key,
+      ReachKey: this.reach_key,
       RefSaveKey: this.ref_save_key,
       ResistKey: this.resistances_key,
       SensesKey: this.senses_key,
+      SpaceKey: this.space_key,
       SpeedKey: this.speed_key,
       SrKey: this.spell_resistance_key,
       WeaknessesKey: this.weaknesses_key,
