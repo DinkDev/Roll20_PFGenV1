@@ -1607,4 +1607,222 @@ Weaknesses vulnerability to protection from evil`;
     expect(actual[4]).to.have.property("type", "SizeValue");
     expect(actual[4]).to.have.property("value", "5 ft.");
   });
+
+  it("can find Special Attacks line 1", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Special Attacks constrict (3d6 plus withering), gnaw, pull`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(11);
+    expect(actual[0]).to.have.property("type", "AttackType");
+    expect(actual[0]).to.have.property("value", "Special Attacks");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "constrict");
+    expect(actual[2]).to.have.property("type", "LParen");
+    expect(actual[2]).to.have.property("value", "(");
+    expect(actual[3]).to.have.property("type", "DiceRoll");
+    expect(actual[3]).to.have.property("value", "3d6");
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "plus");
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "withering");
+    expect(actual[6]).to.have.property("type", "RParen");
+    expect(actual[6]).to.have.property("value", ")");
+    expect(actual[7]).to.have.property("type", "Comma");
+    expect(actual[7]).to.have.property("value", ",");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "gnaw");
+    expect(actual[9]).to.have.property("type", "Comma");
+    expect(actual[9]).to.have.property("value", ",");
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "pull");
+  });
+
+  it("can find Special Attacks line 2", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Special Attacks breath weapon (50 ft. cone, DC 34, 20d6 fire)
+channel positive energy 8/day (8d6, DC 22), crush, holy lance
+2/day (7 rounds), might of the gods +15, 15 rounds/day)`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(49);
+    expect(actual[0]).to.have.property("type", "AttackType");
+    expect(actual[0]).to.have.property("value", "Special Attacks");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "breath");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "weapon");
+    expect(actual[3]).to.have.property("type", "LParen");
+    expect(actual[3]).to.have.property("value", "(");
+    expect(actual[4]).to.have.property("type", "SizeValue");
+    expect(actual[4]).to.have.property("value", "50 ft.");
+  
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "cone");
+    expect(actual[6]).to.have.property("type", "Comma");
+    expect(actual[6]).to.have.property("value", ",");
+    expect(actual[7]).to.have.property("type", "DcKey");
+    expect(actual[7]).to.have.property("value", "DC");
+    expect(actual[8]).to.have.property("type", "NumberWhole");
+    expect(actual[8]).to.have.property("value", "34");
+    expect(actual[9]).to.have.property("type", "Comma");
+    expect(actual[9]).to.have.property("value", ",");
+  
+    expect(actual[10]).to.have.property("type", "DiceRoll");
+    expect(actual[10]).to.have.property("value", "20d6");
+    expect(actual[11]).to.have.property("type", "Word");
+    expect(actual[11]).to.have.property("value", "fire");
+    expect(actual[12]).to.have.property("type", "RParen");
+    expect(actual[12]).to.have.property("value", ")");
+    expect(actual[13]).to.have.property("type", "Word");
+    expect(actual[13]).to.have.property("value", "channel");
+    expect(actual[14]).to.have.property("type", "Word");
+    expect(actual[14]).to.have.property("value", "positive");
+  
+    expect(actual[15]).to.have.property("type", "Word");
+    expect(actual[15]).to.have.property("value", "energy");
+    expect(actual[16]).to.have.property("type", "NumberWhole");
+    expect(actual[16]).to.have.property("value", "8");
+    expect(actual[17]).to.have.property("type", "ForwardSlash");
+    expect(actual[17]).to.have.property("value", "/");
+    expect(actual[18]).to.have.property("type", "Word");
+    expect(actual[18]).to.have.property("value", "day");
+    expect(actual[19]).to.have.property("type", "LParen");
+    expect(actual[19]).to.have.property("value", "(");
+  
+    expect(actual[20]).to.have.property("type", "DiceRoll");
+    expect(actual[20]).to.have.property("value", "8d6");
+    expect(actual[21]).to.have.property("type", "Comma");
+    expect(actual[21]).to.have.property("value", ",");
+    expect(actual[22]).to.have.property("type", "DcKey");
+    expect(actual[22]).to.have.property("value", "DC");
+    expect(actual[23]).to.have.property("type", "NumberWhole");
+    expect(actual[23]).to.have.property("value", "22");  
+    expect(actual[24]).to.have.property("type", "RParen");
+    expect(actual[24]).to.have.property("value", ")");
+
+    expect(actual[25]).to.have.property("type", "Comma");
+    expect(actual[25]).to.have.property("value", ",");
+    expect(actual[26]).to.have.property("type", "Word");
+    expect(actual[26]).to.have.property("value", "crush");
+    expect(actual[27]).to.have.property("type", "Comma");
+    expect(actual[27]).to.have.property("value", ",");
+    expect(actual[28]).to.have.property("type", "Word");
+    expect(actual[28]).to.have.property("value", "holy");  
+    expect(actual[29]).to.have.property("type", "Word");
+    expect(actual[29]).to.have.property("value", "lance");
+
+    expect(actual[30]).to.have.property("type", "NumberWhole");
+    expect(actual[30]).to.have.property("value", "2");
+    expect(actual[31]).to.have.property("type", "ForwardSlash");
+    expect(actual[31]).to.have.property("value", "/");
+    expect(actual[32]).to.have.property("type", "Word");
+    expect(actual[32]).to.have.property("value", "day");
+    expect(actual[33]).to.have.property("type", "LParen");
+    expect(actual[33]).to.have.property("value", "(");  
+    expect(actual[34]).to.have.property("type", "NumberWhole");
+    expect(actual[34]).to.have.property("value", "7");
+
+    expect(actual[35]).to.have.property("type", "Word");
+    expect(actual[35]).to.have.property("value", "rounds");
+    expect(actual[36]).to.have.property("type", "RParen");
+    expect(actual[36]).to.have.property("value", ")");
+    expect(actual[37]).to.have.property("type", "Comma");
+    expect(actual[37]).to.have.property("value", ",");
+    expect(actual[38]).to.have.property("type", "Word");
+    expect(actual[38]).to.have.property("value", "might");  
+    expect(actual[39]).to.have.property("type", "Word");
+    expect(actual[39]).to.have.property("value", "of");
+
+    expect(actual[40]).to.have.property("type", "Word");
+    expect(actual[40]).to.have.property("value", "the");
+    expect(actual[41]).to.have.property("type", "Word");
+    expect(actual[41]).to.have.property("value", "gods");
+    expect(actual[42]).to.have.property("type", "NumberSigned");
+    expect(actual[42]).to.have.property("value", "+15");
+    expect(actual[43]).to.have.property("type", "Comma");
+    expect(actual[43]).to.have.property("value", ",");  
+    expect(actual[44]).to.have.property("type", "NumberWhole");
+    expect(actual[44]).to.have.property("value", "15");
+
+    expect(actual[45]).to.have.property("type", "Word");
+    expect(actual[45]).to.have.property("value", "rounds");
+    expect(actual[46]).to.have.property("type", "ForwardSlash");
+    expect(actual[46]).to.have.property("value", "/");
+    expect(actual[47]).to.have.property("type", "Word");
+    expect(actual[47]).to.have.property("value", "day");
+    expect(actual[48]).to.have.property("type", "RParen");
+    expect(actual[48]).to.have.property("value", ")");
+  });
+
+  it("can find Special Attacks line 3", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Special Attacks body thief, sneak attack +3d6`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(7);
+    expect(actual[0]).to.have.property("type", "AttackType");
+    expect(actual[0]).to.have.property("value", "Special Attacks");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "body");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "thief");
+    expect(actual[3]).to.have.property("type", "Comma");
+    expect(actual[3]).to.have.property("value", ",");
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "sneak");
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "attack");
+    expect(actual[6]).to.have.property("type", "DiceRoll");
+    expect(actual[6]).to.have.property("value", "+3d6");
+  });
+
+  it("can find Special Attacks line 4", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Special Attacks channel positive energy 5/day (DC 18, 4d6)`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(13);
+    expect(actual[0]).to.have.property("type", "AttackType");
+    expect(actual[0]).to.have.property("value", "Special Attacks");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "channel");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "positive");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "energy");
+    expect(actual[4]).to.have.property("type", "NumberWhole");
+    expect(actual[4]).to.have.property("value", "5");
+
+    expect(actual[5]).to.have.property("type", "ForwardSlash");
+    expect(actual[5]).to.have.property("value", "/");
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "day");
+    expect(actual[7]).to.have.property("type", "LParen");
+    expect(actual[7]).to.have.property("value", "(");
+    expect(actual[8]).to.have.property("type", "DcKey");
+    expect(actual[8]).to.have.property("value", "DC");
+    expect(actual[9]).to.have.property("type", "NumberWhole");
+    expect(actual[9]).to.have.property("value", "18");
+  
+    expect(actual[10]).to.have.property("type", "Comma");
+    expect(actual[10]).to.have.property("value", ",");
+    expect(actual[11]).to.have.property("type", "DiceRoll");
+    expect(actual[11]).to.have.property("value", "4d6");
+    expect(actual[12]).to.have.property("type", "RParen");
+    expect(actual[12]).to.have.property("value", ")");
+  });
+
 });

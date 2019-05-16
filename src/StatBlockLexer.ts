@@ -36,6 +36,7 @@ export class StatBlockLexer {
   public aura_key: string;
   public cr_key: RegExp;
   public damage_reduction_key: RegExp;
+  public dc_key: RegExp;
   public defense_key: string;
   public defensive_abilities_key: string;
   public fort_save_Key: RegExp;
@@ -76,7 +77,7 @@ export class StatBlockLexer {
     this.forward_slash = "/";
 
     this.size_value = /(?:(?:\d+-\d\/)?\d+(?:(?: ft\.)|(?:[- ]foot)|(?:[- ]feet)))/;
-    this.dice_roll = /\d+d\d+/;
+    this.dice_roll = /[+-\u2013]?\d+d\d+/;
 
     //this.number_with_denominator = /(?:\d\/\d+)/;
     this.number_whole = /(?:\d\d?\d?(?:,\d{3})*)/;
@@ -96,6 +97,7 @@ export class StatBlockLexer {
     this.aura_key = "Aura";
     this.cr_key = /\b[cC][rR]\b/;
     this.damage_reduction_key = /\bDR\b/;
+    this.dc_key = /\bDC\b/;
     this.defense_key = "DEFENSE";
     this.defensive_abilities_key = "Defensive Abilities";
     this.fort_save_Key = /\bFort\b/;
@@ -129,6 +131,7 @@ export class StatBlockLexer {
       AcFlatFootedKey: this.ac_flat_footed_key,
       AuraKey: this.aura_key,
       CrKey: this.cr_key,
+      DcKey: this.dc_key,
       DefenseKey: this.defense_key,
       DefensiveAbilitiesKey: this.defensive_abilities_key,
       DrKey: this.damage_reduction_key,      
