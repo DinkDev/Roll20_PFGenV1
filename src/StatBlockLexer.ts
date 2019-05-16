@@ -52,6 +52,7 @@ export class StatBlockLexer {
   public senses_key: string;
   public space_key: string;
   public speed_key: string;
+  public spell_like_ability_key: string;
   public spell_resistance_key: RegExp;
   public weaknesses_key: string;    
   public will_save_key: RegExp;
@@ -113,6 +114,7 @@ export class StatBlockLexer {
     this.senses_key = "Senses";
     this.space_key = `Space`;
     this.speed_key = "Speed";
+    this.spell_like_ability_key = `Spell-Like Abilities`;
     this.spell_resistance_key = /\bSR\b/;
     this.weaknesses_key = "Weaknesses";
     this.will_save_key = /\bWill\b/;
@@ -148,6 +150,7 @@ export class StatBlockLexer {
       SensesKey: this.senses_key,
       SpaceKey: this.space_key,
       SpeedKey: this.speed_key,
+      SpellLikeAbilityKey: this.spell_like_ability_key,
       SrKey: this.spell_resistance_key,
       WeaknessesKey: this.weaknesses_key,
       WillSaveKey: this.will_save_key,

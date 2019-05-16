@@ -15,4 +15,20 @@ export class TestHelper {
 
     return tokens;
   };
+
+  public static buildExpectList(tokens: Array<moo.Token>): string{
+
+    if (typeof tokens === undefined) {
+      tokens = [];
+    }
+
+    let rv: string = `expect(actual.length).to.equal(${tokens.length});`;
+
+    for (let index in tokens) {
+      rv += `\nexpect(actual[${index}]).to.have.property("type", "${tokens[index].type}");
+      expect(actual[${index}]).to.have.property("value", "${tokens[index]}");`;
+    }
+
+    return rv;
+  };
 };
