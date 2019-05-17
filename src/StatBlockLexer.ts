@@ -24,7 +24,7 @@ export class StatBlockLexer {
   public number_whole: RegExp;
   public number_with_sign: RegExp;
 
-  //public alignment: RegExp;
+  public ability_list: string[];
   public alignment_list: string[];
   public attack_type_list: string[];
   public creature_size_list: string[];
@@ -89,6 +89,8 @@ export class StatBlockLexer {
     //this.number_with_denominator = /(?:\d\/\d+)/;
     this.number_whole = /(?:\d\d?\d?(?:,\d{3})*)/;
     this.number_with_sign = /(?:[\+\-\u2013]\d{1,3})/;
+
+    this.ability_list = [`Str `, `Dex `, `Con `, `Int `, `Wis `, `Cha `];
 
     this.alignment_list = ["LE", "LN", "LG", "NE", "N", "NG", "CE", "CN", "CG"];
     this.attack_type_list = ["Melee", "Ranged", "Special Attacks"]
@@ -173,6 +175,7 @@ export class StatBlockLexer {
       WillSaveKey: this.will_save_key,
       XpKey: this.xp_key,
 
+      Ability: this.ability_list,
       Alignment: this.alignment_list,
       AttackType: this.attack_type_list,
       CreatureSize: this.creature_size_list,
