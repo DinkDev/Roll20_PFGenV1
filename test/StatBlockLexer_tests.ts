@@ -12,7 +12,7 @@ describe("StatBlockLexer ", () => {
     const actual = TestHelper.runLexer(lexer, input);
 
     expect(actual.length).to.equal(10);
-  });  
+  });
   it("can find CR line data 1", () => {
 
     const sut = new StatBlockLexer();
@@ -28,7 +28,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[1]).to.have.property("value", "CR");
     expect(actual[2]).to.have.property("type", "MDash");
     expect(actual[2]).to.have.property("value", "\u2014");
-  });  
+  });
   it("can find CR line data 2", () => {
 
     const sut = new StatBlockLexer();
@@ -44,7 +44,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[1]).to.have.property("value", "CR");
     expect(actual[2]).to.have.property("type", "NumberWhole");
     expect(actual[2]).to.have.property("value", "7");
-  });  
+  });
   it("can find CR line data 3", () => {
 
     const sut = new StatBlockLexer();
@@ -62,7 +62,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[2]).to.have.property("value", "CR");
     expect(actual[3]).to.have.property("type", "NumberWhole");
     expect(actual[3]).to.have.property("value", "20");
-  });  
+  });
   it("can find CR line data 4", () => {
 
     const sut = new StatBlockLexer();
@@ -119,7 +119,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[3]).to.have.property("value", "XP");
     expect(actual[4]).to.have.property("type", "NumberWhole");
     expect(actual[4]).to.have.property("value", "400");
-  });  
+  });
   it("can find Alignment, Size, and Type line data 1", () => {
 
     const sut = new StatBlockLexer();
@@ -133,7 +133,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[0]).to.have.property("value", "NE");
     expect(actual[1]).to.have.property("type", "CreatureSize");
     expect(actual[1]).to.have.property("value", "Medium");
-    expect(actual[2]).to.have.property("type", "CreatureType");
+    expect(actual[2]).to.have.property("type", "Word");
     expect(actual[2]).to.have.property("value", "aberration");
   });
   it("can find Alignment, Size, and Type line data 2", () => {
@@ -150,7 +150,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[1]).to.have.property("type", "Asterisk");
     expect(actual[2]).to.have.property("type", "CreatureSize");
     expect(actual[2]).to.have.property("value", "Huge");
-    expect(actual[3]).to.have.property("type", "CreatureType");
+    expect(actual[3]).to.have.property("type", "Word");
     expect(actual[3]).to.have.property("value", "dragon");
     expect(actual[4]).to.have.property("type", "LParen");
     expect(actual[5]).to.have.property("type", "Word");
@@ -159,7 +159,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[7]).to.have.property("type", "Word");
     expect(actual[7]).to.have.property("value", "good");
     expect(actual[8]).to.have.property("type", "RParen");
-  }); 
+  });
   it("can find Alignment, Size, and Type line data 3", () => {
 
     const sut = new StatBlockLexer();
@@ -171,14 +171,14 @@ describe("StatBlockLexer ", () => {
     expect(actual.length).to.equal(6);
     expect(actual[0]).to.have.property("type", "CreatureSize");
     expect(actual[0]).to.have.property("value", "Small");
-    expect(actual[1]).to.have.property("type", "CreatureType");
+    expect(actual[1]).to.have.property("type", "Word");
     expect(actual[1]).to.have.property("value", "humanoid");
     expect(actual[2]).to.have.property("type", "LParen");
     expect(actual[3]).to.have.property("type", "Word");
     expect(actual[3]).to.have.property("value", "gnome");
     expect(actual[4]).to.have.property("type", "RParen");
     expect(actual[5]).to.have.property("type", "Alignment");
-    expect(actual[5]).to.have.property("value", "N");    
+    expect(actual[5]).to.have.property("value", "N");
   });
   it("can find Alignment, Size, and Type line data 4", () => {
     const sut = new StatBlockLexer();
@@ -187,13 +187,15 @@ describe("StatBlockLexer ", () => {
     const input = "CG Large magical beast";
     const actual = TestHelper.runLexer(lexer, input);
 
-    expect(actual.length).to.equal(3);
+    expect(actual.length).to.equal(4);
     expect(actual[0]).to.have.property("type", "Alignment");
     expect(actual[0]).to.have.property("value", "CG");
     expect(actual[1]).to.have.property("type", "CreatureSize");
     expect(actual[1]).to.have.property("value", "Large");
-    expect(actual[2]).to.have.property("type", "CreatureType");
-    expect(actual[2]).to.have.property("value", "magical beast");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "magical");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "beast");    
   });
 
   it("can find Init/Senses/Perception data 1", () => {
@@ -324,8 +326,8 @@ describe("StatBlockLexer ", () => {
     expect(actual[4]).to.have.property("type", "PerceptionKey");
     expect(actual[4]).to.have.property("value", "Perception");
     
-    expect(actual[5]).to.have.property("type", "NumberSigned");    
-    expect(actual[5]).to.have.property("value", "+13");    
+    expect(actual[5]).to.have.property("type", "NumberSigned");
+    expect(actual[5]).to.have.property("value", "+13");
   });
   it("can find Aura data 1", () => {
     const sut = new StatBlockLexer();
@@ -350,7 +352,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[4]).to.have.property("type", "SizeValue");
     expect(actual[4]).to.have.property("value", "30 ft.");
     
-    expect(actual[5]).to.have.property("type", "RParen");    
+    expect(actual[5]).to.have.property("type", "RParen");
   });
   it("can find Aura data 2", () => {
     const sut = new StatBlockLexer();
@@ -375,7 +377,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[4]).to.have.property("type", "SizeValue");
     expect(actual[4]).to.have.property("value", "5 feet");
     
-    expect(actual[5]).to.have.property("type", "RParen");    
+    expect(actual[5]).to.have.property("type", "RParen");
   });
   it("can find Aura data 3", () => {
     const sut = new StatBlockLexer();
@@ -409,7 +411,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[7]).to.have.property("type", "Word");
     expect(actual[7]).to.have.property("value", "radius");
 
-    expect(actual[8]).to.have.property("type", "RParen");    
+    expect(actual[8]).to.have.property("type", "RParen");
   });
   it("can find Aura data 4", () => {
     const sut = new StatBlockLexer();
@@ -621,7 +623,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[15]).to.have.property("type", "Comma");
     expect(actual[15]).to.have.property("value", ",");
     expect(actual[16]).to.have.property("type", "NumberSigned");
-    expect(actual[16]).to.have.property("value", "\u2013"+"1");
+    expect(actual[16]).to.have.property("value", "\u2013" + "1");
     expect(actual[17]).to.have.property("type", "Word");
     expect(actual[17]).to.have.property("value", "size");
     expect(actual[18]).to.have.property("type", "SemiColon");
@@ -682,7 +684,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[4]).to.have.property("type", "NumberSigned");
     expect(actual[4]).to.have.property("value", "+270");
     expect(actual[5]).to.have.property("type", "RParen");
-    expect(actual[5]).to.have.property("value", ")");    
+    expect(actual[5]).to.have.property("value", ")");
   });
 
   it("can find hp line 3", () => {
@@ -944,7 +946,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[14]).to.have.property("type", "SrKey");
     expect(actual[14]).to.have.property("value", "SR");
     expect(actual[15]).to.have.property("type", "NumberWhole");
-    expect(actual[15]).to.have.property("value", "29");    
+    expect(actual[15]).to.have.property("value", "29");
   });
 
   it("can find Resist line 1", () => {
@@ -964,7 +966,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[3]).to.have.property("type", "Word");
     expect(actual[3]).to.have.property("value", "cold");
     expect(actual[4]).to.have.property("type", "Word");
-    expect(actual[4]).to.have.property("value", "iron");    
+    expect(actual[4]).to.have.property("value", "iron");
     expect(actual[5]).to.have.property("type", "SemiColon");
     expect(actual[5]).to.have.property("value", ";");
     expect(actual[6]).to.have.property("type", "ResistKey");
@@ -1002,7 +1004,7 @@ describe("StatBlockLexer ", () => {
     expect(actual[4]).to.have.property("value", ";");
     expect(actual[5]).to.have.property("type", "ImmuneKey");
     expect(actual[5]).to.have.property("value", "Immune");
-    expect(actual[6]).to.have.property("type", "CreatureType");
+    expect(actual[6]).to.have.property("type", "Word");
     expect(actual[6]).to.have.property("value", "construct");
     expect(actual[7]).to.have.property("type", "Word");
     expect(actual[7]).to.have.property("value", "traits");
@@ -1444,7 +1446,7 @@ Weaknesses vulnerability to protection from evil`;
 
     const actual = TestHelper.runLexer(lexer, input);
 
-    expect(actual.length).to.equal(13);
+    expect(actual.length).to.equal(12);
     expect(actual[0]).to.have.property("type", "AttackType");
     expect(actual[0]).to.have.property("value", "Ranged");
     expect(actual[1]).to.have.property("type", "Word");
@@ -1465,12 +1467,10 @@ Weaknesses vulnerability to protection from evil`;
     expect(actual[8]).to.have.property("value", `\u{2013}20`);
     expect(actual[9]).to.have.property("type", "ForwardSlash");
     expect(actual[9]).to.have.property("value", "/");
-    expect(actual[10]).to.have.property("type", "Word");
-    expect(actual[10]).to.have.property("value", "x");
-    expect(actual[11]).to.have.property("type", "NumberWhole");
-    expect(actual[11]).to.have.property("value", "2");
-    expect(actual[12]).to.have.property("type", "RParen");
-    expect(actual[12]).to.have.property("value", ")");
+    expect(actual[10]).to.have.property("type", "Multiplier");
+    expect(actual[10]).to.have.property("value", "x2");
+    expect(actual[11]).to.have.property("type", "RParen");
+    expect(actual[11]).to.have.property("value", ")");
   });
 
   it("can find Ranged line 4", () => {
@@ -1703,7 +1703,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual[22]).to.have.property("type", "DcKey");
     expect(actual[22]).to.have.property("value", "DC");
     expect(actual[23]).to.have.property("type", "NumberWhole");
-    expect(actual[23]).to.have.property("value", "22");  
+    expect(actual[23]).to.have.property("value", "22");
     expect(actual[24]).to.have.property("type", "RParen");
     expect(actual[24]).to.have.property("value", ")");
 
@@ -1714,7 +1714,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual[27]).to.have.property("type", "Comma");
     expect(actual[27]).to.have.property("value", ",");
     expect(actual[28]).to.have.property("type", "Word");
-    expect(actual[28]).to.have.property("value", "holy");  
+    expect(actual[28]).to.have.property("value", "holy");
     expect(actual[29]).to.have.property("type", "Word");
     expect(actual[29]).to.have.property("value", "lance");
 
@@ -1725,7 +1725,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual[32]).to.have.property("type", "Word");
     expect(actual[32]).to.have.property("value", "day");
     expect(actual[33]).to.have.property("type", "LParen");
-    expect(actual[33]).to.have.property("value", "(");  
+    expect(actual[33]).to.have.property("value", "(");
     expect(actual[34]).to.have.property("type", "NumberWhole");
     expect(actual[34]).to.have.property("value", "7");
 
@@ -1736,7 +1736,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual[37]).to.have.property("type", "Comma");
     expect(actual[37]).to.have.property("value", ",");
     expect(actual[38]).to.have.property("type", "Word");
-    expect(actual[38]).to.have.property("value", "might");  
+    expect(actual[38]).to.have.property("value", "might");
     expect(actual[39]).to.have.property("type", "Word");
     expect(actual[39]).to.have.property("value", "of");
 
@@ -1747,7 +1747,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual[42]).to.have.property("type", "NumberSigned");
     expect(actual[42]).to.have.property("value", "+15");
     expect(actual[43]).to.have.property("type", "Comma");
-    expect(actual[43]).to.have.property("value", ",");  
+    expect(actual[43]).to.have.property("value", ",");
     expect(actual[44]).to.have.property("type", "NumberWhole");
     expect(actual[44]).to.have.property("value", "15");
 
@@ -1838,156 +1838,153 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
     const actual = TestHelper.runLexer(lexer, input);
 
-    // TODO: check this
-    expect(actual.length).to.equal(67);
-    
+    expect(actual.length).to.equal(66);
+
     expect(actual[0]).to.have.property("type", "SpellLikeAbilityKey");
     expect(actual[0]).to.have.property("value", "Spell-Like Abilities");
     expect(actual[1]).to.have.property("type", "LParen");
     expect(actual[1]).to.have.property("value", "(");
-    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("type", "ClKey");
     expect(actual[2]).to.have.property("value", "CL");
-    expect(actual[3]).to.have.property("type", "NumberWhole");
-    expect(actual[3]).to.have.property("value", "16");
-    expect(actual[4]).to.have.property("type", "Word");
-    expect(actual[4]).to.have.property("value", "th");
+    expect(actual[3]).to.have.property("type", "Level");
+    expect(actual[3]).to.have.property("value", "16th");
+    expect(actual[4]).to.have.property("type", "RParen");
+    expect(actual[4]).to.have.property("value", ")");
 
-    expect(actual[5]).to.have.property("type", "RParen");
-    expect(actual[5]).to.have.property("value", ")");
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "At");
     expect(actual[6]).to.have.property("type", "Word");
-    expect(actual[6]).to.have.property("value", "At");
-    expect(actual[7]).to.have.property("type", "Word");
-    expect(actual[7]).to.have.property("value", "will");
-    expect(actual[8]).to.have.property("type", "MDash");
-    expect(actual[8]).to.have.property("value", "—");
+    expect(actual[6]).to.have.property("value", "will");
+    expect(actual[7]).to.have.property("type", "MDash");
+    expect(actual[7]).to.have.property("value", "—");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "hypnotic");
     expect(actual[9]).to.have.property("type", "Word");
-    expect(actual[9]).to.have.property("value", "hypnotic");
+    expect(actual[9]).to.have.property("value", "pattern");
 
-    expect(actual[10]).to.have.property("type", "Word");
-    expect(actual[10]).to.have.property("value", "pattern");
-    expect(actual[11]).to.have.property("type", "LParen");
-    expect(actual[11]).to.have.property("value", "(");
-    expect(actual[12]).to.have.property("type", "DcKey");
-    expect(actual[12]).to.have.property("value", "DC");
-    expect(actual[13]).to.have.property("type", "NumberWhole");
-    expect(actual[13]).to.have.property("value", "15");
-    expect(actual[14]).to.have.property("type", "RParen");
-    expect(actual[14]).to.have.property("value", ")");
+    expect(actual[10]).to.have.property("type", "LParen");
+    expect(actual[10]).to.have.property("value", "(");
+    expect(actual[11]).to.have.property("type", "DcKey");
+    expect(actual[11]).to.have.property("value", "DC");
+    expect(actual[12]).to.have.property("type", "NumberWhole");
+    expect(actual[12]).to.have.property("value", "15");
+    expect(actual[13]).to.have.property("type", "RParen");
+    expect(actual[13]).to.have.property("value", ")");
+    expect(actual[14]).to.have.property("type", "Comma");
+    expect(actual[14]).to.have.property("value", ",");
 
-    expect(actual[15]).to.have.property("type", "Comma");
-    expect(actual[15]).to.have.property("value", ",");
+    expect(actual[15]).to.have.property("type", "Word");
+    expect(actual[15]).to.have.property("value", "illusory");
     expect(actual[16]).to.have.property("type", "Word");
-    expect(actual[16]).to.have.property("value", "illusory");
-    expect(actual[17]).to.have.property("type", "Word");
-    expect(actual[17]).to.have.property("value", "wall");
-    expect(actual[18]).to.have.property("type", "LParen");
-    expect(actual[18]).to.have.property("value", "(");
-    expect(actual[19]).to.have.property("type", "DcKey");
-    expect(actual[19]).to.have.property("value", "DC");
+    expect(actual[16]).to.have.property("value", "wall");
+    expect(actual[17]).to.have.property("type", "LParen");
+    expect(actual[17]).to.have.property("value", "(");
+    expect(actual[18]).to.have.property("type", "DcKey");
+    expect(actual[18]).to.have.property("value", "DC");
+    expect(actual[19]).to.have.property("type", "NumberWhole");
+    expect(actual[19]).to.have.property("value", "17");
 
-    expect(actual[20]).to.have.property("type", "NumberWhole");
-    expect(actual[20]).to.have.property("value", "17");
-    expect(actual[21]).to.have.property("type", "RParen");
-    expect(actual[21]).to.have.property("value", ")");
-    expect(actual[22]).to.have.property("type", "Comma");
-    expect(actual[22]).to.have.property("value", ",");
+    expect(actual[20]).to.have.property("type", "RParen");
+    expect(actual[20]).to.have.property("value", ")");
+    expect(actual[21]).to.have.property("type", "Comma");
+    expect(actual[21]).to.have.property("value", ",");
+    expect(actual[22]).to.have.property("type", "Word");
+    expect(actual[22]).to.have.property("value", "mirage");
     expect(actual[23]).to.have.property("type", "Word");
-    expect(actual[23]).to.have.property("value", "mirage");
-    expect(actual[24]).to.have.property("type", "Word");
-    expect(actual[24]).to.have.property("value", "arcana");
+    expect(actual[23]).to.have.property("value", "arcana");
+    expect(actual[24]).to.have.property("type", "LParen");
+    expect(actual[24]).to.have.property("value", "(");
 
-    expect(actual[25]).to.have.property("type", "LParen");
-    expect(actual[25]).to.have.property("value", "(");
-    expect(actual[26]).to.have.property("type", "DcKey");
-    expect(actual[26]).to.have.property("value", "DC");
-    expect(actual[27]).to.have.property("type", "NumberWhole");
-    expect(actual[27]).to.have.property("value", "18");
-    expect(actual[28]).to.have.property("type", "RParen");
-    expect(actual[28]).to.have.property("value", ")");
-    expect(actual[29]).to.have.property("type", "Comma");
-    expect(actual[29]).to.have.property("value", ",");
+    expect(actual[25]).to.have.property("type", "DcKey");
+    expect(actual[25]).to.have.property("value", "DC");
+    expect(actual[26]).to.have.property("type", "NumberWhole");
+    expect(actual[26]).to.have.property("value", "18");
+    expect(actual[27]).to.have.property("type", "RParen");
+    expect(actual[27]).to.have.property("value", ")");
+    expect(actual[28]).to.have.property("type", "Comma");
+    expect(actual[28]).to.have.property("value", ",");
+    expect(actual[29]).to.have.property("type", "Word");
+    expect(actual[29]).to.have.property("value", "persistent");
 
     expect(actual[30]).to.have.property("type", "Word");
-    expect(actual[30]).to.have.property("value", "persistent");
-    expect(actual[31]).to.have.property("type", "Word");
-    expect(actual[31]).to.have.property("value", "image");
-    expect(actual[32]).to.have.property("type", "LParen");
-    expect(actual[32]).to.have.property("value", "(");
-    expect(actual[33]).to.have.property("type", "DcKey");
-    expect(actual[33]).to.have.property("value", "DC");
-    expect(actual[34]).to.have.property("type", "NumberWhole");
-    expect(actual[34]).to.have.property("value", "18");
+    expect(actual[30]).to.have.property("value", "image");
+    expect(actual[31]).to.have.property("type", "LParen");
+    expect(actual[31]).to.have.property("value", "(");
+    expect(actual[32]).to.have.property("type", "DcKey");
+    expect(actual[32]).to.have.property("value", "DC");
+    expect(actual[33]).to.have.property("type", "NumberWhole");
+    expect(actual[33]).to.have.property("value", "18");
+    expect(actual[34]).to.have.property("type", "RParen");
+    expect(actual[34]).to.have.property("value", ")");
 
-    expect(actual[35]).to.have.property("type", "RParen");
-    expect(actual[35]).to.have.property("value", ")");
-    expect(actual[36]).to.have.property("type", "Comma");
-    expect(actual[36]).to.have.property("value", ",");
+    expect(actual[35]).to.have.property("type", "Comma");
+    expect(actual[35]).to.have.property("value", ",");
+    expect(actual[36]).to.have.property("type", "Word");
+    expect(actual[36]).to.have.property("value", "programmed");
     expect(actual[37]).to.have.property("type", "Word");
-    expect(actual[37]).to.have.property("value", "programmed");
-    expect(actual[38]).to.have.property("type", "Word");
-    expect(actual[38]).to.have.property("value", "image");
-    expect(actual[39]).to.have.property("type", "LParen");
-    expect(actual[39]).to.have.property("value", "(");
+    expect(actual[37]).to.have.property("value", "image");
+    expect(actual[38]).to.have.property("type", "LParen");
+    expect(actual[38]).to.have.property("value", "(");
+    expect(actual[39]).to.have.property("type", "DcKey");
+    expect(actual[39]).to.have.property("value", "DC");
 
-    expect(actual[40]).to.have.property("type", "DcKey");
-    expect(actual[40]).to.have.property("value", "DC");
-    expect(actual[41]).to.have.property("type", "NumberWhole");
-    expect(actual[41]).to.have.property("value", "19");
-    expect(actual[42]).to.have.property("type", "RParen");
-    expect(actual[42]).to.have.property("value", ")");
-    expect(actual[43]).to.have.property("type", "Comma");
-    expect(actual[43]).to.have.property("value", ",");
+    expect(actual[40]).to.have.property("type", "NumberWhole");
+    expect(actual[40]).to.have.property("value", "19");
+    expect(actual[41]).to.have.property("type", "RParen");
+    expect(actual[41]).to.have.property("value", ")");
+    expect(actual[42]).to.have.property("type", "Comma");
+    expect(actual[42]).to.have.property("value", ",");
+    expect(actual[43]).to.have.property("type", "Word");
+    expect(actual[43]).to.have.property("value", "project");
     expect(actual[44]).to.have.property("type", "Word");
-    expect(actual[44]).to.have.property("value", "project");
+    expect(actual[44]).to.have.property("value", "image");
 
-    expect(actual[45]).to.have.property("type", "Word");
-    expect(actual[45]).to.have.property("value", "image");
-    expect(actual[46]).to.have.property("type", "LParen");
-    expect(actual[46]).to.have.property("value", "(");
-    expect(actual[47]).to.have.property("type", "DcKey");
-    expect(actual[47]).to.have.property("value", "DC");
-    expect(actual[48]).to.have.property("type", "NumberWhole");
-    expect(actual[48]).to.have.property("value", "20");
-    expect(actual[49]).to.have.property("type", "RParen");
-    expect(actual[49]).to.have.property("value", ")");
+    expect(actual[45]).to.have.property("type", "LParen");
+    expect(actual[45]).to.have.property("value", "(");
+    expect(actual[46]).to.have.property("type", "DcKey");
+    expect(actual[46]).to.have.property("value", "DC");
+    expect(actual[47]).to.have.property("type", "NumberWhole");
+    expect(actual[47]).to.have.property("value", "20");
+    expect(actual[48]).to.have.property("type", "RParen");
+    expect(actual[48]).to.have.property("value", ")");
+    expect(actual[49]).to.have.property("type", "Comma");
+    expect(actual[49]).to.have.property("value", ",");
 
-    expect(actual[50]).to.have.property("type", "Comma");
-    expect(actual[50]).to.have.property("value", ",");
-    expect(actual[51]).to.have.property("type", "Word");
-    expect(actual[51]).to.have.property("value", "veil");
-    expect(actual[52]).to.have.property("type", "LParen");
-    expect(actual[52]).to.have.property("value", "(");
-    expect(actual[53]).to.have.property("type", "DcKey");
-    expect(actual[53]).to.have.property("value", "DC");
-    expect(actual[54]).to.have.property("type", "NumberWhole");
-    expect(actual[54]).to.have.property("value", "19");
+    expect(actual[50]).to.have.property("type", "Word");
+    expect(actual[50]).to.have.property("value", "veil");
+    expect(actual[51]).to.have.property("type", "LParen");
+    expect(actual[51]).to.have.property("value", "(");
+    expect(actual[52]).to.have.property("type", "DcKey");
+    expect(actual[52]).to.have.property("value", "DC");
+    expect(actual[53]).to.have.property("type", "NumberWhole");
+    expect(actual[53]).to.have.property("value", "19");
+    expect(actual[54]).to.have.property("type", "RParen");
+    expect(actual[54]).to.have.property("value", ")");
 
-    expect(actual[55]).to.have.property("type", "RParen");
-    expect(actual[55]).to.have.property("value", ")");
-    expect(actual[56]).to.have.property("type", "NumberWhole");
-    expect(actual[56]).to.have.property("value", "3");
-    expect(actual[57]).to.have.property("type", "ForwardSlash");
-    expect(actual[57]).to.have.property("value", "/");
-    expect(actual[58]).to.have.property("type", "Word");
-    expect(actual[58]).to.have.property("value", "day");
-    expect(actual[59]).to.have.property("type", "MDash");
-    expect(actual[59]).to.have.property("value", "—");
+    expect(actual[55]).to.have.property("type", "NumberWhole");
+    expect(actual[55]).to.have.property("value", "3");
+    expect(actual[56]).to.have.property("type", "ForwardSlash");
+    expect(actual[56]).to.have.property("value", "/");
+    expect(actual[57]).to.have.property("type", "Word");
+    expect(actual[57]).to.have.property("value", "day");
+    expect(actual[58]).to.have.property("type", "MDash");
+    expect(actual[58]).to.have.property("value", "—");
+    expect(actual[59]).to.have.property("type", "Word");
+    expect(actual[59]).to.have.property("value", "dominate");
 
     expect(actual[60]).to.have.property("type", "Word");
-    expect(actual[60]).to.have.property("value", "dominate");
-    expect(actual[61]).to.have.property("type", "Word");
-    expect(actual[61]).to.have.property("value", "monster");
-    expect(actual[62]).to.have.property("type", "LParen");
-    expect(actual[62]).to.have.property("value", "(");
-    expect(actual[63]).to.have.property("type", "DcKey");
-    expect(actual[63]).to.have.property("value", "DC");
-    expect(actual[64]).to.have.property("type", "NumberWhole");
-    expect(actual[64]).to.have.property("value", "22");
-
-    expect(actual[65]).to.have.property("type", "RParen");
-    expect(actual[65]).to.have.property("value", ")");
-    expect(actual[66]).to.have.property("type", "Word");
-    expect(actual[66]).to.have.property("value", "STATISTICS");
+    expect(actual[60]).to.have.property("value", "monster");
+    expect(actual[61]).to.have.property("type", "LParen");
+    expect(actual[61]).to.have.property("value", "(");
+    expect(actual[62]).to.have.property("type", "DcKey");
+    expect(actual[62]).to.have.property("value", "DC");
+    expect(actual[63]).to.have.property("type", "NumberWhole");
+    expect(actual[63]).to.have.property("value", "22");
+    expect(actual[64]).to.have.property("type", "RParen");
+    expect(actual[64]).to.have.property("value", ")");
+    
+    expect(actual[65]).to.have.property("type", "StatisticsKey");
+    expect(actual[65]).to.have.property("value", "STATISTICS");
   });
 
   it("can find Spell-Like Abilities line 2", () => {
@@ -2004,173 +2001,171 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     STATISTICS`;
 
     const actual = TestHelper.runLexer(lexer, input);
-
-    // TODO: check this
-    expect(actual.length).to.equal(73);
+    
+    expect(actual.length).to.equal(72);
     
     expect(actual[0]).to.have.property("type", "SpellLikeAbilityKey");
     expect(actual[0]).to.have.property("value", "Spell-Like Abilities");
     expect(actual[1]).to.have.property("type", "LParen");
     expect(actual[1]).to.have.property("value", "(");
-    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("type", "ClKey");
     expect(actual[2]).to.have.property("value", "CL");
-    expect(actual[3]).to.have.property("type", "NumberWhole");
-    expect(actual[3]).to.have.property("value", "13");
-    expect(actual[4]).to.have.property("type", "Word");
-    expect(actual[4]).to.have.property("value", "th");
-    
-    expect(actual[5]).to.have.property("type", "SemiColon");
-    expect(actual[5]).to.have.property("value", ";");
-    expect(actual[6]).to.have.property("type", "Word");
-    expect(actual[6]).to.have.property("value", "concentration");
-    expect(actual[7]).to.have.property("type", "NumberSigned");
-    expect(actual[7]).to.have.property("value", "+17");
-    expect(actual[8]).to.have.property("type", "RParen");
-    expect(actual[8]).to.have.property("value", ")");
+    expect(actual[3]).to.have.property("type", "Level");
+    expect(actual[3]).to.have.property("value", "13th");
+    expect(actual[4]).to.have.property("type", "SemiColon");
+    expect(actual[4]).to.have.property("value", ";");
+
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "concentration");
+    expect(actual[6]).to.have.property("type", "NumberSigned");
+    expect(actual[6]).to.have.property("value", "+17");
+    expect(actual[7]).to.have.property("type", "RParen");
+    expect(actual[7]).to.have.property("value", ")");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "At");
     expect(actual[9]).to.have.property("type", "Word");
-    expect(actual[9]).to.have.property("value", "At");
-    
-    expect(actual[10]).to.have.property("type", "Word");
-    expect(actual[10]).to.have.property("value", "will");
-    expect(actual[11]).to.have.property("type", "MDash");
-    expect(actual[11]).to.have.property("value", "—");
+    expect(actual[9]).to.have.property("value", "will");
+
+    expect(actual[10]).to.have.property("type", "MDash");
+    expect(actual[10]).to.have.property("value", "—");
+    expect(actual[11]).to.have.property("type", "Word");
+    expect(actual[11]).to.have.property("value", "calm");
     expect(actual[12]).to.have.property("type", "Word");
-    expect(actual[12]).to.have.property("value", "calm");
-    expect(actual[13]).to.have.property("type", "Word");
-    expect(actual[13]).to.have.property("value", "emotions");
-    expect(actual[14]).to.have.property("type", "LParen");
-    expect(actual[14]).to.have.property("value", "(");
-    
-    expect(actual[15]).to.have.property("type", "DcKey");
-    expect(actual[15]).to.have.property("value", "DC");
-    expect(actual[16]).to.have.property("type", "NumberWhole");
-    expect(actual[16]).to.have.property("value", "16");
-    expect(actual[17]).to.have.property("type", "RParen");
-    expect(actual[17]).to.have.property("value", ")");
-    expect(actual[18]).to.have.property("type", "Comma");
-    expect(actual[18]).to.have.property("value", ",");
+    expect(actual[12]).to.have.property("value", "emotions");
+    expect(actual[13]).to.have.property("type", "LParen");
+    expect(actual[13]).to.have.property("value", "(");
+    expect(actual[14]).to.have.property("type", "DcKey");
+    expect(actual[14]).to.have.property("value", "DC");
+
+    expect(actual[15]).to.have.property("type", "NumberWhole");
+    expect(actual[15]).to.have.property("value", "16");
+    expect(actual[16]).to.have.property("type", "RParen");
+    expect(actual[16]).to.have.property("value", ")");
+    expect(actual[17]).to.have.property("type", "Comma");
+    expect(actual[17]).to.have.property("value", ",");
+    expect(actual[18]).to.have.property("type", "Word");
+    expect(actual[18]).to.have.property("value", "charm");
     expect(actual[19]).to.have.property("type", "Word");
-    expect(actual[19]).to.have.property("value", "charm");
-    
-    expect(actual[20]).to.have.property("type", "Word");
-    expect(actual[20]).to.have.property("value", "monster");
-    expect(actual[21]).to.have.property("type", "LParen");
-    expect(actual[21]).to.have.property("value", "(");
-    expect(actual[22]).to.have.property("type", "DcKey");
-    expect(actual[22]).to.have.property("value", "DC");
-    expect(actual[23]).to.have.property("type", "NumberWhole");
-    expect(actual[23]).to.have.property("value", "18");
-    expect(actual[24]).to.have.property("type", "RParen");
-    expect(actual[24]).to.have.property("value", ")");
-    
-    expect(actual[25]).to.have.property("type", "Comma");
-    expect(actual[25]).to.have.property("value", ",");
-    expect(actual[26]).to.have.property("type", "Word");
-    expect(actual[26]).to.have.property("value", "clairaudience");
-    expect(actual[27]).to.have.property("type", "ForwardSlash");
-    expect(actual[27]).to.have.property("value", "/");
-    expect(actual[28]).to.have.property("type", "Word");
-    expect(actual[28]).to.have.property("value", "clairvoyance");
-    expect(actual[29]).to.have.property("type", "LParen");
-    expect(actual[29]).to.have.property("value", "(");
-    
+    expect(actual[19]).to.have.property("value", "monster");
+
+    expect(actual[20]).to.have.property("type", "LParen");
+    expect(actual[20]).to.have.property("value", "(");
+    expect(actual[21]).to.have.property("type", "DcKey");
+    expect(actual[21]).to.have.property("value", "DC");
+    expect(actual[22]).to.have.property("type", "NumberWhole");
+    expect(actual[22]).to.have.property("value", "18");
+    expect(actual[23]).to.have.property("type", "RParen");
+    expect(actual[23]).to.have.property("value", ")");
+    expect(actual[24]).to.have.property("type", "Comma");
+    expect(actual[24]).to.have.property("value", ",");
+
+    expect(actual[25]).to.have.property("type", "Word");
+    expect(actual[25]).to.have.property("value", "clairaudience");
+    expect(actual[26]).to.have.property("type", "ForwardSlash");
+    expect(actual[26]).to.have.property("value", "/");
+    expect(actual[27]).to.have.property("type", "Word");
+    expect(actual[27]).to.have.property("value", "clairvoyance");
+    expect(actual[28]).to.have.property("type", "LParen");
+    expect(actual[28]).to.have.property("value", "(");
+    expect(actual[29]).to.have.property("type", "Word");
+    expect(actual[29]).to.have.property("value", "clairvoyance");
+
     expect(actual[30]).to.have.property("type", "Word");
-    expect(actual[30]).to.have.property("value", "clairvoyance");
-    expect(actual[31]).to.have.property("type", "Word");
-    expect(actual[31]).to.have.property("value", "only");
-    expect(actual[32]).to.have.property("type", "RParen");
-    expect(actual[32]).to.have.property("value", ")");
-    expect(actual[33]).to.have.property("type", "Comma");
-    expect(actual[33]).to.have.property("value", ",");
+    expect(actual[30]).to.have.property("value", "only");
+    expect(actual[31]).to.have.property("type", "RParen");
+    expect(actual[31]).to.have.property("value", ")");
+    expect(actual[32]).to.have.property("type", "Comma");
+    expect(actual[32]).to.have.property("value", ",");
+    expect(actual[33]).to.have.property("type", "Word");
+    expect(actual[33]).to.have.property("value", "daze");
     expect(actual[34]).to.have.property("type", "Word");
-    expect(actual[34]).to.have.property("value", "daze");
-    
-    expect(actual[35]).to.have.property("type", "Word");
-    expect(actual[35]).to.have.property("value", "monster");
-    expect(actual[36]).to.have.property("type", "LParen");
-    expect(actual[36]).to.have.property("value", "(");
-    expect(actual[37]).to.have.property("type", "DcKey");
-    expect(actual[37]).to.have.property("value", "DC");
-    expect(actual[38]).to.have.property("type", "NumberWhole");
-    expect(actual[38]).to.have.property("value", "16");
-    expect(actual[39]).to.have.property("type", "RParen");
-    expect(actual[39]).to.have.property("value", ")");
-    
-    expect(actual[40]).to.have.property("type", "Comma");
-    expect(actual[40]).to.have.property("value", ",");
+    expect(actual[34]).to.have.property("value", "monster");
+
+    expect(actual[35]).to.have.property("type", "LParen");
+    expect(actual[35]).to.have.property("value", "(");
+    expect(actual[36]).to.have.property("type", "DcKey");
+    expect(actual[36]).to.have.property("value", "DC");
+    expect(actual[37]).to.have.property("type", "NumberWhole");
+    expect(actual[37]).to.have.property("value", "16");
+    expect(actual[38]).to.have.property("type", "RParen");
+    expect(actual[38]).to.have.property("value", ")");
+    expect(actual[39]).to.have.property("type", "Comma");
+    expect(actual[39]).to.have.property("value", ",");
+
+    expect(actual[40]).to.have.property("type", "Word");
+    expect(actual[40]).to.have.property("value", "feather");
     expect(actual[41]).to.have.property("type", "Word");
-    expect(actual[41]).to.have.property("value", "feather");
-    expect(actual[42]).to.have.property("type", "Word");
-    expect(actual[42]).to.have.property("value", "fall");
-    expect(actual[43]).to.have.property("type", "NumberWhole");
-    expect(actual[43]).to.have.property("value", "3");
-    expect(actual[44]).to.have.property("type", "ForwardSlash");
-    expect(actual[44]).to.have.property("value", "/");
-    
-    expect(actual[45]).to.have.property("type", "Word");
-    expect(actual[45]).to.have.property("value", "day");
-    expect(actual[46]).to.have.property("type", "MDash");
-    expect(actual[46]).to.have.property("value", "—");
+    expect(actual[41]).to.have.property("value", "fall");
+    expect(actual[42]).to.have.property("type", "NumberWhole");
+    expect(actual[42]).to.have.property("value", "3");
+    expect(actual[43]).to.have.property("type", "ForwardSlash");
+    expect(actual[43]).to.have.property("value", "/");
+    expect(actual[44]).to.have.property("type", "Word");
+    expect(actual[44]).to.have.property("value", "day");
+
+    expect(actual[45]).to.have.property("type", "MDash");
+    expect(actual[45]).to.have.property("value", "—");
+    expect(actual[46]).to.have.property("type", "Word");
+    expect(actual[46]).to.have.property("value", "dispel");
     expect(actual[47]).to.have.property("type", "Word");
-    expect(actual[47]).to.have.property("value", "dispel");
-    expect(actual[48]).to.have.property("type", "Word");
-    expect(actual[48]).to.have.property("value", "magic");
-    expect(actual[49]).to.have.property("type", "Comma");
-    expect(actual[49]).to.have.property("value", ",");
-    
+    expect(actual[47]).to.have.property("value", "magic");
+    expect(actual[48]).to.have.property("type", "Comma");
+    expect(actual[48]).to.have.property("value", ",");
+    expect(actual[49]).to.have.property("type", "Word");
+    expect(actual[49]).to.have.property("value", "lightning");
+
     expect(actual[50]).to.have.property("type", "Word");
-    expect(actual[50]).to.have.property("value", "lightning");
-    expect(actual[51]).to.have.property("type", "Word");
-    expect(actual[51]).to.have.property("value", "bolt");
-    expect(actual[52]).to.have.property("type", "LParen");
-    expect(actual[52]).to.have.property("value", "(");
-    expect(actual[53]).to.have.property("type", "DcKey");
-    expect(actual[53]).to.have.property("value", "DC");
-    expect(actual[54]).to.have.property("type", "NumberWhole");
-    expect(actual[54]).to.have.property("value", "17");
-    
-    expect(actual[55]).to.have.property("type", "RParen");
-    expect(actual[55]).to.have.property("value", ")");
-    expect(actual[56]).to.have.property("type", "NumberWhole");
-    expect(actual[56]).to.have.property("value", "1");
-    expect(actual[57]).to.have.property("type", "ForwardSlash");
-    expect(actual[57]).to.have.property("value", "/");
-    expect(actual[58]).to.have.property("type", "Word");
-    expect(actual[58]).to.have.property("value", "day");
-    expect(actual[59]).to.have.property("type", "MDash");
-    expect(actual[59]).to.have.property("value", "—");
-    
+    expect(actual[50]).to.have.property("value", "bolt");
+    expect(actual[51]).to.have.property("type", "LParen");
+    expect(actual[51]).to.have.property("value", "(");
+    expect(actual[52]).to.have.property("type", "DcKey");
+    expect(actual[52]).to.have.property("value", "DC");
+    expect(actual[53]).to.have.property("type", "NumberWhole");
+    expect(actual[53]).to.have.property("value", "17");
+    expect(actual[54]).to.have.property("type", "RParen");
+    expect(actual[54]).to.have.property("value", ")");
+
+    expect(actual[55]).to.have.property("type", "NumberWhole");
+    expect(actual[55]).to.have.property("value", "1");
+    expect(actual[56]).to.have.property("type", "ForwardSlash");
+    expect(actual[56]).to.have.property("value", "/");
+    expect(actual[57]).to.have.property("type", "Word");
+    expect(actual[57]).to.have.property("value", "day");
+    expect(actual[58]).to.have.property("type", "MDash");
+    expect(actual[58]).to.have.property("value", "—");
+    expect(actual[59]).to.have.property("type", "Word");
+    expect(actual[59]).to.have.property("value", "dominate");
+
     expect(actual[60]).to.have.property("type", "Word");
-    expect(actual[60]).to.have.property("value", "dominate");
-    expect(actual[61]).to.have.property("type", "Word");
-    expect(actual[61]).to.have.property("value", "monster");
-    expect(actual[62]).to.have.property("type", "LParen");
-    expect(actual[62]).to.have.property("value", "(");
-    expect(actual[63]).to.have.property("type", "DcKey");
-    expect(actual[63]).to.have.property("value", "DC");
-    expect(actual[64]).to.have.property("type", "NumberWhole");
-    expect(actual[64]).to.have.property("value", "23");
-    
-    expect(actual[65]).to.have.property("type", "RParen");
-    expect(actual[65]).to.have.property("value", ")");
-    expect(actual[66]).to.have.property("type", "NumberWhole");
-    expect(actual[66]).to.have.property("value", "1");
-    expect(actual[67]).to.have.property("type", "ForwardSlash");
-    expect(actual[67]).to.have.property("value", "/");
-    expect(actual[68]).to.have.property("type", "Word");
-    expect(actual[68]).to.have.property("value", "month");
-    expect(actual[69]).to.have.property("type", "MDash");
-    expect(actual[69]).to.have.property("value", "—");
-    
+    expect(actual[60]).to.have.property("value", "monster");
+    expect(actual[61]).to.have.property("type", "LParen");
+    expect(actual[61]).to.have.property("value", "(");
+    expect(actual[62]).to.have.property("type", "DcKey");
+    expect(actual[62]).to.have.property("value", "DC");
+    expect(actual[63]).to.have.property("type", "NumberWhole");
+    expect(actual[63]).to.have.property("value", "23");
+    expect(actual[64]).to.have.property("type", "RParen");
+    expect(actual[64]).to.have.property("value", ")");
+
+    expect(actual[65]).to.have.property("type", "NumberWhole");
+    expect(actual[65]).to.have.property("value", "1");
+    expect(actual[66]).to.have.property("type", "ForwardSlash");
+    expect(actual[66]).to.have.property("value", "/");
+    expect(actual[67]).to.have.property("type", "Word");
+    expect(actual[67]).to.have.property("value", "month");
+    expect(actual[68]).to.have.property("type", "MDash");
+    expect(actual[68]).to.have.property("value", "—");
+    expect(actual[69]).to.have.property("type", "Word");
+    expect(actual[69]).to.have.property("value", "interplanetary");
+
     expect(actual[70]).to.have.property("type", "Word");
-    expect(actual[70]).to.have.property("value", "interplanetary");
-    expect(actual[71]).to.have.property("type", "Word");
-    expect(actual[71]).to.have.property("value", "teleportUM");
-    expect(actual[72]).to.have.property("type", "Word");
-    expect(actual[72]).to.have.property("value", "STATISTICS");
+    expect(actual[70]).to.have.property("value", "teleportUM");
+    expect(actual[71]).to.have.property("type", "StatisticsKey");
+    expect(actual[71]).to.have.property("value", "STATISTICS");
+
   });
 
-  it("can find Spell-Like Abilities line 3", () => {
+  it("can find Spell-Like Abilities/Spells Prepared line 3", () => {
     const sut = new StatBlockLexer();
     const lexer = sut.getLexer();
 
@@ -2184,154 +2179,142 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
     const actual = TestHelper.runLexer(lexer, input);
 
-    // TODO: check this
-    expect(actual.length).to.equal(65);
-
+    expect(actual.length).to.equal(60);
+    
     expect(actual[0]).to.have.property("type", "Word");
     expect(actual[0]).to.have.property("value", "Gnome");
     expect(actual[1]).to.have.property("type", "SpellLikeAbilityKey");
     expect(actual[1]).to.have.property("value", "Spell-Like Abilities");
     expect(actual[2]).to.have.property("type", "LParen");
     expect(actual[2]).to.have.property("value", "(");
-    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("type", "ClKey");
     expect(actual[3]).to.have.property("value", "CL");
-    expect(actual[4]).to.have.property("type", "NumberWhole");
-    expect(actual[4]).to.have.property("value", "1");
+    expect(actual[4]).to.have.property("type", "Level");
+    expect(actual[4]).to.have.property("value", "1st");
 
-    expect(actual[5]).to.have.property("type", "Word");
-    expect(actual[5]).to.have.property("value", "st");
-    expect(actual[6]).to.have.property("type", "SemiColon");
-    expect(actual[6]).to.have.property("value", ";");
-    expect(actual[7]).to.have.property("type", "Word");
-    expect(actual[7]).to.have.property("value", "concentration");
-    expect(actual[8]).to.have.property("type", "NumberSigned");
-    expect(actual[8]).to.have.property("value", "+3");
-    expect(actual[9]).to.have.property("type", "RParen");
-    expect(actual[9]).to.have.property("value", ")");
+    expect(actual[5]).to.have.property("type", "SemiColon");
+    expect(actual[5]).to.have.property("value", ";");
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "concentration");
+    expect(actual[7]).to.have.property("type", "NumberSigned");
+    expect(actual[7]).to.have.property("value", "+3");
+    expect(actual[8]).to.have.property("type", "RParen");
+    expect(actual[8]).to.have.property("value", ")");
+    expect(actual[9]).to.have.property("type", "NumberWhole");
+    expect(actual[9]).to.have.property("value", "1");
 
-    expect(actual[10]).to.have.property("type", "NumberWhole");
-    expect(actual[10]).to.have.property("value", "1");
-    expect(actual[11]).to.have.property("type", "ForwardSlash");
-    expect(actual[11]).to.have.property("value", "/");
-    expect(actual[12]).to.have.property("type", "Word");
-    expect(actual[12]).to.have.property("value", "day");
-    expect(actual[13]).to.have.property("type", "MDash");
-    expect(actual[13]).to.have.property("value", "—");
+    expect(actual[10]).to.have.property("type", "ForwardSlash");
+    expect(actual[10]).to.have.property("value", "/");
+    expect(actual[11]).to.have.property("type", "Word");
+    expect(actual[11]).to.have.property("value", "day");
+    expect(actual[12]).to.have.property("type", "MDash");
+    expect(actual[12]).to.have.property("value", "—");
+    expect(actual[13]).to.have.property("type", "Word");
+    expect(actual[13]).to.have.property("value", "dancing");
     expect(actual[14]).to.have.property("type", "Word");
-    expect(actual[14]).to.have.property("value", "dancing");
+    expect(actual[14]).to.have.property("value", "lights");
 
-    expect(actual[15]).to.have.property("type", "Word");
-    expect(actual[15]).to.have.property("value", "lights");
-    expect(actual[16]).to.have.property("type", "Comma");
-    expect(actual[16]).to.have.property("value", ",");
+    expect(actual[15]).to.have.property("type", "Comma");
+    expect(actual[15]).to.have.property("value", ",");
+    expect(actual[16]).to.have.property("type", "Word");
+    expect(actual[16]).to.have.property("value", "ghost");
     expect(actual[17]).to.have.property("type", "Word");
-    expect(actual[17]).to.have.property("value", "ghost");
-    expect(actual[18]).to.have.property("type", "Word");
-    expect(actual[18]).to.have.property("value", "sound");
-    expect(actual[19]).to.have.property("type", "LParen");
-    expect(actual[19]).to.have.property("value", "(");
+    expect(actual[17]).to.have.property("value", "sound");
+    expect(actual[18]).to.have.property("type", "LParen");
+    expect(actual[18]).to.have.property("value", "(");
+    expect(actual[19]).to.have.property("type", "DcKey");
+    expect(actual[19]).to.have.property("value", "DC");
 
-    expect(actual[20]).to.have.property("type", "DcKey");
-    expect(actual[20]).to.have.property("value", "DC");
-    expect(actual[21]).to.have.property("type", "NumberWhole");
-    expect(actual[21]).to.have.property("value", "13");
-    expect(actual[22]).to.have.property("type", "RParen");
-    expect(actual[22]).to.have.property("value", ")");
-    expect(actual[23]).to.have.property("type", "Comma");
-    expect(actual[23]).to.have.property("value", ",");
-    expect(actual[24]).to.have.property("type", "Word");
-    expect(actual[24]).to.have.property("value", "prestidigitation");
+    expect(actual[20]).to.have.property("type", "NumberWhole");
+    expect(actual[20]).to.have.property("value", "13");
+    expect(actual[21]).to.have.property("type", "RParen");
+    expect(actual[21]).to.have.property("value", ")");
+    expect(actual[22]).to.have.property("type", "Comma");
+    expect(actual[22]).to.have.property("value", ",");
+    expect(actual[23]).to.have.property("type", "Word");
+    expect(actual[23]).to.have.property("value", "prestidigitation");
+    expect(actual[24]).to.have.property("type", "Comma");
+    expect(actual[24]).to.have.property("value", ",");
 
-    expect(actual[25]).to.have.property("type", "Comma");
-    expect(actual[25]).to.have.property("value", ",");
+    expect(actual[25]).to.have.property("type", "Word");
+    expect(actual[25]).to.have.property("value", "speak");
     expect(actual[26]).to.have.property("type", "Word");
-    expect(actual[26]).to.have.property("value", "speak");
+    expect(actual[26]).to.have.property("value", "with");
     expect(actual[27]).to.have.property("type", "Word");
-    expect(actual[27]).to.have.property("value", "with");
-    expect(actual[28]).to.have.property("type", "CreatureType");
-    expect(actual[28]).to.have.property("value", "animal");
-    expect(actual[29]).to.have.property("type", "Word");
-    expect(actual[29]).to.have.property("value", "s");
+    expect(actual[27]).to.have.property("value", "animals");
+    expect(actual[28]).to.have.property("type", "Word");
+    expect(actual[28]).to.have.property("value", "Druid");
+    expect(actual[29]).to.have.property("type", "SpellsKnownPreparedPsychic");
+    expect(actual[29]).to.have.property("value", "Spells Prepared");
 
-    expect(actual[30]).to.have.property("type", "Word");
-    expect(actual[30]).to.have.property("value", "Druid");
-    expect(actual[31]).to.have.property("type", "Word");
-    expect(actual[31]).to.have.property("value", "Spells");
-    expect(actual[32]).to.have.property("type", "Word");
-    expect(actual[32]).to.have.property("value", "Prepared");
-    expect(actual[33]).to.have.property("type", "LParen");
-    expect(actual[33]).to.have.property("value", "(");
+    expect(actual[30]).to.have.property("type", "LParen");
+    expect(actual[30]).to.have.property("value", "(");
+    expect(actual[31]).to.have.property("type", "ClKey");
+    expect(actual[31]).to.have.property("value", "CL");
+    expect(actual[32]).to.have.property("type", "Level");
+    expect(actual[32]).to.have.property("value", "1st");
+    expect(actual[33]).to.have.property("type", "SemiColon");
+    expect(actual[33]).to.have.property("value", ";");
     expect(actual[34]).to.have.property("type", "Word");
-    expect(actual[34]).to.have.property("value", "CL");
+    expect(actual[34]).to.have.property("value", "concentration");
 
-    expect(actual[35]).to.have.property("type", "NumberWhole");
-    expect(actual[35]).to.have.property("value", "1");
-    expect(actual[36]).to.have.property("type", "Word");
-    expect(actual[36]).to.have.property("value", "st");
-    expect(actual[37]).to.have.property("type", "SemiColon");
-    expect(actual[37]).to.have.property("value", ";");
-    expect(actual[38]).to.have.property("type", "Word");
-    expect(actual[38]).to.have.property("value", "concentration");
-    expect(actual[39]).to.have.property("type", "NumberSigned");
-    expect(actual[39]).to.have.property("value", "+4");
+    expect(actual[35]).to.have.property("type", "NumberSigned");
+    expect(actual[35]).to.have.property("value", "+4");
+    expect(actual[36]).to.have.property("type", "RParen");
+    expect(actual[36]).to.have.property("value", ")");
+    expect(actual[37]).to.have.property("type", "Level");
+    expect(actual[37]).to.have.property("value", "1st");
+    expect(actual[38]).to.have.property("type", "MDash");
+    expect(actual[38]).to.have.property("value", "—");
+    expect(actual[39]).to.have.property("type", "Word");
+    expect(actual[39]).to.have.property("value", "entangle");
 
-    expect(actual[40]).to.have.property("type", "RParen");
-    expect(actual[40]).to.have.property("value", ")");
-    expect(actual[41]).to.have.property("type", "NumberWhole");
-    expect(actual[41]).to.have.property("value", "1");
-    expect(actual[42]).to.have.property("type", "Word");
-    expect(actual[42]).to.have.property("value", "st");
-    expect(actual[43]).to.have.property("type", "MDash");
-    expect(actual[43]).to.have.property("value", "—");
-    expect(actual[44]).to.have.property("type", "Word");
-    expect(actual[44]).to.have.property("value", "entangle");
+    expect(actual[40]).to.have.property("type", "LParen");
+    expect(actual[40]).to.have.property("value", "(");
+    expect(actual[41]).to.have.property("type", "DcKey");
+    expect(actual[41]).to.have.property("value", "DC");
+    expect(actual[42]).to.have.property("type", "NumberWhole");
+    expect(actual[42]).to.have.property("value", "14");
+    expect(actual[43]).to.have.property("type", "RParen");
+    expect(actual[43]).to.have.property("value", ")");
+    expect(actual[44]).to.have.property("type", "Comma");
+    expect(actual[44]).to.have.property("value", ",");
 
-    expect(actual[45]).to.have.property("type", "LParen");
-    expect(actual[45]).to.have.property("value", "(");
-    expect(actual[46]).to.have.property("type", "DcKey");
-    expect(actual[46]).to.have.property("value", "DC");
-    expect(actual[47]).to.have.property("type", "NumberWhole");
-    expect(actual[47]).to.have.property("value", "14");
-    expect(actual[48]).to.have.property("type", "RParen");
-    expect(actual[48]).to.have.property("value", ")");
-    expect(actual[49]).to.have.property("type", "Comma");
-    expect(actual[49]).to.have.property("value", ",");
+    expect(actual[45]).to.have.property("type", "Word");
+    expect(actual[45]).to.have.property("value", "goodberry");
+    expect(actual[46]).to.have.property("type", "NumberWhole");
+    expect(actual[46]).to.have.property("value", "0");
+    expect(actual[47]).to.have.property("type", "LParen");
+    expect(actual[47]).to.have.property("value", "(");
+    expect(actual[48]).to.have.property("type", "Word");
+    expect(actual[48]).to.have.property("value", "at");
+    expect(actual[49]).to.have.property("type", "Word");
+    expect(actual[49]).to.have.property("value", "will");
 
-    expect(actual[50]).to.have.property("type", "Word");
-    expect(actual[50]).to.have.property("value", "goodberry");
-    expect(actual[51]).to.have.property("type", "NumberWhole");
-    expect(actual[51]).to.have.property("value", "0");
-    expect(actual[52]).to.have.property("type", "LParen");
-    expect(actual[52]).to.have.property("value", "(");
+    expect(actual[50]).to.have.property("type", "RParen");
+    expect(actual[50]).to.have.property("value", ")");
+    expect(actual[51]).to.have.property("type", "MDash");
+    expect(actual[51]).to.have.property("value", "—");
+    expect(actual[52]).to.have.property("type", "Word");
+    expect(actual[52]).to.have.property("value", "detect");
     expect(actual[53]).to.have.property("type", "Word");
-    expect(actual[53]).to.have.property("value", "at");
-    expect(actual[54]).to.have.property("type", "Word");
-    expect(actual[54]).to.have.property("value", "will");
+    expect(actual[53]).to.have.property("value", "magic");
+    expect(actual[54]).to.have.property("type", "Comma");
+    expect(actual[54]).to.have.property("value", ",");
 
-    expect(actual[55]).to.have.property("type", "RParen");
-    expect(actual[55]).to.have.property("value", ")");
-    expect(actual[56]).to.have.property("type", "MDash");
-    expect(actual[56]).to.have.property("value", "—");
-    expect(actual[57]).to.have.property("type", "Word");
-    expect(actual[57]).to.have.property("value", "detect");
+    expect(actual[55]).to.have.property("type", "Word");
+    expect(actual[55]).to.have.property("value", "know");
+    expect(actual[56]).to.have.property("type", "Word");
+    expect(actual[56]).to.have.property("value", "direction");
+    expect(actual[57]).to.have.property("type", "Comma");
+    expect(actual[57]).to.have.property("value", ",");
     expect(actual[58]).to.have.property("type", "Word");
-    expect(actual[58]).to.have.property("value", "magic");
-    expect(actual[59]).to.have.property("type", "Comma");
-    expect(actual[59]).to.have.property("value", ",");
-
-    expect(actual[60]).to.have.property("type", "Word");
-    expect(actual[60]).to.have.property("value", "know");
-    expect(actual[61]).to.have.property("type", "Word");
-    expect(actual[61]).to.have.property("value", "direction");
-    expect(actual[62]).to.have.property("type", "Comma");
-    expect(actual[62]).to.have.property("value", ",");
-    expect(actual[63]).to.have.property("type", "Word");
-    expect(actual[63]).to.have.property("value", "resistance");
-    expect(actual[64]).to.have.property("type", "Word");
-    expect(actual[64]).to.have.property("value", "TACTICS");
+    expect(actual[58]).to.have.property("value", "resistance");
+    expect(actual[59]).to.have.property("type", "TacticsKey");
+    expect(actual[59]).to.have.property("value", "TACTICS");
   });
 
-  it("can find Spell-Like Abilities line 4", () => {
+  it("can find Spell-Like Abilities/Spells Prepared line 4", () => {
     const sut = new StatBlockLexer();
     const lexer = sut.getLexer();
 
@@ -2352,300 +2335,1193 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     TACTICS`;
 
     const actual = TestHelper.runLexer(lexer, input);
-// TODO: check this
-    expect(actual.length).to.equal(146);
+
+    expect(actual.length).to.equal(139);
+    
     expect(actual[0]).to.have.property("type", "Word");
     expect(actual[0]).to.have.property("value", "Domain");
     expect(actual[1]).to.have.property("type", "SpellLikeAbilityKey");
     expect(actual[1]).to.have.property("value", "Spell-Like Abilities");
     expect(actual[2]).to.have.property("type", "LParen");
     expect(actual[2]).to.have.property("value", "(");
-    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("type", "ClKey");
     expect(actual[3]).to.have.property("value", "CL");
-    expect(actual[4]).to.have.property("type", "NumberWhole");
-    expect(actual[4]).to.have.property("value", "8");
-    expect(actual[5]).to.have.property("type", "Word");
-    expect(actual[5]).to.have.property("value", "th");
-    expect(actual[6]).to.have.property("type", "SemiColon");
-    expect(actual[6]).to.have.property("value", ";");
-    expect(actual[7]).to.have.property("type", "Word");
-    expect(actual[7]).to.have.property("value", "concentration");
-    expect(actual[8]).to.have.property("type", "NumberSigned");
-    expect(actual[8]).to.have.property("value", "+12");
-    expect(actual[9]).to.have.property("type", "RParen");
-    expect(actual[9]).to.have.property("value", ")");
+    expect(actual[4]).to.have.property("type", "Level");
+    expect(actual[4]).to.have.property("value", "8th");
+
+    expect(actual[5]).to.have.property("type", "SemiColon");
+    expect(actual[5]).to.have.property("value", ";");
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "concentration");
+    expect(actual[7]).to.have.property("type", "NumberSigned");
+    expect(actual[7]).to.have.property("value", "+12");
+    expect(actual[8]).to.have.property("type", "RParen");
+    expect(actual[8]).to.have.property("value", ")");
+    expect(actual[9]).to.have.property("type", "Word");
+    expect(actual[9]).to.have.property("value", "At");
+
     expect(actual[10]).to.have.property("type", "Word");
-    expect(actual[10]).to.have.property("value", "At");
-    expect(actual[11]).to.have.property("type", "Word");
-    expect(actual[11]).to.have.property("value", "will");
-    expect(actual[12]).to.have.property("type", "MDash");
-    expect(actual[12]).to.have.property("value", "—");
+    expect(actual[10]).to.have.property("value", "will");
+    expect(actual[11]).to.have.property("type", "MDash");
+    expect(actual[11]).to.have.property("value", "—");
+    expect(actual[12]).to.have.property("type", "Word");
+    expect(actual[12]).to.have.property("value", "lore");
     expect(actual[13]).to.have.property("type", "Word");
-    expect(actual[13]).to.have.property("value", "lore");
-    expect(actual[14]).to.have.property("type", "Word");
-    expect(actual[14]).to.have.property("value", "keeper");
-    expect(actual[15]).to.have.property("type", "LParen");
-    expect(actual[15]).to.have.property("value", "(");
-    expect(actual[16]).to.have.property("type", "NumberWhole");
-    expect(actual[16]).to.have.property("value", "27");
-    expect(actual[17]).to.have.property("type", "RParen");
-    expect(actual[17]).to.have.property("value", ")");
-    expect(actual[18]).to.have.property("type", "Comma");
-    expect(actual[18]).to.have.property("value", ",");
+    expect(actual[13]).to.have.property("value", "keeper");
+    expect(actual[14]).to.have.property("type", "LParen");
+    expect(actual[14]).to.have.property("value", "(");
+
+    expect(actual[15]).to.have.property("type", "NumberWhole");
+    expect(actual[15]).to.have.property("value", "27");
+    expect(actual[16]).to.have.property("type", "RParen");
+    expect(actual[16]).to.have.property("value", ")");
+    expect(actual[17]).to.have.property("type", "Comma");
+    expect(actual[17]).to.have.property("value", ",");
+    expect(actual[18]).to.have.property("type", "Word");
+    expect(actual[18]).to.have.property("value", "remote");
     expect(actual[19]).to.have.property("type", "Word");
-    expect(actual[19]).to.have.property("value", "remote");
-    expect(actual[20]).to.have.property("type", "Word");
-    expect(actual[20]).to.have.property("value", "viewing");
-    expect(actual[21]).to.have.property("type", "LParen");
-    expect(actual[21]).to.have.property("value", "(");
-    expect(actual[22]).to.have.property("type", "NumberWhole");
-    expect(actual[22]).to.have.property("value", "8");
-    expect(actual[23]).to.have.property("type", "Word");
-    expect(actual[23]).to.have.property("value", "rounds");
-    expect(actual[24]).to.have.property("type", "ForwardSlash");
-    expect(actual[24]).to.have.property("value", "/");
-    expect(actual[25]).to.have.property("type", "Word");
-    expect(actual[25]).to.have.property("value", "day");
-    expect(actual[26]).to.have.property("type", "RParen");
-    expect(actual[26]).to.have.property("value", ")");
-    expect(actual[27]).to.have.property("type", "Word");
-    expect(actual[27]).to.have.property("value", "Cleric");
-    expect(actual[28]).to.have.property("type", "Word");
-    expect(actual[28]).to.have.property("value", "Spells");
-    expect(actual[29]).to.have.property("type", "Word");
-    expect(actual[29]).to.have.property("value", "Prepared");
-    expect(actual[30]).to.have.property("type", "LParen");
-    expect(actual[30]).to.have.property("value", "(");
-    expect(actual[31]).to.have.property("type", "Word");
-    expect(actual[31]).to.have.property("value", "CL");
-    expect(actual[32]).to.have.property("type", "NumberWhole");
-    expect(actual[32]).to.have.property("value", "8");
-    expect(actual[33]).to.have.property("type", "Word");
-    expect(actual[33]).to.have.property("value", "th");
-    expect(actual[34]).to.have.property("type", "SemiColon");
-    expect(actual[34]).to.have.property("value", ";");
-    expect(actual[35]).to.have.property("type", "Word");
-    expect(actual[35]).to.have.property("value", "concentration");
-    expect(actual[36]).to.have.property("type", "NumberSigned");
-    expect(actual[36]).to.have.property("value", "+12");
-    expect(actual[37]).to.have.property("type", "RParen");
-    expect(actual[37]).to.have.property("value", ")");
-    expect(actual[38]).to.have.property("type", "NumberWhole");
-    expect(actual[38]).to.have.property("value", "4");
-    expect(actual[39]).to.have.property("type", "Word");
-    expect(actual[39]).to.have.property("value", "th");
-    expect(actual[40]).to.have.property("type", "MDash");
-    expect(actual[40]).to.have.property("value", "—");
-    expect(actual[41]).to.have.property("type", "Word");
-    expect(actual[41]).to.have.property("value", "discern");
-    expect(actual[42]).to.have.property("type", "Word");
-    expect(actual[42]).to.have.property("value", "lies");
-    expect(actual[43]).to.have.property("type", "LParen");
-    expect(actual[43]).to.have.property("value", "(");
-    expect(actual[44]).to.have.property("type", "DcKey");
-    expect(actual[44]).to.have.property("value", "DC");
-    expect(actual[45]).to.have.property("type", "NumberWhole");
-    expect(actual[45]).to.have.property("value", "18");
-    expect(actual[46]).to.have.property("type", "RParen");
-    expect(actual[46]).to.have.property("value", ")");
-    expect(actual[47]).to.have.property("type", "Comma");
-    expect(actual[47]).to.have.property("value", ",");
+    expect(actual[19]).to.have.property("value", "viewing");
+
+    expect(actual[20]).to.have.property("type", "LParen");
+    expect(actual[20]).to.have.property("value", "(");
+    expect(actual[21]).to.have.property("type", "NumberWhole");
+    expect(actual[21]).to.have.property("value", "8");
+    expect(actual[22]).to.have.property("type", "Word");
+    expect(actual[22]).to.have.property("value", "rounds");
+    expect(actual[23]).to.have.property("type", "ForwardSlash");
+    expect(actual[23]).to.have.property("value", "/");
+    expect(actual[24]).to.have.property("type", "Word");
+    expect(actual[24]).to.have.property("value", "day");
+
+    expect(actual[25]).to.have.property("type", "RParen");
+    expect(actual[25]).to.have.property("value", ")");
+    expect(actual[26]).to.have.property("type", "Word");
+    expect(actual[26]).to.have.property("value", "Cleric");
+    expect(actual[27]).to.have.property("type", "SpellsKnownPreparedPsychic");
+    expect(actual[27]).to.have.property("value", "Spells Prepared");
+    expect(actual[28]).to.have.property("type", "LParen");
+    expect(actual[28]).to.have.property("value", "(");
+    expect(actual[29]).to.have.property("type", "ClKey");
+    expect(actual[29]).to.have.property("value", "CL");
+
+    expect(actual[30]).to.have.property("type", "Level");
+    expect(actual[30]).to.have.property("value", "8th");
+    expect(actual[31]).to.have.property("type", "SemiColon");
+    expect(actual[31]).to.have.property("value", ";");
+    expect(actual[32]).to.have.property("type", "Word");
+    expect(actual[32]).to.have.property("value", "concentration");
+    expect(actual[33]).to.have.property("type", "NumberSigned");
+    expect(actual[33]).to.have.property("value", "+12");
+    expect(actual[34]).to.have.property("type", "RParen");
+    expect(actual[34]).to.have.property("value", ")");
+
+    expect(actual[35]).to.have.property("type", "Level");
+    expect(actual[35]).to.have.property("value", "4th");
+    expect(actual[36]).to.have.property("type", "MDash");
+    expect(actual[36]).to.have.property("value", "—");
+    expect(actual[37]).to.have.property("type", "Word");
+    expect(actual[37]).to.have.property("value", "discern");
+    expect(actual[38]).to.have.property("type", "Word");
+    expect(actual[38]).to.have.property("value", "lies");
+    expect(actual[39]).to.have.property("type", "LParen");
+    expect(actual[39]).to.have.property("value", "(");
+
+    expect(actual[40]).to.have.property("type", "DcKey");
+    expect(actual[40]).to.have.property("value", "DC");
+    expect(actual[41]).to.have.property("type", "NumberWhole");
+    expect(actual[41]).to.have.property("value", "18");
+    expect(actual[42]).to.have.property("type", "RParen");
+    expect(actual[42]).to.have.property("value", ")");
+    expect(actual[43]).to.have.property("type", "Comma");
+    expect(actual[43]).to.have.property("value", ",");
+    expect(actual[44]).to.have.property("type", "Word");
+    expect(actual[44]).to.have.property("value", "divinationD");
+
+    expect(actual[45]).to.have.property("type", "Comma");
+    expect(actual[45]).to.have.property("value", ",");
+    expect(actual[46]).to.have.property("type", "Word");
+    expect(actual[46]).to.have.property("value", "greater");
+    expect(actual[47]).to.have.property("type", "Word");
+    expect(actual[47]).to.have.property("value", "magic");
     expect(actual[48]).to.have.property("type", "Word");
-    expect(actual[48]).to.have.property("value", "divinationD");
+    expect(actual[48]).to.have.property("value", "weapon");
     expect(actual[49]).to.have.property("type", "Comma");
     expect(actual[49]).to.have.property("value", ",");
+
     expect(actual[50]).to.have.property("type", "Word");
-    expect(actual[50]).to.have.property("value", "greater");
-    expect(actual[51]).to.have.property("type", "Word");
-    expect(actual[51]).to.have.property("value", "magic");
-    expect(actual[52]).to.have.property("type", "Word");
-    expect(actual[52]).to.have.property("value", "weapon");
-    expect(actual[53]).to.have.property("type", "Comma");
-    expect(actual[53]).to.have.property("value", ",");
-    expect(actual[54]).to.have.property("type", "Word");
-    expect(actual[54]).to.have.property("value", "sending");
-    expect(actual[55]).to.have.property("type", "NumberWhole");
-    expect(actual[55]).to.have.property("value", "3");
+    expect(actual[50]).to.have.property("value", "sending");
+    expect(actual[51]).to.have.property("type", "Level");
+    expect(actual[51]).to.have.property("value", "3rd");
+    expect(actual[52]).to.have.property("type", "MDash");
+    expect(actual[52]).to.have.property("value", "—");
+    expect(actual[53]).to.have.property("type", "Word");
+    expect(actual[53]).to.have.property("value", "prayer");
+    expect(actual[54]).to.have.property("type", "Comma");
+    expect(actual[54]).to.have.property("value", ",");
+
+    expect(actual[55]).to.have.property("type", "Word");
+    expect(actual[55]).to.have.property("value", "remove");
     expect(actual[56]).to.have.property("type", "Word");
-    expect(actual[56]).to.have.property("value", "rd");
-    expect(actual[57]).to.have.property("type", "MDash");
-    expect(actual[57]).to.have.property("value", "—");
+    expect(actual[56]).to.have.property("value", "curse");
+    expect(actual[57]).to.have.property("type", "Comma");
+    expect(actual[57]).to.have.property("value", ",");
     expect(actual[58]).to.have.property("type", "Word");
-    expect(actual[58]).to.have.property("value", "prayer");
+    expect(actual[58]).to.have.property("value", "remove");
+    expect(actual[59]).to.have.property("type", "Word");
+    expect(actual[59]).to.have.property("value", "disease");
+
+    expect(actual[60]).to.have.property("type", "Comma");
+    expect(actual[60]).to.have.property("value", ",");
+    expect(actual[61]).to.have.property("type", "Word");
+    expect(actual[61]).to.have.property("value", "searing");
+    expect(actual[62]).to.have.property("type", "Word");
+    expect(actual[62]).to.have.property("value", "light");
+    expect(actual[63]).to.have.property("type", "Comma");
+    expect(actual[63]).to.have.property("value", ",");
+    expect(actual[64]).to.have.property("type", "Word");
+    expect(actual[64]).to.have.property("value", "speak");
+
+    expect(actual[65]).to.have.property("type", "Word");
+    expect(actual[65]).to.have.property("value", "with");
+    expect(actual[66]).to.have.property("type", "Word");
+    expect(actual[66]).to.have.property("value", "deadD");
+    expect(actual[67]).to.have.property("type", "LParen");
+    expect(actual[67]).to.have.property("value", "(");
+    expect(actual[68]).to.have.property("type", "DcKey");
+    expect(actual[68]).to.have.property("value", "DC");
+    expect(actual[69]).to.have.property("type", "NumberWhole");
+    expect(actual[69]).to.have.property("value", "17");
+
+    expect(actual[70]).to.have.property("type", "RParen");
+    expect(actual[70]).to.have.property("value", ")");
+    expect(actual[71]).to.have.property("type", "Level");
+    expect(actual[71]).to.have.property("value", "2nd");
+    expect(actual[72]).to.have.property("type", "MDash");
+    expect(actual[72]).to.have.property("value", "—");
+    expect(actual[73]).to.have.property("type", "Word");
+    expect(actual[73]).to.have.property("value", "gentle");
+    expect(actual[74]).to.have.property("type", "Word");
+    expect(actual[74]).to.have.property("value", "reposeD");
+
+    expect(actual[75]).to.have.property("type", "Comma");
+    expect(actual[75]).to.have.property("value", ",");
+    expect(actual[76]).to.have.property("type", "Word");
+    expect(actual[76]).to.have.property("value", "hold");
+    expect(actual[77]).to.have.property("type", "Word");
+    expect(actual[77]).to.have.property("value", "person");
+    expect(actual[78]).to.have.property("type", "LParen");
+    expect(actual[78]).to.have.property("value", "(");
+    expect(actual[79]).to.have.property("type", "DcKey");
+    expect(actual[79]).to.have.property("value", "DC");
+
+    expect(actual[80]).to.have.property("type", "NumberWhole");
+    expect(actual[80]).to.have.property("value", "16");
+    expect(actual[81]).to.have.property("type", "RParen");
+    expect(actual[81]).to.have.property("value", ")");
+    expect(actual[82]).to.have.property("type", "Comma");
+    expect(actual[82]).to.have.property("value", ",");
+    expect(actual[83]).to.have.property("type", "Word");
+    expect(actual[83]).to.have.property("value", "lesser");
+    expect(actual[84]).to.have.property("type", "Word");
+    expect(actual[84]).to.have.property("value", "restoration");
+
+    expect(actual[85]).to.have.property("type", "Comma");
+    expect(actual[85]).to.have.property("value", ",");
+    expect(actual[86]).to.have.property("type", "Word");
+    expect(actual[86]).to.have.property("value", "remove");
+    expect(actual[87]).to.have.property("type", "Word");
+    expect(actual[87]).to.have.property("value", "paralysis");
+    expect(actual[88]).to.have.property("type", "Comma");
+    expect(actual[88]).to.have.property("value", ",");
+    expect(actual[89]).to.have.property("type", "Word");
+    expect(actual[89]).to.have.property("value", "spiritual");
+
+    expect(actual[90]).to.have.property("type", "Word");
+    expect(actual[90]).to.have.property("value", "weapon");
+    expect(actual[91]).to.have.property("type", "Level");
+    expect(actual[91]).to.have.property("value", "1st");
+    expect(actual[92]).to.have.property("type", "MDash");
+    expect(actual[92]).to.have.property("value", "—");
+    expect(actual[93]).to.have.property("type", "Word");
+    expect(actual[93]).to.have.property("value", "bless");
+    expect(actual[94]).to.have.property("type", "Comma");
+    expect(actual[94]).to.have.property("value", ",");
+
+    expect(actual[95]).to.have.property("type", "Word");
+    expect(actual[95]).to.have.property("value", "comprehend");
+    expect(actual[96]).to.have.property("type", "Word");
+    expect(actual[96]).to.have.property("value", "languagesD");
+    expect(actual[97]).to.have.property("type", "Comma");
+    expect(actual[97]).to.have.property("value", ",");
+    expect(actual[98]).to.have.property("type", "Word");
+    expect(actual[98]).to.have.property("value", "divine");
+    expect(actual[99]).to.have.property("type", "Word");
+    expect(actual[99]).to.have.property("value", "favor");
+
+    expect(actual[100]).to.have.property("type", "Comma");
+    expect(actual[100]).to.have.property("value", ",");
+    expect(actual[101]).to.have.property("type", "Word");
+    expect(actual[101]).to.have.property("value", "hide");
+    expect(actual[102]).to.have.property("type", "Word");
+    expect(actual[102]).to.have.property("value", "from");
+    expect(actual[103]).to.have.property("type", "Word");
+    expect(actual[103]).to.have.property("value", "undead");
+    expect(actual[104]).to.have.property("type", "Comma");
+    expect(actual[104]).to.have.property("value", ",");
+
+    expect(actual[105]).to.have.property("type", "Word");
+    expect(actual[105]).to.have.property("value", "sanctify");
+    expect(actual[106]).to.have.property("type", "Word");
+    expect(actual[106]).to.have.property("value", "corpseUM");
+    expect(actual[107]).to.have.property("type", "Comma");
+    expect(actual[107]).to.have.property("value", ",");
+    expect(actual[108]).to.have.property("type", "Word");
+    expect(actual[108]).to.have.property("value", "shield");
+    expect(actual[109]).to.have.property("type", "Word");
+    expect(actual[109]).to.have.property("value", "of");
+
+    expect(actual[110]).to.have.property("type", "Word");
+    expect(actual[110]).to.have.property("value", "faith");
+    expect(actual[111]).to.have.property("type", "NumberWhole");
+    expect(actual[111]).to.have.property("value", "0");
+    expect(actual[112]).to.have.property("type", "LParen");
+    expect(actual[112]).to.have.property("value", "(");
+    expect(actual[113]).to.have.property("type", "Word");
+    expect(actual[113]).to.have.property("value", "at");
+    expect(actual[114]).to.have.property("type", "Word");
+    expect(actual[114]).to.have.property("value", "will");
+
+    expect(actual[115]).to.have.property("type", "RParen");
+    expect(actual[115]).to.have.property("value", ")");
+    expect(actual[116]).to.have.property("type", "MDash");
+    expect(actual[116]).to.have.property("value", "—");
+    expect(actual[117]).to.have.property("type", "Word");
+    expect(actual[117]).to.have.property("value", "detect");
+    expect(actual[118]).to.have.property("type", "Word");
+    expect(actual[118]).to.have.property("value", "magic");
+    expect(actual[119]).to.have.property("type", "Comma");
+    expect(actual[119]).to.have.property("value", ",");
+
+    expect(actual[120]).to.have.property("type", "Word");
+    expect(actual[120]).to.have.property("value", "light");
+    expect(actual[121]).to.have.property("type", "Comma");
+    expect(actual[121]).to.have.property("value", ",");
+    expect(actual[122]).to.have.property("type", "Word");
+    expect(actual[122]).to.have.property("value", "read");
+    expect(actual[123]).to.have.property("type", "Word");
+    expect(actual[123]).to.have.property("value", "magic");
+    expect(actual[124]).to.have.property("type", "Comma");
+    expect(actual[124]).to.have.property("value", ",");
+
+    expect(actual[125]).to.have.property("type", "Word");
+    expect(actual[125]).to.have.property("value", "stabilize");
+    expect(actual[126]).to.have.property("type", "Word");
+    expect(actual[126]).to.have.property("value", "D");
+    expect(actual[127]).to.have.property("type", "Word");
+    expect(actual[127]).to.have.property("value", "domain");
+    expect(actual[128]).to.have.property("type", "Word");
+    expect(actual[128]).to.have.property("value", "spell");
+    expect(actual[129]).to.have.property("type", "SemiColon");
+    expect(actual[129]).to.have.property("value", ";");
+
+    expect(actual[130]).to.have.property("type", "Word");
+    expect(actual[130]).to.have.property("value", "Domains");
+    expect(actual[131]).to.have.property("type", "Word");
+    expect(actual[131]).to.have.property("value", "Knowledge");
+    expect(actual[132]).to.have.property("type", "Comma");
+    expect(actual[132]).to.have.property("value", ",");
+    expect(actual[133]).to.have.property("type", "Word");
+    expect(actual[133]).to.have.property("value", "Repose");
+    expect(actual[134]).to.have.property("type", "LParen");
+    expect(actual[134]).to.have.property("value", "(");
+
+    expect(actual[135]).to.have.property("type", "Word");
+    expect(actual[135]).to.have.property("value", "Ancestors");
+    expect(actual[136]).to.have.property("type", "Word");
+    expect(actual[136]).to.have.property("value", "subdomainAPG");
+    expect(actual[137]).to.have.property("type", "RParen");
+    expect(actual[137]).to.have.property("value", ")");
+    expect(actual[138]).to.have.property("type", "TacticsKey");
+    expect(actual[138]).to.have.property("value", "TACTICS");
+
+  });
+
+  it("can find Spell-Like Abilities/Spells Known line 5", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Spell-like Abilities (CL 14th):
+    At will—create water, obscuring mist, stinking cloud (DC 17)
+    Sorcerer Spells Known (CL 5th)
+    2nd (5/day)—invisibility, whispering wind
+    1st (7/day)—feather fall, hypnotism (DC 15), shocking grasp,
+    unseen servant
+    0 (at will)—detect magic, daze (DC 14), mage hand,
+    message, open/close, ray of frost`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+    
+    expect(actual.length).to.equal(89);
+    
+    expect(actual[0]).to.have.property("type", "Word");
+    expect(actual[0]).to.have.property("value", "Spell");
+    expect(actual[1]).to.have.property("type", "Dash");
+    expect(actual[1]).to.have.property("value", "-");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "like");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "Abilities");
+    expect(actual[4]).to.have.property("type", "LParen");
+    expect(actual[4]).to.have.property("value", "(");
+
+    expect(actual[5]).to.have.property("type", "ClKey");
+    expect(actual[5]).to.have.property("value", "CL");
+    expect(actual[6]).to.have.property("type", "Level");
+    expect(actual[6]).to.have.property("value", "14th");
+    expect(actual[7]).to.have.property("type", "RParen");
+    expect(actual[7]).to.have.property("value", ")");
+    expect(actual[8]).to.have.property("type", "Colon");
+    expect(actual[8]).to.have.property("value", ":");
+    expect(actual[9]).to.have.property("type", "Word");
+    expect(actual[9]).to.have.property("value", "At");
+
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "will");
+    expect(actual[11]).to.have.property("type", "MDash");
+    expect(actual[11]).to.have.property("value", "—");
+    expect(actual[12]).to.have.property("type", "Word");
+    expect(actual[12]).to.have.property("value", "create");
+    expect(actual[13]).to.have.property("type", "Word");
+    expect(actual[13]).to.have.property("value", "water");
+    expect(actual[14]).to.have.property("type", "Comma");
+    expect(actual[14]).to.have.property("value", ",");
+
+    expect(actual[15]).to.have.property("type", "Word");
+    expect(actual[15]).to.have.property("value", "obscuring");
+    expect(actual[16]).to.have.property("type", "Word");
+    expect(actual[16]).to.have.property("value", "mist");
+    expect(actual[17]).to.have.property("type", "Comma");
+    expect(actual[17]).to.have.property("value", ",");
+    expect(actual[18]).to.have.property("type", "Word");
+    expect(actual[18]).to.have.property("value", "stinking");
+    expect(actual[19]).to.have.property("type", "Word");
+    expect(actual[19]).to.have.property("value", "cloud");
+
+    expect(actual[20]).to.have.property("type", "LParen");
+    expect(actual[20]).to.have.property("value", "(");
+    expect(actual[21]).to.have.property("type", "DcKey");
+    expect(actual[21]).to.have.property("value", "DC");
+    expect(actual[22]).to.have.property("type", "NumberWhole");
+    expect(actual[22]).to.have.property("value", "17");
+    expect(actual[23]).to.have.property("type", "RParen");
+    expect(actual[23]).to.have.property("value", ")");
+    expect(actual[24]).to.have.property("type", "Word");
+    expect(actual[24]).to.have.property("value", "Sorcerer");
+
+    expect(actual[25]).to.have.property("type", "SpellsKnownPreparedPsychic");
+    expect(actual[25]).to.have.property("value", "Spells Known");
+    expect(actual[26]).to.have.property("type", "LParen");
+    expect(actual[26]).to.have.property("value", "(");
+    expect(actual[27]).to.have.property("type", "ClKey");
+    expect(actual[27]).to.have.property("value", "CL");
+    expect(actual[28]).to.have.property("type", "Level");
+    expect(actual[28]).to.have.property("value", "5th");
+    expect(actual[29]).to.have.property("type", "RParen");
+    expect(actual[29]).to.have.property("value", ")");
+
+    expect(actual[30]).to.have.property("type", "Level");
+    expect(actual[30]).to.have.property("value", "2nd");
+    expect(actual[31]).to.have.property("type", "LParen");
+    expect(actual[31]).to.have.property("value", "(");
+    expect(actual[32]).to.have.property("type", "NumberWhole");
+    expect(actual[32]).to.have.property("value", "5");
+    expect(actual[33]).to.have.property("type", "ForwardSlash");
+    expect(actual[33]).to.have.property("value", "/");
+    expect(actual[34]).to.have.property("type", "Word");
+    expect(actual[34]).to.have.property("value", "day");
+
+    expect(actual[35]).to.have.property("type", "RParen");
+    expect(actual[35]).to.have.property("value", ")");
+    expect(actual[36]).to.have.property("type", "MDash");
+    expect(actual[36]).to.have.property("value", "—");
+    expect(actual[37]).to.have.property("type", "Word");
+    expect(actual[37]).to.have.property("value", "invisibility");
+    expect(actual[38]).to.have.property("type", "Comma");
+    expect(actual[38]).to.have.property("value", ",");
+    expect(actual[39]).to.have.property("type", "Word");
+    expect(actual[39]).to.have.property("value", "whispering");
+
+    expect(actual[40]).to.have.property("type", "Word");
+    expect(actual[40]).to.have.property("value", "wind");
+    expect(actual[41]).to.have.property("type", "Level");
+    expect(actual[41]).to.have.property("value", "1st");
+    expect(actual[42]).to.have.property("type", "LParen");
+    expect(actual[42]).to.have.property("value", "(");
+    expect(actual[43]).to.have.property("type", "NumberWhole");
+    expect(actual[43]).to.have.property("value", "7");
+    expect(actual[44]).to.have.property("type", "ForwardSlash");
+    expect(actual[44]).to.have.property("value", "/");
+
+    expect(actual[45]).to.have.property("type", "Word");
+    expect(actual[45]).to.have.property("value", "day");
+    expect(actual[46]).to.have.property("type", "RParen");
+    expect(actual[46]).to.have.property("value", ")");
+    expect(actual[47]).to.have.property("type", "MDash");
+    expect(actual[47]).to.have.property("value", "—");
+    expect(actual[48]).to.have.property("type", "Word");
+    expect(actual[48]).to.have.property("value", "feather");
+    expect(actual[49]).to.have.property("type", "Word");
+    expect(actual[49]).to.have.property("value", "fall");
+
+    expect(actual[50]).to.have.property("type", "Comma");
+    expect(actual[50]).to.have.property("value", ",");
+    expect(actual[51]).to.have.property("type", "Word");
+    expect(actual[51]).to.have.property("value", "hypnotism");
+    expect(actual[52]).to.have.property("type", "LParen");
+    expect(actual[52]).to.have.property("value", "(");
+    expect(actual[53]).to.have.property("type", "DcKey");
+    expect(actual[53]).to.have.property("value", "DC");
+    expect(actual[54]).to.have.property("type", "NumberWhole");
+    expect(actual[54]).to.have.property("value", "15");
+
+    expect(actual[55]).to.have.property("type", "RParen");
+    expect(actual[55]).to.have.property("value", ")");
+    expect(actual[56]).to.have.property("type", "Comma");
+    expect(actual[56]).to.have.property("value", ",");
+    expect(actual[57]).to.have.property("type", "Word");
+    expect(actual[57]).to.have.property("value", "shocking");
+    expect(actual[58]).to.have.property("type", "Word");
+    expect(actual[58]).to.have.property("value", "grasp");
     expect(actual[59]).to.have.property("type", "Comma");
     expect(actual[59]).to.have.property("value", ",");
+
     expect(actual[60]).to.have.property("type", "Word");
-    expect(actual[60]).to.have.property("value", "remove");
+    expect(actual[60]).to.have.property("value", "unseen");
     expect(actual[61]).to.have.property("type", "Word");
-    expect(actual[61]).to.have.property("value", "curse");
-    expect(actual[62]).to.have.property("type", "Comma");
-    expect(actual[62]).to.have.property("value", ",");
-    expect(actual[63]).to.have.property("type", "Word");
-    expect(actual[63]).to.have.property("value", "remove");
+    expect(actual[61]).to.have.property("value", "servant");
+    expect(actual[62]).to.have.property("type", "NumberWhole");
+    expect(actual[62]).to.have.property("value", "0");
+    expect(actual[63]).to.have.property("type", "LParen");
+    expect(actual[63]).to.have.property("value", "(");
     expect(actual[64]).to.have.property("type", "Word");
-    expect(actual[64]).to.have.property("value", "disease");
-    expect(actual[65]).to.have.property("type", "Comma");
-    expect(actual[65]).to.have.property("value", ",");
-    expect(actual[66]).to.have.property("type", "Word");
-    expect(actual[66]).to.have.property("value", "searing");
-    expect(actual[67]).to.have.property("type", "Word");
-    expect(actual[67]).to.have.property("value", "light");
-    expect(actual[68]).to.have.property("type", "Comma");
-    expect(actual[68]).to.have.property("value", ",");
+    expect(actual[64]).to.have.property("value", "at");
+
+    expect(actual[65]).to.have.property("type", "Word");
+    expect(actual[65]).to.have.property("value", "will");
+    expect(actual[66]).to.have.property("type", "RParen");
+    expect(actual[66]).to.have.property("value", ")");
+    expect(actual[67]).to.have.property("type", "MDash");
+    expect(actual[67]).to.have.property("value", "—");
+    expect(actual[68]).to.have.property("type", "Word");
+    expect(actual[68]).to.have.property("value", "detect");
     expect(actual[69]).to.have.property("type", "Word");
-    expect(actual[69]).to.have.property("value", "speak");
-    expect(actual[70]).to.have.property("type", "Word");
-    expect(actual[70]).to.have.property("value", "with");
+    expect(actual[69]).to.have.property("value", "magic");
+
+    expect(actual[70]).to.have.property("type", "Comma");
+    expect(actual[70]).to.have.property("value", ",");
     expect(actual[71]).to.have.property("type", "Word");
-    expect(actual[71]).to.have.property("value", "deadD");
+    expect(actual[71]).to.have.property("value", "daze");
     expect(actual[72]).to.have.property("type", "LParen");
     expect(actual[72]).to.have.property("value", "(");
     expect(actual[73]).to.have.property("type", "DcKey");
     expect(actual[73]).to.have.property("value", "DC");
     expect(actual[74]).to.have.property("type", "NumberWhole");
-    expect(actual[74]).to.have.property("value", "17");
+    expect(actual[74]).to.have.property("value", "14");
+
     expect(actual[75]).to.have.property("type", "RParen");
     expect(actual[75]).to.have.property("value", ")");
-    expect(actual[76]).to.have.property("type", "NumberWhole");
-    expect(actual[76]).to.have.property("value", "2");
+    expect(actual[76]).to.have.property("type", "Comma");
+    expect(actual[76]).to.have.property("value", ",");
     expect(actual[77]).to.have.property("type", "Word");
-    expect(actual[77]).to.have.property("value", "nd");
-    expect(actual[78]).to.have.property("type", "MDash");
-    expect(actual[78]).to.have.property("value", "—");
-    expect(actual[79]).to.have.property("type", "Word");
-    expect(actual[79]).to.have.property("value", "gentle");
+    expect(actual[77]).to.have.property("value", "mage");
+    expect(actual[78]).to.have.property("type", "Word");
+    expect(actual[78]).to.have.property("value", "hand");
+    expect(actual[79]).to.have.property("type", "Comma");
+    expect(actual[79]).to.have.property("value", ",");
+
     expect(actual[80]).to.have.property("type", "Word");
-    expect(actual[80]).to.have.property("value", "reposeD");
+    expect(actual[80]).to.have.property("value", "message");
     expect(actual[81]).to.have.property("type", "Comma");
     expect(actual[81]).to.have.property("value", ",");
     expect(actual[82]).to.have.property("type", "Word");
-    expect(actual[82]).to.have.property("value", "hold");
+    expect(actual[82]).to.have.property("value", "open");
+    expect(actual[83]).to.have.property("type", "ForwardSlash");
+    expect(actual[83]).to.have.property("value", "/");
+    expect(actual[84]).to.have.property("type", "Word");
+    expect(actual[84]).to.have.property("value", "close");
+
+    expect(actual[85]).to.have.property("type", "Comma");
+    expect(actual[85]).to.have.property("value", ",");
+    expect(actual[86]).to.have.property("type", "Word");
+    expect(actual[86]).to.have.property("value", "ray");
+    expect(actual[87]).to.have.property("type", "Word");
+    expect(actual[87]).to.have.property("value", "of");
+    expect(actual[88]).to.have.property("type", "Word");
+    expect(actual[88]).to.have.property("value", "frost");
+
+  });
+
+  it("can find Psychic Magic/Spells Known line 6", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+  
+    const input = `Psychic Magic (CL 6th; concentration +9)
+      3 PE—
+      forbid actionUM (1 PE, DC 14), mending (0 PE)
+      Psychic Spells Known (CL 1st; concentration +4)
+      1st (4/day)—mage armor, sleep (DC 14)
+      0 (at-will)—detect magic, detect psychic significanceOA,
+      mage hand, read magic`;
+  
+    const actual = TestHelper.runLexer(lexer, input);
+      
+    expect(actual.length).to.equal(69);
+    
+    expect(actual[0]).to.have.property("type", "SpellsKnownPreparedPsychic");
+    expect(actual[0]).to.have.property("value", "Psychic Magic");
+    expect(actual[1]).to.have.property("type", "LParen");
+    expect(actual[1]).to.have.property("value", "(");
+    expect(actual[2]).to.have.property("type", "ClKey");
+    expect(actual[2]).to.have.property("value", "CL");
+    expect(actual[3]).to.have.property("type", "Level");
+    expect(actual[3]).to.have.property("value", "6th");
+    expect(actual[4]).to.have.property("type", "SemiColon");
+    expect(actual[4]).to.have.property("value", ";");
+  
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "concentration");
+    expect(actual[6]).to.have.property("type", "NumberSigned");
+    expect(actual[6]).to.have.property("value", "+9");
+    expect(actual[7]).to.have.property("type", "RParen");
+    expect(actual[7]).to.have.property("value", ")");
+    expect(actual[8]).to.have.property("type", "NumberWhole");
+    expect(actual[8]).to.have.property("value", "3");
+    expect(actual[9]).to.have.property("type", "Word");
+    expect(actual[9]).to.have.property("value", "PE");
+  
+    expect(actual[10]).to.have.property("type", "MDash");
+    expect(actual[10]).to.have.property("value", "—");
+    expect(actual[11]).to.have.property("type", "Word");
+    expect(actual[11]).to.have.property("value", "forbid");
+    expect(actual[12]).to.have.property("type", "Word");
+    expect(actual[12]).to.have.property("value", "actionUM");
+    expect(actual[13]).to.have.property("type", "LParen");
+    expect(actual[13]).to.have.property("value", "(");
+    expect(actual[14]).to.have.property("type", "NumberWhole");
+    expect(actual[14]).to.have.property("value", "1");
+  
+    expect(actual[15]).to.have.property("type", "Word");
+    expect(actual[15]).to.have.property("value", "PE");
+    expect(actual[16]).to.have.property("type", "Comma");
+    expect(actual[16]).to.have.property("value", ",");
+    expect(actual[17]).to.have.property("type", "DcKey");
+    expect(actual[17]).to.have.property("value", "DC");
+    expect(actual[18]).to.have.property("type", "NumberWhole");
+    expect(actual[18]).to.have.property("value", "14");
+    expect(actual[19]).to.have.property("type", "RParen");
+    expect(actual[19]).to.have.property("value", ")");
+  
+    expect(actual[20]).to.have.property("type", "Comma");
+    expect(actual[20]).to.have.property("value", ",");
+    expect(actual[21]).to.have.property("type", "Word");
+    expect(actual[21]).to.have.property("value", "mending");
+    expect(actual[22]).to.have.property("type", "LParen");
+    expect(actual[22]).to.have.property("value", "(");
+    expect(actual[23]).to.have.property("type", "NumberWhole");
+    expect(actual[23]).to.have.property("value", "0");
+    expect(actual[24]).to.have.property("type", "Word");
+    expect(actual[24]).to.have.property("value", "PE");
+  
+    expect(actual[25]).to.have.property("type", "RParen");
+    expect(actual[25]).to.have.property("value", ")");
+    expect(actual[26]).to.have.property("type", "Word");
+    expect(actual[26]).to.have.property("value", "Psychic");
+    expect(actual[27]).to.have.property("type", "SpellsKnownPreparedPsychic");
+    expect(actual[27]).to.have.property("value", "Spells Known");
+    expect(actual[28]).to.have.property("type", "LParen");
+    expect(actual[28]).to.have.property("value", "(");
+    expect(actual[29]).to.have.property("type", "ClKey");
+    expect(actual[29]).to.have.property("value", "CL");
+  
+    expect(actual[30]).to.have.property("type", "Level");
+    expect(actual[30]).to.have.property("value", "1st");
+    expect(actual[31]).to.have.property("type", "SemiColon");
+    expect(actual[31]).to.have.property("value", ";");
+    expect(actual[32]).to.have.property("type", "Word");
+    expect(actual[32]).to.have.property("value", "concentration");
+    expect(actual[33]).to.have.property("type", "NumberSigned");
+    expect(actual[33]).to.have.property("value", "+4");
+    expect(actual[34]).to.have.property("type", "RParen");
+    expect(actual[34]).to.have.property("value", ")");
+  
+    expect(actual[35]).to.have.property("type", "Level");
+    expect(actual[35]).to.have.property("value", "1st");
+    expect(actual[36]).to.have.property("type", "LParen");
+    expect(actual[36]).to.have.property("value", "(");
+    expect(actual[37]).to.have.property("type", "NumberWhole");
+    expect(actual[37]).to.have.property("value", "4");
+    expect(actual[38]).to.have.property("type", "ForwardSlash");
+    expect(actual[38]).to.have.property("value", "/");
+    expect(actual[39]).to.have.property("type", "Word");
+    expect(actual[39]).to.have.property("value", "day");
+  
+    expect(actual[40]).to.have.property("type", "RParen");
+    expect(actual[40]).to.have.property("value", ")");
+    expect(actual[41]).to.have.property("type", "MDash");
+    expect(actual[41]).to.have.property("value", "—");
+    expect(actual[42]).to.have.property("type", "Word");
+    expect(actual[42]).to.have.property("value", "mage");
+    expect(actual[43]).to.have.property("type", "Word");
+    expect(actual[43]).to.have.property("value", "armor");
+    expect(actual[44]).to.have.property("type", "Comma");
+    expect(actual[44]).to.have.property("value", ",");
+  
+    expect(actual[45]).to.have.property("type", "Word");
+    expect(actual[45]).to.have.property("value", "sleep");
+    expect(actual[46]).to.have.property("type", "LParen");
+    expect(actual[46]).to.have.property("value", "(");
+    expect(actual[47]).to.have.property("type", "DcKey");
+    expect(actual[47]).to.have.property("value", "DC");
+    expect(actual[48]).to.have.property("type", "NumberWhole");
+    expect(actual[48]).to.have.property("value", "14");
+    expect(actual[49]).to.have.property("type", "RParen");
+    expect(actual[49]).to.have.property("value", ")");
+  
+    expect(actual[50]).to.have.property("type", "NumberWhole");
+    expect(actual[50]).to.have.property("value", "0");
+    expect(actual[51]).to.have.property("type", "LParen");
+    expect(actual[51]).to.have.property("value", "(");
+    expect(actual[52]).to.have.property("type", "Word");
+    expect(actual[52]).to.have.property("value", "at");
+    expect(actual[53]).to.have.property("type", "Dash");
+    expect(actual[53]).to.have.property("value", "-");
+    expect(actual[54]).to.have.property("type", "Word");
+    expect(actual[54]).to.have.property("value", "will");
+  
+    expect(actual[55]).to.have.property("type", "RParen");
+    expect(actual[55]).to.have.property("value", ")");
+    expect(actual[56]).to.have.property("type", "MDash");
+    expect(actual[56]).to.have.property("value", "—");
+    expect(actual[57]).to.have.property("type", "Word");
+    expect(actual[57]).to.have.property("value", "detect");
+    expect(actual[58]).to.have.property("type", "Word");
+    expect(actual[58]).to.have.property("value", "magic");
+    expect(actual[59]).to.have.property("type", "Comma");
+    expect(actual[59]).to.have.property("value", ",");
+  
+    expect(actual[60]).to.have.property("type", "Word");
+    expect(actual[60]).to.have.property("value", "detect");
+    expect(actual[61]).to.have.property("type", "Word");
+    expect(actual[61]).to.have.property("value", "psychic");
+    expect(actual[62]).to.have.property("type", "Word");
+    expect(actual[62]).to.have.property("value", "significanceOA");
+    expect(actual[63]).to.have.property("type", "Comma");
+    expect(actual[63]).to.have.property("value", ",");
+    expect(actual[64]).to.have.property("type", "Word");
+    expect(actual[64]).to.have.property("value", "mage");
+  
+    expect(actual[65]).to.have.property("type", "Word");
+    expect(actual[65]).to.have.property("value", "hand");
+    expect(actual[66]).to.have.property("type", "Comma");
+    expect(actual[66]).to.have.property("value", ",");
+    expect(actual[67]).to.have.property("type", "Word");
+    expect(actual[67]).to.have.property("value", "read");
+    expect(actual[68]).to.have.property("type", "Word");
+    expect(actual[68]).to.have.property("value", "magic");
+  
+  });
+  
+  it("can find Psychic Magic/Spells Known line 7", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+    
+    const input = `Psychic Magic (CL 11th, concentration +17)
+        10 PE—ego whip IOA (3 PE, DC 19), id insinuation IOA
+        (2 PE, DC 18), mental barrier IOA (1 PE), mind thrust IVOA
+        (4 PE, DC 20)
+        Spell-Like Abilities (CL 11th; concentration +17)
+        Constant—mage armor`;
+    
+    const actual = TestHelper.runLexer(lexer, input);
+        
+    expect(actual.length).to.equal(63);
+    
+    expect(actual[0]).to.have.property("type", "SpellsKnownPreparedPsychic");
+    expect(actual[0]).to.have.property("value", "Psychic Magic");
+    expect(actual[1]).to.have.property("type", "LParen");
+    expect(actual[1]).to.have.property("value", "(");
+    expect(actual[2]).to.have.property("type", "ClKey");
+    expect(actual[2]).to.have.property("value", "CL");
+    expect(actual[3]).to.have.property("type", "Level");
+    expect(actual[3]).to.have.property("value", "11th");
+    expect(actual[4]).to.have.property("type", "Comma");
+    expect(actual[4]).to.have.property("value", ",");
+
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "concentration");
+    expect(actual[6]).to.have.property("type", "NumberSigned");
+    expect(actual[6]).to.have.property("value", "+17");
+    expect(actual[7]).to.have.property("type", "RParen");
+    expect(actual[7]).to.have.property("value", ")");
+    expect(actual[8]).to.have.property("type", "NumberWhole");
+    expect(actual[8]).to.have.property("value", "10");
+    expect(actual[9]).to.have.property("type", "Word");
+    expect(actual[9]).to.have.property("value", "PE");
+
+    expect(actual[10]).to.have.property("type", "MDash");
+    expect(actual[10]).to.have.property("value", "—");
+    expect(actual[11]).to.have.property("type", "Word");
+    expect(actual[11]).to.have.property("value", "ego");
+    expect(actual[12]).to.have.property("type", "Word");
+    expect(actual[12]).to.have.property("value", "whip");
+    expect(actual[13]).to.have.property("type", "Word");
+    expect(actual[13]).to.have.property("value", "IOA");
+    expect(actual[14]).to.have.property("type", "LParen");
+    expect(actual[14]).to.have.property("value", "(");
+
+    expect(actual[15]).to.have.property("type", "NumberWhole");
+    expect(actual[15]).to.have.property("value", "3");
+    expect(actual[16]).to.have.property("type", "Word");
+    expect(actual[16]).to.have.property("value", "PE");
+    expect(actual[17]).to.have.property("type", "Comma");
+    expect(actual[17]).to.have.property("value", ",");
+    expect(actual[18]).to.have.property("type", "DcKey");
+    expect(actual[18]).to.have.property("value", "DC");
+    expect(actual[19]).to.have.property("type", "NumberWhole");
+    expect(actual[19]).to.have.property("value", "19");
+
+    expect(actual[20]).to.have.property("type", "RParen");
+    expect(actual[20]).to.have.property("value", ")");
+    expect(actual[21]).to.have.property("type", "Comma");
+    expect(actual[21]).to.have.property("value", ",");
+    expect(actual[22]).to.have.property("type", "Word");
+    expect(actual[22]).to.have.property("value", "id");
+    expect(actual[23]).to.have.property("type", "Word");
+    expect(actual[23]).to.have.property("value", "insinuation");
+    expect(actual[24]).to.have.property("type", "Word");
+    expect(actual[24]).to.have.property("value", "IOA");
+
+    expect(actual[25]).to.have.property("type", "LParen");
+    expect(actual[25]).to.have.property("value", "(");
+    expect(actual[26]).to.have.property("type", "NumberWhole");
+    expect(actual[26]).to.have.property("value", "2");
+    expect(actual[27]).to.have.property("type", "Word");
+    expect(actual[27]).to.have.property("value", "PE");
+    expect(actual[28]).to.have.property("type", "Comma");
+    expect(actual[28]).to.have.property("value", ",");
+    expect(actual[29]).to.have.property("type", "DcKey");
+    expect(actual[29]).to.have.property("value", "DC");
+
+    expect(actual[30]).to.have.property("type", "NumberWhole");
+    expect(actual[30]).to.have.property("value", "18");
+    expect(actual[31]).to.have.property("type", "RParen");
+    expect(actual[31]).to.have.property("value", ")");
+    expect(actual[32]).to.have.property("type", "Comma");
+    expect(actual[32]).to.have.property("value", ",");
+    expect(actual[33]).to.have.property("type", "Word");
+    expect(actual[33]).to.have.property("value", "mental");
+    expect(actual[34]).to.have.property("type", "Word");
+    expect(actual[34]).to.have.property("value", "barrier");
+
+    expect(actual[35]).to.have.property("type", "Word");
+    expect(actual[35]).to.have.property("value", "IOA");
+    expect(actual[36]).to.have.property("type", "LParen");
+    expect(actual[36]).to.have.property("value", "(");
+    expect(actual[37]).to.have.property("type", "NumberWhole");
+    expect(actual[37]).to.have.property("value", "1");
+    expect(actual[38]).to.have.property("type", "Word");
+    expect(actual[38]).to.have.property("value", "PE");
+    expect(actual[39]).to.have.property("type", "RParen");
+    expect(actual[39]).to.have.property("value", ")");
+
+    expect(actual[40]).to.have.property("type", "Comma");
+    expect(actual[40]).to.have.property("value", ",");
+    expect(actual[41]).to.have.property("type", "Word");
+    expect(actual[41]).to.have.property("value", "mind");
+    expect(actual[42]).to.have.property("type", "Word");
+    expect(actual[42]).to.have.property("value", "thrust");
+    expect(actual[43]).to.have.property("type", "Word");
+    expect(actual[43]).to.have.property("value", "IVOA");
+    expect(actual[44]).to.have.property("type", "LParen");
+    expect(actual[44]).to.have.property("value", "(");
+
+    expect(actual[45]).to.have.property("type", "NumberWhole");
+    expect(actual[45]).to.have.property("value", "4");
+    expect(actual[46]).to.have.property("type", "Word");
+    expect(actual[46]).to.have.property("value", "PE");
+    expect(actual[47]).to.have.property("type", "Comma");
+    expect(actual[47]).to.have.property("value", ",");
+    expect(actual[48]).to.have.property("type", "DcKey");
+    expect(actual[48]).to.have.property("value", "DC");
+    expect(actual[49]).to.have.property("type", "NumberWhole");    
+    expect(actual[49]).to.have.property("value", "20");
+
+    expect(actual[50]).to.have.property("type", "RParen");
+    expect(actual[50]).to.have.property("value", ")");
+    expect(actual[51]).to.have.property("type", "SpellLikeAbilityKey");
+    expect(actual[51]).to.have.property("value", "Spell-Like Abilities");
+    expect(actual[52]).to.have.property("type", "LParen");
+    expect(actual[52]).to.have.property("value", "(");
+    expect(actual[53]).to.have.property("type", "ClKey");
+    expect(actual[53]).to.have.property("value", "CL");
+    expect(actual[54]).to.have.property("type", "Level");
+    expect(actual[54]).to.have.property("value", "11th");
+
+    expect(actual[55]).to.have.property("type", "SemiColon");
+    expect(actual[55]).to.have.property("value", ";");
+    expect(actual[56]).to.have.property("type", "Word");
+    expect(actual[56]).to.have.property("value", "concentration");
+    expect(actual[57]).to.have.property("type", "NumberSigned");
+    expect(actual[57]).to.have.property("value", "+17");
+    expect(actual[58]).to.have.property("type", "RParen");
+    expect(actual[58]).to.have.property("value", ")");
+    expect(actual[59]).to.have.property("type", "Word");
+    expect(actual[59]).to.have.property("value", "Constant");
+
+    expect(actual[60]).to.have.property("type", "MDash");
+    expect(actual[60]).to.have.property("value", "—");
+    expect(actual[61]).to.have.property("type", "Word");
+    expect(actual[61]).to.have.property("value", "mage");
+    expect(actual[62]).to.have.property("type", "Word");
+    expect(actual[62]).to.have.property("value", "armor");    
+  });
+
+  it("can find Tactics line 1", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `TACTICS
+    Before Combat Lini casts goodberry at the start of each day.
+    During Combat Lini attempts to stay out of melee, sending her
+    animal companion to fight while she uses her magic to heal,
+    summon allies, and control the environment.
+    STATISTICS`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+    
+    expect(actual.length).to.equal(46);
+    
+    expect(actual[0]).to.have.property("type", "TacticsKey");
+    expect(actual[0]).to.have.property("value", "TACTICS");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "Before");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "Combat");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "Lini");
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "casts");
+
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "goodberry");
+    expect(actual[6]).to.have.property("type", "Word");
+    expect(actual[6]).to.have.property("value", "at");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "the");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "start");
+    expect(actual[9]).to.have.property("type", "Word");
+    expect(actual[9]).to.have.property("value", "of");
+
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "each");
+    expect(actual[11]).to.have.property("type", "Word");
+    expect(actual[11]).to.have.property("value", "day");
+    expect(actual[12]).to.have.property("type", "Period");
+    expect(actual[12]).to.have.property("value", ".");
+    expect(actual[13]).to.have.property("type", "Word");
+    expect(actual[13]).to.have.property("value", "During");
+    expect(actual[14]).to.have.property("type", "Word");
+    expect(actual[14]).to.have.property("value", "Combat");
+
+    expect(actual[15]).to.have.property("type", "Word");
+    expect(actual[15]).to.have.property("value", "Lini");
+    expect(actual[16]).to.have.property("type", "Word");
+    expect(actual[16]).to.have.property("value", "attempts");
+    expect(actual[17]).to.have.property("type", "Word");
+    expect(actual[17]).to.have.property("value", "to");
+    expect(actual[18]).to.have.property("type", "Word");
+    expect(actual[18]).to.have.property("value", "stay");
+    expect(actual[19]).to.have.property("type", "Word");
+    expect(actual[19]).to.have.property("value", "out");
+
+    expect(actual[20]).to.have.property("type", "Word");
+    expect(actual[20]).to.have.property("value", "of");
+    expect(actual[21]).to.have.property("type", "Word");
+    expect(actual[21]).to.have.property("value", "melee");
+    expect(actual[22]).to.have.property("type", "Comma");
+    expect(actual[22]).to.have.property("value", ",");
+    expect(actual[23]).to.have.property("type", "Word");
+    expect(actual[23]).to.have.property("value", "sending");
+    expect(actual[24]).to.have.property("type", "Word");
+    expect(actual[24]).to.have.property("value", "her");
+
+    expect(actual[25]).to.have.property("type", "Word");
+    expect(actual[25]).to.have.property("value", "animal");
+    expect(actual[26]).to.have.property("type", "Word");
+    expect(actual[26]).to.have.property("value", "companion");
+    expect(actual[27]).to.have.property("type", "Word");
+    expect(actual[27]).to.have.property("value", "to");
+    expect(actual[28]).to.have.property("type", "Word");
+    expect(actual[28]).to.have.property("value", "fight");
+    expect(actual[29]).to.have.property("type", "Word");
+    expect(actual[29]).to.have.property("value", "while");
+
+    expect(actual[30]).to.have.property("type", "Word");
+    expect(actual[30]).to.have.property("value", "she");
+    expect(actual[31]).to.have.property("type", "Word");
+    expect(actual[31]).to.have.property("value", "uses");
+    expect(actual[32]).to.have.property("type", "Word");
+    expect(actual[32]).to.have.property("value", "her");
+    expect(actual[33]).to.have.property("type", "Word");
+    expect(actual[33]).to.have.property("value", "magic");
+    expect(actual[34]).to.have.property("type", "Word");
+    expect(actual[34]).to.have.property("value", "to");
+
+    expect(actual[35]).to.have.property("type", "Word");
+    expect(actual[35]).to.have.property("value", "heal");
+    expect(actual[36]).to.have.property("type", "Comma");
+    expect(actual[36]).to.have.property("value", ",");
+    expect(actual[37]).to.have.property("type", "Word");
+    expect(actual[37]).to.have.property("value", "summon");
+    expect(actual[38]).to.have.property("type", "Word");
+    expect(actual[38]).to.have.property("value", "allies");
+    expect(actual[39]).to.have.property("type", "Comma");
+    expect(actual[39]).to.have.property("value", ",");
+
+    expect(actual[40]).to.have.property("type", "Word");
+    expect(actual[40]).to.have.property("value", "and");
+    expect(actual[41]).to.have.property("type", "Word");
+    expect(actual[41]).to.have.property("value", "control");
+    expect(actual[42]).to.have.property("type", "Word");
+    expect(actual[42]).to.have.property("value", "the");
+    expect(actual[43]).to.have.property("type", "Word");
+    expect(actual[43]).to.have.property("value", "environment");
+    expect(actual[44]).to.have.property("type", "Period");
+    expect(actual[44]).to.have.property("value", ".");
+
+    expect(actual[45]).to.have.property("type", "StatisticsKey");
+    expect(actual[45]).to.have.property("value", "STATISTICS");
+  });
+  
+  it("can find Tactics line 2", () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `TACTICS
+    Before Combat If he’s able, Ptemenib casts shield of faith before combat.
+    During Combat Ptemenib prefers a supporting role in combat, using his spells to heal and bolster his allies. If he has no other options, however, Ptemenib joins combat with his few offensive spells.
+    Morale Ptemenib is good-hearted and dedicated, but not foolish. If a battle seems lost, he’s not above fleeing to heal himself, though he will return to rescue any comrades who are captured.
+    STATISTICS`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+    
+    expect(actual.length).to.equal(93);
+  
+    expect(actual[0]).to.have.property("type", "TacticsKey");
+    expect(actual[0]).to.have.property("value", "TACTICS");
+    expect(actual[1]).to.have.property("type", "Word");
+    expect(actual[1]).to.have.property("value", "Before");
+    expect(actual[2]).to.have.property("type", "Word");
+    expect(actual[2]).to.have.property("value", "Combat");
+    expect(actual[3]).to.have.property("type", "Word");
+    expect(actual[3]).to.have.property("value", "If");
+    expect(actual[4]).to.have.property("type", "Word");
+    expect(actual[4]).to.have.property("value", "he’s");
+  
+    expect(actual[5]).to.have.property("type", "Word");
+    expect(actual[5]).to.have.property("value", "able");
+    expect(actual[6]).to.have.property("type", "Comma");
+    expect(actual[6]).to.have.property("value", ",");
+    expect(actual[7]).to.have.property("type", "Word");
+    expect(actual[7]).to.have.property("value", "Ptemenib");
+    expect(actual[8]).to.have.property("type", "Word");
+    expect(actual[8]).to.have.property("value", "casts");
+    expect(actual[9]).to.have.property("type", "Word");
+    expect(actual[9]).to.have.property("value", "shield");
+  
+    expect(actual[10]).to.have.property("type", "Word");
+    expect(actual[10]).to.have.property("value", "of");
+    expect(actual[11]).to.have.property("type", "Word");
+    expect(actual[11]).to.have.property("value", "faith");
+    expect(actual[12]).to.have.property("type", "Word");
+    expect(actual[12]).to.have.property("value", "before");
+    expect(actual[13]).to.have.property("type", "Word");
+    expect(actual[13]).to.have.property("value", "combat");
+    expect(actual[14]).to.have.property("type", "Period");
+    expect(actual[14]).to.have.property("value", ".");
+  
+    expect(actual[15]).to.have.property("type", "Word");
+    expect(actual[15]).to.have.property("value", "During");
+    expect(actual[16]).to.have.property("type", "Word");
+    expect(actual[16]).to.have.property("value", "Combat");
+    expect(actual[17]).to.have.property("type", "Word");
+    expect(actual[17]).to.have.property("value", "Ptemenib");
+    expect(actual[18]).to.have.property("type", "Word");
+    expect(actual[18]).to.have.property("value", "prefers");
+    expect(actual[19]).to.have.property("type", "Word");
+    expect(actual[19]).to.have.property("value", "a");
+  
+    expect(actual[20]).to.have.property("type", "Word");
+    expect(actual[20]).to.have.property("value", "supporting");
+    expect(actual[21]).to.have.property("type", "Word");
+    expect(actual[21]).to.have.property("value", "role");
+    expect(actual[22]).to.have.property("type", "Word");
+    expect(actual[22]).to.have.property("value", "in");
+    expect(actual[23]).to.have.property("type", "Word");
+    expect(actual[23]).to.have.property("value", "combat");
+    expect(actual[24]).to.have.property("type", "Comma");
+    expect(actual[24]).to.have.property("value", ",");
+  
+    expect(actual[25]).to.have.property("type", "Word");
+    expect(actual[25]).to.have.property("value", "using");
+    expect(actual[26]).to.have.property("type", "Word");
+    expect(actual[26]).to.have.property("value", "his");
+    expect(actual[27]).to.have.property("type", "Word");
+    expect(actual[27]).to.have.property("value", "spells");
+    expect(actual[28]).to.have.property("type", "Word");
+    expect(actual[28]).to.have.property("value", "to");
+    expect(actual[29]).to.have.property("type", "Word");
+    expect(actual[29]).to.have.property("value", "heal");
+  
+    expect(actual[30]).to.have.property("type", "Word");
+    expect(actual[30]).to.have.property("value", "and");
+    expect(actual[31]).to.have.property("type", "Word");
+    expect(actual[31]).to.have.property("value", "bolster");
+    expect(actual[32]).to.have.property("type", "Word");
+    expect(actual[32]).to.have.property("value", "his");
+    expect(actual[33]).to.have.property("type", "Word");
+    expect(actual[33]).to.have.property("value", "allies");
+    expect(actual[34]).to.have.property("type", "Period");
+    expect(actual[34]).to.have.property("value", ".");
+  
+    expect(actual[35]).to.have.property("type", "Word");
+    expect(actual[35]).to.have.property("value", "If");
+    expect(actual[36]).to.have.property("type", "Word");
+    expect(actual[36]).to.have.property("value", "he");
+    expect(actual[37]).to.have.property("type", "Word");
+    expect(actual[37]).to.have.property("value", "has");
+    expect(actual[38]).to.have.property("type", "Word");
+    expect(actual[38]).to.have.property("value", "no");
+    expect(actual[39]).to.have.property("type", "Word");
+    expect(actual[39]).to.have.property("value", "other");
+  
+    expect(actual[40]).to.have.property("type", "Word");
+    expect(actual[40]).to.have.property("value", "options");
+    expect(actual[41]).to.have.property("type", "Comma");
+    expect(actual[41]).to.have.property("value", ",");
+    expect(actual[42]).to.have.property("type", "Word");
+    expect(actual[42]).to.have.property("value", "however");
+    expect(actual[43]).to.have.property("type", "Comma");
+    expect(actual[43]).to.have.property("value", ",");
+    expect(actual[44]).to.have.property("type", "Word");
+    expect(actual[44]).to.have.property("value", "Ptemenib");
+  
+    expect(actual[45]).to.have.property("type", "Word");
+    expect(actual[45]).to.have.property("value", "joins");
+    expect(actual[46]).to.have.property("type", "Word");
+    expect(actual[46]).to.have.property("value", "combat");
+    expect(actual[47]).to.have.property("type", "Word");
+    expect(actual[47]).to.have.property("value", "with");
+    expect(actual[48]).to.have.property("type", "Word");
+    expect(actual[48]).to.have.property("value", "his");
+    expect(actual[49]).to.have.property("type", "Word");
+    expect(actual[49]).to.have.property("value", "few");
+  
+    expect(actual[50]).to.have.property("type", "Word");
+    expect(actual[50]).to.have.property("value", "offensive");
+    expect(actual[51]).to.have.property("type", "Word");
+    expect(actual[51]).to.have.property("value", "spells");
+    expect(actual[52]).to.have.property("type", "Period");
+    expect(actual[52]).to.have.property("value", ".");
+    expect(actual[53]).to.have.property("type", "Word");
+    expect(actual[53]).to.have.property("value", "Morale");
+    expect(actual[54]).to.have.property("type", "Word");
+    expect(actual[54]).to.have.property("value", "Ptemenib");
+  
+    expect(actual[55]).to.have.property("type", "Word");
+    expect(actual[55]).to.have.property("value", "is");
+    expect(actual[56]).to.have.property("type", "Word");
+    expect(actual[56]).to.have.property("value", "good");
+    expect(actual[57]).to.have.property("type", "Dash");
+    expect(actual[57]).to.have.property("value", "-");
+    expect(actual[58]).to.have.property("type", "Word");
+    expect(actual[58]).to.have.property("value", "hearted");
+    expect(actual[59]).to.have.property("type", "Word");
+    expect(actual[59]).to.have.property("value", "and");
+  
+    expect(actual[60]).to.have.property("type", "Word");
+    expect(actual[60]).to.have.property("value", "dedicated");
+    expect(actual[61]).to.have.property("type", "Comma");
+    expect(actual[61]).to.have.property("value", ",");
+    expect(actual[62]).to.have.property("type", "Word");
+    expect(actual[62]).to.have.property("value", "but");
+    expect(actual[63]).to.have.property("type", "Word");
+    expect(actual[63]).to.have.property("value", "not");
+    expect(actual[64]).to.have.property("type", "Word");
+    expect(actual[64]).to.have.property("value", "foolish");
+  
+    expect(actual[65]).to.have.property("type", "Period");
+    expect(actual[65]).to.have.property("value", ".");
+    expect(actual[66]).to.have.property("type", "Word");
+    expect(actual[66]).to.have.property("value", "If");
+    expect(actual[67]).to.have.property("type", "Word");
+    expect(actual[67]).to.have.property("value", "a");
+    expect(actual[68]).to.have.property("type", "Word");
+    expect(actual[68]).to.have.property("value", "battle");
+    expect(actual[69]).to.have.property("type", "Word");
+    expect(actual[69]).to.have.property("value", "seems");
+  
+    expect(actual[70]).to.have.property("type", "Word");
+    expect(actual[70]).to.have.property("value", "lost");
+    expect(actual[71]).to.have.property("type", "Comma");
+    expect(actual[71]).to.have.property("value", ",");
+    expect(actual[72]).to.have.property("type", "Word");
+    expect(actual[72]).to.have.property("value", "he’s");
+    expect(actual[73]).to.have.property("type", "Word");
+    expect(actual[73]).to.have.property("value", "not");
+    expect(actual[74]).to.have.property("type", "Word");
+    expect(actual[74]).to.have.property("value", "above");
+  
+    expect(actual[75]).to.have.property("type", "Word");
+    expect(actual[75]).to.have.property("value", "fleeing");
+    expect(actual[76]).to.have.property("type", "Word");
+    expect(actual[76]).to.have.property("value", "to");
+    expect(actual[77]).to.have.property("type", "Word");
+    expect(actual[77]).to.have.property("value", "heal");
+    expect(actual[78]).to.have.property("type", "Word");
+    expect(actual[78]).to.have.property("value", "himself");
+    expect(actual[79]).to.have.property("type", "Comma");
+    expect(actual[79]).to.have.property("value", ",");
+  
+    expect(actual[80]).to.have.property("type", "Word");
+    expect(actual[80]).to.have.property("value", "though");
+    expect(actual[81]).to.have.property("type", "Word");
+    expect(actual[81]).to.have.property("value", "he");
+    expect(actual[82]).to.have.property("type", "Word");
+    expect(actual[82]).to.have.property("value", "will");
     expect(actual[83]).to.have.property("type", "Word");
-    expect(actual[83]).to.have.property("value", "person");
-    expect(actual[84]).to.have.property("type", "LParen");
-    expect(actual[84]).to.have.property("value", "(");
-    expect(actual[85]).to.have.property("type", "DcKey");
-    expect(actual[85]).to.have.property("value", "DC");
-    expect(actual[86]).to.have.property("type", "NumberWhole");
-    expect(actual[86]).to.have.property("value", "16");
-    expect(actual[87]).to.have.property("type", "RParen");
-    expect(actual[87]).to.have.property("value", ")");
-    expect(actual[88]).to.have.property("type", "Comma");
-    expect(actual[88]).to.have.property("value", ",");
+    expect(actual[83]).to.have.property("value", "return");
+    expect(actual[84]).to.have.property("type", "Word");
+    expect(actual[84]).to.have.property("value", "to");
+  
+    expect(actual[85]).to.have.property("type", "Word");
+    expect(actual[85]).to.have.property("value", "rescue");
+    expect(actual[86]).to.have.property("type", "Word");
+    expect(actual[86]).to.have.property("value", "any");
+    expect(actual[87]).to.have.property("type", "Word");
+    expect(actual[87]).to.have.property("value", "comrades");
+    expect(actual[88]).to.have.property("type", "Word");
+    expect(actual[88]).to.have.property("value", "who");
     expect(actual[89]).to.have.property("type", "Word");
-    expect(actual[89]).to.have.property("value", "lesser");
+    expect(actual[89]).to.have.property("value", "are");
+  
     expect(actual[90]).to.have.property("type", "Word");
-    expect(actual[90]).to.have.property("value", "restoration");
-    expect(actual[91]).to.have.property("type", "Comma");
-    expect(actual[91]).to.have.property("value", ",");
-    expect(actual[92]).to.have.property("type", "Word");
-    expect(actual[92]).to.have.property("value", "remove");
-    expect(actual[93]).to.have.property("type", "Word");
-    expect(actual[93]).to.have.property("value", "paralysis");
-    expect(actual[94]).to.have.property("type", "Comma");
-    expect(actual[94]).to.have.property("value", ",");
-    expect(actual[95]).to.have.property("type", "Word");
-    expect(actual[95]).to.have.property("value", "spiritual");
-    expect(actual[96]).to.have.property("type", "Word");
-    expect(actual[96]).to.have.property("value", "weapon");
-    expect(actual[97]).to.have.property("type", "NumberWhole");
-    expect(actual[97]).to.have.property("value", "1");
-    expect(actual[98]).to.have.property("type", "Word");
-    expect(actual[98]).to.have.property("value", "st");
-    expect(actual[99]).to.have.property("type", "MDash");
-    expect(actual[99]).to.have.property("value", "—");
-    expect(actual[100]).to.have.property("type", "Word");
-    expect(actual[100]).to.have.property("value", "bless");
-    expect(actual[101]).to.have.property("type", "Comma");
-    expect(actual[101]).to.have.property("value", ",");
-    expect(actual[102]).to.have.property("type", "Word");
-    expect(actual[102]).to.have.property("value", "comprehend");
-    expect(actual[103]).to.have.property("type", "Word");
-    expect(actual[103]).to.have.property("value", "languagesD");
-    expect(actual[104]).to.have.property("type", "Comma");
-    expect(actual[104]).to.have.property("value", ",");
-    expect(actual[105]).to.have.property("type", "Word");
-    expect(actual[105]).to.have.property("value", "divine");
-    expect(actual[106]).to.have.property("type", "Word");
-    expect(actual[106]).to.have.property("value", "favor");
-    expect(actual[107]).to.have.property("type", "Comma");
-    expect(actual[107]).to.have.property("value", ",");
-    expect(actual[108]).to.have.property("type", "Word");
-    expect(actual[108]).to.have.property("value", "hide");
-    expect(actual[109]).to.have.property("type", "Word");
-    expect(actual[109]).to.have.property("value", "from");
-    expect(actual[110]).to.have.property("type", "CreatureType");
-    expect(actual[110]).to.have.property("value", "undead");
-    expect(actual[111]).to.have.property("type", "Comma");
-    expect(actual[111]).to.have.property("value", ",");
-    expect(actual[112]).to.have.property("type", "Word");
-    expect(actual[112]).to.have.property("value", "sanctify");
-    expect(actual[113]).to.have.property("type", "Word");
-    expect(actual[113]).to.have.property("value", "corpseUM");
-    expect(actual[114]).to.have.property("type", "Comma");
-    expect(actual[114]).to.have.property("value", ",");
-    expect(actual[115]).to.have.property("type", "Word");
-    expect(actual[115]).to.have.property("value", "shield");
-    expect(actual[116]).to.have.property("type", "Word");
-    expect(actual[116]).to.have.property("value", "of");
-    expect(actual[117]).to.have.property("type", "Word");
-    expect(actual[117]).to.have.property("value", "faith");
-    expect(actual[118]).to.have.property("type", "NumberWhole");
-    expect(actual[118]).to.have.property("value", "0");
-    expect(actual[119]).to.have.property("type", "LParen");
-    expect(actual[119]).to.have.property("value", "(");
-    expect(actual[120]).to.have.property("type", "Word");
-    expect(actual[120]).to.have.property("value", "at");
-    expect(actual[121]).to.have.property("type", "Word");
-    expect(actual[121]).to.have.property("value", "will");
-    expect(actual[122]).to.have.property("type", "RParen");
-    expect(actual[122]).to.have.property("value", ")");
-    expect(actual[123]).to.have.property("type", "MDash");
-    expect(actual[123]).to.have.property("value", "—");
-    expect(actual[124]).to.have.property("type", "Word");
-    expect(actual[124]).to.have.property("value", "detect");
-    expect(actual[125]).to.have.property("type", "Word");
-    expect(actual[125]).to.have.property("value", "magic");
-    expect(actual[126]).to.have.property("type", "Comma");
-    expect(actual[126]).to.have.property("value", ",");
-    expect(actual[127]).to.have.property("type", "Word");
-    expect(actual[127]).to.have.property("value", "light");
-    expect(actual[128]).to.have.property("type", "Comma");
-    expect(actual[128]).to.have.property("value", ",");
-    expect(actual[129]).to.have.property("type", "Word");
-    expect(actual[129]).to.have.property("value", "read");
-    expect(actual[130]).to.have.property("type", "Word");
-    expect(actual[130]).to.have.property("value", "magic");
-    expect(actual[131]).to.have.property("type", "Comma");
-    expect(actual[131]).to.have.property("value", ",");
-    expect(actual[132]).to.have.property("type", "Word");
-    expect(actual[132]).to.have.property("value", "stabilize");
-    expect(actual[133]).to.have.property("type", "Word");
-    expect(actual[133]).to.have.property("value", "D");
-    expect(actual[134]).to.have.property("type", "Word");
-    expect(actual[134]).to.have.property("value", "domain");
-    expect(actual[135]).to.have.property("type", "Word");
-    expect(actual[135]).to.have.property("value", "spell");
-    expect(actual[136]).to.have.property("type", "SemiColon");
-    expect(actual[136]).to.have.property("value", ";");
-    expect(actual[137]).to.have.property("type", "Word");
-    expect(actual[137]).to.have.property("value", "Domains");
-    expect(actual[138]).to.have.property("type", "Word");
-    expect(actual[138]).to.have.property("value", "Knowledge");
-    expect(actual[139]).to.have.property("type", "Comma");
-    expect(actual[139]).to.have.property("value", ",");
-    expect(actual[140]).to.have.property("type", "Word");
-    expect(actual[140]).to.have.property("value", "Repose");
-    expect(actual[141]).to.have.property("type", "LParen");
-    expect(actual[141]).to.have.property("value", "(");
-    expect(actual[142]).to.have.property("type", "Word");
-    expect(actual[142]).to.have.property("value", "Ancestors");
-    expect(actual[143]).to.have.property("type", "Word");
-    expect(actual[143]).to.have.property("value", "subdomainAPG");
-    expect(actual[144]).to.have.property("type", "RParen");
-    expect(actual[144]).to.have.property("value", ")");
-    expect(actual[145]).to.have.property("type", "Word");
-    expect(actual[145]).to.have.property("value", "TACTICS");
+    expect(actual[90]).to.have.property("value", "captured");
+    expect(actual[91]).to.have.property("type", "Period");
+    expect(actual[91]).to.have.property("value", ".");
+    expect(actual[92]).to.have.property("type", "StatisticsKey");
+    expect(actual[92]).to.have.property("value", "STATISTICS");
   });
 
 });

@@ -28,12 +28,15 @@ export class StatBlockLexer {
   public alignment_list: string[];
   public attack_type_list: string[];
   public creature_size_list: string[];
-  public creature_type_list: string[];
+  // public creature_type_list: string[];
+  public level_list: string[];
+  public spells_known_prepared_psychic: string[];
 
   public ac_flat_footed_key: string;
   public ac_key: RegExp;
   public ac_touch_key: string;
   public aura_key: string;
+  public cl_key: RegExp;
   public cr_key: RegExp;
   public damage_reduction_key: RegExp;
   public dc_key: RegExp;
@@ -54,10 +57,13 @@ export class StatBlockLexer {
   public speed_key: string;
   public spell_like_ability_key: string;
   public spell_resistance_key: RegExp;
+  public statistics_key: string;
+  public tactics_key: string;
   public weaknesses_key: string;    
   public will_save_key: RegExp;
   public xp_key: RegExp;
 
+  public multiplier: RegExp;
   public word: RegExp;
   public word_hyphenated: RegExp;
 
@@ -87,15 +93,20 @@ export class StatBlockLexer {
     this.alignment_list = ["LE", "LN", "LG", "NE", "N", "NG", "CE", "CN", "CG"];
     this.attack_type_list = ["Melee", "Ranged", "Special Attacks"]
     this.creature_size_list = ["Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"];
-
     // creature types: https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types/
-    this.creature_type_list = ["aberration", "animal", "construct", "dragon", "fey", "humanoid", "magical beast",
-      "monstrous humanoid", "ooze", "outsider", "plant", "undead", "vermin"];
+    // this.creature_type_list = ["aberration", "animal", "construct", "dragon", "fey", "humanoid", "magical beast",
+    //   "monstrous humanoid", "ooze", "outsider", "plant", "undead", "vermin"];
+
+    this.level_list = [`1st`, `1st`, `2nd`, `3rd`, `4th`, `5th`, `6th`, `7th`, `8th`, `9th`, `10th`,
+      `11th`, `12th`, `13th`, `14th`, `15th`, `16th`, `17th`, `18th`, `19th`, `20th`];
+    
+    this.spells_known_prepared_psychic = [`Spells Known`, `Spells Prepared`, `Psychic Magic`];
 
     this.ac_key = /\bAC\b/;
     this.ac_flat_footed_key = "flat-footed";
     this.ac_touch_key = "touch";
     this.aura_key = "Aura";
+    this.cl_key = /\b[cC][lL]\b/;
     this.cr_key = /\b[cC][rR]\b/;
     this.damage_reduction_key = /\bDR\b/;
     this.dc_key = /\bDC\b/;
@@ -116,11 +127,14 @@ export class StatBlockLexer {
     this.speed_key = "Speed";
     this.spell_like_ability_key = `Spell-Like Abilities`;
     this.spell_resistance_key = /\bSR\b/;
+    this.statistics_key = `STATISTICS`;
+    this.tactics_key = `TACTICS`;
     this.weaknesses_key = "Weaknesses";
     this.will_save_key = /\bWill\b/;
     this.xp_key = /\b[xX][pP]\b/;
     
-    this.word = /(?:[a-zA-Z]+(?:(?:'[tT])|(?:'[lL][lL])|(?:'[sS])|(?:[sS]'))?)/;
+    this.multiplier = /\b[x*]\d\b/;
+    this.word = /(?:\b[a-zA-Z]+(?:(?:[’'][tT])|(?:[’'][lL][lL])|(?:[’'][sS])|(?:[sS][’']))?\b)/;
     this.word_hyphenated = /(?:[a-zA-Z]+[-][a-zA-Z]+)/;
     //this.alpha = /[a-zA-Z]+/;
   }
@@ -132,6 +146,7 @@ export class StatBlockLexer {
       AcTouchKey: this.ac_touch_key,
       AcFlatFootedKey: this.ac_flat_footed_key,
       AuraKey: this.aura_key,
+      ClKey: this.cl_key,
       CrKey: this.cr_key,
       DcKey: this.dc_key,
       DefenseKey: this.defense_key,
@@ -152,6 +167,8 @@ export class StatBlockLexer {
       SpeedKey: this.speed_key,
       SpellLikeAbilityKey: this.spell_like_ability_key,
       SrKey: this.spell_resistance_key,
+      StatisticsKey: this.statistics_key,
+      TacticsKey: this.tactics_key,
       WeaknessesKey: this.weaknesses_key,
       WillSaveKey: this.will_save_key,
       XpKey: this.xp_key,
@@ -159,10 +176,13 @@ export class StatBlockLexer {
       Alignment: this.alignment_list,
       AttackType: this.attack_type_list,
       CreatureSize: this.creature_size_list,
-      CreatureType: this.creature_type_list,
+      //CreatureType: this.creature_type_list,
+      Level: this.level_list,
+      SpellsKnownPreparedPsychic: this.spells_known_prepared_psychic,
 
       DiceRoll: this.dice_roll,
       //NumberWithDenominator: this.number_with_denominator,
+      Multiplier: this.multiplier,
       NumberSigned: this.number_with_sign,
       SizeValue: this.size_value,
       NumberWhole: this.number_whole,
