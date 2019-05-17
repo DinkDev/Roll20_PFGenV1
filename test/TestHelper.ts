@@ -8,7 +8,7 @@ export class TestHelper {
     let token: moo.Token | undefined;
 
     while (token = lexer.next()) {
-      if (token != undefined && token.type !== "WS") {
+      if (token != undefined && token.type !== `WS`) {
         tokens.push(token);
       }
     }
@@ -25,8 +25,8 @@ export class TestHelper {
     let rv: string = `expect(actual.length).to.equal(${tokens.length});`;
 
     for (let index in tokens) {
-      rv += `\nexpect(actual[${index}]).to.have.property("type", "${tokens[index].type}");
-      expect(actual[${index}]).to.have.property("value", "${tokens[index]}");`;
+      rv += `\nexpect(actual[${index}]).to.have.property(\`type\`, \`${tokens[index].type}\`);
+      expect(actual[${index}]).to.have.property(\`value\`, \`${tokens[index]}\`);`;
     }
 
     return rv;

@@ -69,19 +69,19 @@ export class StatBlockLexer {
 
   public constructor() {
 
-    this.versus = "vs.";
+    this.versus = `vs.`;
 
-    this.colon = ":";
-    this.semi_colon = ";";
-    this.comma = ",";
-    this.period = ".";
-    this.dash = "-";
-    this.m_dash = "\u2014";
-    this.n_dash = "\u2013";
-    this.asterisk = "\*";
-    this.l_paren = "(";
-    this.r_paren = ")";
-    this.forward_slash = "/";
+    this.colon = `:`;
+    this.semi_colon = `;`;
+    this.comma = `,`;
+    this.period = `.`;
+    this.dash = `-`;
+    this.m_dash = `\u2014`;
+    this.n_dash = `\u2013`;
+    this.asterisk = `\*`;
+    this.l_paren = `(`;
+    this.r_paren = `)`;
+    this.forward_slash = `/`;
 
     this.size_value = /(?:(?:\d+-\d\/)?\d+(?:(?: ft\.)|(?:[- ]foot)|(?:[- ]feet)))/;
     this.dice_roll = /[+-\u2013]?\d+d\d+/;
@@ -92,12 +92,12 @@ export class StatBlockLexer {
 
     this.ability_list = [`Str `, `Dex `, `Con `, `Int `, `Wis `, `Cha `];
 
-    this.alignment_list = ["LE", "LN", "LG", "NE", "N", "NG", "CE", "CN", "CG"];
-    this.attack_type_list = ["Melee", "Ranged", "Special Attacks"]
-    this.creature_size_list = ["Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal"];
+    this.alignment_list = [`LE`, `LN`, `LG`, `NE`, `N`, `NG`, `CE`, `CN`, `CG`];
+    this.attack_type_list = [`Melee`, `Ranged`, `Special Attacks`]
+    this.creature_size_list = [`Fine`, `Diminutive`, `Tiny`, `Small`, `Medium`, `Large`, `Huge`, `Gargantuan`, `Colossal`];
     // creature types: https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types/
-    // this.creature_type_list = ["aberration", "animal", "construct", "dragon", "fey", "humanoid", "magical beast",
-    //   "monstrous humanoid", "ooze", "outsider", "plant", "undead", "vermin"];
+    // this.creature_type_list = [`aberration`, `animal`, `construct`, `dragon`, `fey`, `humanoid`, `magical beast`,
+    //   `monstrous humanoid`, `ooze`, `outsider`, `plant`, `undead`, `vermin`];
 
     this.level_list = [`1st`, `1st`, `2nd`, `3rd`, `4th`, `5th`, `6th`, `7th`, `8th`, `9th`, `10th`,
       `11th`, `12th`, `13th`, `14th`, `15th`, `16th`, `17th`, `18th`, `19th`, `20th`];
@@ -105,33 +105,33 @@ export class StatBlockLexer {
     this.spells_known_prepared_psychic = [`Spells Known`, `Spells Prepared`, `Psychic Magic`];
 
     this.ac_key = /\bAC\b/;
-    this.ac_flat_footed_key = "flat-footed";
-    this.ac_touch_key = "touch";
-    this.aura_key = "Aura";
+    this.ac_flat_footed_key = `flat-footed`;
+    this.ac_touch_key = `touch`;
+    this.aura_key = `Aura`;
     this.cl_key = /\b[cC][lL]\b/;
     this.cr_key = /\b[cC][rR]\b/;
     this.damage_reduction_key = /\bDR\b/;
     this.dc_key = /\bDC\b/;
-    this.defense_key = "DEFENSE";
-    this.defensive_abilities_key = "Defensive Abilities";
+    this.defense_key = `DEFENSE`;
+    this.defensive_abilities_key = `Defensive Abilities`;
     this.fort_save_Key = /\bFort\b/;
     this.hp_key = /\bhp\b/;
-    this.immune_key = "Immune";
+    this.immune_key = `Immune`;
     this.init_key = /\bInit\b/;
-    this.melee_key = "Melee";
-    this.offense_key = "OFFENSE";
-    this.perception_key = "Perception";
+    this.melee_key = `Melee`;
+    this.offense_key = `OFFENSE`;
+    this.perception_key = `Perception`;
     this.reach_key = `Reach`;
     this.ref_save_key = /\bRef\b/;
     this.resistances_key = /\bResist\b/;
-    this.senses_key = "Senses";
+    this.senses_key = `Senses`;
     this.space_key = `Space`;
-    this.speed_key = "Speed";
+    this.speed_key = `Speed`;
     this.spell_like_ability_key = `Spell-Like Abilities`;
     this.spell_resistance_key = /\bSR\b/;
     this.statistics_key = `STATISTICS`;
     this.tactics_key = `TACTICS`;
-    this.weaknesses_key = "Weaknesses";
+    this.weaknesses_key = `Weaknesses`;
     this.will_save_key = /\bWill\b/;
     this.xp_key = /\b[xX][pP]\b/;
     
