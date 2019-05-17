@@ -1,4 +1,5 @@
 import * as moo from "moo";
+import * as _ from "underscore";
 
 export class StatBlockLexer {
 
@@ -28,7 +29,7 @@ export class StatBlockLexer {
   public alignment_list: string[];
   public attack_type_list: string[];
   public creature_size_list: string[];
-  // public creature_type_list: string[];
+  public creature_type_list: object[];
   public level_list: string[];
   public spells_known_prepared_psychic: string[];
 
@@ -96,8 +97,22 @@ export class StatBlockLexer {
     this.attack_type_list = [`Melee`, `Ranged`, `Special Attacks`]
     this.creature_size_list = [`Fine`, `Diminutive`, `Tiny`, `Small`, `Medium`, `Large`, `Huge`, `Gargantuan`, `Colossal`];
     // creature types: https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types/
-    // this.creature_type_list = [`aberration`, `animal`, `construct`, `dragon`, `fey`, `humanoid`, `magical beast`,
-    //   `monstrous humanoid`, `ooze`, `outsider`, `plant`, `undead`, `vermin`];
+    this.creature_type_list = _.map<RegExp, object>([
+      /\baberration\b/,
+      /\banimal\b/,
+      /\bconstruct\b/,
+      /\bdragon\b/,
+      /\bfey\b/,
+      /\bhumanoid\b/,
+      /\bmagical beast\b/,
+      /\bmonstrous humanoid\b/,
+      /\booze\b/,
+      /\boutsider\b/,
+      /\bplant\b/,
+      /\bundead\b/,
+      /\bvermin\b/], r => {
+        return { match: r };
+      } );
 
     this.level_list = [`1st`, `1st`, `2nd`, `3rd`, `4th`, `5th`, `6th`, `7th`, `8th`, `9th`, `10th`,
       `11th`, `12th`, `13th`, `14th`, `15th`, `16th`, `17th`, `18th`, `19th`, `20th`];
@@ -179,7 +194,7 @@ export class StatBlockLexer {
       Alignment: this.alignment_list,
       AttackType: this.attack_type_list,
       CreatureSize: this.creature_size_list,
-      //CreatureType: this.creature_type_list,
+      CreatureType: this.creature_type_list,
       Level: this.level_list,
       SpellsKnownPreparedPsychic: this.spells_known_prepared_psychic,
 

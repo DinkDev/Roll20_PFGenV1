@@ -133,7 +133,7 @@ describe(`StatBlockLexer `, () => {
     expect(actual[0]).to.have.property(`value`, `NE`);
     expect(actual[1]).to.have.property(`type`, `CreatureSize`);
     expect(actual[1]).to.have.property(`value`, `Medium`);
-    expect(actual[2]).to.have.property(`type`, `Word`);
+    expect(actual[2]).to.have.property(`type`, `CreatureType`);
     expect(actual[2]).to.have.property(`value`, `aberration`);
   });
   it(`can find Alignment, Size, and Type line data 2`, () => {
@@ -150,7 +150,7 @@ describe(`StatBlockLexer `, () => {
     expect(actual[1]).to.have.property(`type`, `Asterisk`);
     expect(actual[2]).to.have.property(`type`, `CreatureSize`);
     expect(actual[2]).to.have.property(`value`, `Huge`);
-    expect(actual[3]).to.have.property(`type`, `Word`);
+    expect(actual[3]).to.have.property(`type`, `CreatureType`);
     expect(actual[3]).to.have.property(`value`, `dragon`);
     expect(actual[4]).to.have.property(`type`, `LParen`);
     expect(actual[5]).to.have.property(`type`, `Word`);
@@ -171,7 +171,7 @@ describe(`StatBlockLexer `, () => {
     expect(actual.length).to.equal(6);
     expect(actual[0]).to.have.property(`type`, `CreatureSize`);
     expect(actual[0]).to.have.property(`value`, `Small`);
-    expect(actual[1]).to.have.property(`type`, `Word`);
+    expect(actual[1]).to.have.property(`type`, `CreatureType`);
     expect(actual[1]).to.have.property(`value`, `humanoid`);
     expect(actual[2]).to.have.property(`type`, `LParen`);
     expect(actual[3]).to.have.property(`type`, `Word`);
@@ -187,15 +187,13 @@ describe(`StatBlockLexer `, () => {
     const input = `CG Large magical beast`;
     const actual = TestHelper.runLexer(lexer, input);
 
-    expect(actual.length).to.equal(4);
+    expect(actual.length).to.equal(3);
     expect(actual[0]).to.have.property(`type`, `Alignment`);
     expect(actual[0]).to.have.property(`value`, `CG`);
     expect(actual[1]).to.have.property(`type`, `CreatureSize`);
     expect(actual[1]).to.have.property(`value`, `Large`);
-    expect(actual[2]).to.have.property(`type`, `Word`);
-    expect(actual[2]).to.have.property(`value`, `magical`);
-    expect(actual[3]).to.have.property(`type`, `Word`);
-    expect(actual[3]).to.have.property(`value`, `beast`);    
+    expect(actual[2]).to.have.property(`type`, `CreatureType`);
+    expect(actual[2]).to.have.property(`value`, `magical beast`);    
   });
 
   it(`can find Init/Senses/Perception data 1`, () => {
@@ -1004,7 +1002,7 @@ describe(`StatBlockLexer `, () => {
     expect(actual[4]).to.have.property(`value`, `;`);
     expect(actual[5]).to.have.property(`type`, `ImmuneKey`);
     expect(actual[5]).to.have.property(`value`, `Immune`);
-    expect(actual[6]).to.have.property(`type`, `Word`);
+    expect(actual[6]).to.have.property(`type`, `CreatureType`);
     expect(actual[6]).to.have.property(`value`, `construct`);
     expect(actual[7]).to.have.property(`type`, `Word`);
     expect(actual[7]).to.have.property(`value`, `traits`);
@@ -2564,7 +2562,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual[101]).to.have.property(`value`, `hide`);
     expect(actual[102]).to.have.property(`type`, `Word`);
     expect(actual[102]).to.have.property(`value`, `from`);
-    expect(actual[103]).to.have.property(`type`, `Word`);
+    expect(actual[103]).to.have.property(`type`, `CreatureType`);
     expect(actual[103]).to.have.property(`value`, `undead`);
     expect(actual[104]).to.have.property(`type`, `Comma`);
     expect(actual[104]).to.have.property(`value`, `,`);
@@ -3256,7 +3254,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual[24]).to.have.property(`type`, `Word`);
     expect(actual[24]).to.have.property(`value`, `her`);
 
-    expect(actual[25]).to.have.property(`type`, `Word`);
+    expect(actual[25]).to.have.property(`type`, `CreatureType`);
     expect(actual[25]).to.have.property(`value`, `animal`);
     expect(actual[26]).to.have.property(`type`, `Word`);
     expect(actual[26]).to.have.property(`value`, `companion`);
