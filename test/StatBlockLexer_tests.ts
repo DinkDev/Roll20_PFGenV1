@@ -3538,7 +3538,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     const sut = new StatBlockLexer();
     const lexer = sut.getLexer();
 
-    const input = 'Str 11, Dex 21, Con 14, Int 18, Wis 10, Cha 19';
+    const input = `Str 11, Dex 21, Con 14, Int 18, Wis 10, Cha 19`;
 
     const actual = TestHelper.runLexer(lexer, input);
 
@@ -3589,7 +3589,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     const sut = new StatBlockLexer();
     const lexer = sut.getLexer();
 
-    const input = 'Str 31, Dex 14, Con 28, Int 16, Wis 18, Cha 20';
+    const input = `Str 31, Dex 14, Con 28, Int 16, Wis 18, Cha 20`;
 
     const actual = TestHelper.runLexer(lexer, input);
 
@@ -3640,7 +3640,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     const sut = new StatBlockLexer();
     const lexer = sut.getLexer();
 
-    const input = 'Str 14, Dex 10, Con —, Int —, Wis 1, Cha 1';
+    const input = `Str 14, Dex 10, Con —, Int —, Wis 1, Cha 1`;
 
     const actual = TestHelper.runLexer(lexer, input);
 
@@ -3685,5 +3685,600 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual[15]).to.have.property(`value`, `Cha`);
     expect(actual[16]).to.have.property(`type`, `NumberWhole`);
     expect(actual[16]).to.have.property(`value`, `1`);
+  });
+
+  it(`can find Base Atk/CMB/CMD line 1`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Base Atk +6; CMB +5; CMD 18`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(8);
+
+    expect(actual[0]).to.have.property(`type`, `BaseAtkKey`);
+    expect(actual[0]).to.have.property(`value`, `Base Atk`);
+    expect(actual[1]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[1]).to.have.property(`value`, `+6`);
+    expect(actual[2]).to.have.property(`type`, `SemiColon`);
+    expect(actual[2]).to.have.property(`value`, `;`);
+    expect(actual[3]).to.have.property(`type`, `CmbKey`);
+    expect(actual[3]).to.have.property(`value`, `CMB`);
+    expect(actual[4]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[4]).to.have.property(`value`, `+5`);
+
+    expect(actual[5]).to.have.property(`type`, `SemiColon`);
+    expect(actual[5]).to.have.property(`value`, `;`);
+    expect(actual[6]).to.have.property(`type`, `CmdKey`);
+    expect(actual[6]).to.have.property(`value`, `CMD`);
+    expect(actual[7]).to.have.property(`type`, `NumberWhole`);
+    expect(actual[7]).to.have.property(`value`, `18`);
+  });
+
+  it(`can find Base Atk/CMB/CMD line 1`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Base Atk +0; CMB –3; CMD 8`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(8);
+
+    expect(actual[0]).to.have.property(`type`, `BaseAtkKey`);
+    expect(actual[0]).to.have.property(`value`, `Base Atk`);
+    expect(actual[1]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[1]).to.have.property(`value`, `+0`);
+    expect(actual[2]).to.have.property(`type`, `SemiColon`);
+    expect(actual[2]).to.have.property(`value`, `;`);
+    expect(actual[3]).to.have.property(`type`, `CmbKey`);
+    expect(actual[3]).to.have.property(`value`, `CMB`);
+    expect(actual[4]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[4]).to.have.property(`value`, `–3`);
+
+    expect(actual[5]).to.have.property(`type`, `SemiColon`);
+    expect(actual[5]).to.have.property(`value`, `;`);
+    expect(actual[6]).to.have.property(`type`, `CmdKey`);
+    expect(actual[6]).to.have.property(`value`, `CMD`);
+    expect(actual[7]).to.have.property(`type`, `NumberWhole`);
+    expect(actual[7]).to.have.property(`value`, `8`);
+  });
+
+  it(`can find Base Atk/CMB/CMD line 3`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Base Atk +14; CMB +24; CMD 35 (39 vs. trip)`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(13);
+
+    expect(actual[0]).to.have.property(`type`, `BaseAtkKey`);
+    expect(actual[0]).to.have.property(`value`, `Base Atk`);
+    expect(actual[1]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[1]).to.have.property(`value`, `+14`);
+    expect(actual[2]).to.have.property(`type`, `SemiColon`);
+    expect(actual[2]).to.have.property(`value`, `;`);
+    expect(actual[3]).to.have.property(`type`, `CmbKey`);
+    expect(actual[3]).to.have.property(`value`, `CMB`);
+    expect(actual[4]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[4]).to.have.property(`value`, `+24`);
+
+    expect(actual[5]).to.have.property(`type`, `SemiColon`);
+    expect(actual[5]).to.have.property(`value`, `;`);
+    expect(actual[6]).to.have.property(`type`, `CmdKey`);
+    expect(actual[6]).to.have.property(`value`, `CMD`);
+    expect(actual[7]).to.have.property(`type`, `NumberWhole`);
+    expect(actual[7]).to.have.property(`value`, `35`);
+    expect(actual[8]).to.have.property(`type`, `LParen`);
+    expect(actual[8]).to.have.property(`value`, `(`);
+    expect(actual[9]).to.have.property(`type`, `NumberWhole`);
+    expect(actual[9]).to.have.property(`value`, `39`);
+
+    expect(actual[10]).to.have.property(`type`, `Versus`);
+    expect(actual[10]).to.have.property(`value`, `vs.`);
+    expect(actual[11]).to.have.property(`type`, `Word`);
+    expect(actual[11]).to.have.property(`value`, `trip`);
+    expect(actual[12]).to.have.property(`type`, `RParen`);
+    expect(actual[12]).to.have.property(`value`, `)`);
+  });
+
+  it(`can find Base Atk/CMB/CMD line 4`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Base Atk +9; CMB +9 (+21 grapple); CMD 24 (32 vs.
+grapple, can’t be tripped)`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(21);
+
+    expect(actual[0]).to.have.property(`type`, `BaseAtkKey`);
+    expect(actual[0]).to.have.property(`value`, `Base Atk`);
+    expect(actual[1]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[1]).to.have.property(`value`, `+9`);
+    expect(actual[2]).to.have.property(`type`, `SemiColon`);
+    expect(actual[2]).to.have.property(`value`, `;`);
+    expect(actual[3]).to.have.property(`type`, `CmbKey`);
+    expect(actual[3]).to.have.property(`value`, `CMB`);
+    expect(actual[4]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[4]).to.have.property(`value`, `+9`);
+
+    expect(actual[5]).to.have.property(`type`, `LParen`);
+    expect(actual[5]).to.have.property(`value`, `(`);
+    expect(actual[6]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[6]).to.have.property(`value`, `+21`);
+    expect(actual[7]).to.have.property(`type`, `Word`);
+    expect(actual[7]).to.have.property(`value`, `grapple`);
+    expect(actual[8]).to.have.property(`type`, `RParen`);
+    expect(actual[8]).to.have.property(`value`, `)`);
+    expect(actual[9]).to.have.property(`type`, `SemiColon`);
+    expect(actual[9]).to.have.property(`value`, `;`);
+
+    expect(actual[10]).to.have.property(`type`, `CmdKey`);
+    expect(actual[10]).to.have.property(`value`, `CMD`);
+    expect(actual[11]).to.have.property(`type`, `NumberWhole`);
+    expect(actual[11]).to.have.property(`value`, `24`);
+    expect(actual[12]).to.have.property(`type`, `LParen`);
+    expect(actual[12]).to.have.property(`value`, `(`);
+    expect(actual[13]).to.have.property(`type`, `NumberWhole`);
+    expect(actual[13]).to.have.property(`value`, `32`);
+    expect(actual[14]).to.have.property(`type`, `Versus`);
+    expect(actual[14]).to.have.property(`value`, `vs.`);
+
+    expect(actual[15]).to.have.property(`type`, `Word`);
+    expect(actual[15]).to.have.property(`value`, `grapple`);
+    expect(actual[16]).to.have.property(`type`, `Comma`);
+    expect(actual[16]).to.have.property(`value`, `,`);
+    expect(actual[17]).to.have.property(`type`, `Word`);
+    expect(actual[17]).to.have.property(`value`, `can’t`);
+    expect(actual[18]).to.have.property(`type`, `Word`);
+    expect(actual[18]).to.have.property(`value`, `be`);
+    expect(actual[19]).to.have.property(`type`, `Word`);
+    expect(actual[19]).to.have.property(`value`, `tripped`);
+
+    expect(actual[20]).to.have.property(`type`, `RParen`);
+    expect(actual[20]).to.have.property(`value`, `)`);
+  });
+
+  it(`can find Feats line 1`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Feats Self-Sufficient`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(4);
+    expect(actual[0]).to.have.property(`type`, `FeatsKey`);
+    expect(actual[0]).to.have.property(`value`, `Feats`);
+    expect(actual[1]).to.have.property(`type`, `Word`);
+    expect(actual[1]).to.have.property(`value`, `Self`);
+    expect(actual[2]).to.have.property(`type`, `Dash`);
+    expect(actual[2]).to.have.property(`value`, `-`);
+    expect(actual[3]).to.have.property(`type`, `Word`);
+    expect(actual[3]).to.have.property(`value`, `Sufficient`);
+  });
+
+  it(`can find Feats line 2`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Feats Combat Reflexes, Critical Focus, Flyby Attack,
+    HoverB, Improved Initiative, Skill Focus (Perception),
+    Weapon Finesse, Weapon Focus (tentacle), WingoverB`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(31);
+
+    expect(actual[0]).to.have.property(`type`, `FeatsKey`);
+    expect(actual[0]).to.have.property(`value`, `Feats`);
+    expect(actual[1]).to.have.property(`type`, `Word`);
+    expect(actual[1]).to.have.property(`value`, `Combat`);
+    expect(actual[2]).to.have.property(`type`, `Word`);
+    expect(actual[2]).to.have.property(`value`, `Reflexes`);
+    expect(actual[3]).to.have.property(`type`, `Comma`);
+    expect(actual[3]).to.have.property(`value`, `,`);
+    expect(actual[4]).to.have.property(`type`, `Word`);
+    expect(actual[4]).to.have.property(`value`, `Critical`);
+
+    expect(actual[5]).to.have.property(`type`, `Word`);
+    expect(actual[5]).to.have.property(`value`, `Focus`);
+    expect(actual[6]).to.have.property(`type`, `Comma`);
+    expect(actual[6]).to.have.property(`value`, `,`);
+    expect(actual[7]).to.have.property(`type`, `Word`);
+    expect(actual[7]).to.have.property(`value`, `Flyby`);
+    expect(actual[8]).to.have.property(`type`, `Word`);
+    expect(actual[8]).to.have.property(`value`, `Attack`);
+    expect(actual[9]).to.have.property(`type`, `Comma`);
+    expect(actual[9]).to.have.property(`value`, `,`);
+
+    expect(actual[10]).to.have.property(`type`, `Word`);
+    expect(actual[10]).to.have.property(`value`, `HoverB`);
+    expect(actual[11]).to.have.property(`type`, `Comma`);
+    expect(actual[11]).to.have.property(`value`, `,`);
+    expect(actual[12]).to.have.property(`type`, `Word`);
+    expect(actual[12]).to.have.property(`value`, `Improved`);
+    expect(actual[13]).to.have.property(`type`, `Word`);
+    expect(actual[13]).to.have.property(`value`, `Initiative`);
+    expect(actual[14]).to.have.property(`type`, `Comma`);
+    expect(actual[14]).to.have.property(`value`, `,`);
+
+    expect(actual[15]).to.have.property(`type`, `Word`);
+    expect(actual[15]).to.have.property(`value`, `Skill`);
+    expect(actual[16]).to.have.property(`type`, `Word`);
+    expect(actual[16]).to.have.property(`value`, `Focus`);
+    expect(actual[17]).to.have.property(`type`, `LParen`);
+    expect(actual[17]).to.have.property(`value`, `(`);
+    expect(actual[18]).to.have.property(`type`, `PerceptionKey`);
+    expect(actual[18]).to.have.property(`value`, `Perception`);
+    expect(actual[19]).to.have.property(`type`, `RParen`);
+    expect(actual[19]).to.have.property(`value`, `)`);
+
+    expect(actual[20]).to.have.property(`type`, `Comma`);
+    expect(actual[20]).to.have.property(`value`, `,`);
+    expect(actual[21]).to.have.property(`type`, `Word`);
+    expect(actual[21]).to.have.property(`value`, `Weapon`);
+    expect(actual[22]).to.have.property(`type`, `Word`);
+    expect(actual[22]).to.have.property(`value`, `Finesse`);
+    expect(actual[23]).to.have.property(`type`, `Comma`);
+    expect(actual[23]).to.have.property(`value`, `,`);
+    expect(actual[24]).to.have.property(`type`, `Word`);
+    expect(actual[24]).to.have.property(`value`, `Weapon`);
+
+    expect(actual[25]).to.have.property(`type`, `Word`);
+    expect(actual[25]).to.have.property(`value`, `Focus`);
+    expect(actual[26]).to.have.property(`type`, `LParen`);
+    expect(actual[26]).to.have.property(`value`, `(`);
+    expect(actual[27]).to.have.property(`type`, `Word`);
+    expect(actual[27]).to.have.property(`value`, `tentacle`);
+    expect(actual[28]).to.have.property(`type`, `RParen`);
+    expect(actual[28]).to.have.property(`value`, `)`);
+    expect(actual[29]).to.have.property(`type`, `Comma`);
+    expect(actual[29]).to.have.property(`value`, `,`);
+
+    expect(actual[30]).to.have.property(`type`, `Word`);
+    expect(actual[30]).to.have.property(`value`, `WingoverB`);
+  });
+
+  it(`can find Feats line 3`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Feats Alertness, Improved Channel, Lightning Reflexes,
+    Toughness, Turn Undead`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(13);
+
+    expect(actual[0]).to.have.property(`type`, `FeatsKey`);
+    expect(actual[0]).to.have.property(`value`, `Feats`);
+    expect(actual[1]).to.have.property(`type`, `Word`);
+    expect(actual[1]).to.have.property(`value`, `Alertness`);
+    expect(actual[2]).to.have.property(`type`, `Comma`);
+    expect(actual[2]).to.have.property(`value`, `,`);
+    expect(actual[3]).to.have.property(`type`, `Word`);
+    expect(actual[3]).to.have.property(`value`, `Improved`);
+    expect(actual[4]).to.have.property(`type`, `Word`);
+    expect(actual[4]).to.have.property(`value`, `Channel`);
+
+    expect(actual[5]).to.have.property(`type`, `Comma`);
+    expect(actual[5]).to.have.property(`value`, `,`);
+    expect(actual[6]).to.have.property(`type`, `Word`);
+    expect(actual[6]).to.have.property(`value`, `Lightning`);
+    expect(actual[7]).to.have.property(`type`, `Word`);
+    expect(actual[7]).to.have.property(`value`, `Reflexes`);
+    expect(actual[8]).to.have.property(`type`, `Comma`);
+    expect(actual[8]).to.have.property(`value`, `,`);
+    expect(actual[9]).to.have.property(`type`, `Word`);
+    expect(actual[9]).to.have.property(`value`, `Toughness`);
+
+    expect(actual[10]).to.have.property(`type`, `Comma`);
+    expect(actual[10]).to.have.property(`value`, `,`);
+    expect(actual[11]).to.have.property(`type`, `Word`);
+    expect(actual[11]).to.have.property(`value`, `Turn`);
+    expect(actual[12]).to.have.property(`type`, `Word`);
+    expect(actual[12]).to.have.property(`value`, `Undead`);
+  });
+
+  it(`can find Skills line 1`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Feats Alertness, Improved Channel, Lightning Reflexes,
+    Toughness, Turn Undead`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(13);
+
+    expect(actual[0]).to.have.property(`type`, `FeatsKey`);
+    expect(actual[0]).to.have.property(`value`, `Feats`);
+    expect(actual[1]).to.have.property(`type`, `Word`);
+    expect(actual[1]).to.have.property(`value`, `Alertness`);
+    expect(actual[2]).to.have.property(`type`, `Comma`);
+    expect(actual[2]).to.have.property(`value`, `,`);
+    expect(actual[3]).to.have.property(`type`, `Word`);
+    expect(actual[3]).to.have.property(`value`, `Improved`);
+    expect(actual[4]).to.have.property(`type`, `Word`);
+    expect(actual[4]).to.have.property(`value`, `Channel`);
+
+    expect(actual[5]).to.have.property(`type`, `Comma`);
+    expect(actual[5]).to.have.property(`value`, `,`);
+    expect(actual[6]).to.have.property(`type`, `Word`);
+    expect(actual[6]).to.have.property(`value`, `Lightning`);
+    expect(actual[7]).to.have.property(`type`, `Word`);
+    expect(actual[7]).to.have.property(`value`, `Reflexes`);
+    expect(actual[8]).to.have.property(`type`, `Comma`);
+    expect(actual[8]).to.have.property(`value`, `,`);
+    expect(actual[9]).to.have.property(`type`, `Word`);
+    expect(actual[9]).to.have.property(`value`, `Toughness`);
+
+    expect(actual[10]).to.have.property(`type`, `Comma`);
+    expect(actual[10]).to.have.property(`value`, `,`);
+    expect(actual[11]).to.have.property(`type`, `Word`);
+    expect(actual[11]).to.have.property(`value`, `Turn`);
+    expect(actual[12]).to.have.property(`type`, `Word`);
+    expect(actual[12]).to.have.property(`value`, `Undead`);
+  });
+
+  it(`can find Skills line 2`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Skills Bluff +21, Diplomacy +21, Fly +16, Intimidate +21,
+    Knowledge (arcana) +20, Knowledge (nature) +20,
+    Perception +25, Sense Motive +25, Spellcraft +20`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(34);
+
+    expect(actual[0]).to.have.property(`type`, `SkillsKey`);
+    expect(actual[0]).to.have.property(`value`, `Skills`);
+    expect(actual[1]).to.have.property(`type`, `Word`);
+    expect(actual[1]).to.have.property(`value`, `Bluff`);
+    expect(actual[2]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[2]).to.have.property(`value`, `+21`);
+    expect(actual[3]).to.have.property(`type`, `Comma`);
+    expect(actual[3]).to.have.property(`value`, `,`);
+    expect(actual[4]).to.have.property(`type`, `Word`);
+    expect(actual[4]).to.have.property(`value`, `Diplomacy`);
+
+    expect(actual[5]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[5]).to.have.property(`value`, `+21`);
+    expect(actual[6]).to.have.property(`type`, `Comma`);
+    expect(actual[6]).to.have.property(`value`, `,`);
+    expect(actual[7]).to.have.property(`type`, `Word`);
+    expect(actual[7]).to.have.property(`value`, `Fly`);
+    expect(actual[8]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[8]).to.have.property(`value`, `+16`);
+    expect(actual[9]).to.have.property(`type`, `Comma`);
+    expect(actual[9]).to.have.property(`value`, `,`);
+
+    expect(actual[10]).to.have.property(`type`, `Word`);
+    expect(actual[10]).to.have.property(`value`, `Intimidate`);
+    expect(actual[11]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[11]).to.have.property(`value`, `+21`);
+    expect(actual[12]).to.have.property(`type`, `Comma`);
+    expect(actual[12]).to.have.property(`value`, `,`);
+    expect(actual[13]).to.have.property(`type`, `Word`);
+    expect(actual[13]).to.have.property(`value`, `Knowledge`);
+    expect(actual[14]).to.have.property(`type`, `LParen`);
+    expect(actual[14]).to.have.property(`value`, `(`);
+
+    expect(actual[15]).to.have.property(`type`, `Word`);
+    expect(actual[15]).to.have.property(`value`, `arcana`);
+    expect(actual[16]).to.have.property(`type`, `RParen`);
+    expect(actual[16]).to.have.property(`value`, `)`);
+    expect(actual[17]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[17]).to.have.property(`value`, `+20`);
+    expect(actual[18]).to.have.property(`type`, `Comma`);
+    expect(actual[18]).to.have.property(`value`, `,`);
+    expect(actual[19]).to.have.property(`type`, `Word`);
+    expect(actual[19]).to.have.property(`value`, `Knowledge`);
+
+    expect(actual[20]).to.have.property(`type`, `LParen`);
+    expect(actual[20]).to.have.property(`value`, `(`);
+    expect(actual[21]).to.have.property(`type`, `Word`);
+    expect(actual[21]).to.have.property(`value`, `nature`);
+    expect(actual[22]).to.have.property(`type`, `RParen`);
+    expect(actual[22]).to.have.property(`value`, `)`);
+    expect(actual[23]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[23]).to.have.property(`value`, `+20`);
+    expect(actual[24]).to.have.property(`type`, `Comma`);
+    expect(actual[24]).to.have.property(`value`, `,`);
+
+    expect(actual[25]).to.have.property(`type`, `PerceptionKey`);
+    expect(actual[25]).to.have.property(`value`, `Perception`);
+    expect(actual[26]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[26]).to.have.property(`value`, `+25`);
+    expect(actual[27]).to.have.property(`type`, `Comma`);
+    expect(actual[27]).to.have.property(`value`, `,`);
+    expect(actual[28]).to.have.property(`type`, `Word`);
+    expect(actual[28]).to.have.property(`value`, `Sense`);
+    expect(actual[29]).to.have.property(`type`, `Word`);
+    expect(actual[29]).to.have.property(`value`, `Motive`);
+
+    expect(actual[30]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[30]).to.have.property(`value`, `+25`);
+    expect(actual[31]).to.have.property(`type`, `Comma`);
+    expect(actual[31]).to.have.property(`value`, `,`);
+    expect(actual[32]).to.have.property(`type`, `Word`);
+    expect(actual[32]).to.have.property(`value`, `Spellcraft`);
+    expect(actual[33]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[33]).to.have.property(`value`, `+20`);
+  });
+
+  it(`can find Skills line 3`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Skills Acrobatics +21, Diplomacy +17, Fly +20,
+    Knowledge (arcana) +14, Perception +28, Sense
+    Motive +13, Spellcraft +15, Stealth +21, Use Magic
+    Device +17; Racial Modifiers +6 Perception`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(37);
+
+    expect(actual[0]).to.have.property(`type`, `SkillsKey`);
+    expect(actual[0]).to.have.property(`value`, `Skills`);
+    expect(actual[1]).to.have.property(`type`, `Word`);
+    expect(actual[1]).to.have.property(`value`, `Acrobatics`);
+    expect(actual[2]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[2]).to.have.property(`value`, `+21`);
+    expect(actual[3]).to.have.property(`type`, `Comma`);
+    expect(actual[3]).to.have.property(`value`, `,`);
+    expect(actual[4]).to.have.property(`type`, `Word`);
+    expect(actual[4]).to.have.property(`value`, `Diplomacy`);
+
+    expect(actual[5]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[5]).to.have.property(`value`, `+17`);
+    expect(actual[6]).to.have.property(`type`, `Comma`);
+    expect(actual[6]).to.have.property(`value`, `,`);
+    expect(actual[7]).to.have.property(`type`, `Word`);
+    expect(actual[7]).to.have.property(`value`, `Fly`);
+    expect(actual[8]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[8]).to.have.property(`value`, `+20`);
+    expect(actual[9]).to.have.property(`type`, `Comma`);
+    expect(actual[9]).to.have.property(`value`, `,`);
+
+    expect(actual[10]).to.have.property(`type`, `Word`);
+    expect(actual[10]).to.have.property(`value`, `Knowledge`);
+    expect(actual[11]).to.have.property(`type`, `LParen`);
+    expect(actual[11]).to.have.property(`value`, `(`);
+    expect(actual[12]).to.have.property(`type`, `Word`);
+    expect(actual[12]).to.have.property(`value`, `arcana`);
+    expect(actual[13]).to.have.property(`type`, `RParen`);
+    expect(actual[13]).to.have.property(`value`, `)`);
+    expect(actual[14]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[14]).to.have.property(`value`, `+14`);
+
+    expect(actual[15]).to.have.property(`type`, `Comma`);
+    expect(actual[15]).to.have.property(`value`, `,`);
+    expect(actual[16]).to.have.property(`type`, `PerceptionKey`);
+    expect(actual[16]).to.have.property(`value`, `Perception`);
+    expect(actual[17]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[17]).to.have.property(`value`, `+28`);
+    expect(actual[18]).to.have.property(`type`, `Comma`);
+    expect(actual[18]).to.have.property(`value`, `,`);
+    expect(actual[19]).to.have.property(`type`, `Word`);
+    expect(actual[19]).to.have.property(`value`, `Sense`);
+
+    expect(actual[20]).to.have.property(`type`, `Word`);
+    expect(actual[20]).to.have.property(`value`, `Motive`);
+    expect(actual[21]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[21]).to.have.property(`value`, `+13`);
+    expect(actual[22]).to.have.property(`type`, `Comma`);
+    expect(actual[22]).to.have.property(`value`, `,`);
+    expect(actual[23]).to.have.property(`type`, `Word`);
+    expect(actual[23]).to.have.property(`value`, `Spellcraft`);
+    expect(actual[24]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[24]).to.have.property(`value`, `+15`);
+
+    expect(actual[25]).to.have.property(`type`, `Comma`);
+    expect(actual[25]).to.have.property(`value`, `,`);
+    expect(actual[26]).to.have.property(`type`, `Word`);
+    expect(actual[26]).to.have.property(`value`, `Stealth`);
+    expect(actual[27]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[27]).to.have.property(`value`, `+21`);
+    expect(actual[28]).to.have.property(`type`, `Comma`);
+    expect(actual[28]).to.have.property(`value`, `,`);
+    expect(actual[29]).to.have.property(`type`, `Word`);
+    expect(actual[29]).to.have.property(`value`, `Use`);
+
+    expect(actual[30]).to.have.property(`type`, `Word`);
+    expect(actual[30]).to.have.property(`value`, `Magic`);
+    expect(actual[31]).to.have.property(`type`, `Word`);
+    expect(actual[31]).to.have.property(`value`, `Device`);
+    expect(actual[32]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[32]).to.have.property(`value`, `+17`);
+    expect(actual[33]).to.have.property(`type`, `SemiColon`);
+    expect(actual[33]).to.have.property(`value`, `;`);
+    expect(actual[34]).to.have.property(`type`, `RacialModifiersKey`);
+    expect(actual[34]).to.have.property(`value`, `Racial Modifiers`);
+
+    expect(actual[35]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[35]).to.have.property(`value`, `+6`);
+    expect(actual[36]).to.have.property(`type`, `PerceptionKey`);
+    expect(actual[36]).to.have.property(`value`, `Perception`);
+  });
+
+  it(`can find Skills line 4`, () => {
+    const sut = new StatBlockLexer();
+    const lexer = sut.getLexer();
+
+    const input = `Skills Acrobatics +8, Perception +10, Stealth +8,
+    Survival +7 (+10 in forests); Racial Modifiers
+    +3 Survival in forests, +4 Stealth`;
+
+    const actual = TestHelper.runLexer(lexer, input);
+
+    expect(actual.length).to.equal(26);
+    
+    expect(actual[0]).to.have.property(`type`, `SkillsKey`);
+    expect(actual[0]).to.have.property(`value`, `Skills`);
+    expect(actual[1]).to.have.property(`type`, `Word`);
+    expect(actual[1]).to.have.property(`value`, `Acrobatics`);
+    expect(actual[2]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[2]).to.have.property(`value`, `+8`);
+    expect(actual[3]).to.have.property(`type`, `Comma`);
+    expect(actual[3]).to.have.property(`value`, `,`);
+    expect(actual[4]).to.have.property(`type`, `PerceptionKey`);
+    expect(actual[4]).to.have.property(`value`, `Perception`);
+
+    expect(actual[5]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[5]).to.have.property(`value`, `+10`);
+    expect(actual[6]).to.have.property(`type`, `Comma`);
+    expect(actual[6]).to.have.property(`value`, `,`);
+    expect(actual[7]).to.have.property(`type`, `Word`);
+    expect(actual[7]).to.have.property(`value`, `Stealth`);
+    expect(actual[8]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[8]).to.have.property(`value`, `+8`);
+    expect(actual[9]).to.have.property(`type`, `Comma`);
+    expect(actual[9]).to.have.property(`value`, `,`);
+
+    expect(actual[10]).to.have.property(`type`, `Word`);
+    expect(actual[10]).to.have.property(`value`, `Survival`);
+    expect(actual[11]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[11]).to.have.property(`value`, `+7`);
+    expect(actual[12]).to.have.property(`type`, `LParen`);
+    expect(actual[12]).to.have.property(`value`, `(`);
+    expect(actual[13]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[13]).to.have.property(`value`, `+10`);
+    expect(actual[14]).to.have.property(`type`, `Word`);
+    expect(actual[14]).to.have.property(`value`, `in`);
+
+    expect(actual[15]).to.have.property(`type`, `Word`);
+    expect(actual[15]).to.have.property(`value`, `forests`);
+    expect(actual[16]).to.have.property(`type`, `RParen`);
+    expect(actual[16]).to.have.property(`value`, `)`);
+    expect(actual[17]).to.have.property(`type`, `SemiColon`);
+    expect(actual[17]).to.have.property(`value`, `;`);
+    expect(actual[18]).to.have.property(`type`, `RacialModifiersKey`);
+    expect(actual[18]).to.have.property(`value`, `Racial Modifiers`);
+    expect(actual[19]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[19]).to.have.property(`value`, `+3`);
+
+    expect(actual[20]).to.have.property(`type`, `Word`);
+    expect(actual[20]).to.have.property(`value`, `Survival`);
+    expect(actual[21]).to.have.property(`type`, `Word`);
+    expect(actual[21]).to.have.property(`value`, `in`);
+    expect(actual[22]).to.have.property(`type`, `Word`);
+    expect(actual[22]).to.have.property(`value`, `forests`);
+    expect(actual[23]).to.have.property(`type`, `Comma`);
+    expect(actual[23]).to.have.property(`value`, `,`);
+    expect(actual[24]).to.have.property(`type`, `NumberSigned`);
+    expect(actual[24]).to.have.property(`value`, `+4`);
+
+    expect(actual[25]).to.have.property(`type`, `Word`);
+    expect(actual[25]).to.have.property(`value`, `Stealth`);
   });
 });

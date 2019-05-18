@@ -35,12 +35,16 @@ export class StatBlockLexer {
   public ac_key: RegExp;
   public ac_touch_key: RegExp;
   public aura_key: RegExp;
+  public base_atk_key: RegExp;
   public cl_key: RegExp;
+  public cmb_key: RegExp;
+  public cmd_key: RegExp;
   public cr_key: RegExp;
   public damage_reduction_key: RegExp;
   public dc_key: RegExp;
   public defense_key: RegExp;
   public defensive_abilities_key: RegExp;
+  public feats_key: RegExp;
   public fort_save_Key: RegExp;
   public hp_key: RegExp;
   public immune_key: RegExp;
@@ -48,10 +52,12 @@ export class StatBlockLexer {
   public melee_key: RegExp;
   public offense_key: RegExp;
   public perception_key: RegExp;
+  public racial_modifiers_key: RegExp;
   public reach_key: RegExp;
   public ref_save_key: RegExp;
   public resistances_key: RegExp;
   public senses_key: RegExp;
+  public skills_key: RegExp;
   public space_key: RegExp;
   public speed_key: RegExp;
   public spell_like_ability_key: RegExp;
@@ -63,8 +69,8 @@ export class StatBlockLexer {
   public xp_key: RegExp;
 
   public multiplier: RegExp;
+  //public word_hyphenated: RegExp;
   public word: RegExp;
-  public word_hyphenated: RegExp;
 
   public constructor() {
 
@@ -132,12 +138,16 @@ export class StatBlockLexer {
     this.ac_flat_footed_key = /\bflat-footed\b/
     this.ac_touch_key = /\btouch\b/
     this.aura_key = /\bAura\b/
+    this.base_atk_key = /\bBase Atk\b/;
     this.cl_key = /\b[cC][lL]\b/;
+    this.cmb_key = /\bCMB\b/;
+    this.cmd_key = /\bCMD\b/;
     this.cr_key = /\b[cC][rR]\b/;
     this.damage_reduction_key = /\bDR\b/;
     this.dc_key = /\bDC\b/;
     this.defense_key = /\bDEFENSE\b/
     this.defensive_abilities_key = /\bDefensive Abilities\b/
+    this.feats_key = /\bFeats\b/;
     this.fort_save_Key = /\bFort\b/;
     this.hp_key = /\bhp\b/;
     this.immune_key = /\bImmune\b/
@@ -145,10 +155,12 @@ export class StatBlockLexer {
     this.melee_key = /\bMelee\b/
     this.offense_key = /\bOFFENSE\b/
     this.perception_key = /\bPerception\b/
+    this.racial_modifiers_key = /\bRacial Modifiers\b/;
     this.reach_key = /\bReach\b/
     this.ref_save_key = /\bRef\b/;
     this.resistances_key = /\bResist\b/;
     this.senses_key = /\bSenses\b/
+    this.skills_key = /\bSkills\b/;
     this.space_key = /\bSpace\b/
     this.speed_key = /\bSpeed\b/
     this.spell_like_ability_key = /\bSpell-Like Abilities\b/
@@ -160,24 +172,31 @@ export class StatBlockLexer {
     this.xp_key = /\b[xX][pP]\b/;
     
     this.multiplier = /\b[x*]\d\b/;
+    //this.word_hyphenated = /(?:\b[a-zA-Z]+[-\u2013\u2014][a-zA-Z]+\b)/;
+
+    // TODO: for Word, maybe add parsing out of trailing letter patterns (what's B? - Bestiary (implied1))!
     this.word = /(?:\b[a-zA-Z]+(?:(?:[’'][tT])|(?:[’'][lL][lL])|(?:[’'][sS])|(?:[sS][’']))?\b)/;
-    this.word_hyphenated = /(?:[a-zA-Z]+[-][a-zA-Z]+)/;
   }
 
   public getLexer(): moo.Lexer {
     return moo.compile({
-      // TODO: split into groups
+      // TODO: split rules into groups
+      // TODO: how to share rules in a few classes that each produce a lexer?
       // specific string matches
       AcKey: this.ac_key,
       AcTouchKey: this.ac_touch_key,
       AcFlatFootedKey: this.ac_flat_footed_key,
       AuraKey: this.aura_key,
+      BaseAtkKey: this.base_atk_key,
       ClKey: this.cl_key,
+      CmbKey: this.cmb_key,
+      CmdKey: this.cmd_key,
       CrKey: this.cr_key,
       DcKey: this.dc_key,
       DefenseKey: this.defense_key,
       DefensiveAbilitiesKey: this.defensive_abilities_key,
-      DrKey: this.damage_reduction_key,      
+      DrKey: this.damage_reduction_key,
+      FeatsKey: this.feats_key,
       FortSaveKey: this.fort_save_Key,
       HpKey: this.hp_key,      
       ImmuneKey: this.immune_key,
@@ -185,10 +204,12 @@ export class StatBlockLexer {
       //MeleeKey: this.melee_key,
       OffenseKey: this.offense_key,
       PerceptionKey: this.perception_key,
+      RacialModifiersKey: this.racial_modifiers_key,
       ReachKey: this.reach_key,
       RefSaveKey: this.ref_save_key,
       ResistKey: this.resistances_key,
       SensesKey: this.senses_key,
+      SkillsKey: this.skills_key,
       SpaceKey: this.space_key,
       SpeedKey: this.speed_key,
       SpellLikeAbilityKey: this.spell_like_ability_key,
@@ -216,6 +237,12 @@ export class StatBlockLexer {
 
       Versus: this.versus,
        
+
+      // constructs
+      //WordHyphenated: this.word_hyphenated,
+      Word: this.word,
+      
+
       // punctuation
       Colon: this.colon,
       SemiColon: this.semi_colon,
@@ -232,10 +259,6 @@ export class StatBlockLexer {
       RParen: this.r_paren,
 
       ForwardSlash: this.forward_slash,
-
-      // constructs
-      Word: this.word,
-      WordHyphenated: this.word_hyphenated,
 
       WS: { match: /[ \t\n\r]+/, lineBreaks: true },
     });
