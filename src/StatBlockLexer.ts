@@ -3,9 +3,8 @@ import * as _ from "underscore";
 
 export class StatBlockLexer {
 
-  public versus: string;
+  public versus: RegExp;
 
-  //public alpha: RegExp;
   public colon: string;
   public semi_colon: string;
   public comma: string;
@@ -21,46 +20,45 @@ export class StatBlockLexer {
 
   public size_value: RegExp;
   public dice_roll: RegExp;
-  //public number_with_denominator: RegExp;
   public number_whole: RegExp;
   public number_with_sign: RegExp;
 
-  public ability_list: string[];
-  public alignment_list: string[];
-  public attack_type_list: string[];
-  public creature_size_list: string[];
+  public ability_list: object[];
+  public alignment_list: object[];
+  public attack_type_list: object[];
+  public creature_size_list: object[];
   public creature_type_list: object[];
-  public level_list: string[];
-  public spells_known_prepared_psychic: string[];
+  public level_list: object[];
+  public spells_known_prepared_psychic: object[];
 
-  public ac_flat_footed_key: string;
+  public ac_flat_footed_key: RegExp;
   public ac_key: RegExp;
-  public ac_touch_key: string;
-  public aura_key: string;
+  public ac_touch_key: RegExp;
+  public aura_key: RegExp;
   public cl_key: RegExp;
   public cr_key: RegExp;
   public damage_reduction_key: RegExp;
   public dc_key: RegExp;
-  public defense_key: string;
-  public defensive_abilities_key: string;
+  public defense_key: RegExp;
+  public defensive_abilities_key: RegExp;
   public fort_save_Key: RegExp;
   public hp_key: RegExp;
-  public immune_key: string;
+  public immune_key: RegExp;
   public init_key: RegExp;
-  public melee_key: string;
-  public offense_key: string;
-  public perception_key: string;
-  public reach_key: string;
+  public melee_key: RegExp;
+  public offense_key: RegExp;
+  public perception_key: RegExp;
+  public reach_key: RegExp;
   public ref_save_key: RegExp;
   public resistances_key: RegExp;
-  public senses_key: string;
-  public space_key: string;
-  public speed_key: string;
-  public spell_like_ability_key: string;
+  public senses_key: RegExp;
+  public space_key: RegExp;
+  public speed_key: RegExp;
+  public spell_like_ability_key: RegExp;
   public spell_resistance_key: RegExp;
-  public statistics_key: string;
-  public tactics_key: string;
-  public weaknesses_key: string;    
+  public statistics_key: RegExp;
+  public tactics_key: RegExp;
+  public weaknesses_key: RegExp;    
   public will_save_key: RegExp;
   public xp_key: RegExp;
 
@@ -70,7 +68,7 @@ export class StatBlockLexer {
 
   public constructor() {
 
-    this.versus = `vs.`;
+    this.versus = /\bvs\./;
 
     this.colon = `:`;
     this.semi_colon = `;`;
@@ -91,73 +89,84 @@ export class StatBlockLexer {
     this.number_whole = /(?:\d\d?\d?(?:,\d{3})*)/;
     this.number_with_sign = /(?:[\+\-\u2013]\d{1,3})/;
 
-    this.ability_list = [`Str `, `Dex `, `Con `, `Int `, `Wis `, `Cha `];
+    this.ability_list = _.map<RegExp, object>([/\bStr\b/, /\bDex\b/, /\bCon\b/, /\bInt\b/, /\bWis\b/, /\bCha\b/], r => {
+      return { match: r };
+    } );
 
-    this.alignment_list = [`LE`, `LN`, `LG`, `NE`, `N`, `NG`, `CE`, `CN`, `CG`];
-    this.attack_type_list = [`Melee`, `Ranged`, `Special Attacks`]
-    this.creature_size_list = [`Fine`, `Diminutive`, `Tiny`, `Small`, `Medium`, `Large`, `Huge`, `Gargantuan`, `Colossal`];
+    this.alignment_list = this.creature_type_list = _.map<RegExp, object>([
+      /\bLE\b/, /\bLN\b/, /\bLG\b/, /\bNE\b/,
+      /\bN\b/, /\bNG\b/, /\bCE\b/, /\bCN\b/, /\bCG\b/], r => {
+        return { match: r };
+      });
+    
+    this.attack_type_list = _.map<RegExp, object>([/\bMelee\b/, /\bRanged\b/, /\bSpecial Attacks\b/], r => {
+      return { match: r };
+    });
+
+    this.creature_size_list = _.map<RegExp, object>([/\bFine\b/, /\bDiminutive\b/, /\bTiny\b/, /\bSmall\b/,
+      /\bMedium\b/, /\bLarge\b/, /\bHuge\b/, /\bGargantuan\b/, /\bColossal\b/], r => {
+      return { match: r };
+    });
+
     // creature types: https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types/
     this.creature_type_list = _.map<RegExp, object>([
-      /\baberration\b/,
-      /\banimal\b/,
-      /\bconstruct\b/,
-      /\bdragon\b/,
-      /\bfey\b/,
-      /\bhumanoid\b/,
-      /\bmagical beast\b/,
-      /\bmonstrous humanoid\b/,
-      /\booze\b/,
-      /\boutsider\b/,
-      /\bplant\b/,
-      /\bundead\b/,
-      /\bvermin\b/], r => {
+      /\baberration\b/, /\banimal\b/, /\bconstruct\b/, /\bdragon\b/, /\bfey\b/,
+      /\bhumanoid\b/, /\bmagical beast\b/, /\bmonstrous humanoid\b/, /\booze\b/,
+      /\boutsider\b/, /\bplant\b/, /\bundead\b/, /\bvermin\b/], r => {
         return { match: r };
-      } );
+      });
 
-    this.level_list = [`1st`, `1st`, `2nd`, `3rd`, `4th`, `5th`, `6th`, `7th`, `8th`, `9th`, `10th`,
-      `11th`, `12th`, `13th`, `14th`, `15th`, `16th`, `17th`, `18th`, `19th`, `20th`];
+    this.level_list = _.map<RegExp, object>([
+      /\b1st\b/, /\b1st\b/, /\b2nd\b/, /\b3rd\b/, /\b4th\b/, /\b5th\b/, /\b6th\b/, /\b7th\b/,
+      /\b8th\b/, /\b9th\b/, /\b10th\b/, /\b11th\b/, /\b12th\b/, /\b13th\b/, /\b14th\b/,
+      /\b15th\b/, /\b16th\b/, /\b17th\b/, /\b18th\b/, /\b19th\b/, /\b20th\b/], r => {
+        return { match: r };
+      });
     
-    this.spells_known_prepared_psychic = [`Spells Known`, `Spells Prepared`, `Psychic Magic`];
+    this.spells_known_prepared_psychic = _.map<RegExp, object>([
+      /\bSpells Known\b/, /\bSpells Prepared\b/, /\bPsychic Magic\b/], r => {
+      return { match: r };
+    });
 
     this.ac_key = /\bAC\b/;
-    this.ac_flat_footed_key = `flat-footed`;
-    this.ac_touch_key = `touch`;
-    this.aura_key = `Aura`;
+    this.ac_flat_footed_key = /\bflat-footed\b/
+    this.ac_touch_key = /\btouch\b/
+    this.aura_key = /\bAura\b/
     this.cl_key = /\b[cC][lL]\b/;
     this.cr_key = /\b[cC][rR]\b/;
     this.damage_reduction_key = /\bDR\b/;
     this.dc_key = /\bDC\b/;
-    this.defense_key = `DEFENSE`;
-    this.defensive_abilities_key = `Defensive Abilities`;
+    this.defense_key = /\bDEFENSE\b/
+    this.defensive_abilities_key = /\bDefensive Abilities\b/
     this.fort_save_Key = /\bFort\b/;
     this.hp_key = /\bhp\b/;
-    this.immune_key = `Immune`;
+    this.immune_key = /\bImmune\b/
     this.init_key = /\bInit\b/;
-    this.melee_key = `Melee`;
-    this.offense_key = `OFFENSE`;
-    this.perception_key = `Perception`;
-    this.reach_key = `Reach`;
+    this.melee_key = /\bMelee\b/
+    this.offense_key = /\bOFFENSE\b/
+    this.perception_key = /\bPerception\b/
+    this.reach_key = /\bReach\b/
     this.ref_save_key = /\bRef\b/;
     this.resistances_key = /\bResist\b/;
-    this.senses_key = `Senses`;
-    this.space_key = `Space`;
-    this.speed_key = `Speed`;
-    this.spell_like_ability_key = `Spell-Like Abilities`;
+    this.senses_key = /\bSenses\b/
+    this.space_key = /\bSpace\b/
+    this.speed_key = /\bSpeed\b/
+    this.spell_like_ability_key = /\bSpell-Like Abilities\b/
     this.spell_resistance_key = /\bSR\b/;
-    this.statistics_key = `STATISTICS`;
-    this.tactics_key = `TACTICS`;
-    this.weaknesses_key = `Weaknesses`;
+    this.statistics_key = /\bSTATISTICS\b/
+    this.tactics_key = /\bTACTICS\b/
+    this.weaknesses_key = /\bWeaknesses\b/
     this.will_save_key = /\bWill\b/;
     this.xp_key = /\b[xX][pP]\b/;
     
     this.multiplier = /\b[x*]\d\b/;
     this.word = /(?:\b[a-zA-Z]+(?:(?:[’'][tT])|(?:[’'][lL][lL])|(?:[’'][sS])|(?:[sS][’']))?\b)/;
     this.word_hyphenated = /(?:[a-zA-Z]+[-][a-zA-Z]+)/;
-    //this.alpha = /[a-zA-Z]+/;
   }
 
   public getLexer(): moo.Lexer {
     return moo.compile({
+      // TODO: split into groups
       // specific string matches
       AcKey: this.ac_key,
       AcTouchKey: this.ac_touch_key,

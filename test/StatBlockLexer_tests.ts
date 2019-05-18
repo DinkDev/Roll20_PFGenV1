@@ -479,7 +479,7 @@ describe(`StatBlockLexer `, () => {
     expect(actual[8]).to.have.property(`value`, `(`);
     expect(actual[9]).to.have.property(`type`, `NumberSigned`);
     expect(actual[9]).to.have.property(`value`, `+5`);
-    expect(actual[10]).to.have.property(`type`, `Word`);
+    expect(actual[10]).to.have.property(`type`, `Ability`);
     expect(actual[10]).to.have.property(`value`, `Dex`);
     expect(actual[11]).to.have.property(`type`, `Comma`);
     expect(actual[11]).to.have.property(`value`, `,`);
@@ -526,7 +526,7 @@ describe(`StatBlockLexer `, () => {
     expect(actual[11]).to.have.property(`value`, `,`);
     expect(actual[12]).to.have.property(`type`, `NumberSigned`);
     expect(actual[12]).to.have.property(`value`, `+1`);
-    expect(actual[13]).to.have.property(`type`, `Word`);
+    expect(actual[13]).to.have.property(`type`, `Ability`);
     expect(actual[13]).to.have.property(`value`, `Dex`);
     expect(actual[14]).to.have.property(`type`, `Comma`);
     expect(actual[14]).to.have.property(`value`, `,`);
@@ -610,7 +610,7 @@ describe(`StatBlockLexer `, () => {
     expect(actual[9]).to.have.property(`value`, `(`);
     expect(actual[10]).to.have.property(`type`, `NumberSigned`);
     expect(actual[10]).to.have.property(`value`, `+3`);
-    expect(actual[11]).to.have.property(`type`, `Word`);
+    expect(actual[11]).to.have.property(`type`, `Ability`);
     expect(actual[11]).to.have.property(`value`, `Dex`);
     expect(actual[12]).to.have.property(`type`, `Comma`);
     expect(actual[12]).to.have.property(`value`, `,`);
@@ -3545,42 +3545,42 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual.length).to.equal(17);
 
     expect(actual[0]).to.have.property(`type`, `Ability`);
-    expect(actual[0]).to.have.property(`value`, `Str `);
+    expect(actual[0]).to.have.property(`value`, `Str`);
     expect(actual[1]).to.have.property(`type`, `NumberWhole`);
     expect(actual[1]).to.have.property(`value`, `11`);
     expect(actual[2]).to.have.property(`type`, `Comma`);
     expect(actual[2]).to.have.property(`value`, `,`);
 
     expect(actual[3]).to.have.property(`type`, `Ability`);
-    expect(actual[3]).to.have.property(`value`, `Dex `);
+    expect(actual[3]).to.have.property(`value`, `Dex`);
     expect(actual[4]).to.have.property(`type`, `NumberWhole`);
     expect(actual[4]).to.have.property(`value`, `21`);
     expect(actual[5]).to.have.property(`type`, `Comma`);
     expect(actual[5]).to.have.property(`value`, `,`);
 
     expect(actual[6]).to.have.property(`type`, `Ability`);
-    expect(actual[6]).to.have.property(`value`, `Con `);
+    expect(actual[6]).to.have.property(`value`, `Con`);
     expect(actual[7]).to.have.property(`type`, `NumberWhole`);
     expect(actual[7]).to.have.property(`value`, `14`);
     expect(actual[8]).to.have.property(`type`, `Comma`);
     expect(actual[8]).to.have.property(`value`, `,`);
 
     expect(actual[9]).to.have.property(`type`, `Ability`);
-    expect(actual[9]).to.have.property(`value`, `Int `);
+    expect(actual[9]).to.have.property(`value`, `Int`);
     expect(actual[10]).to.have.property(`type`, `NumberWhole`);
     expect(actual[10]).to.have.property(`value`, `18`);
     expect(actual[11]).to.have.property(`type`, `Comma`);
     expect(actual[11]).to.have.property(`value`, `,`);
 
     expect(actual[12]).to.have.property(`type`, `Ability`);
-    expect(actual[12]).to.have.property(`value`, `Wis `);
+    expect(actual[12]).to.have.property(`value`, `Wis`);
     expect(actual[13]).to.have.property(`type`, `NumberWhole`);
     expect(actual[13]).to.have.property(`value`, `10`);
     expect(actual[14]).to.have.property(`type`, `Comma`);
     expect(actual[14]).to.have.property(`value`, `,`);
 
     expect(actual[15]).to.have.property(`type`, `Ability`);
-    expect(actual[15]).to.have.property(`value`, `Cha `);
+    expect(actual[15]).to.have.property(`value`, `Cha`);
     expect(actual[16]).to.have.property(`type`, `NumberWhole`);
     expect(actual[16]).to.have.property(`value`, `19`);
   });
@@ -3596,42 +3596,42 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual.length).to.equal(17);
 
     expect(actual[0]).to.have.property(`type`, `Ability`);
-    expect(actual[0]).to.have.property(`value`, `Str `);
+    expect(actual[0]).to.have.property(`value`, `Str`);
     expect(actual[1]).to.have.property(`type`, `NumberWhole`);
     expect(actual[1]).to.have.property(`value`, `31`);
     expect(actual[2]).to.have.property(`type`, `Comma`);
     expect(actual[2]).to.have.property(`value`, `,`);
 
     expect(actual[3]).to.have.property(`type`, `Ability`);
-    expect(actual[3]).to.have.property(`value`, `Dex `);
+    expect(actual[3]).to.have.property(`value`, `Dex`);
     expect(actual[4]).to.have.property(`type`, `NumberWhole`);
     expect(actual[4]).to.have.property(`value`, `14`);
     expect(actual[5]).to.have.property(`type`, `Comma`);
     expect(actual[5]).to.have.property(`value`, `,`);
 
     expect(actual[6]).to.have.property(`type`, `Ability`);
-    expect(actual[6]).to.have.property(`value`, `Con `);
+    expect(actual[6]).to.have.property(`value`, `Con`);
     expect(actual[7]).to.have.property(`type`, `NumberWhole`);
     expect(actual[7]).to.have.property(`value`, `28`);
     expect(actual[8]).to.have.property(`type`, `Comma`);
     expect(actual[8]).to.have.property(`value`, `,`);
 
     expect(actual[9]).to.have.property(`type`, `Ability`);
-    expect(actual[9]).to.have.property(`value`, `Int `);
+    expect(actual[9]).to.have.property(`value`, `Int`);
     expect(actual[10]).to.have.property(`type`, `NumberWhole`);
     expect(actual[10]).to.have.property(`value`, `16`);
     expect(actual[11]).to.have.property(`type`, `Comma`);
     expect(actual[11]).to.have.property(`value`, `,`);
 
     expect(actual[12]).to.have.property(`type`, `Ability`);
-    expect(actual[12]).to.have.property(`value`, `Wis `);
+    expect(actual[12]).to.have.property(`value`, `Wis`);
     expect(actual[13]).to.have.property(`type`, `NumberWhole`);
     expect(actual[13]).to.have.property(`value`, `18`);
     expect(actual[14]).to.have.property(`type`, `Comma`);
     expect(actual[14]).to.have.property(`value`, `,`);
 
     expect(actual[15]).to.have.property(`type`, `Ability`);
-    expect(actual[15]).to.have.property(`value`, `Cha `);
+    expect(actual[15]).to.have.property(`value`, `Cha`);
     expect(actual[16]).to.have.property(`type`, `NumberWhole`);
     expect(actual[16]).to.have.property(`value`, `20`);
   });
@@ -3647,42 +3647,42 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
     expect(actual.length).to.equal(17);
 
     expect(actual[0]).to.have.property(`type`, `Ability`);
-    expect(actual[0]).to.have.property(`value`, `Str `);
+    expect(actual[0]).to.have.property(`value`, `Str`);
     expect(actual[1]).to.have.property(`type`, `NumberWhole`);
     expect(actual[1]).to.have.property(`value`, `14`);
     expect(actual[2]).to.have.property(`type`, `Comma`);
     expect(actual[2]).to.have.property(`value`, `,`);
 
     expect(actual[3]).to.have.property(`type`, `Ability`);
-    expect(actual[3]).to.have.property(`value`, `Dex `);
+    expect(actual[3]).to.have.property(`value`, `Dex`);
     expect(actual[4]).to.have.property(`type`, `NumberWhole`);
     expect(actual[4]).to.have.property(`value`, `10`);
     expect(actual[5]).to.have.property(`type`, `Comma`);
     expect(actual[5]).to.have.property(`value`, `,`);
 
     expect(actual[6]).to.have.property(`type`, `Ability`);
-    expect(actual[6]).to.have.property(`value`, `Con `);
+    expect(actual[6]).to.have.property(`value`, `Con`);
     expect(actual[7]).to.have.property(`type`, `MDash`);
     expect(actual[7]).to.have.property(`value`, `\u{2014}`);
     expect(actual[8]).to.have.property(`type`, `Comma`);
     expect(actual[8]).to.have.property(`value`, `,`);
 
     expect(actual[9]).to.have.property(`type`, `Ability`);
-    expect(actual[9]).to.have.property(`value`, `Int `);
+    expect(actual[9]).to.have.property(`value`, `Int`);
     expect(actual[10]).to.have.property(`type`, `MDash`);
     expect(actual[10]).to.have.property(`value`, `\u{2014}`);
     expect(actual[11]).to.have.property(`type`, `Comma`);
     expect(actual[11]).to.have.property(`value`, `,`);
 
     expect(actual[12]).to.have.property(`type`, `Ability`);
-    expect(actual[12]).to.have.property(`value`, `Wis `);
+    expect(actual[12]).to.have.property(`value`, `Wis`);
     expect(actual[13]).to.have.property(`type`, `NumberWhole`);
     expect(actual[13]).to.have.property(`value`, `1`);
     expect(actual[14]).to.have.property(`type`, `Comma`);
     expect(actual[14]).to.have.property(`value`, `,`);
 
     expect(actual[15]).to.have.property(`type`, `Ability`);
-    expect(actual[15]).to.have.property(`value`, `Cha `);
+    expect(actual[15]).to.have.property(`value`, `Cha`);
     expect(actual[16]).to.have.property(`type`, `NumberWhole`);
     expect(actual[16]).to.have.property(`value`, `1`);
   });
