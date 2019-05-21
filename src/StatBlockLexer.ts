@@ -31,7 +31,7 @@ export class StatBlockLexer {
   public creature_size_list: object[];
   public creature_type_list: object[];
   public ecology_type_list: object[];
-  public gear_list: object[];
+  //public gear_key_list: object[];
   public level_list: object[];
   public special_abilities_type_list: object[];
   public spells_known_prepared_psychic: object[];
@@ -47,16 +47,16 @@ export class StatBlockLexer {
   public cr_key: RegExp;
   public damage_reduction_key: RegExp;
   public dc_key: RegExp;
-  public defense_key: RegExp;
+  //public defense_key: RegExp;
   public defensive_abilities_key: RegExp;
-  public ecology_key: RegExp;
+  //public ecology_key: RegExp;
   public feats_key: RegExp;
   public fort_save_Key: RegExp;
   public hp_key: RegExp;
   public immune_key: RegExp;
   public init_key: RegExp;
   public languages_key: RegExp;
-  public offense_key: RegExp;
+  //public offense_key: RegExp;
   public perception_key: RegExp;
   public racial_modifiers_key: RegExp;
   public reach_key: RegExp;
@@ -65,13 +65,13 @@ export class StatBlockLexer {
   public senses_key: RegExp;
   public skills_key: RegExp;
   public space_key: RegExp;
-  public special_abilities_key: RegExp;
+  // public special_abilities_key: RegExp;
   public speed_key: RegExp;
   public spell_like_ability_key: RegExp;
   public spell_resistance_key: RegExp;
   public sq_key: RegExp;
-  public statistics_key: RegExp;
-  public tactics_key: RegExp;
+  // public statistics_key: RegExp;
+  //public tactics_key: RegExp;
   public vulnerabile_to_key: RegExp;
   public weaknesses_key: RegExp;    
   public will_save_key: RegExp;
@@ -80,6 +80,20 @@ export class StatBlockLexer {
   public multiplier: RegExp;
   //public word_hyphenated: RegExp;
   public word: RegExp;
+
+  public sectionElements: {
+    defense_key: RegExp;
+    offense_key: RegExp;
+    tactics_key: RegExp;
+    statistics_key: RegExp;
+    special_abilities_key: RegExp;
+    gear_key_list: object[],
+    ecology_key: RegExp,
+  };
+
+  // rules
+  public sectionsRules: moo.Rules;
+
 
   public constructor() {
 
@@ -139,9 +153,9 @@ export class StatBlockLexer {
       return { match: r };
     });
         
-    this.gear_list = _.map<RegExp, object>([/\bGear\b/, /\bCombat Gear\b/, /\bOther Gear\b/], r => {
-      return { match: r };
-    });
+    // this.gear_key_list = _.map<RegExp, object>([/\bGear\b/, /\bCombat Gear\b/, /\bOther Gear\b/], r => {
+    //   return { match: r };
+    // });
 
     this.level_list = _.map<RegExp, object>([
       /\b1st\b/, /\b1st\b/, /\b2nd\b/, /\b3rd\b/, /\b4th\b/, /\b5th\b/, /\b6th\b/, /\b7th\b/,
@@ -170,16 +184,15 @@ export class StatBlockLexer {
     this.cr_key = /\b[cC][rR]\b/;
     this.damage_reduction_key = /\bDR\b/;
     this.dc_key = /\bDC\b/;
-    this.defense_key = /\bDEFENSE\b/;
     this.defensive_abilities_key = /\bDefensive Abilities\b/;
-    this.ecology_key = /\bECOLOGY\b/;
+    //this.ecology_key = /\bECOLOGY\b/;
     this.feats_key = /\bFeats\b/;
     this.fort_save_Key = /\bFort\b/;
     this.hp_key = /\bhp\b/;
     this.immune_key = /\bImmune\b/;
     this.init_key = /\bInit\b/;
     this.languages_key = /\bLanguages\b/;
-    this.offense_key = /\bOFFENSE\b/;
+    //this.offense_key = /\bOFFENSE\b/;
     this.perception_key = /\bPerception\b/;
     this.racial_modifiers_key = /\bRacial Modifiers\b/;
     this.reach_key = /\bReach\b/;
@@ -188,13 +201,13 @@ export class StatBlockLexer {
     this.senses_key = /\bSenses\b/;
     this.skills_key = /\bSkills\b/;
     this.space_key = /\bSpace\b/;
-    this.special_abilities_key = /\bSPECIAL ABILITIES\b/;
+    //this.special_abilities_key = /\bSPECIAL ABILITIES\b/;
     this.speed_key = /\bSpeed\b/;
     this.spell_like_ability_key = /\bSpell-Like Abilities\b/;
     this.spell_resistance_key = /\bSR\b/;
     this.sq_key = /\bSQ\b/;
-    this.statistics_key = /\bSTATISTICS\b/;
-    this.tactics_key = /\bTACTICS\b/;
+    //this.statistics_key = /\bSTATISTICS\b/;
+    //this.tactics_key = /\bTACTICS\b/;
     this.vulnerabile_to_key = /\bVulnerable to\b/;
     this.weaknesses_key = /\bWeaknesses\b/;
     this.will_save_key = /\bWill\b/;
@@ -205,6 +218,28 @@ export class StatBlockLexer {
 
     // TODO: for Word, maybe add parsing out of trailing letter patterns (what's B? - Bestiary (implied1))!
     this.word = /(?:\b[a-zA-Z]+\b(?:[’']?(?:(?:[stST])?|(?:[lL][lL])?)?))/;
+
+    this.sectionElements = {
+      defense_key: /\bDEFENSE\b/,
+      offense_key: /\bOFFENSE\b/,
+      tactics_key: /\bTACTICS\b/,
+      statistics_key: /\bSTATISTICS\b/,
+      special_abilities_key: /\bSPECIAL ABILITIES\b/,
+      gear_key_list: _.map<RegExp, object>([/\bGear\b/, /\bCombat Gear\b/, /\bOther Gear\b/], r => {
+        return { match: r };
+      }),
+      ecology_key: /\bECOLOGY\b/,
+    };
+
+    this.sectionsRules = {
+      DefenseKey: this.sectionElements.defense_key,
+      OffenseKey: this.sectionElements.offense_key,
+      TacticsKey: this.sectionElements.tactics_key,
+      StatisticsKey: this.sectionElements.statistics_key,
+      SpecialAbilitiesKey: this.sectionElements.special_abilities_key,
+      GearKey: this.sectionElements.gear_key_list,
+      EcologyKey: this.sectionElements.ecology_key,
+    };
   }
 
   public getLexer(): moo.Lexer {
@@ -212,6 +247,8 @@ export class StatBlockLexer {
       // TODO: split rules into groups
       // TODO: how to share rules in a few classes that each produce a lexer?
       // specific string matches
+      ...this.sectionsRules,
+
       AcKey: this.ac_key,
       AcTouchKey: this.ac_touch_key,
       AcFlatFootedKey: this.ac_flat_footed_key,
@@ -222,17 +259,15 @@ export class StatBlockLexer {
       CmdKey: this.cmd_key,
       CrKey: this.cr_key,
       DcKey: this.dc_key,
-      DefenseKey: this.defense_key,
+      
       DefensiveAbilitiesKey: this.defensive_abilities_key,
       DrKey: this.damage_reduction_key,
-      EcologyKey: this.ecology_key,
       FeatsKey: this.feats_key,
       FortSaveKey: this.fort_save_Key,
       HpKey: this.hp_key,      
       ImmuneKey: this.immune_key,
       InitKey: this.init_key,
       LanguagesKey: this.languages_key,
-      OffenseKey: this.offense_key,
       PerceptionKey: this.perception_key,
       // TODO: Racial Modifers list of skills has name and value reversed WRT Skills section.
       RacialModifiersKey: this.racial_modifiers_key,
@@ -242,13 +277,10 @@ export class StatBlockLexer {
       SensesKey: this.senses_key,
       SkillsKey: this.skills_key,
       SpaceKey: this.space_key,
-      SpecialAbilitiesKey: this.special_abilities_key,
       SpeedKey: this.speed_key,
       SpellLikeAbilityKey: this.spell_like_ability_key,
       SqKey: this.sq_key,
       SrKey: this.spell_resistance_key,
-      StatisticsKey: this.statistics_key,
-      TacticsKey: this.tactics_key,
       VulnerableToKey: this.vulnerabile_to_key,
       WeaknessesKey: this.weaknesses_key,
       WillSaveKey: this.will_save_key,
@@ -260,7 +292,6 @@ export class StatBlockLexer {
       CreatureSize: this.creature_size_list,
       CreatureType: this.creature_type_list,
       EcologyType: this.ecology_type_list,
-      Gear: this.gear_list,
       Level: this.level_list,
       SpecialAbilitiesType: this.special_abilities_type_list,
       SpellsKnownPreparedPsychic: this.spells_known_prepared_psychic,

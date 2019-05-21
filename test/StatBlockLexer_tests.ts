@@ -4498,7 +4498,7 @@ grapple, can’t be tripped)`;
 
     expect(actual.length).to.equal(50);
 
-    expect(actual[0]).to.have.property(`type`, `Gear`);
+    expect(actual[0]).to.have.property(`type`, `GearKey`);
     expect(actual[0]).to.have.property(`value`, `Combat Gear`);
     expect(actual[1]).to.have.property(`type`, `Word`);
     expect(actual[1]).to.have.property(`value`, `goodberries`);
@@ -4528,7 +4528,7 @@ grapple, can’t be tripped)`;
     expect(actual[12]).to.have.property(`value`, `acid`);
     expect(actual[13]).to.have.property(`type`, `SemiColon`);
     expect(actual[13]).to.have.property(`value`, `;`);
-    expect(actual[14]).to.have.property(`type`, `Gear`);
+    expect(actual[14]).to.have.property(`type`, `GearKey`);
     expect(actual[14]).to.have.property(`value`, `Other Gear`);
 
     expect(actual[15]).to.have.property(`type`, `Word`);
@@ -4619,7 +4619,7 @@ grapple, can’t be tripped)`;
 
     expect(actual.length).to.equal(11);
 
-    expect(actual[0]).to.have.property(`type`, `Gear`);
+    expect(actual[0]).to.have.property(`type`, `GearKey`);
     expect(actual[0]).to.have.property(`value`, `Gear`);
     expect(actual[1]).to.have.property(`type`, `Word`);
     expect(actual[1]).to.have.property(`value`, `scale`);
@@ -4662,7 +4662,7 @@ grapple, can’t be tripped)`;
 
     expect(actual.length).to.equal(98);
 
-    expect(actual[0]).to.have.property(`type`, `Gear`);
+    expect(actual[0]).to.have.property(`type`, `GearKey`);
     expect(actual[0]).to.have.property(`value`, `Combat Gear`);
     expect(actual[1]).to.have.property(`type`, `Word`);
     expect(actual[1]).to.have.property(`value`, `potion`);
@@ -4758,7 +4758,7 @@ grapple, can’t be tripped)`;
     expect(actual[42]).to.have.property(`value`, `)`);
     expect(actual[43]).to.have.property(`type`, `SemiColon`);
     expect(actual[43]).to.have.property(`value`, `;`);
-    expect(actual[44]).to.have.property(`type`, `Gear`);
+    expect(actual[44]).to.have.property(`type`, `GearKey`);
     expect(actual[44]).to.have.property(`value`, `Other Gear`);
 
     expect(actual[45]).to.have.property(`type`, `NumberSigned`);
