@@ -94,7 +94,6 @@ export class StatBlockLexer {
   // rules
   public sectionsRules: moo.Rules;
 
-
   public constructor() {
 
     this.versus = /\bvs\./;
@@ -129,7 +128,7 @@ export class StatBlockLexer {
       /\bN\b/, /\bNG\b/, /\bCE\b/, /\bCN\b/, /\bCG\b/], r => {
         return { match: r };
       });
-    
+
     this.attack_type_list = _.map<RegExp, object>([/\bMelee\b/, /\bRanged\b/, /\bSpecial Attacks\b/], r => {
       return { match: r };
     });
@@ -148,11 +147,11 @@ export class StatBlockLexer {
       /\bvermin(?:(?:s[’']?)|(?:[’']s))?/], r => {
         return { match: r };
       });
-    
+
     this.ecology_type_list = _.map<RegExp, object>([/\bEnvironment\b/, /\bOrganization\b/, /\bTreasure\b/], r => {
       return { match: r };
     });
-        
+
     // this.gear_key_list = _.map<RegExp, object>([/\bGear\b/, /\bCombat Gear\b/, /\bOther Gear\b/], r => {
     //   return { match: r };
     // });
@@ -163,11 +162,11 @@ export class StatBlockLexer {
       /\b15th\b/, /\b16th\b/, /\b17th\b/, /\b18th\b/, /\b19th\b/, /\b20th\b/], r => {
         return { match: r };
       });
-    
+
     this.special_abilities_type_list = _.map<RegExp, object>([/\(Ex\)/, /\(Sp\)/, /\(Su\)/], r => {
         return { match: r };
       });
-    
+
     this.spells_known_prepared_psychic = _.map<RegExp, object>([
       /\bSpells Known\b/, /\bSpells Prepared\b/, /\bPsychic Magic\b/], r => {
       return { match: r };
@@ -212,7 +211,7 @@ export class StatBlockLexer {
     this.weaknesses_key = /\bWeaknesses\b/;
     this.will_save_key = /\bWill\b/;
     this.xp_key = /\b[xX][pP]\b/;
-    
+
     this.multiplier = /\b[x*]\d\b/;
     //this.word_hyphenated = /(?:\b[a-zA-Z]+[-\u2013\u2014][a-zA-Z]+\b)/;
 
@@ -242,7 +241,98 @@ export class StatBlockLexer {
     };
   }
 
-  public getLexer(): moo.Lexer {
+  public getSectionLexer(): moo.Lexer {
+    return moo.compile({
+      // TODO: split rules into groups
+      // TODO: how to share rules in a few classes that each produce a lexer?
+      // specific string matches
+      ...this.sectionsRules,
+
+      // AcKey: this.ac_key,
+      // AcTouchKey: this.ac_touch_key,
+      // AcFlatFootedKey: this.ac_flat_footed_key,
+      // AuraKey: this.aura_key,
+      // BaseAtkKey: this.base_atk_key,
+      // ClKey: this.cl_key,
+      // CmbKey: this.cmb_key,
+      // CmdKey: this.cmd_key,
+      // CrKey: this.cr_key,
+      // DcKey: this.dc_key,
+
+      // DefensiveAbilitiesKey: this.defensive_abilities_key,
+      // DrKey: this.damage_reduction_key,
+      // FeatsKey: this.feats_key,
+      // FortSaveKey: this.fort_save_Key,
+      // HpKey: this.hp_key,
+      // ImmuneKey: this.immune_key,
+      // InitKey: this.init_key,
+      // LanguagesKey: this.languages_key,
+      // PerceptionKey: this.perception_key,
+      // // TODO: Racial Modifers list of skills has name and value reversed WRT Skills section.
+      // RacialModifiersKey: this.racial_modifiers_key,
+      // ReachKey: this.reach_key,
+      // RefSaveKey: this.ref_save_key,
+      // ResistKey: this.resistances_key,
+      // SensesKey: this.senses_key,
+      // SkillsKey: this.skills_key,
+      // SpaceKey: this.space_key,
+      // SpeedKey: this.speed_key,
+      // SpellLikeAbilityKey: this.spell_like_ability_key,
+      // SqKey: this.sq_key,
+      // SrKey: this.spell_resistance_key,
+      // VulnerableToKey: this.vulnerabile_to_key,
+      // WeaknessesKey: this.weaknesses_key,
+      // WillSaveKey: this.will_save_key,
+      // XpKey: this.xp_key,
+
+      // Ability: this.ability_list,
+      // Alignment: this.alignment_list,
+      // AttackType: this.attack_type_list,
+      // CreatureSize: this.creature_size_list,
+      // CreatureType: this.creature_type_list,
+      // EcologyType: this.ecology_type_list,
+      // Level: this.level_list,
+      // SpecialAbilitiesType: this.special_abilities_type_list,
+      // SpellsKnownPreparedPsychic: this.spells_known_prepared_psychic,
+
+      DiceRoll: this.dice_roll,
+      // //NumberWithDenominator: this.number_with_denominator,
+      // Multiplier: this.multiplier,
+      NumberSigned: this.number_with_sign,
+      // SizeValue: this.size_value,
+      NumberWhole: this.number_whole,
+
+      // Versus: this.versus,
+
+      // constructs
+      //WordHyphenated: this.word_hyphenated,
+      Word: this.word,
+
+      // punctuation
+      Colon: this.colon,
+      SemiColon: this.semi_colon,
+      Comma: this.comma,
+      Period: this.period,
+
+      Dash: this.dash,
+      MDash: this.m_dash,
+      NDash: this.n_dash,
+
+      DoubleQuoteOpen: this.double_quote_open,
+      DoubleQuoteClose: this.double_quote_close,
+
+      Asterisk: this.asterisk,
+
+      LParen: this.l_paren,
+      RParen: this.r_paren,
+
+      ForwardSlash: this.forward_slash,
+
+      WS: { match: /[ \t\n\r]+/, lineBreaks: true },
+    });
+  }
+
+  public getStatBlockLexer(): moo.Lexer {
     return moo.compile({
       // TODO: split rules into groups
       // TODO: how to share rules in a few classes that each produce a lexer?

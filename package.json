@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run nearleyc && tsc -p ./tsconfig.json -d",
-    "nearleyc": "nearleyc ./grammar/pathfinder1.ne -o ./out/pathfinder1.ts",
+    "nearleyc": "nearleyc ./grammar/pathfinder1.ne -o ./grammarout/pathfinder1.ts",
     "test": "mocha --require ts-node/register test/**/*.ts"
   },
   "repository": {
@@ -23,10 +23,12 @@
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
     "@types/moo": "^0.5.0",
+    "@types/nearley": "^2.11.0",
     "@types/underscore": "^1.8.18",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "moo": "^0.5.0",
+    "nearley": "^2.16.0",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.5"
   },

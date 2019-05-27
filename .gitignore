@@ -62,3 +62,4 @@ typings/
 
 # Ignore output dir
 out/
+grammarout/

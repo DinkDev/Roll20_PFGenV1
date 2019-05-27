@@ -6,7 +6,7 @@ describe(`StatBlockLexer `, () => {
   it(`all works on words and periods`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `The quick brown fox\r\njumped over the lazy dog.`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -16,7 +16,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find CR line data 1`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `ZAZU CR —`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -32,7 +32,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find CR line data 2`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
     
     const input = `AATHERIEXA CR 7`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -48,7 +48,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find CR line data 3`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `WRATH DRAGON CR 20`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -66,7 +66,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find CR line data 4`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `BLACK ORC CR 1/3`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -89,7 +89,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find XP line data 1`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `XP 3,200`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -103,7 +103,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find XP line data 2`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `GNOME DRUID 1 XP 400`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -123,7 +123,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find Alignment, Size, and Type line data 1`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `NE Medium aberration`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -139,7 +139,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find Alignment, Size, and Type line data 2`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `NG* Huge dragon (extraplanar, good)`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -163,7 +163,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find Alignment, Size, and Type line data 3`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Small humanoid (gnome) N`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -182,7 +182,7 @@ describe(`StatBlockLexer `, () => {
   });
   it(`can find Alignment, Size, and Type line data 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `CG Large magical beast`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -199,7 +199,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find Init/Senses/Perception data 1`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Init +9; Senses all-around vision, darkvision 120 ft., low-light\r\nvision, see invisibility; Perception +28`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -270,7 +270,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find Init/Senses/Perception data 2`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Init +5; Senses darkvision 60 ft.; Perception +14`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -304,7 +304,7 @@ describe(`StatBlockLexer `, () => {
   it(`can find Init/Senses/Perception data 3`, () => {
 
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Init +0; Senses Perception +13`;
     const actual = TestHelper.runLexer(lexer, input);
@@ -329,7 +329,7 @@ describe(`StatBlockLexer `, () => {
   });
   it(`can find Aura data 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Aura unnatural aura (30 ft.)`;
 
@@ -354,7 +354,7 @@ describe(`StatBlockLexer `, () => {
   });
   it(`can find Aura data 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Aura mucus cloud (5 feet)`;
 
@@ -379,7 +379,7 @@ describe(`StatBlockLexer `, () => {
   });
   it(`can find Aura data 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Aura magic circle against evil (10 ft. radius)`;
 
@@ -413,7 +413,7 @@ describe(`StatBlockLexer `, () => {
   });
   it(`can find Aura data 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     // Note: this should probably fail (need a size to set the aura)
     const input = `Aura magic circle against evil`;
@@ -439,7 +439,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find Defense key`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `DEFENSE`;
 
@@ -451,7 +451,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find AC line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `AC 21, touch 15, flat-footed 16 (+5 Dex, +6 natural)`;
 
@@ -492,7 +492,7 @@ describe(`StatBlockLexer `, () => {
   });
   it(`can find AC line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `AC 14, touch 12, flat-footed 13 (+2 armor, +1 Dex, +1 size)`;
 
@@ -539,7 +539,7 @@ describe(`StatBlockLexer `, () => {
   });
   it(`can find AC line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `AC 16, touch 13, flat-footed 16 (+3 armor, +3 deflection)`;
 
@@ -580,7 +580,7 @@ describe(`StatBlockLexer `, () => {
   });
   it(`can find AC line 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     // Note: semicolon was common in Bestiary 1
     const input = `AC 15, touch 12, flat-footed 12; (+3 Dex, +3 natural, –1 size; +2\ndeflection vs. evil)`;
@@ -640,7 +640,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find hp line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `hp 84 (13d8+26)`;
 
@@ -663,7 +663,7 @@ describe(`StatBlockLexer `, () => {
   });
   it(`can find hp line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `hp 465 (30d12+270)`;
 
@@ -687,7 +687,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find hp line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `hp 8 (1d10+2 plus 1)`;
 
@@ -713,7 +713,7 @@ describe(`StatBlockLexer `, () => {
   });
   it(`can find saving throws line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Fort +6, Ref +9, Will +8`;
 
@@ -740,7 +740,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find saving throws line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Fort +26; Ref +19; Will +23`;
 
@@ -767,7 +767,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find saving throws line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Fort +7, Ref +7, Will +6; +2 resistance vs. evil`;
 
@@ -804,7 +804,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find Defensive Abilities line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Defensive Abilities defensive training (+4 dodge bonus to AC vs. giants)`;
 
@@ -840,7 +840,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find Defensive Abilities line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Defensive Abilities blessing of Orcus, ferocity; DR 1/—`;
 
@@ -873,7 +873,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can fine DR/Immune/SR line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `DR 5/magic; Immune cold, disease, poison`;
 
@@ -906,7 +906,7 @@ describe(`StatBlockLexer `, () => {
     
   it(`can find DR/Immune/SR line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `DR 15/evil; Immune fire, poison, paralysis, sleep; SR 29`;
 
@@ -949,7 +949,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find Resist line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `DR 5/cold iron; Resist acid 5, fire 5`
     const actual = TestHelper.runLexer(lexer, input);
@@ -983,7 +983,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find Resist line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `DR 5/adamantine; Immune construct traits; Resist cold 10, fire 10`;
 
@@ -1024,7 +1024,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find Weaknesses line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Weaknesses vulnerable to electricity`;
 
@@ -1043,7 +1043,7 @@ describe(`StatBlockLexer `, () => {
 
   it(`can find Weaknesses line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `DR 10/adamantine and magic; Immune fire, mind-affecting
 effects; Resist cold 20, electricity 20, sonic 20; SR 23
@@ -1124,7 +1124,7 @@ Weaknesses vulnerability to protection from evil`;
     
   it(`can find Offense key`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `OFFENSE`;
 
@@ -1136,7 +1136,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Speed line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Speed 5 ft., fly 50 ft. (good)`;
 
@@ -1163,7 +1163,7 @@ Weaknesses vulnerability to protection from evil`;
   
   it(`can find Speed line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Speed 40 ft.`;
 
@@ -1178,7 +1178,7 @@ Weaknesses vulnerability to protection from evil`;
   
   it(`can find Speed line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Speed 10 ft., swim 60 ft.`;
 
@@ -1199,7 +1199,7 @@ Weaknesses vulnerability to protection from evil`;
   
   it(`can find Speed line 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Speed 50 ft., fly 200 ft. (poor)`;
 
@@ -1226,7 +1226,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Melee line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Melee bite +37 (2d8+15), 2 claws +37 (2d6+10), 2 wings +34`;
 
@@ -1275,7 +1275,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Melee line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Melee 4 tentacles +10 (1d6+5 plus slime)`;
 
@@ -1306,7 +1306,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Melee line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Melee mwk silver dagger +6/+1 (1d4–1/19–20)`;
 
@@ -1345,7 +1345,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Melee line 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Melee sickle –1 (1d4–2)`;
 
@@ -1370,7 +1370,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Ranged line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Ranged nasal spray +10 touch (3d6 fire, 3d6 acid, and nasal burn)`;
 
@@ -1413,7 +1413,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Ranged line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Ranged sling +2 (1d3–2)`;
 
@@ -1438,7 +1438,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Ranged line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Ranged light crossbow +2 (1d8, 19–20/x2)`;
 
@@ -1473,7 +1473,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Ranged line 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Ranged light crossbow +6 (1d8/19–20)`;
 
@@ -1504,7 +1504,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Space/Reach line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Space 5 ft.; Reach 5 ft. (15 ft. with tentacles)`;
 
@@ -1535,7 +1535,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Space/Reach line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Space 15 ft.; Reach 15 ft.`;
 
@@ -1556,7 +1556,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Space/Reach line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Space 15 ft.; Reach 10 ft. (15 ft. with bite)`;
 
@@ -1587,7 +1587,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Space/Reach line 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Space 10 ft.; Reach 5 ft.`;
 
@@ -1608,7 +1608,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Special Attacks line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Special Attacks constrict (3d6 plus withering), gnaw, pull`;
 
@@ -1641,7 +1641,7 @@ Weaknesses vulnerability to protection from evil`;
 
   it(`can find Special Attacks line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Special Attacks breath weapon (50 ft. cone, DC 34, 20d6 fire)
 channel positive energy 8/day (8d6, DC 22), crush, holy lance
@@ -1761,7 +1761,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Special Attacks line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Special Attacks body thief, sneak attack +3d6`;
 
@@ -1786,7 +1786,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Special Attacks line 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Special Attacks channel positive energy 5/day (DC 18, 4d6)`;
 
@@ -1825,7 +1825,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Spell-Like Abilities line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Spell-Like Abilities (CL 16th)
 
@@ -1987,7 +1987,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Spell-Like Abilities line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Spell-Like Abilities (CL 13th; concentration +17)
     At will—calm emotions (DC 16), charm monster (DC 18),
@@ -2165,7 +2165,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Spell-Like Abilities/Spells Prepared line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Gnome Spell-Like Abilities (CL 1st; concentration +3)
     1/day—dancing lights, ghost sound (DC 13), prestidigitation,
@@ -2314,7 +2314,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Spell-Like Abilities/Spells Prepared line 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Domain Spell-Like Abilities (CL 8th; concentration +12)
     At will—lore keeper (27), remote viewing (8 rounds/day)
@@ -2646,7 +2646,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Spell-Like Abilities/Spells Known line 5`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Spell-like Abilities (CL 14th):
     At will—create water, obscuring mist, stinking cloud (DC 17)
@@ -2861,7 +2861,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Psychic Magic/Spells Known line 6`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
   
     const input = `Psychic Magic (CL 6th; concentration +9)
       3 PE—
@@ -3031,7 +3031,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
   
   it(`can find Psychic Magic/Spells Known line 7`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
     
     const input = `Psychic Magic (CL 11th, concentration +17)
         10 PE—ego whip IOA (3 PE, DC 19), id insinuation IOA
@@ -3186,7 +3186,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Tactics line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `TACTICS
     Before Combat Lini casts goodberry at the start of each day.
@@ -3304,7 +3304,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
   
   it(`can find Tactics line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `TACTICS
     Before Combat If he’s able, Ptemenib casts shield of faith before combat.
@@ -3524,7 +3524,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Statistics key`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `STATISTICS`;
 
@@ -3536,7 +3536,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Ability scores line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Str 11, Dex 21, Con 14, Int 18, Wis 10, Cha 19`;
 
@@ -3587,7 +3587,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Ability scores line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Str 31, Dex 14, Con 28, Int 16, Wis 18, Cha 20`;
 
@@ -3638,7 +3638,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Ability scores line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Str 14, Dex 10, Con —, Int —, Wis 1, Cha 1`;
 
@@ -3689,7 +3689,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Base Atk/CMB/CMD line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Base Atk +6; CMB +5; CMD 18`;
 
@@ -3718,7 +3718,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Base Atk/CMB/CMD line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Base Atk +0; CMB –3; CMD 8`;
 
@@ -3747,7 +3747,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Base Atk/CMB/CMD line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Base Atk +14; CMB +24; CMD 35 (39 vs. trip)`;
 
@@ -3787,7 +3787,7 @@ channel positive energy 8/day (8d6, DC 22), crush, holy lance
 
   it(`can find Base Atk/CMB/CMD line 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Base Atk +9; CMB +9 (+21 grapple); CMD 24 (32 vs.
 grapple, can’t be tripped)`;
@@ -3846,7 +3846,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Feats line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Feats Self-Sufficient`;
 
@@ -3865,7 +3865,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Feats line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Feats Combat Reflexes, Critical Focus, Flyby Attack,
     HoverB, Improved Initiative, Skill Focus (Perception),
@@ -3947,7 +3947,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Feats line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Feats Alertness, Improved Channel, Lightning Reflexes,
     Toughness, Turn Undead`;
@@ -3988,7 +3988,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Skills line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Feats Alertness, Improved Channel, Lightning Reflexes,
     Toughness, Turn Undead`;
@@ -4029,7 +4029,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Skills line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Skills Bluff +21, Diplomacy +21, Fly +16, Intimidate +21,
     Knowledge (arcana) +20, Knowledge (nature) +20,
@@ -4117,7 +4117,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Skills line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Skills Acrobatics +21, Diplomacy +17, Fly +20,
     Knowledge (arcana) +14, Perception +28, Sense
@@ -4213,7 +4213,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Skills line 4`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Skills Acrobatics +8, Perception +10, Stealth +8,
     Survival +7 (+10 in forests); Racial Modifiers
@@ -4284,7 +4284,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Languages line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Languages Ancient Osiriani, Celestial, Common, Osiriani`;
 
@@ -4315,7 +4315,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Languages line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Languages Undercommon (cannot speak); telepathy 100 ft.`;
 
@@ -4346,7 +4346,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Languages line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Languages Aklo, Common, Draconic, Undercommon;
     telepathy 100 ft.`;
@@ -4383,7 +4383,7 @@ grapple, can’t be tripped)`;
 
   it(`can find SQ line 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `SQ amphibious`;
 
@@ -4400,7 +4400,7 @@ grapple, can’t be tripped)`;
 
   it(`can find SQ line 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `SQ nature bond (animal companion, snow leopard named Droogami*),
     nature sense, wild empathy +3`;
@@ -4456,7 +4456,7 @@ grapple, can’t be tripped)`;
 
   it(`can find SQ line 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `SQ speak with dead (8/day)`;
 
@@ -4487,7 +4487,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Gear lines 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Combat Gear goodberries (5), scroll of cure light wounds, acid;
     Other Gear leather armor, sickle, sling with 10 bullets, belt pouch,
@@ -4611,7 +4611,7 @@ grapple, can’t be tripped)`;
   
   it(`can find Gear lines 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Gear scale mail, longspear, light crossbow, 10 bolts`;
 
@@ -4647,7 +4647,7 @@ grapple, can’t be tripped)`;
   
   it(`can find Gear lines 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `Combat Gear potion of cure moderate wounds, scroll of
     resist energy, scroll of sound burst, wand of sanctuary (29
@@ -4881,7 +4881,7 @@ grapple, can’t be tripped)`;
 
   it(`can find ECOLOGY/Environment/Organization/Treasure lines 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `ECOLOGY
     Environment any land
@@ -4946,7 +4946,7 @@ grapple, can’t be tripped)`;
 
   it(`can find ECOLOGY/Environment/Organization/Treasure lines 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `ECOLOGY
     Environment any
@@ -4976,7 +4976,7 @@ grapple, can’t be tripped)`;
 
   it(`can find ECOLOGY/Environment/Organization/Treasure lines 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `ECOLOGY
     Environment temperate forests
@@ -5031,7 +5031,7 @@ grapple, can’t be tripped)`;
 
   it(`can find Special Abilities/Vulerable lines 1`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `SPECIAL ABILITIES
 Mucus Cloud (Ex)
@@ -5484,7 +5484,7 @@ attack. The save DC is Constitution-based.`;
 
   it(`can find Special Abilities/Vulerable lines 2`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `SPECIAL ABILITIES
 Body Thief (Su) As a full-round action that provokes
@@ -6198,7 +6198,7 @@ determining how it is affected by a protection from evil spell.`;
 
   it(`can find Special Abilities/Vulerable lines 3`, () => {
     const sut = new StatBlockLexer();
-    const lexer = sut.getLexer();
+    const lexer = sut.getStatBlockLexer();
 
     const input = `SPECIAL ABILITIES
 Advice (Ex) Clockwork familiars have an innate

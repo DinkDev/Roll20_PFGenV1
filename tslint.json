@@ -14,5 +14,5 @@
         //"variable-declaration",
         "property-declaration",
         "arrow-call-signature"
-      ],
+    ]
 }
