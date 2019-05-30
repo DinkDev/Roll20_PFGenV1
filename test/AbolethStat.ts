@@ -1,4 +1,4 @@
-// tslint:disable-next-line:max-line-length
+// tslint:disable:max-line-length
 export const abolethStatBlock = `Aboleth CR 7
 
 XP 3,200

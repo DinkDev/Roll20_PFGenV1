@@ -349,7 +349,7 @@ export class StatBlockLexer {
       CmdKey: this.cmd_key,
       CrKey: this.cr_key,
       DcKey: this.dc_key,
-      
+
       DefensiveAbilitiesKey: this.defensive_abilities_key,
       DrKey: this.damage_reduction_key,
       FeatsKey: this.feats_key,

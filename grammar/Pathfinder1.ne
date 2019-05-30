@@ -4,22 +4,39 @@
 import moo from "moo";
 import { StatBlockLexer } from "../src/StatBlockLexer";
 
-export interface Lexer {
-    reset: (chunk: string, info: any) => void;
-    next: () => Token | undefined;
-    save: () => any;
-    formatError: (token: Token) => string;
-    has: (tokenType: string) => boolean;
-}
-
 const statBlock = new StatBlockLexer();
-// make typescript happy!
-const lexer = statBlock.getSectionLexer() as unknown as Lexer;
+// make typescript happy
+// Nearley's Lexer definition doesn't include moo module,
+// so cast it to Nearley's definition!
+const lexer = statBlock.getStatBlockLexer() as unknown as Lexer;
 %}
 
 @lexer lexer
 
-SimpleStatBlock -> Words ( __ Section __ Words ):*
+SimpleStatBlock -> HeaderBlock DefenseBlock Todo
+HeaderBlock -> NameAndCrLine __ XpLine __ AlignSizeAndTypeLine __ InitSensesPerceptLine __ MoreHeader __
+NameAndCrLine -> WordAndSpace:+ CrSec
+WordAndSpace -> %Word __
+WordsAndComma -> _ WordAndSpace:* %Word %Comma
+CommaSeperatedListOfWords -> WordsAndComma:* _ WordAndSpace:* %Word
+CrSec -> %CrKey __ %NumberWhole FractionalCr:?
+ | %CrKey __ %MDash
+FractionalCr -> %ForwardSlash %NumberWhole
+XpLine -> %XpKey __ %NumberWhole
+XpLine -> XpRaceClassLevel __ %XpKey __ %NumberWhole
+XpRaceClassLevel -> WordAndSpace:+ %NumberWhole
+AlignSizeAndTypeLine -> %Alignment %Asterisk:? __ %CreatureSize __ %CreatureType _ SubtypeList:?
+AlignSizeAndTypeLine -> %CreatureSize __ %CreatureType __ SubtypeList:? _ %Alignment 
+SubtypeList -> %LParen CommaSeperatedListOfWords %RParen
+InitSensesPerceptLine -> InitSec __ SensesSec __ PerceptSec
+InitSec -> %InitKey __ %NumberSigned %SemiColon
+SensesSec -> %SensesKey  # TODO: need to fill this out
+PerceptSec -> %PerceptionKey __ %NumberSigned
+MoreHeader -> Todo
+DefenseBlock -> %DefenseKey Todo
+Todo -> "TODO"
+
+# Words ( __ Section __ Words ):*
 Section -> %DefenseKey
  | %OffenseKey
  | %TacticsKey

@@ -2,6 +2,8 @@ import { expect } from "chai";
 import { StatBlockLexer } from "../src/StatBlockLexer";
 import { TestHelper } from "./TestHelper";
 
+// tslint:disable:max-line-length
+
 describe(`StatBlockLexer `, () => {
   it(`all works on words and periods`, () => {
 
@@ -13,7 +15,7 @@ describe(`StatBlockLexer `, () => {
 
     expect(actual.length).to.equal(10);
   });
-  it(`can find CR line data 1`, () => {
+  it(`can find Name and CR line data 1`, () => {
 
     const sut = new StatBlockLexer();
     const lexer = sut.getStatBlockLexer();
@@ -29,11 +31,11 @@ describe(`StatBlockLexer `, () => {
     expect(actual[2]).to.have.property(`type`, `MDash`);
     expect(actual[2]).to.have.property(`value`, `\u2014`);
   });
-  it(`can find CR line data 2`, () => {
+  it(`can find Name and CR line data 2`, () => {
 
     const sut = new StatBlockLexer();
     const lexer = sut.getStatBlockLexer();
-    
+
     const input = `AATHERIEXA CR 7`;
     const actual = TestHelper.runLexer(lexer, input);
 
@@ -45,7 +47,7 @@ describe(`StatBlockLexer `, () => {
     expect(actual[2]).to.have.property(`type`, `NumberWhole`);
     expect(actual[2]).to.have.property(`value`, `7`);
   });
-  it(`can find CR line data 3`, () => {
+  it(`can find Name and CR line data 3`, () => {
 
     const sut = new StatBlockLexer();
     const lexer = sut.getStatBlockLexer();
@@ -63,7 +65,7 @@ describe(`StatBlockLexer `, () => {
     expect(actual[3]).to.have.property(`type`, `NumberWhole`);
     expect(actual[3]).to.have.property(`value`, `20`);
   });
-  it(`can find CR line data 4`, () => {
+  it(`can find Name and CR line data 4`, () => {
 
     const sut = new StatBlockLexer();
     const lexer = sut.getStatBlockLexer();
@@ -193,7 +195,7 @@ describe(`StatBlockLexer `, () => {
     expect(actual[1]).to.have.property(`type`, `CreatureSize`);
     expect(actual[1]).to.have.property(`value`, `Large`);
     expect(actual[2]).to.have.property(`type`, `CreatureType`);
-    expect(actual[2]).to.have.property(`value`, `magical beast`);    
+    expect(actual[2]).to.have.property(`value`, `magical beast`);
   });
 
   it(`can find Init/Senses/Perception data 1`, () => {
@@ -278,26 +280,26 @@ describe(`StatBlockLexer `, () => {
     expect(actual.length).to.equal(9);
     expect(actual[0]).to.have.property(`type`, `InitKey`);
     expect(actual[0]).to.have.property(`value`, `Init`);
-    
+
     expect(actual[1]).to.have.property(`type`, `NumberSigned`);
     expect(actual[1]).to.have.property(`value`, `+5`);
-    
+
     expect(actual[2]).to.have.property(`type`, `SemiColon`);
-    
+
     expect(actual[3]).to.have.property(`type`, `SensesKey`);
     expect(actual[3]).to.have.property(`value`, `Senses`);
-    
+
     expect(actual[4]).to.have.property(`type`, `Word`);
     expect(actual[4]).to.have.property(`value`, `darkvision`);
-    
+
     expect(actual[5]).to.have.property(`type`, `SizeValue`);
     expect(actual[5]).to.have.property(`value`, `60 ft.`);
-    
+
     expect(actual[6]).to.have.property(`type`, `SemiColon`);
-    
+
     expect(actual[7]).to.have.property(`type`, `PerceptionKey`);
     expect(actual[7]).to.have.property(`value`, `Perception`);
-    
+
     expect(actual[8]).to.have.property(`type`, `NumberSigned`);
     expect(actual[8]).to.have.property(`value`, `+14`);
   });
@@ -312,18 +314,18 @@ describe(`StatBlockLexer `, () => {
     expect(actual.length).to.equal(6);
     expect(actual[0]).to.have.property(`type`, `InitKey`);
     expect(actual[0]).to.have.property(`value`, `Init`);
-    
+
     expect(actual[1]).to.have.property(`type`, `NumberSigned`);
     expect(actual[1]).to.have.property(`value`, `+0`);
-    
+
     expect(actual[2]).to.have.property(`type`, `SemiColon`);
-    
+
     expect(actual[3]).to.have.property(`type`, `SensesKey`);
     expect(actual[3]).to.have.property(`value`, `Senses`);
-    
+
     expect(actual[4]).to.have.property(`type`, `PerceptionKey`);
     expect(actual[4]).to.have.property(`value`, `Perception`);
-    
+
     expect(actual[5]).to.have.property(`type`, `NumberSigned`);
     expect(actual[5]).to.have.property(`value`, `+13`);
   });
@@ -338,18 +340,18 @@ describe(`StatBlockLexer `, () => {
     expect(actual.length).to.equal(6);
     expect(actual[0]).to.have.property(`type`, `AuraKey`);
     expect(actual[0]).to.have.property(`value`, `Aura`);
-    
+
     expect(actual[1]).to.have.property(`type`, `Word`);
     expect(actual[1]).to.have.property(`value`, `unnatural`);
-    
+
     expect(actual[2]).to.have.property(`type`, `Word`);
     expect(actual[2]).to.have.property(`value`, `aura`);
 
     expect(actual[3]).to.have.property(`type`, `LParen`);
-    
+
     expect(actual[4]).to.have.property(`type`, `SizeValue`);
     expect(actual[4]).to.have.property(`value`, `30 ft.`);
-    
+
     expect(actual[5]).to.have.property(`type`, `RParen`);
   });
   it(`can find Aura data 2`, () => {
@@ -363,18 +365,18 @@ describe(`StatBlockLexer `, () => {
     expect(actual.length).to.equal(6);
     expect(actual[0]).to.have.property(`type`, `AuraKey`);
     expect(actual[0]).to.have.property(`value`, `Aura`);
-    
+
     expect(actual[1]).to.have.property(`type`, `Word`);
     expect(actual[1]).to.have.property(`value`, `mucus`);
-    
+
     expect(actual[2]).to.have.property(`type`, `Word`);
     expect(actual[2]).to.have.property(`value`, `cloud`);
 
     expect(actual[3]).to.have.property(`type`, `LParen`);
-    
+
     expect(actual[4]).to.have.property(`type`, `SizeValue`);
     expect(actual[4]).to.have.property(`value`, `5 feet`);
-    
+
     expect(actual[5]).to.have.property(`type`, `RParen`);
   });
   it(`can find Aura data 3`, () => {
@@ -388,21 +390,21 @@ describe(`StatBlockLexer `, () => {
     expect(actual.length).to.equal(9);
     expect(actual[0]).to.have.property(`type`, `AuraKey`);
     expect(actual[0]).to.have.property(`value`, `Aura`);
-    
+
     expect(actual[1]).to.have.property(`type`, `Word`);
     expect(actual[1]).to.have.property(`value`, `magic`);
-    
+
     expect(actual[2]).to.have.property(`type`, `Word`);
     expect(actual[2]).to.have.property(`value`, `circle`);
 
     expect(actual[3]).to.have.property(`type`, `Word`);
     expect(actual[3]).to.have.property(`value`, `against`);
-    
+
     expect(actual[4]).to.have.property(`type`, `Word`);
     expect(actual[4]).to.have.property(`value`, `evil`);
 
     expect(actual[5]).to.have.property(`type`, `LParen`);
-    
+
     expect(actual[6]).to.have.property(`type`, `SizeValue`);
     expect(actual[6]).to.have.property(`value`, `10 ft.`);
     
