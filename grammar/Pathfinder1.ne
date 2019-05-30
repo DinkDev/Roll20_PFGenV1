@@ -16,9 +16,11 @@ const lexer = statBlock.getStatBlockLexer() as unknown as Lexer;
 SimpleStatBlock -> HeaderBlock DefenseBlock Todo
 HeaderBlock -> NameAndCrLine __ XpLine __ AlignSizeAndTypeLine __ InitSensesPerceptLine __ MoreHeader __
 NameAndCrLine -> WordAndSpace:+ CrSec
-WordAndSpace -> %Word __
-WordsAndComma -> _ WordAndSpace:* %Word %Comma
-CommaSeperatedListOfWords -> WordsAndComma:* _ WordAndSpace:* %Word
+WordAndSpace -> CompoundWord __
+CompoundWord -> %Word
+CompoundWord -> %Word %Dash %Word
+WordsAndComma -> _ WordAndSpace:* CompoundWord %Comma
+CommaSeperatedListOfWords -> WordsAndComma:* _ WordAndSpace:* CompoundWord
 CrSec -> %CrKey __ %NumberWhole FractionalCr:?
  | %CrKey __ %MDash
 FractionalCr -> %ForwardSlash %NumberWhole
@@ -30,7 +32,11 @@ AlignSizeAndTypeLine -> %CreatureSize __ %CreatureType __ SubtypeList:? _ %Align
 SubtypeList -> %LParen CommaSeperatedListOfWords %RParen
 InitSensesPerceptLine -> InitSec __ SensesSec __ PerceptSec
 InitSec -> %InitKey __ %NumberSigned %SemiColon
-SensesSec -> %SensesKey  # TODO: need to fill this out
+SpaceAndSize -> __ %SizeValue
+WordsAndSize -> WordAndSpace:* CompoundWord SpaceAndSize:?
+WordsSizeAndComma -> _ WordsAndSize %Comma
+CommaSeperatedWordsAndSize -> WordsSizeAndComma:* _ WordsAndSize %SemiColon
+SensesSec -> %SensesKey _ CommaSeperatedWordsAndSize:?
 PerceptSec -> %PerceptionKey __ %NumberSigned
 MoreHeader -> Todo
 DefenseBlock -> %DefenseKey Todo
