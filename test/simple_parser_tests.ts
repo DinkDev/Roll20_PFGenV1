@@ -8,7 +8,7 @@ describe(`simple_parser`, () => {
   try {
     parser.feed(aatheriexaStatBlock);
 
-  // TODO: much work to be done here!
+    // TODO: much work to be done here!
     const res = parser.results;
   } catch (error) {
     // catch to allow test to complete, even though it failed!

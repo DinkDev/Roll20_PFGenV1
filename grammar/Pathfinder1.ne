@@ -14,7 +14,7 @@ const lexer = statBlock.getStatBlockLexer() as unknown as Lexer;
 @lexer lexer
 
 SimpleStatBlock -> HeaderBlock DefenseBlock Todo
-HeaderBlock -> NameAndCrLine __ XpLine __ AlignSizeAndTypeLine __ InitSensesPerceptLine __ MoreHeader __
+HeaderBlock -> NameAndCrLine __ XpLine __ AlignSizeAndTypeLine __ InitSensesPerceptLine _ AuraLine:? __
 NameAndCrLine -> WordAndSpace:+ CrSec
 WordAndSpace -> CompoundWord __
 CompoundWord -> %Word
@@ -38,7 +38,10 @@ WordsSizeAndComma -> _ WordsAndSize %Comma
 CommaSeperatedWordsAndSize -> WordsSizeAndComma:* _ WordsAndSize %SemiColon
 SensesSec -> %SensesKey _ CommaSeperatedWordsAndSize:?
 PerceptSec -> %PerceptionKey __ %NumberSigned
-MoreHeader -> Todo
+AuraLine -> %AuraKey AuraDetailAndComma:* __ AuraDetail
+AuraDetail -> WordAndSpace:+ AuraStats:?
+AuraStats -> %LParen %SizeValue:? %Comma:? %DcKey:? _ %NumberWhole:? %Comma:? _ %NumberWhole:? %DiceRoll:? _ %CompountWord:? %RParen
+AuraDetailAndComma -> _ AuraDetail %Comma
 DefenseBlock -> %DefenseKey Todo
 Todo -> "TODO"
 
