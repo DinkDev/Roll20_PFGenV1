@@ -9,18 +9,31 @@ const statBlock = new StatBlockLexer();
 // Nearley's Lexer definition doesn't include moo module,
 // so cast it to Nearley's definition!
 const lexer = statBlock.getStatBlockLexer() as unknown as Lexer;
+
+const extractValue = function(tokens: Token[]) {
+  return {
+    value: tokens[0].value,
+    tokens: tokens
+  }
+}
+
 %}
 
 @lexer lexer
 
-SimpleStatBlock -> HeaderBlock DefenseBlock Todo
+SimpleStatBlock -> HeaderBlock DefenseBlock
 HeaderBlock -> NameAndCrLine __ XpLine __ AlignSizeAndTypeLine __ InitSensesPerceptLine _ AuraLine:? __
 NameAndCrLine -> WordAndSpace:+ CrSec
 WordAndSpace -> CompoundWord __
-CompoundWord -> %Word
+CompoundWord -> %Word         {% extractValue %}
 CompoundWord -> %Word %Dash %Word
-WordsAndComma -> _ WordAndSpace:* CompoundWord %Comma
-CommaSeperatedListOfWords -> WordsAndComma:* _ WordAndSpace:* CompoundWord
+# WordsAndComma -> _ WordAndSpace:* CompoundWord %Comma
+# CommaSeperatedListOfWords -> WordsAndComma:* _ WordAndSpace:* CompoundWord
+SpaceSeperatedList[W] -> $W (__ $W):*
+CommaSeperatedList[T] -> $T (%Comma _ $T):*
+WordList -> SpaceSeperatedList[CompoundWord]
+CommaSeperatedListOfWords -> CommaSeperatedList[WordList]
+
 CrSec -> %CrKey __ %NumberWhole FractionalCr:?
  | %CrKey __ %MDash
 FractionalCr -> %ForwardSlash %NumberWhole
