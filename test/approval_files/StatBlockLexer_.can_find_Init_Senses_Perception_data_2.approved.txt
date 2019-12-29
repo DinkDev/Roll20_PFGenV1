@@ -1,0 +1,83 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Init",
+    "type": "InitKey",
+    "value": "Init"
+  },
+  {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "+5",
+    "type": "NumberSigned",
+    "value": "+5"
+  },
+  {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 10,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 9,
+    "text": "Senses",
+    "type": "SensesKey",
+    "value": "Senses"
+  },
+  {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "darkvision",
+    "type": "Word",
+    "value": "darkvision"
+  },
+  {
+    "col": 28,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 27,
+    "text": "60 ft.",
+    "type": "SizeValue",
+    "value": "60 ft."
+  },
+  {
+    "col": 34,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 33,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 36,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 35,
+    "text": "Perception",
+    "type": "PerceptionKey",
+    "value": "Perception"
+  },
+  {
+    "col": 47,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 46,
+    "text": "+14",
+    "type": "NumberSigned",
+    "value": "+14"
+  }
+]

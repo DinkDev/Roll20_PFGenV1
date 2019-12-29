@@ -1,0 +1,83 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "NG",
+    "type": "Alignment",
+    "value": "NG"
+  },
+  {
+    "col": 3,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 2,
+    "text": "*",
+    "type": "Asterisk",
+    "value": "*"
+  },
+  {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "Huge",
+    "type": "CreatureSize",
+    "value": "Huge"
+  },
+  {
+    "col": 10,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 9,
+    "text": "dragon",
+    "type": "CreatureType",
+    "value": "dragon"
+  },
+  {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": "extraplanar",
+    "type": "Word",
+    "value": "extraplanar"
+  },
+  {
+    "col": 29,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 28,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 31,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 30,
+    "text": "good",
+    "type": "Word",
+    "value": "good"
+  },
+  {
+    "col": 35,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 34,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

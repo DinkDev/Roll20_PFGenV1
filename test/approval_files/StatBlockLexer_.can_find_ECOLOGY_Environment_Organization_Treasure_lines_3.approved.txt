@@ -1,0 +1,164 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "ECOLOGY",
+    "type": "EcologyKey",
+    "value": "ECOLOGY"
+  },
+  {
+    "col": 5,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 12,
+    "text": "Environment",
+    "type": "EcologyType",
+    "value": "Environment"
+  },
+  {
+    "col": 17,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 24,
+    "text": "temperate",
+    "type": "Word",
+    "value": "temperate"
+  },
+  {
+    "col": 27,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 34,
+    "text": "forests",
+    "type": "Word",
+    "value": "forests"
+  },
+  {
+    "col": 5,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 46,
+    "text": "Organization",
+    "type": "EcologyType",
+    "value": "Organization"
+  },
+  {
+    "col": 18,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 59,
+    "text": "solitary",
+    "type": "Word",
+    "value": "solitary"
+  },
+  {
+    "col": 26,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 67,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 28,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 69,
+    "text": "mated",
+    "type": "Word",
+    "value": "mated"
+  },
+  {
+    "col": 34,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 75,
+    "text": "pair",
+    "type": "Word",
+    "value": "pair"
+  },
+  {
+    "col": 38,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 79,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 85,
+    "text": "or",
+    "type": "Word",
+    "value": "or"
+  },
+  {
+    "col": 8,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 88,
+    "text": "blessing",
+    "type": "Word",
+    "value": "blessing"
+  },
+  {
+    "col": 17,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 97,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 18,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 98,
+    "text": "3",
+    "type": "NumberWhole",
+    "value": "3"
+  },
+  {
+    "col": 19,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 99,
+    "text": "–6",
+    "type": "NumberSigned",
+    "value": "–6"
+  },
+  {
+    "col": 21,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 101,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 107,
+    "text": "Treasure",
+    "type": "EcologyType",
+    "value": "Treasure"
+  },
+  {
+    "col": 14,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 116,
+    "text": "none",
+    "type": "Word",
+    "value": "none"
+  }
+]

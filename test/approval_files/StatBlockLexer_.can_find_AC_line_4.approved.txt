@@ -1,0 +1,218 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "AC",
+    "type": "AcKey",
+    "value": "AC"
+  },
+  {
+    "col": 4,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 3,
+    "text": "15",
+    "type": "NumberWhole",
+    "value": "15"
+  },
+  {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "touch",
+    "type": "AcTouchKey",
+    "value": "touch"
+  },
+  {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "12",
+    "type": "NumberWhole",
+    "value": "12"
+  },
+  {
+    "col": 16,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 15,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": "flat-footed",
+    "type": "AcFlatFootedKey",
+    "value": "flat-footed"
+  },
+  {
+    "col": 30,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 29,
+    "text": "12",
+    "type": "NumberWhole",
+    "value": "12"
+  },
+  {
+    "col": 32,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 31,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 34,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 33,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 35,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 34,
+    "text": "+3",
+    "type": "NumberSigned",
+    "value": "+3"
+  },
+  {
+    "col": 38,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 37,
+    "text": "Dex",
+    "type": "Ability",
+    "value": "Dex"
+  },
+  {
+    "col": 41,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 40,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 43,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 42,
+    "text": "+3",
+    "type": "NumberSigned",
+    "value": "+3"
+  },
+  {
+    "col": 46,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 45,
+    "text": "natural",
+    "type": "Word",
+    "value": "natural"
+  },
+  {
+    "col": 53,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 52,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 55,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 54,
+    "text": "–1",
+    "type": "NumberSigned",
+    "value": "–1"
+  },
+  {
+    "col": 58,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 57,
+    "text": "size",
+    "type": "Word",
+    "value": "size"
+  },
+  {
+    "col": 62,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 61,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 64,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 63,
+    "text": "+2",
+    "type": "NumberSigned",
+    "value": "+2"
+  },
+  {
+    "col": 1,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 66,
+    "text": "deflection",
+    "type": "Word",
+    "value": "deflection"
+  },
+  {
+    "col": 12,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 77,
+    "text": "vs.",
+    "type": "Versus",
+    "value": "vs."
+  },
+  {
+    "col": 16,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 81,
+    "text": "evil",
+    "type": "Word",
+    "value": "evil"
+  },
+  {
+    "col": 20,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 85,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

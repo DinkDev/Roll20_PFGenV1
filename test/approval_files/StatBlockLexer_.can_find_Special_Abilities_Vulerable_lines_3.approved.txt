@@ -1,0 +1,3260 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "SPECIAL ABILITIES",
+    "type": "SpecialAbilitiesKey",
+    "value": "SPECIAL ABILITIES"
+  },
+  {
+    "col": 1,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": "Advice",
+    "type": "Word",
+    "value": "Advice"
+  },
+  {
+    "col": 8,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 25,
+    "text": "(Ex)",
+    "type": "SpecialAbilitiesType",
+    "value": "(Ex)"
+  },
+  {
+    "col": 13,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 30,
+    "text": "Clockwork",
+    "type": "Word",
+    "value": "Clockwork"
+  },
+  {
+    "col": 23,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 40,
+    "text": "familiars",
+    "type": "Word",
+    "value": "familiars"
+  },
+  {
+    "col": 33,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 50,
+    "text": "have",
+    "type": "Word",
+    "value": "have"
+  },
+  {
+    "col": 38,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 55,
+    "text": "an",
+    "type": "Word",
+    "value": "an"
+  },
+  {
+    "col": 41,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 58,
+    "text": "innate",
+    "type": "Word",
+    "value": "innate"
+  },
+  {
+    "col": 1,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 65,
+    "text": "understanding",
+    "type": "Word",
+    "value": "understanding"
+  },
+  {
+    "col": 15,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 79,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 18,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 82,
+    "text": "how",
+    "type": "Word",
+    "value": "how"
+  },
+  {
+    "col": 22,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 86,
+    "text": "things",
+    "type": "Word",
+    "value": "things"
+  },
+  {
+    "col": 29,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 93,
+    "text": "work",
+    "type": "Word",
+    "value": "work"
+  },
+  {
+    "col": 33,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 97,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 35,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 99,
+    "text": "granting",
+    "type": "Word",
+    "value": "granting"
+  },
+  {
+    "col": 44,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 108,
+    "text": "their",
+    "type": "Word",
+    "value": "their"
+  },
+  {
+    "col": 50,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 114,
+    "text": "masters",
+    "type": "Word",
+    "value": "masters"
+  },
+  {
+    "col": 1,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 122,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 3,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 124,
+    "text": "+2",
+    "type": "NumberSigned",
+    "value": "+2"
+  },
+  {
+    "col": 6,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 127,
+    "text": "bonus",
+    "type": "Word",
+    "value": "bonus"
+  },
+  {
+    "col": 12,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 133,
+    "text": "on",
+    "type": "Word",
+    "value": "on"
+  },
+  {
+    "col": 15,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 136,
+    "text": "all",
+    "type": "Word",
+    "value": "all"
+  },
+  {
+    "col": 19,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 140,
+    "text": "Craft",
+    "type": "Word",
+    "value": "Craft"
+  },
+  {
+    "col": 25,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 146,
+    "text": "and",
+    "type": "Word",
+    "value": "and"
+  },
+  {
+    "col": 29,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 150,
+    "text": "Use",
+    "type": "Word",
+    "value": "Use"
+  },
+  {
+    "col": 33,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 154,
+    "text": "Magic",
+    "type": "Word",
+    "value": "Magic"
+  },
+  {
+    "col": 39,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 160,
+    "text": "Device",
+    "type": "Word",
+    "value": "Device"
+  },
+  {
+    "col": 46,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 167,
+    "text": "checks",
+    "type": "Word",
+    "value": "checks"
+  },
+  {
+    "col": 52,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 173,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 1,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 175,
+    "text": "Item",
+    "type": "Word",
+    "value": "Item"
+  },
+  {
+    "col": 6,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 180,
+    "text": "Installation",
+    "type": "Word",
+    "value": "Installation"
+  },
+  {
+    "col": 19,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 193,
+    "text": "(Ex)",
+    "type": "SpecialAbilitiesType",
+    "value": "(Ex)"
+  },
+  {
+    "col": 24,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 198,
+    "text": "Each",
+    "type": "Word",
+    "value": "Each"
+  },
+  {
+    "col": 29,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 203,
+    "text": "clockwork",
+    "type": "Word",
+    "value": "clockwork"
+  },
+  {
+    "col": 39,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 213,
+    "text": "familiar",
+    "type": "Word",
+    "value": "familiar"
+  },
+  {
+    "col": 48,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 222,
+    "text": "possesses",
+    "type": "Word",
+    "value": "possesses"
+  },
+  {
+    "col": 58,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 232,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 1,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 236,
+    "text": "ability",
+    "type": "Word",
+    "value": "ability"
+  },
+  {
+    "col": 9,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 244,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 12,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 247,
+    "text": "carry",
+    "type": "Word",
+    "value": "carry"
+  },
+  {
+    "col": 18,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 253,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 20,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 255,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 26,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 261,
+    "text": "item",
+    "type": "Word",
+    "value": "item"
+  },
+  {
+    "col": 31,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 266,
+    "text": "in",
+    "type": "Word",
+    "value": "in"
+  },
+  {
+    "col": 34,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 269,
+    "text": "its",
+    "type": "Word",
+    "value": "its"
+  },
+  {
+    "col": 38,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 273,
+    "text": "body",
+    "type": "Word",
+    "value": "body"
+  },
+  {
+    "col": 42,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 277,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 44,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 279,
+    "text": "This",
+    "type": "Word",
+    "value": "This"
+  },
+  {
+    "col": 49,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 284,
+    "text": "specific",
+    "type": "Word",
+    "value": "specific"
+  },
+  {
+    "col": 58,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 293,
+    "text": "item",
+    "type": "Word",
+    "value": "item"
+  },
+  {
+    "col": 1,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 298,
+    "text": "type",
+    "type": "Word",
+    "value": "type"
+  },
+  {
+    "col": 6,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 303,
+    "text": "is",
+    "type": "Word",
+    "value": "is"
+  },
+  {
+    "col": 9,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 306,
+    "text": "chosen",
+    "type": "Word",
+    "value": "chosen"
+  },
+  {
+    "col": 16,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 313,
+    "text": "at",
+    "type": "Word",
+    "value": "at"
+  },
+  {
+    "col": 19,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 316,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 23,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 320,
+    "text": "time",
+    "type": "Word",
+    "value": "time"
+  },
+  {
+    "col": 28,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 325,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 31,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 328,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 35,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 332,
+    "text": "construct’s",
+    "type": "CreatureType",
+    "value": "construct’s"
+  },
+  {
+    "col": 47,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 344,
+    "text": "creation",
+    "type": "Word",
+    "value": "creation"
+  },
+  {
+    "col": 55,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 352,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 57,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 354,
+    "text": "and",
+    "type": "Word",
+    "value": "and"
+  },
+  {
+    "col": 1,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 358,
+    "text": "cannot",
+    "type": "Word",
+    "value": "cannot"
+  },
+  {
+    "col": 8,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 365,
+    "text": "be",
+    "type": "Word",
+    "value": "be"
+  },
+  {
+    "col": 11,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 368,
+    "text": "changed",
+    "type": "Word",
+    "value": "changed"
+  },
+  {
+    "col": 18,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 375,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 20,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 377,
+    "text": "While",
+    "type": "Word",
+    "value": "While"
+  },
+  {
+    "col": 26,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 383,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 30,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 387,
+    "text": "creature",
+    "type": "Word",
+    "value": "creature"
+  },
+  {
+    "col": 39,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 396,
+    "text": "cannot",
+    "type": "Word",
+    "value": "cannot"
+  },
+  {
+    "col": 46,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 403,
+    "text": "activate",
+    "type": "Word",
+    "value": "activate"
+  },
+  {
+    "col": 55,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 412,
+    "text": "or",
+    "type": "Word",
+    "value": "or"
+  },
+  {
+    "col": 58,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 415,
+    "text": "use",
+    "type": "Word",
+    "value": "use"
+  },
+  {
+    "col": 1,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 419,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 5,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 423,
+    "text": "item",
+    "type": "Word",
+    "value": "item"
+  },
+  {
+    "col": 9,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 427,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 11,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 429,
+    "text": "it",
+    "type": "Word",
+    "value": "it"
+  },
+  {
+    "col": 14,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 432,
+    "text": "gains",
+    "type": "Word",
+    "value": "gains"
+  },
+  {
+    "col": 20,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 438,
+    "text": "certain",
+    "type": "Word",
+    "value": "certain"
+  },
+  {
+    "col": 28,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 446,
+    "text": "constant",
+    "type": "Word",
+    "value": "constant"
+  },
+  {
+    "col": 37,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 455,
+    "text": "abilities",
+    "type": "Word",
+    "value": "abilities"
+  },
+  {
+    "col": 47,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 465,
+    "text": "from",
+    "type": "Word",
+    "value": "from"
+  },
+  {
+    "col": 52,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 470,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 56,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 474,
+    "text": "resonant",
+    "type": "Word",
+    "value": "resonant"
+  },
+  {
+    "col": 1,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 483,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 7,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 489,
+    "text": "fields",
+    "type": "Word",
+    "value": "fields"
+  },
+  {
+    "col": 13,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 495,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 15,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 497,
+    "text": "and",
+    "type": "Word",
+    "value": "and"
+  },
+  {
+    "col": 19,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 501,
+    "text": "can",
+    "type": "Word",
+    "value": "can"
+  },
+  {
+    "col": 23,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 505,
+    "text": "drain",
+    "type": "Word",
+    "value": "drain"
+  },
+  {
+    "col": 29,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 511,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 33,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 515,
+    "text": "item’s",
+    "type": "Word",
+    "value": "item’s"
+  },
+  {
+    "col": 40,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 522,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 46,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 528,
+    "text": "as",
+    "type": "Word",
+    "value": "as"
+  },
+  {
+    "col": 49,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 531,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 51,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 533,
+    "text": "free",
+    "type": "Word",
+    "value": "free"
+  },
+  {
+    "col": 56,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 538,
+    "text": "action",
+    "type": "Word",
+    "value": "action"
+  },
+  {
+    "col": 1,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 545,
+    "text": "in",
+    "type": "Word",
+    "value": "in"
+  },
+  {
+    "col": 4,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 548,
+    "text": "order",
+    "type": "Word",
+    "value": "order"
+  },
+  {
+    "col": 10,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 554,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 13,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 557,
+    "text": "gain",
+    "type": "Word",
+    "value": "gain"
+  },
+  {
+    "col": 18,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 562,
+    "text": "additional",
+    "type": "Word",
+    "value": "additional"
+  },
+  {
+    "col": 29,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 573,
+    "text": "magical",
+    "type": "Word",
+    "value": "magical"
+  },
+  {
+    "col": 37,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 581,
+    "text": "effects",
+    "type": "Word",
+    "value": "effects"
+  },
+  {
+    "col": 44,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 588,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 46,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 590,
+    "text": "In",
+    "type": "Word",
+    "value": "In"
+  },
+  {
+    "col": 49,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 593,
+    "text": "addition",
+    "type": "Word",
+    "value": "addition"
+  },
+  {
+    "col": 57,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 601,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 59,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 603,
+    "text": "any",
+    "type": "Word",
+    "value": "any"
+  },
+  {
+    "col": 1,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 607,
+    "text": "clockwork",
+    "type": "Word",
+    "value": "clockwork"
+  },
+  {
+    "col": 11,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 617,
+    "text": "construct",
+    "type": "CreatureType",
+    "value": "construct"
+  },
+  {
+    "col": 21,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 627,
+    "text": "can",
+    "type": "Word",
+    "value": "can"
+  },
+  {
+    "col": 25,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 631,
+    "text": "drain",
+    "type": "Word",
+    "value": "drain"
+  },
+  {
+    "col": 31,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 637,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 33,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 639,
+    "text": "single",
+    "type": "Word",
+    "value": "single"
+  },
+  {
+    "col": 40,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 646,
+    "text": "charge",
+    "type": "Word",
+    "value": "charge"
+  },
+  {
+    "col": 47,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 653,
+    "text": "or",
+    "type": "Word",
+    "value": "or"
+  },
+  {
+    "col": 1,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 656,
+    "text": "spell",
+    "type": "Word",
+    "value": "spell"
+  },
+  {
+    "col": 7,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 662,
+    "text": "level",
+    "type": "Word",
+    "value": "level"
+  },
+  {
+    "col": 13,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 668,
+    "text": "from",
+    "type": "Word",
+    "value": "from"
+  },
+  {
+    "col": 18,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 673,
+    "text": "its",
+    "type": "Word",
+    "value": "its"
+  },
+  {
+    "col": 22,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 677,
+    "text": "installed",
+    "type": "Word",
+    "value": "installed"
+  },
+  {
+    "col": 32,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 687,
+    "text": "item",
+    "type": "Word",
+    "value": "item"
+  },
+  {
+    "col": 37,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 692,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 40,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 695,
+    "text": "heal",
+    "type": "Word",
+    "value": "heal"
+  },
+  {
+    "col": 45,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 700,
+    "text": "itself",
+    "type": "Word",
+    "value": "itself"
+  },
+  {
+    "col": 1,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 707,
+    "text": "for",
+    "type": "Word",
+    "value": "for"
+  },
+  {
+    "col": 5,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 711,
+    "text": "1d6",
+    "type": "DiceRoll",
+    "value": "1d6"
+  },
+  {
+    "col": 9,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 715,
+    "text": "hit",
+    "type": "Word",
+    "value": "hit"
+  },
+  {
+    "col": 13,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 719,
+    "text": "points",
+    "type": "Word",
+    "value": "points"
+  },
+  {
+    "col": 20,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 726,
+    "text": "as",
+    "type": "Word",
+    "value": "as"
+  },
+  {
+    "col": 23,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 729,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 25,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 731,
+    "text": "standard",
+    "type": "Word",
+    "value": "standard"
+  },
+  {
+    "col": 34,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 740,
+    "text": "action",
+    "type": "Word",
+    "value": "action"
+  },
+  {
+    "col": 40,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 746,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 1,
+    "line": 15,
+    "lineBreaks": 0,
+    "offset": 748,
+    "text": "Removing",
+    "type": "Word",
+    "value": "Removing"
+  },
+  {
+    "col": 10,
+    "line": 15,
+    "lineBreaks": 0,
+    "offset": 757,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 12,
+    "line": 15,
+    "lineBreaks": 0,
+    "offset": 759,
+    "text": "spent",
+    "type": "Word",
+    "value": "spent"
+  },
+  {
+    "col": 18,
+    "line": 15,
+    "lineBreaks": 0,
+    "offset": 765,
+    "text": "item",
+    "type": "Word",
+    "value": "item"
+  },
+  {
+    "col": 23,
+    "line": 15,
+    "lineBreaks": 0,
+    "offset": 770,
+    "text": "and",
+    "type": "Word",
+    "value": "and"
+  },
+  {
+    "col": 27,
+    "line": 15,
+    "lineBreaks": 0,
+    "offset": 774,
+    "text": "installing",
+    "type": "Word",
+    "value": "installing"
+  },
+  {
+    "col": 38,
+    "line": 15,
+    "lineBreaks": 0,
+    "offset": 785,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 1,
+    "line": 16,
+    "lineBreaks": 0,
+    "offset": 787,
+    "text": "new",
+    "type": "Word",
+    "value": "new"
+  },
+  {
+    "col": 5,
+    "line": 16,
+    "lineBreaks": 0,
+    "offset": 791,
+    "text": "one",
+    "type": "Word",
+    "value": "one"
+  },
+  {
+    "col": 9,
+    "line": 16,
+    "lineBreaks": 0,
+    "offset": 795,
+    "text": "is",
+    "type": "Word",
+    "value": "is"
+  },
+  {
+    "col": 12,
+    "line": 16,
+    "lineBreaks": 0,
+    "offset": 798,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 14,
+    "line": 16,
+    "lineBreaks": 0,
+    "offset": 800,
+    "text": "full",
+    "type": "Word",
+    "value": "full"
+  },
+  {
+    "col": 18,
+    "line": 16,
+    "lineBreaks": 0,
+    "offset": 804,
+    "text": "-",
+    "type": "Dash",
+    "value": "-"
+  },
+  {
+    "col": 19,
+    "line": 16,
+    "lineBreaks": 0,
+    "offset": 805,
+    "text": "round",
+    "type": "Word",
+    "value": "round"
+  },
+  {
+    "col": 25,
+    "line": 16,
+    "lineBreaks": 0,
+    "offset": 811,
+    "text": "action",
+    "type": "Word",
+    "value": "action"
+  },
+  {
+    "col": 31,
+    "line": 16,
+    "lineBreaks": 0,
+    "offset": 817,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 1,
+    "line": 17,
+    "lineBreaks": 0,
+    "offset": 819,
+    "text": "Potion",
+    "type": "Word",
+    "value": "Potion"
+  },
+  {
+    "col": 7,
+    "line": 17,
+    "lineBreaks": 0,
+    "offset": 825,
+    "text": ":",
+    "type": "Colon",
+    "value": ":"
+  },
+  {
+    "col": 9,
+    "line": 17,
+    "lineBreaks": 0,
+    "offset": 827,
+    "text": "The",
+    "type": "Word",
+    "value": "The"
+  },
+  {
+    "col": 13,
+    "line": 17,
+    "lineBreaks": 0,
+    "offset": 831,
+    "text": "clockwork",
+    "type": "Word",
+    "value": "clockwork"
+  },
+  {
+    "col": 23,
+    "line": 17,
+    "lineBreaks": 0,
+    "offset": 841,
+    "text": "familiar",
+    "type": "Word",
+    "value": "familiar"
+  },
+  {
+    "col": 32,
+    "line": 17,
+    "lineBreaks": 0,
+    "offset": 850,
+    "text": "gains",
+    "type": "Word",
+    "value": "gains"
+  },
+  {
+    "col": 1,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 856,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 3,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 858,
+    "text": "constant",
+    "type": "Word",
+    "value": "constant"
+  },
+  {
+    "col": 12,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 867,
+    "text": "protection",
+    "type": "Word",
+    "value": "protection"
+  },
+  {
+    "col": 23,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 878,
+    "text": "from",
+    "type": "Word",
+    "value": "from"
+  },
+  {
+    "col": 28,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 883,
+    "text": "good",
+    "type": "Word",
+    "value": "good"
+  },
+  {
+    "col": 32,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 887,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 33,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 888,
+    "text": "evil",
+    "type": "Word",
+    "value": "evil"
+  },
+  {
+    "col": 37,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 892,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 38,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 893,
+    "text": "law",
+    "type": "Word",
+    "value": "law"
+  },
+  {
+    "col": 41,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 896,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 42,
+    "line": 18,
+    "lineBreaks": 0,
+    "offset": 897,
+    "text": "chaos",
+    "type": "Word",
+    "value": "chaos"
+  },
+  {
+    "col": 1,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 903,
+    "text": "effect",
+    "type": "Word",
+    "value": "effect"
+  },
+  {
+    "col": 8,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 910,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 9,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 911,
+    "text": "one",
+    "type": "Word",
+    "value": "one"
+  },
+  {
+    "col": 13,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 915,
+    "text": "type",
+    "type": "Word",
+    "value": "type"
+  },
+  {
+    "col": 18,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 920,
+    "text": "only",
+    "type": "Word",
+    "value": "only"
+  },
+  {
+    "col": 22,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 924,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 24,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 926,
+    "text": "chosen",
+    "type": "Word",
+    "value": "chosen"
+  },
+  {
+    "col": 31,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 933,
+    "text": "each",
+    "type": "Word",
+    "value": "each"
+  },
+  {
+    "col": 36,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 938,
+    "text": "time",
+    "type": "Word",
+    "value": "time"
+  },
+  {
+    "col": 41,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 943,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 43,
+    "line": 19,
+    "lineBreaks": 0,
+    "offset": 945,
+    "text": "new",
+    "type": "Word",
+    "value": "new"
+  },
+  {
+    "col": 1,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 949,
+    "text": "potion",
+    "type": "Word",
+    "value": "potion"
+  },
+  {
+    "col": 8,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 956,
+    "text": "is",
+    "type": "Word",
+    "value": "is"
+  },
+  {
+    "col": 11,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 959,
+    "text": "installed",
+    "type": "Word",
+    "value": "installed"
+  },
+  {
+    "col": 20,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 968,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 21,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 969,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 23,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 971,
+    "text": "In",
+    "type": "Word",
+    "value": "In"
+  },
+  {
+    "col": 26,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 974,
+    "text": "addition",
+    "type": "Word",
+    "value": "addition"
+  },
+  {
+    "col": 34,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 982,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 36,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 984,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 38,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 986,
+    "text": "clockwork",
+    "type": "Word",
+    "value": "clockwork"
+  },
+  {
+    "col": 48,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 996,
+    "text": "familiar",
+    "type": "Word",
+    "value": "familiar"
+  },
+  {
+    "col": 57,
+    "line": 20,
+    "lineBreaks": 0,
+    "offset": 1005,
+    "text": "can",
+    "type": "Word",
+    "value": "can"
+  },
+  {
+    "col": 1,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1009,
+    "text": "drain",
+    "type": "Word",
+    "value": "drain"
+  },
+  {
+    "col": 7,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1015,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 11,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1019,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 17,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1025,
+    "text": "from",
+    "type": "Word",
+    "value": "from"
+  },
+  {
+    "col": 22,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1030,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 26,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1034,
+    "text": "potion",
+    "type": "Word",
+    "value": "potion"
+  },
+  {
+    "col": 33,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1041,
+    "text": "in",
+    "type": "Word",
+    "value": "in"
+  },
+  {
+    "col": 36,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1044,
+    "text": "order",
+    "type": "Word",
+    "value": "order"
+  },
+  {
+    "col": 42,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1050,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 45,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1053,
+    "text": "grant",
+    "type": "Word",
+    "value": "grant"
+  },
+  {
+    "col": 51,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1059,
+    "text": "this",
+    "type": "Word",
+    "value": "this"
+  },
+  {
+    "col": 56,
+    "line": 21,
+    "lineBreaks": 0,
+    "offset": 1064,
+    "text": "ability",
+    "type": "Word",
+    "value": "ability"
+  },
+  {
+    "col": 1,
+    "line": 22,
+    "lineBreaks": 0,
+    "offset": 1072,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 4,
+    "line": 22,
+    "lineBreaks": 0,
+    "offset": 1075,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 6,
+    "line": 22,
+    "lineBreaks": 0,
+    "offset": 1077,
+    "text": "creature",
+    "type": "Word",
+    "value": "creature"
+  },
+  {
+    "col": 15,
+    "line": 22,
+    "lineBreaks": 0,
+    "offset": 1086,
+    "text": "sharing",
+    "type": "Word",
+    "value": "sharing"
+  },
+  {
+    "col": 23,
+    "line": 22,
+    "lineBreaks": 0,
+    "offset": 1094,
+    "text": "its",
+    "type": "Word",
+    "value": "its"
+  },
+  {
+    "col": 27,
+    "line": 22,
+    "lineBreaks": 0,
+    "offset": 1098,
+    "text": "space",
+    "type": "Word",
+    "value": "space"
+  },
+  {
+    "col": 32,
+    "line": 22,
+    "lineBreaks": 0,
+    "offset": 1103,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 34,
+    "line": 22,
+    "lineBreaks": 0,
+    "offset": 1105,
+    "text": "This",
+    "type": "Word",
+    "value": "This"
+  },
+  {
+    "col": 39,
+    "line": 22,
+    "lineBreaks": 0,
+    "offset": 1110,
+    "text": "ability",
+    "type": "Word",
+    "value": "ability"
+  },
+  {
+    "col": 47,
+    "line": 22,
+    "lineBreaks": 0,
+    "offset": 1118,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 1,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1121,
+    "text": "include",
+    "type": "Word",
+    "value": "include"
+  },
+  {
+    "col": 9,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1129,
+    "text": "others",
+    "type": "Word",
+    "value": "others"
+  },
+  {
+    "col": 16,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1136,
+    "text": "in",
+    "type": "Word",
+    "value": "in"
+  },
+  {
+    "col": 19,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1139,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 23,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1143,
+    "text": "protection",
+    "type": "Word",
+    "value": "protection"
+  },
+  {
+    "col": 34,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1154,
+    "text": "effect",
+    "type": "Word",
+    "value": "effect"
+  },
+  {
+    "col": 41,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1161,
+    "text": "lasts",
+    "type": "Word",
+    "value": "lasts"
+  },
+  {
+    "col": 47,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1167,
+    "text": "for",
+    "type": "Word",
+    "value": "for"
+  },
+  {
+    "col": 51,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1171,
+    "text": "1",
+    "type": "NumberWhole",
+    "value": "1"
+  },
+  {
+    "col": 53,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1173,
+    "text": "minute",
+    "type": "Word",
+    "value": "minute"
+  },
+  {
+    "col": 60,
+    "line": 23,
+    "lineBreaks": 0,
+    "offset": 1180,
+    "text": "per",
+    "type": "Word",
+    "value": "per"
+  },
+  {
+    "col": 1,
+    "line": 24,
+    "lineBreaks": 0,
+    "offset": 1184,
+    "text": "spell",
+    "type": "Word",
+    "value": "spell"
+  },
+  {
+    "col": 7,
+    "line": 24,
+    "lineBreaks": 0,
+    "offset": 1190,
+    "text": "level",
+    "type": "Word",
+    "value": "level"
+  },
+  {
+    "col": 13,
+    "line": 24,
+    "lineBreaks": 0,
+    "offset": 1196,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 16,
+    "line": 24,
+    "lineBreaks": 0,
+    "offset": 1199,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 20,
+    "line": 24,
+    "lineBreaks": 0,
+    "offset": 1203,
+    "text": "potion",
+    "type": "Word",
+    "value": "potion"
+  },
+  {
+    "col": 27,
+    "line": 24,
+    "lineBreaks": 0,
+    "offset": 1210,
+    "text": "drained",
+    "type": "Word",
+    "value": "drained"
+  },
+  {
+    "col": 34,
+    "line": 24,
+    "lineBreaks": 0,
+    "offset": 1217,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 1,
+    "line": 25,
+    "lineBreaks": 0,
+    "offset": 1219,
+    "text": "Scroll",
+    "type": "Word",
+    "value": "Scroll"
+  },
+  {
+    "col": 7,
+    "line": 25,
+    "lineBreaks": 0,
+    "offset": 1225,
+    "text": ":",
+    "type": "Colon",
+    "value": ":"
+  },
+  {
+    "col": 9,
+    "line": 25,
+    "lineBreaks": 0,
+    "offset": 1227,
+    "text": "The",
+    "type": "Word",
+    "value": "The"
+  },
+  {
+    "col": 13,
+    "line": 25,
+    "lineBreaks": 0,
+    "offset": 1231,
+    "text": "clockwork",
+    "type": "Word",
+    "value": "clockwork"
+  },
+  {
+    "col": 23,
+    "line": 25,
+    "lineBreaks": 0,
+    "offset": 1241,
+    "text": "familiar",
+    "type": "Word",
+    "value": "familiar"
+  },
+  {
+    "col": 32,
+    "line": 25,
+    "lineBreaks": 0,
+    "offset": 1250,
+    "text": "gains",
+    "type": "Word",
+    "value": "gains"
+  },
+  {
+    "col": 38,
+    "line": 25,
+    "lineBreaks": 0,
+    "offset": 1256,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 40,
+    "line": 25,
+    "lineBreaks": 0,
+    "offset": 1258,
+    "text": "constant",
+    "type": "Word",
+    "value": "constant"
+  },
+  {
+    "col": 49,
+    "line": 25,
+    "lineBreaks": 0,
+    "offset": 1267,
+    "text": "detect",
+    "type": "Word",
+    "value": "detect"
+  },
+  {
+    "col": 56,
+    "line": 25,
+    "lineBreaks": 0,
+    "offset": 1274,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 1,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1280,
+    "text": "effect",
+    "type": "Word",
+    "value": "effect"
+  },
+  {
+    "col": 8,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1287,
+    "text": "as",
+    "type": "Word",
+    "value": "as"
+  },
+  {
+    "col": 11,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1290,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 13,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1292,
+    "text": "spell",
+    "type": "Word",
+    "value": "spell"
+  },
+  {
+    "col": 18,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1297,
+    "text": "-",
+    "type": "Dash",
+    "value": "-"
+  },
+  {
+    "col": 19,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1298,
+    "text": "like",
+    "type": "Word",
+    "value": "like"
+  },
+  {
+    "col": 24,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1303,
+    "text": "ability",
+    "type": "Word",
+    "value": "ability"
+  },
+  {
+    "col": 31,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1310,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 33,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1312,
+    "text": "Draining",
+    "type": "Word",
+    "value": "Draining"
+  },
+  {
+    "col": 42,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1321,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 48,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1327,
+    "text": "from",
+    "type": "Word",
+    "value": "from"
+  },
+  {
+    "col": 53,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1332,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 55,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1334,
+    "text": "scroll",
+    "type": "Word",
+    "value": "scroll"
+  },
+  {
+    "col": 62,
+    "line": 26,
+    "lineBreaks": 0,
+    "offset": 1341,
+    "text": "allows",
+    "type": "Word",
+    "value": "allows"
+  },
+  {
+    "col": 1,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1348,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 5,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1352,
+    "text": "familiar",
+    "type": "Word",
+    "value": "familiar"
+  },
+  {
+    "col": 14,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1361,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 17,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1364,
+    "text": "cast",
+    "type": "Word",
+    "value": "cast"
+  },
+  {
+    "col": 22,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1369,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 24,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1371,
+    "text": "single",
+    "type": "Word",
+    "value": "single"
+  },
+  {
+    "col": 31,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1378,
+    "text": "identify",
+    "type": "Word",
+    "value": "identify"
+  },
+  {
+    "col": 40,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1387,
+    "text": "spell",
+    "type": "Word",
+    "value": "spell"
+  },
+  {
+    "col": 46,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1393,
+    "text": "on",
+    "type": "Word",
+    "value": "on"
+  },
+  {
+    "col": 49,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1396,
+    "text": "behalf",
+    "type": "Word",
+    "value": "behalf"
+  },
+  {
+    "col": 56,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1403,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 59,
+    "line": 27,
+    "lineBreaks": 0,
+    "offset": 1406,
+    "text": "its",
+    "type": "Word",
+    "value": "its"
+  },
+  {
+    "col": 1,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1410,
+    "text": "master",
+    "type": "Word",
+    "value": "master"
+  },
+  {
+    "col": 8,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1417,
+    "text": "for",
+    "type": "Word",
+    "value": "for"
+  },
+  {
+    "col": 12,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1421,
+    "text": "each",
+    "type": "Word",
+    "value": "each"
+  },
+  {
+    "col": 17,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1426,
+    "text": "spell",
+    "type": "Word",
+    "value": "spell"
+  },
+  {
+    "col": 23,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1432,
+    "text": "level",
+    "type": "Word",
+    "value": "level"
+  },
+  {
+    "col": 29,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1438,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 32,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1441,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 36,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1445,
+    "text": "spell",
+    "type": "Word",
+    "value": "spell"
+  },
+  {
+    "col": 42,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1451,
+    "text": "inscribed",
+    "type": "Word",
+    "value": "inscribed"
+  },
+  {
+    "col": 52,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1461,
+    "text": "on",
+    "type": "Word",
+    "value": "on"
+  },
+  {
+    "col": 55,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1464,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 59,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1468,
+    "text": "scroll",
+    "type": "Word",
+    "value": "scroll"
+  },
+  {
+    "col": 65,
+    "line": 28,
+    "lineBreaks": 0,
+    "offset": 1474,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 1,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1476,
+    "text": "these",
+    "type": "Word",
+    "value": "these"
+  },
+  {
+    "col": 7,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1482,
+    "text": "castings",
+    "type": "Word",
+    "value": "castings"
+  },
+  {
+    "col": 16,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1491,
+    "text": "may",
+    "type": "Word",
+    "value": "may"
+  },
+  {
+    "col": 20,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1495,
+    "text": "be",
+    "type": "Word",
+    "value": "be"
+  },
+  {
+    "col": 23,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1498,
+    "text": "stored",
+    "type": "Word",
+    "value": "stored"
+  },
+  {
+    "col": 30,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1505,
+    "text": "and",
+    "type": "Word",
+    "value": "and"
+  },
+  {
+    "col": 34,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1509,
+    "text": "saved",
+    "type": "Word",
+    "value": "saved"
+  },
+  {
+    "col": 39,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1514,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 41,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1516,
+    "text": "though",
+    "type": "Word",
+    "value": "though"
+  },
+  {
+    "col": 48,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1523,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 50,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1525,
+    "text": "scroll",
+    "type": "Word",
+    "value": "scroll"
+  },
+  {
+    "col": 57,
+    "line": 29,
+    "lineBreaks": 0,
+    "offset": 1532,
+    "text": "used",
+    "type": "Word",
+    "value": "used"
+  },
+  {
+    "col": 1,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1537,
+    "text": "in",
+    "type": "Word",
+    "value": "in"
+  },
+  {
+    "col": 4,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1540,
+    "text": "this",
+    "type": "Word",
+    "value": "this"
+  },
+  {
+    "col": 9,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1545,
+    "text": "manner",
+    "type": "Word",
+    "value": "manner"
+  },
+  {
+    "col": 16,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1552,
+    "text": "becomes",
+    "type": "Word",
+    "value": "becomes"
+  },
+  {
+    "col": 24,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1560,
+    "text": "instantly",
+    "type": "Word",
+    "value": "instantly"
+  },
+  {
+    "col": 34,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1570,
+    "text": "useless",
+    "type": "Word",
+    "value": "useless"
+  },
+  {
+    "col": 41,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1577,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 43,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1579,
+    "text": "even",
+    "type": "Word",
+    "value": "even"
+  },
+  {
+    "col": 48,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1584,
+    "text": "if",
+    "type": "Word",
+    "value": "if"
+  },
+  {
+    "col": 51,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1587,
+    "text": "not",
+    "type": "Word",
+    "value": "not"
+  },
+  {
+    "col": 55,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1591,
+    "text": "all",
+    "type": "Word",
+    "value": "all"
+  },
+  {
+    "col": 59,
+    "line": 30,
+    "lineBreaks": 0,
+    "offset": 1595,
+    "text": "spell",
+    "type": "Word",
+    "value": "spell"
+  },
+  {
+    "col": 1,
+    "line": 31,
+    "lineBreaks": 0,
+    "offset": 1601,
+    "text": "levels",
+    "type": "Word",
+    "value": "levels"
+  },
+  {
+    "col": 8,
+    "line": 31,
+    "lineBreaks": 0,
+    "offset": 1608,
+    "text": "have",
+    "type": "Word",
+    "value": "have"
+  },
+  {
+    "col": 13,
+    "line": 31,
+    "lineBreaks": 0,
+    "offset": 1613,
+    "text": "been",
+    "type": "Word",
+    "value": "been"
+  },
+  {
+    "col": 18,
+    "line": 31,
+    "lineBreaks": 0,
+    "offset": 1618,
+    "text": "drained",
+    "type": "Word",
+    "value": "drained"
+  },
+  {
+    "col": 25,
+    "line": 31,
+    "lineBreaks": 0,
+    "offset": 1625,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 1,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1627,
+    "text": "Wand",
+    "type": "Word",
+    "value": "Wand"
+  },
+  {
+    "col": 5,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1631,
+    "text": ":",
+    "type": "Colon",
+    "value": ":"
+  },
+  {
+    "col": 7,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1633,
+    "text": "The",
+    "type": "Word",
+    "value": "The"
+  },
+  {
+    "col": 11,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1637,
+    "text": "clockwork",
+    "type": "Word",
+    "value": "clockwork"
+  },
+  {
+    "col": 21,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1647,
+    "text": "familiar",
+    "type": "Word",
+    "value": "familiar"
+  },
+  {
+    "col": 30,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1656,
+    "text": "gains",
+    "type": "Word",
+    "value": "gains"
+  },
+  {
+    "col": 36,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1662,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 40,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1666,
+    "text": "ability",
+    "type": "Word",
+    "value": "ability"
+  },
+  {
+    "col": 48,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1674,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 51,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1677,
+    "text": "spit",
+    "type": "Word",
+    "value": "spit"
+  },
+  {
+    "col": 56,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1682,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 58,
+    "line": 32,
+    "lineBreaks": 0,
+    "offset": 1684,
+    "text": "glob",
+    "type": "Word",
+    "value": "glob"
+  },
+  {
+    "col": 1,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1689,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 4,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1692,
+    "text": "acid",
+    "type": "Word",
+    "value": "acid"
+  },
+  {
+    "col": 9,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1697,
+    "text": "up",
+    "type": "Word",
+    "value": "up"
+  },
+  {
+    "col": 12,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1700,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 15,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1703,
+    "text": "30 feet",
+    "type": "SizeValue",
+    "value": "30 feet"
+  },
+  {
+    "col": 23,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1711,
+    "text": "as",
+    "type": "Word",
+    "value": "as"
+  },
+  {
+    "col": 26,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1714,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 28,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1716,
+    "text": "ranged",
+    "type": "Word",
+    "value": "ranged"
+  },
+  {
+    "col": 35,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1723,
+    "text": "touch",
+    "type": "AcTouchKey",
+    "value": "touch"
+  },
+  {
+    "col": 41,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1729,
+    "text": "attack",
+    "type": "Word",
+    "value": "attack"
+  },
+  {
+    "col": 47,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1735,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 49,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1737,
+    "text": "dealing",
+    "type": "Word",
+    "value": "dealing"
+  },
+  {
+    "col": 57,
+    "line": 33,
+    "lineBreaks": 0,
+    "offset": 1745,
+    "text": "1d4",
+    "type": "DiceRoll",
+    "value": "1d4"
+  },
+  {
+    "col": 1,
+    "line": 34,
+    "lineBreaks": 0,
+    "offset": 1749,
+    "text": "points",
+    "type": "Word",
+    "value": "points"
+  },
+  {
+    "col": 8,
+    "line": 34,
+    "lineBreaks": 0,
+    "offset": 1756,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 11,
+    "line": 34,
+    "lineBreaks": 0,
+    "offset": 1759,
+    "text": "damage",
+    "type": "Word",
+    "value": "damage"
+  },
+  {
+    "col": 17,
+    "line": 34,
+    "lineBreaks": 0,
+    "offset": 1765,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 19,
+    "line": 34,
+    "lineBreaks": 0,
+    "offset": 1767,
+    "text": "Draining",
+    "type": "Word",
+    "value": "Draining"
+  },
+  {
+    "col": 28,
+    "line": 34,
+    "lineBreaks": 0,
+    "offset": 1776,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 30,
+    "line": 34,
+    "lineBreaks": 0,
+    "offset": 1778,
+    "text": "charge",
+    "type": "Word",
+    "value": "charge"
+  },
+  {
+    "col": 37,
+    "line": 34,
+    "lineBreaks": 0,
+    "offset": 1785,
+    "text": "increases",
+    "type": "Word",
+    "value": "increases"
+  },
+  {
+    "col": 47,
+    "line": 34,
+    "lineBreaks": 0,
+    "offset": 1795,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 51,
+    "line": 34,
+    "lineBreaks": 0,
+    "offset": 1799,
+    "text": "damage",
+    "type": "Word",
+    "value": "damage"
+  },
+  {
+    "col": 1,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1806,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 4,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1809,
+    "text": "2d4",
+    "type": "DiceRoll",
+    "value": "2d4"
+  },
+  {
+    "col": 8,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1813,
+    "text": "points",
+    "type": "Word",
+    "value": "points"
+  },
+  {
+    "col": 15,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1820,
+    "text": "for",
+    "type": "Word",
+    "value": "for"
+  },
+  {
+    "col": 19,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1824,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 21,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1826,
+    "text": "single",
+    "type": "Word",
+    "value": "single"
+  },
+  {
+    "col": 28,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1833,
+    "text": "attack",
+    "type": "Word",
+    "value": "attack"
+  },
+  {
+    "col": 34,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1839,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 36,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1841,
+    "text": "This",
+    "type": "Word",
+    "value": "This"
+  },
+  {
+    "col": 41,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1846,
+    "text": "charge",
+    "type": "Word",
+    "value": "charge"
+  },
+  {
+    "col": 48,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1853,
+    "text": "is",
+    "type": "Word",
+    "value": "is"
+  },
+  {
+    "col": 51,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1856,
+    "text": "spent",
+    "type": "Word",
+    "value": "spent"
+  },
+  {
+    "col": 57,
+    "line": 35,
+    "lineBreaks": 0,
+    "offset": 1862,
+    "text": "before",
+    "type": "Word",
+    "value": "before"
+  },
+  {
+    "col": 1,
+    "line": 36,
+    "lineBreaks": 0,
+    "offset": 1869,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 5,
+    "line": 36,
+    "lineBreaks": 0,
+    "offset": 1873,
+    "text": "attack",
+    "type": "Word",
+    "value": "attack"
+  },
+  {
+    "col": 12,
+    "line": 36,
+    "lineBreaks": 0,
+    "offset": 1880,
+    "text": "is",
+    "type": "Word",
+    "value": "is"
+  },
+  {
+    "col": 15,
+    "line": 36,
+    "lineBreaks": 0,
+    "offset": 1883,
+    "text": "rolled",
+    "type": "Word",
+    "value": "rolled"
+  },
+  {
+    "col": 21,
+    "line": 36,
+    "lineBreaks": 0,
+    "offset": 1889,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "BLACK",
+    "type": "Word",
+    "value": "BLACK"
+  },
+  {
+    "col": 7,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 6,
+    "text": "ORC",
+    "type": "Word",
+    "value": "ORC"
+  },
+  {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": "CR",
+    "type": "CrKey",
+    "value": "CR"
+  },
+  {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "1",
+    "type": "NumberWhole",
+    "value": "1"
+  },
+  {
+    "col": 15,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 14,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 16,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 15,
+    "text": "3",
+    "type": "NumberWhole",
+    "value": "3"
+  }
+]
