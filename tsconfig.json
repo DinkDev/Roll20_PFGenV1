@@ -62,5 +62,8 @@
   },
 
   // TODO: will need to differentiate an include without the test files
-  "include": ["./src", "./test"]
+  "include": [
+    "./src",
+    "./test",
+  ]
 }

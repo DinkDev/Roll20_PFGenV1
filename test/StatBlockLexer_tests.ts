@@ -1,10 +1,19 @@
+import * as approvals from "approvals";
 import { expect } from "chai";
+import { ITestCallbackContext } from "mocha";
 import { StatBlockLexer } from "../src/StatBlockLexer";
 import { TestHelper } from "./TestHelper";
 
 // tslint:disable:max-line-length
 
 describe(`StatBlockLexer `, () => {
+
+  approvals.configure({
+    normalizeLineEndingsTo: "\r\n",
+    reporters: ["vscode"],
+  });
+  approvals.mocha("./test/approval_files");
+
   it(`all works on words and periods`, () => {
 
     const sut = new StatBlockLexer();
@@ -15,7 +24,7 @@ describe(`StatBlockLexer `, () => {
 
     expect(actual.length).to.equal(10);
   });
-  it(`can find Name and CR line data 1`, () => {
+  it(`can find Name and CR line data 1`, function(this: ITestCallbackContext) {
 
     const sut = new StatBlockLexer();
     const lexer = sut.getStatBlockLexer();
@@ -23,13 +32,14 @@ describe(`StatBlockLexer `, () => {
     const input = `ZAZU CR —`;
     const actual = TestHelper.runLexer(lexer, input);
 
-    expect(actual.length).to.equal(3);
-    expect(actual[0]).to.have.property(`type`, `Word`);
-    expect(actual[0]).to.have.property(`value`, `ZAZU`);
-    expect(actual[1]).to.have.property(`type`, `CrKey`);
-    expect(actual[1]).to.have.property(`value`, `CR`);
-    expect(actual[2]).to.have.property(`type`, `MDash`);
-    expect(actual[2]).to.have.property(`value`, `\u2014`);
+    // expect(actual.length).to.equal(3);
+    // expect(actual[0]).to.have.property(`type`, `Word`);
+    // expect(actual[0]).to.have.property(`value`, `ZAZU`);
+    // expect(actual[1]).to.have.property(`type`, `CrKey`);
+    // expect(actual[1]).to.have.property(`value`, `CR`);
+    // expect(actual[2]).to.have.property(`type`, `MDash`);
+    // expect(actual[2]).to.have.property(`value`, `\u2014`);
+    this.verifyAsJSON(actual);
   });
   it(`can find Name and CR line data 2`, () => {
 
