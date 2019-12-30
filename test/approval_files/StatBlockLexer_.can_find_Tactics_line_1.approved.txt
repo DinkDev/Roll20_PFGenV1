@@ -1,0 +1,416 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "TACTICS",
+    "type": "TacticsKey",
+    "value": "TACTICS"
+  },
+  {
+    "col": 5,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 12,
+    "text": "Before",
+    "type": "Word",
+    "value": "Before"
+  },
+  {
+    "col": 12,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 19,
+    "text": "Combat",
+    "type": "Word",
+    "value": "Combat"
+  },
+  {
+    "col": 19,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 26,
+    "text": "Lini",
+    "type": "Word",
+    "value": "Lini"
+  },
+  {
+    "col": 24,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 31,
+    "text": "casts",
+    "type": "Word",
+    "value": "casts"
+  },
+  {
+    "col": 30,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 37,
+    "text": "goodberry",
+    "type": "Word",
+    "value": "goodberry"
+  },
+  {
+    "col": 40,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 47,
+    "text": "at",
+    "type": "Word",
+    "value": "at"
+  },
+  {
+    "col": 43,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 50,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 47,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 54,
+    "text": "start",
+    "type": "Word",
+    "value": "start"
+  },
+  {
+    "col": 53,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 60,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 56,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 63,
+    "text": "each",
+    "type": "Word",
+    "value": "each"
+  },
+  {
+    "col": 61,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 68,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 64,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 71,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 5,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 77,
+    "text": "During",
+    "type": "Word",
+    "value": "During"
+  },
+  {
+    "col": 12,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 84,
+    "text": "Combat",
+    "type": "Word",
+    "value": "Combat"
+  },
+  {
+    "col": 19,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 91,
+    "text": "Lini",
+    "type": "Word",
+    "value": "Lini"
+  },
+  {
+    "col": 24,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 96,
+    "text": "attempts",
+    "type": "Word",
+    "value": "attempts"
+  },
+  {
+    "col": 33,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 105,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 36,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 108,
+    "text": "stay",
+    "type": "Word",
+    "value": "stay"
+  },
+  {
+    "col": 41,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 113,
+    "text": "out",
+    "type": "Word",
+    "value": "out"
+  },
+  {
+    "col": 45,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 117,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 48,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 120,
+    "text": "melee",
+    "type": "Word",
+    "value": "melee"
+  },
+  {
+    "col": 53,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 125,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 55,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 127,
+    "text": "sending",
+    "type": "Word",
+    "value": "sending"
+  },
+  {
+    "col": 63,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 135,
+    "text": "her",
+    "type": "Word",
+    "value": "her"
+  },
+  {
+    "col": 5,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 143,
+    "text": "animal",
+    "type": "CreatureType",
+    "value": "animal"
+  },
+  {
+    "col": 12,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 150,
+    "text": "companion",
+    "type": "Word",
+    "value": "companion"
+  },
+  {
+    "col": 22,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 160,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 25,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 163,
+    "text": "fight",
+    "type": "Word",
+    "value": "fight"
+  },
+  {
+    "col": 31,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 169,
+    "text": "while",
+    "type": "Word",
+    "value": "while"
+  },
+  {
+    "col": 37,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 175,
+    "text": "she",
+    "type": "Word",
+    "value": "she"
+  },
+  {
+    "col": 41,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 179,
+    "text": "uses",
+    "type": "Word",
+    "value": "uses"
+  },
+  {
+    "col": 46,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 184,
+    "text": "her",
+    "type": "Word",
+    "value": "her"
+  },
+  {
+    "col": 50,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 188,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 56,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 194,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 59,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 197,
+    "text": "heal",
+    "type": "Word",
+    "value": "heal"
+  },
+  {
+    "col": 63,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 201,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 207,
+    "text": "summon",
+    "type": "Word",
+    "value": "summon"
+  },
+  {
+    "col": 12,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 214,
+    "text": "allies",
+    "type": "Word",
+    "value": "allies"
+  },
+  {
+    "col": 18,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 220,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 20,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 222,
+    "text": "and",
+    "type": "Word",
+    "value": "and"
+  },
+  {
+    "col": 24,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 226,
+    "text": "control",
+    "type": "Word",
+    "value": "control"
+  },
+  {
+    "col": 32,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 234,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 36,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 238,
+    "text": "environment",
+    "type": "Word",
+    "value": "environment"
+  },
+  {
+    "col": 47,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 249,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 5,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 255,
+    "text": "STATISTICS",
+    "type": "StatisticsKey",
+    "value": "STATISTICS"
+  }
+]

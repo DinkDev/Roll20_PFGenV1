@@ -1,0 +1,236 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Skills",
+    "type": "SkillsKey",
+    "value": "Skills"
+  },
+  {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "Acrobatics",
+    "type": "Word",
+    "value": "Acrobatics"
+  },
+  {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": "+8",
+    "type": "NumberSigned",
+    "value": "+8"
+  },
+  {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 23,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 22,
+    "text": "Perception",
+    "type": "PerceptionKey",
+    "value": "Perception"
+  },
+  {
+    "col": 34,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 33,
+    "text": "+10",
+    "type": "NumberSigned",
+    "value": "+10"
+  },
+  {
+    "col": 37,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 36,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 39,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 38,
+    "text": "Stealth",
+    "type": "Word",
+    "value": "Stealth"
+  },
+  {
+    "col": 47,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 46,
+    "text": "+8",
+    "type": "NumberSigned",
+    "value": "+8"
+  },
+  {
+    "col": 49,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 48,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 54,
+    "text": "Survival",
+    "type": "Word",
+    "value": "Survival"
+  },
+  {
+    "col": 14,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 63,
+    "text": "+7",
+    "type": "NumberSigned",
+    "value": "+7"
+  },
+  {
+    "col": 17,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 66,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 18,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 67,
+    "text": "+10",
+    "type": "NumberSigned",
+    "value": "+10"
+  },
+  {
+    "col": 22,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 71,
+    "text": "in",
+    "type": "Word",
+    "value": "in"
+  },
+  {
+    "col": 25,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 74,
+    "text": "forests",
+    "type": "Word",
+    "value": "forests"
+  },
+  {
+    "col": 32,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 81,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 33,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 82,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 35,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 84,
+    "text": "Racial Modifiers",
+    "type": "RacialModifiersKey",
+    "value": "Racial Modifiers"
+  },
+  {
+    "col": 5,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 105,
+    "text": "+3",
+    "type": "NumberSigned",
+    "value": "+3"
+  },
+  {
+    "col": 8,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 108,
+    "text": "Survival",
+    "type": "Word",
+    "value": "Survival"
+  },
+  {
+    "col": 17,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 117,
+    "text": "in",
+    "type": "Word",
+    "value": "in"
+  },
+  {
+    "col": 20,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 120,
+    "text": "forests",
+    "type": "Word",
+    "value": "forests"
+  },
+  {
+    "col": 27,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 127,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 29,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 129,
+    "text": "+4",
+    "type": "NumberSigned",
+    "value": "+4"
+  },
+  {
+    "col": 32,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 132,
+    "text": "Stealth",
+    "type": "Word",
+    "value": "Stealth"
+  }
+]

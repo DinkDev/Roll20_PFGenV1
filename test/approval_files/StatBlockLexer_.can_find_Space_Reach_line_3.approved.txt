@@ -1,0 +1,92 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Space",
+    "type": "SpaceKey",
+    "value": "Space"
+  },
+  {
+    "col": 7,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 6,
+    "text": "15 ft.",
+    "type": "SizeValue",
+    "value": "15 ft."
+  },
+  {
+    "col": 13,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 12,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 15,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 14,
+    "text": "Reach",
+    "type": "ReachKey",
+    "value": "Reach"
+  },
+  {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": "10 ft.",
+    "type": "SizeValue",
+    "value": "10 ft."
+  },
+  {
+    "col": 28,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 27,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 29,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 28,
+    "text": "15 ft.",
+    "type": "SizeValue",
+    "value": "15 ft."
+  },
+  {
+    "col": 36,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 35,
+    "text": "with",
+    "type": "Word",
+    "value": "with"
+  },
+  {
+    "col": 41,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 40,
+    "text": "bite",
+    "type": "Word",
+    "value": "bite"
+  },
+  {
+    "col": 45,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 44,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

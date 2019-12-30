@@ -1,0 +1,650 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Spell-Like Abilities",
+    "type": "SpellLikeAbilityKey",
+    "value": "Spell-Like Abilities"
+  },
+  {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 23,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 22,
+    "text": "CL",
+    "type": "ClKey",
+    "value": "CL"
+  },
+  {
+    "col": 26,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 25,
+    "text": "13th",
+    "type": "Level",
+    "value": "13th"
+  },
+  {
+    "col": 30,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 29,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 32,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 31,
+    "text": "concentration",
+    "type": "Word",
+    "value": "concentration"
+  },
+  {
+    "col": 46,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 45,
+    "text": "+17",
+    "type": "NumberSigned",
+    "value": "+17"
+  },
+  {
+    "col": 49,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 48,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 54,
+    "text": "At",
+    "type": "Word",
+    "value": "At"
+  },
+  {
+    "col": 8,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 57,
+    "text": "will",
+    "type": "Word",
+    "value": "will"
+  },
+  {
+    "col": 12,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 61,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 13,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 62,
+    "text": "calm",
+    "type": "Word",
+    "value": "calm"
+  },
+  {
+    "col": 18,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 67,
+    "text": "emotions",
+    "type": "Word",
+    "value": "emotions"
+  },
+  {
+    "col": 27,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 76,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 28,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 77,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 31,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 80,
+    "text": "16",
+    "type": "NumberWhole",
+    "value": "16"
+  },
+  {
+    "col": 33,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 82,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 34,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 83,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 36,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 85,
+    "text": "charm",
+    "type": "Word",
+    "value": "charm"
+  },
+  {
+    "col": 42,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 91,
+    "text": "monster",
+    "type": "Word",
+    "value": "monster"
+  },
+  {
+    "col": 50,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 99,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 51,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 100,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 54,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 103,
+    "text": "18",
+    "type": "NumberWhole",
+    "value": "18"
+  },
+  {
+    "col": 56,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 105,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 57,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 106,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 112,
+    "text": "clairaudience",
+    "type": "Word",
+    "value": "clairaudience"
+  },
+  {
+    "col": 18,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 125,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 19,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 126,
+    "text": "clairvoyance",
+    "type": "Word",
+    "value": "clairvoyance"
+  },
+  {
+    "col": 32,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 139,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 33,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 140,
+    "text": "clairvoyance",
+    "type": "Word",
+    "value": "clairvoyance"
+  },
+  {
+    "col": 46,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 153,
+    "text": "only",
+    "type": "Word",
+    "value": "only"
+  },
+  {
+    "col": 50,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 157,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 51,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 158,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 53,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 160,
+    "text": "daze",
+    "type": "Word",
+    "value": "daze"
+  },
+  {
+    "col": 5,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 169,
+    "text": "monster",
+    "type": "Word",
+    "value": "monster"
+  },
+  {
+    "col": 13,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 177,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 14,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 178,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 17,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 181,
+    "text": "16",
+    "type": "NumberWhole",
+    "value": "16"
+  },
+  {
+    "col": 19,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 183,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 20,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 184,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 22,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 186,
+    "text": "feather",
+    "type": "Word",
+    "value": "feather"
+  },
+  {
+    "col": 30,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 194,
+    "text": "fall",
+    "type": "Word",
+    "value": "fall"
+  },
+  {
+    "col": 5,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 203,
+    "text": "3",
+    "type": "NumberWhole",
+    "value": "3"
+  },
+  {
+    "col": 6,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 204,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 7,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 205,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 10,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 208,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 11,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 209,
+    "text": "dispel",
+    "type": "Word",
+    "value": "dispel"
+  },
+  {
+    "col": 18,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 216,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 23,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 221,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 25,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 223,
+    "text": "lightning",
+    "type": "Word",
+    "value": "lightning"
+  },
+  {
+    "col": 35,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 233,
+    "text": "bolt",
+    "type": "Word",
+    "value": "bolt"
+  },
+  {
+    "col": 40,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 238,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 41,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 239,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 44,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 242,
+    "text": "17",
+    "type": "NumberWhole",
+    "value": "17"
+  },
+  {
+    "col": 46,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 244,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 250,
+    "text": "1",
+    "type": "NumberWhole",
+    "value": "1"
+  },
+  {
+    "col": 6,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 251,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 7,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 252,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 10,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 255,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 11,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 256,
+    "text": "dominate",
+    "type": "Word",
+    "value": "dominate"
+  },
+  {
+    "col": 20,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 265,
+    "text": "monster",
+    "type": "Word",
+    "value": "monster"
+  },
+  {
+    "col": 28,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 273,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 29,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 274,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 32,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 277,
+    "text": "23",
+    "type": "NumberWhole",
+    "value": "23"
+  },
+  {
+    "col": 34,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 279,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 285,
+    "text": "1",
+    "type": "NumberWhole",
+    "value": "1"
+  },
+  {
+    "col": 6,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 286,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 7,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 287,
+    "text": "month",
+    "type": "Word",
+    "value": "month"
+  },
+  {
+    "col": 12,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 292,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 13,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 293,
+    "text": "interplanetary",
+    "type": "Word",
+    "value": "interplanetary"
+  },
+  {
+    "col": 28,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 308,
+    "text": "teleportUM",
+    "type": "Word",
+    "value": "teleportUM"
+  },
+  {
+    "col": 5,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 323,
+    "text": "STATISTICS",
+    "type": "StatisticsKey",
+    "value": "STATISTICS"
+  }
+]

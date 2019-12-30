@@ -1,0 +1,623 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Psychic Magic",
+    "type": "SpellsKnownPreparedPsychic",
+    "value": "Psychic Magic"
+  },
+  {
+    "col": 15,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 14,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 16,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 15,
+    "text": "CL",
+    "type": "ClKey",
+    "value": "CL"
+  },
+  {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": "6th",
+    "type": "Level",
+    "value": "6th"
+  },
+  {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 24,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 23,
+    "text": "concentration",
+    "type": "Word",
+    "value": "concentration"
+  },
+  {
+    "col": 38,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 37,
+    "text": "+9",
+    "type": "NumberSigned",
+    "value": "+9"
+  },
+  {
+    "col": 40,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 39,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 7,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 47,
+    "text": "3",
+    "type": "NumberWhole",
+    "value": "3"
+  },
+  {
+    "col": 9,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 49,
+    "text": "PE",
+    "type": "Word",
+    "value": "PE"
+  },
+  {
+    "col": 11,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 51,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 7,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 59,
+    "text": "forbid",
+    "type": "Word",
+    "value": "forbid"
+  },
+  {
+    "col": 14,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 66,
+    "text": "actionUM",
+    "type": "Word",
+    "value": "actionUM"
+  },
+  {
+    "col": 23,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 75,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 24,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 76,
+    "text": "1",
+    "type": "NumberWhole",
+    "value": "1"
+  },
+  {
+    "col": 26,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 78,
+    "text": "PE",
+    "type": "Word",
+    "value": "PE"
+  },
+  {
+    "col": 28,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 80,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 30,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 82,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 33,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 85,
+    "text": "14",
+    "type": "NumberWhole",
+    "value": "14"
+  },
+  {
+    "col": 35,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 87,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 36,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 88,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 38,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 90,
+    "text": "mending",
+    "type": "Word",
+    "value": "mending"
+  },
+  {
+    "col": 46,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 98,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 47,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 99,
+    "text": "0",
+    "type": "NumberWhole",
+    "value": "0"
+  },
+  {
+    "col": 49,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 101,
+    "text": "PE",
+    "type": "Word",
+    "value": "PE"
+  },
+  {
+    "col": 51,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 103,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 7,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 111,
+    "text": "Psychic",
+    "type": "Word",
+    "value": "Psychic"
+  },
+  {
+    "col": 15,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 119,
+    "text": "Spells Known",
+    "type": "SpellsKnownPreparedPsychic",
+    "value": "Spells Known"
+  },
+  {
+    "col": 28,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 132,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 29,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 133,
+    "text": "CL",
+    "type": "ClKey",
+    "value": "CL"
+  },
+  {
+    "col": 32,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 136,
+    "text": "1st",
+    "type": "Level",
+    "value": "1st"
+  },
+  {
+    "col": 35,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 139,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 37,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 141,
+    "text": "concentration",
+    "type": "Word",
+    "value": "concentration"
+  },
+  {
+    "col": 51,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 155,
+    "text": "+4",
+    "type": "NumberSigned",
+    "value": "+4"
+  },
+  {
+    "col": 53,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 157,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 7,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 165,
+    "text": "1st",
+    "type": "Level",
+    "value": "1st"
+  },
+  {
+    "col": 11,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 169,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 12,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 170,
+    "text": "4",
+    "type": "NumberWhole",
+    "value": "4"
+  },
+  {
+    "col": 13,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 171,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 14,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 172,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 17,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 175,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 18,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 176,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 19,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 177,
+    "text": "mage",
+    "type": "Word",
+    "value": "mage"
+  },
+  {
+    "col": 24,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 182,
+    "text": "armor",
+    "type": "Word",
+    "value": "armor"
+  },
+  {
+    "col": 29,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 187,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 31,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 189,
+    "text": "sleep",
+    "type": "Word",
+    "value": "sleep"
+  },
+  {
+    "col": 37,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 195,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 38,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 196,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 41,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 199,
+    "text": "14",
+    "type": "NumberWhole",
+    "value": "14"
+  },
+  {
+    "col": 43,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 201,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 7,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 209,
+    "text": "0",
+    "type": "NumberWhole",
+    "value": "0"
+  },
+  {
+    "col": 9,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 211,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 10,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 212,
+    "text": "at",
+    "type": "Word",
+    "value": "at"
+  },
+  {
+    "col": 12,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 214,
+    "text": "-",
+    "type": "Dash",
+    "value": "-"
+  },
+  {
+    "col": 13,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 215,
+    "text": "will",
+    "type": "Word",
+    "value": "will"
+  },
+  {
+    "col": 17,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 219,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 18,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 220,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 19,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 221,
+    "text": "detect",
+    "type": "Word",
+    "value": "detect"
+  },
+  {
+    "col": 26,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 228,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 31,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 233,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 33,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 235,
+    "text": "detect",
+    "type": "Word",
+    "value": "detect"
+  },
+  {
+    "col": 40,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 242,
+    "text": "psychic",
+    "type": "Word",
+    "value": "psychic"
+  },
+  {
+    "col": 48,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 250,
+    "text": "significanceOA",
+    "type": "Word",
+    "value": "significanceOA"
+  },
+  {
+    "col": 62,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 264,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 7,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 272,
+    "text": "mage",
+    "type": "Word",
+    "value": "mage"
+  },
+  {
+    "col": 12,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 277,
+    "text": "hand",
+    "type": "Word",
+    "value": "hand"
+  },
+  {
+    "col": 16,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 281,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 18,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 283,
+    "text": "read",
+    "type": "Word",
+    "value": "read"
+  },
+  {
+    "col": 23,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 288,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  }
+]

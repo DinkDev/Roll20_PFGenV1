@@ -1,0 +1,173 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Melee",
+    "type": "AttackType",
+    "value": "Melee"
+  },
+  {
+    "col": 7,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 6,
+    "text": "bite",
+    "type": "Word",
+    "value": "bite"
+  },
+  {
+    "col": 12,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 11,
+    "text": "+37",
+    "type": "NumberSigned",
+    "value": "+37"
+  },
+  {
+    "col": 16,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 15,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "2d8",
+    "type": "DiceRoll",
+    "value": "2d8"
+  },
+  {
+    "col": 20,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 19,
+    "text": "+15",
+    "type": "NumberSigned",
+    "value": "+15"
+  },
+  {
+    "col": 23,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 22,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 24,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 23,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 26,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 25,
+    "text": "2",
+    "type": "NumberWhole",
+    "value": "2"
+  },
+  {
+    "col": 28,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 27,
+    "text": "claws",
+    "type": "Word",
+    "value": "claws"
+  },
+  {
+    "col": 34,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 33,
+    "text": "+37",
+    "type": "NumberSigned",
+    "value": "+37"
+  },
+  {
+    "col": 38,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 37,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 39,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 38,
+    "text": "2d6",
+    "type": "DiceRoll",
+    "value": "2d6"
+  },
+  {
+    "col": 42,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 41,
+    "text": "+10",
+    "type": "NumberSigned",
+    "value": "+10"
+  },
+  {
+    "col": 45,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 44,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 46,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 45,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 48,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 47,
+    "text": "2",
+    "type": "NumberWhole",
+    "value": "2"
+  },
+  {
+    "col": 50,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 49,
+    "text": "wings",
+    "type": "Word",
+    "value": "wings"
+  },
+  {
+    "col": 56,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 55,
+    "text": "+34",
+    "type": "NumberSigned",
+    "value": "+34"
+  }
+]

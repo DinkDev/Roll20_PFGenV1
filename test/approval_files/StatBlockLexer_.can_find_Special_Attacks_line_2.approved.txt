@@ -1,0 +1,443 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Special Attacks",
+    "type": "AttackType",
+    "value": "Special Attacks"
+  },
+  {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "breath",
+    "type": "Word",
+    "value": "breath"
+  },
+  {
+    "col": 24,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 23,
+    "text": "weapon",
+    "type": "Word",
+    "value": "weapon"
+  },
+  {
+    "col": 31,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 30,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 32,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 31,
+    "text": "50 ft.",
+    "type": "SizeValue",
+    "value": "50 ft."
+  },
+  {
+    "col": 39,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 38,
+    "text": "cone",
+    "type": "Word",
+    "value": "cone"
+  },
+  {
+    "col": 43,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 42,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 45,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 44,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 48,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 47,
+    "text": "34",
+    "type": "NumberWhole",
+    "value": "34"
+  },
+  {
+    "col": 50,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 49,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 52,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 51,
+    "text": "20d6",
+    "type": "DiceRoll",
+    "value": "20d6"
+  },
+  {
+    "col": 57,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 56,
+    "text": "fire",
+    "type": "Word",
+    "value": "fire"
+  },
+  {
+    "col": 61,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 60,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 1,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 62,
+    "text": "channel",
+    "type": "Word",
+    "value": "channel"
+  },
+  {
+    "col": 9,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 70,
+    "text": "positive",
+    "type": "Word",
+    "value": "positive"
+  },
+  {
+    "col": 18,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 79,
+    "text": "energy",
+    "type": "Word",
+    "value": "energy"
+  },
+  {
+    "col": 25,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 86,
+    "text": "8",
+    "type": "NumberWhole",
+    "value": "8"
+  },
+  {
+    "col": 26,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 87,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 27,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 88,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 31,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 92,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 32,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 93,
+    "text": "8d6",
+    "type": "DiceRoll",
+    "value": "8d6"
+  },
+  {
+    "col": 35,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 96,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 37,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 98,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 40,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 101,
+    "text": "22",
+    "type": "NumberWhole",
+    "value": "22"
+  },
+  {
+    "col": 42,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 103,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 43,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 104,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 45,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 106,
+    "text": "crush",
+    "type": "Word",
+    "value": "crush"
+  },
+  {
+    "col": 50,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 111,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 52,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 113,
+    "text": "holy",
+    "type": "Word",
+    "value": "holy"
+  },
+  {
+    "col": 57,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 118,
+    "text": "lance",
+    "type": "Word",
+    "value": "lance"
+  },
+  {
+    "col": 1,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 124,
+    "text": "2",
+    "type": "NumberWhole",
+    "value": "2"
+  },
+  {
+    "col": 2,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 125,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 3,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 126,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 7,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 130,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 8,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 131,
+    "text": "7",
+    "type": "NumberWhole",
+    "value": "7"
+  },
+  {
+    "col": 10,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 133,
+    "text": "rounds",
+    "type": "Word",
+    "value": "rounds"
+  },
+  {
+    "col": 16,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 139,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 17,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 140,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 19,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 142,
+    "text": "might",
+    "type": "Word",
+    "value": "might"
+  },
+  {
+    "col": 25,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 148,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 28,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 151,
+    "text": "the",
+    "type": "Word",
+    "value": "the"
+  },
+  {
+    "col": 32,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 155,
+    "text": "gods",
+    "type": "Word",
+    "value": "gods"
+  },
+  {
+    "col": 37,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 160,
+    "text": "+15",
+    "type": "NumberSigned",
+    "value": "+15"
+  },
+  {
+    "col": 40,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 163,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 42,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 165,
+    "text": "15",
+    "type": "NumberWhole",
+    "value": "15"
+  },
+  {
+    "col": 45,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 168,
+    "text": "rounds",
+    "type": "Word",
+    "value": "rounds"
+  },
+  {
+    "col": 51,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 174,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 52,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 175,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 55,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 178,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

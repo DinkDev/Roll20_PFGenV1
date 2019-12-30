@@ -1,0 +1,1253 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Domain",
+    "type": "Word",
+    "value": "Domain"
+  },
+  {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "Spell-Like Abilities",
+    "type": "SpellLikeAbilityKey",
+    "value": "Spell-Like Abilities"
+  },
+  {
+    "col": 29,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 28,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 30,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 29,
+    "text": "CL",
+    "type": "ClKey",
+    "value": "CL"
+  },
+  {
+    "col": 33,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 32,
+    "text": "8th",
+    "type": "Level",
+    "value": "8th"
+  },
+  {
+    "col": 36,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 35,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 38,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 37,
+    "text": "concentration",
+    "type": "Word",
+    "value": "concentration"
+  },
+  {
+    "col": 52,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 51,
+    "text": "+12",
+    "type": "NumberSigned",
+    "value": "+12"
+  },
+  {
+    "col": 55,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 54,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 60,
+    "text": "At",
+    "type": "Word",
+    "value": "At"
+  },
+  {
+    "col": 8,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 63,
+    "text": "will",
+    "type": "Word",
+    "value": "will"
+  },
+  {
+    "col": 12,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 67,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 13,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 68,
+    "text": "lore",
+    "type": "Word",
+    "value": "lore"
+  },
+  {
+    "col": 18,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 73,
+    "text": "keeper",
+    "type": "Word",
+    "value": "keeper"
+  },
+  {
+    "col": 25,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 80,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 26,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 81,
+    "text": "27",
+    "type": "NumberWhole",
+    "value": "27"
+  },
+  {
+    "col": 28,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 83,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 29,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 84,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 31,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 86,
+    "text": "remote",
+    "type": "Word",
+    "value": "remote"
+  },
+  {
+    "col": 38,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 93,
+    "text": "viewing",
+    "type": "Word",
+    "value": "viewing"
+  },
+  {
+    "col": 46,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 101,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 47,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 102,
+    "text": "8",
+    "type": "NumberWhole",
+    "value": "8"
+  },
+  {
+    "col": 49,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 104,
+    "text": "rounds",
+    "type": "Word",
+    "value": "rounds"
+  },
+  {
+    "col": 55,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 110,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 56,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 111,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 59,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 114,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 120,
+    "text": "Cleric",
+    "type": "Word",
+    "value": "Cleric"
+  },
+  {
+    "col": 12,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 127,
+    "text": "Spells Prepared",
+    "type": "SpellsKnownPreparedPsychic",
+    "value": "Spells Prepared"
+  },
+  {
+    "col": 28,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 143,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 29,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 144,
+    "text": "CL",
+    "type": "ClKey",
+    "value": "CL"
+  },
+  {
+    "col": 32,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 147,
+    "text": "8th",
+    "type": "Level",
+    "value": "8th"
+  },
+  {
+    "col": 35,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 150,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 37,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 152,
+    "text": "concentration",
+    "type": "Word",
+    "value": "concentration"
+  },
+  {
+    "col": 51,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 166,
+    "text": "+12",
+    "type": "NumberSigned",
+    "value": "+12"
+  },
+  {
+    "col": 54,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 169,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 175,
+    "text": "4th",
+    "type": "Level",
+    "value": "4th"
+  },
+  {
+    "col": 8,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 178,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 9,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 179,
+    "text": "discern",
+    "type": "Word",
+    "value": "discern"
+  },
+  {
+    "col": 17,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 187,
+    "text": "lies",
+    "type": "Word",
+    "value": "lies"
+  },
+  {
+    "col": 22,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 192,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 23,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 193,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 26,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 196,
+    "text": "18",
+    "type": "NumberWhole",
+    "value": "18"
+  },
+  {
+    "col": 28,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 198,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 29,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 199,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 31,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 201,
+    "text": "divinationD",
+    "type": "Word",
+    "value": "divinationD"
+  },
+  {
+    "col": 42,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 212,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 44,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 214,
+    "text": "greater",
+    "type": "Word",
+    "value": "greater"
+  },
+  {
+    "col": 52,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 222,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 5,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 232,
+    "text": "weapon",
+    "type": "Word",
+    "value": "weapon"
+  },
+  {
+    "col": 11,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 238,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 13,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 240,
+    "text": "sending",
+    "type": "Word",
+    "value": "sending"
+  },
+  {
+    "col": 5,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 252,
+    "text": "3rd",
+    "type": "Level",
+    "value": "3rd"
+  },
+  {
+    "col": 8,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 255,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 9,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 256,
+    "text": "prayer",
+    "type": "Word",
+    "value": "prayer"
+  },
+  {
+    "col": 15,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 262,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 17,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 264,
+    "text": "remove",
+    "type": "Word",
+    "value": "remove"
+  },
+  {
+    "col": 24,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 271,
+    "text": "curse",
+    "type": "Word",
+    "value": "curse"
+  },
+  {
+    "col": 29,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 276,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 31,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 278,
+    "text": "remove",
+    "type": "Word",
+    "value": "remove"
+  },
+  {
+    "col": 38,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 285,
+    "text": "disease",
+    "type": "Word",
+    "value": "disease"
+  },
+  {
+    "col": 45,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 292,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 47,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 294,
+    "text": "searing",
+    "type": "Word",
+    "value": "searing"
+  },
+  {
+    "col": 55,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 302,
+    "text": "light",
+    "type": "Word",
+    "value": "light"
+  },
+  {
+    "col": 60,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 307,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 313,
+    "text": "speak",
+    "type": "Word",
+    "value": "speak"
+  },
+  {
+    "col": 11,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 319,
+    "text": "with",
+    "type": "Word",
+    "value": "with"
+  },
+  {
+    "col": 16,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 324,
+    "text": "deadD",
+    "type": "Word",
+    "value": "deadD"
+  },
+  {
+    "col": 22,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 330,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 23,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 331,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 26,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 334,
+    "text": "17",
+    "type": "NumberWhole",
+    "value": "17"
+  },
+  {
+    "col": 28,
+    "line": 7,
+    "lineBreaks": 0,
+    "offset": 336,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 342,
+    "text": "2nd",
+    "type": "Level",
+    "value": "2nd"
+  },
+  {
+    "col": 8,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 345,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 9,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 346,
+    "text": "gentle",
+    "type": "Word",
+    "value": "gentle"
+  },
+  {
+    "col": 16,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 353,
+    "text": "reposeD",
+    "type": "Word",
+    "value": "reposeD"
+  },
+  {
+    "col": 23,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 360,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 25,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 362,
+    "text": "hold",
+    "type": "Word",
+    "value": "hold"
+  },
+  {
+    "col": 30,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 367,
+    "text": "person",
+    "type": "Word",
+    "value": "person"
+  },
+  {
+    "col": 37,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 374,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 38,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 375,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 41,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 378,
+    "text": "16",
+    "type": "NumberWhole",
+    "value": "16"
+  },
+  {
+    "col": 43,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 380,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 44,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 381,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 46,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 383,
+    "text": "lesser",
+    "type": "Word",
+    "value": "lesser"
+  },
+  {
+    "col": 53,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 390,
+    "text": "restoration",
+    "type": "Word",
+    "value": "restoration"
+  },
+  {
+    "col": 64,
+    "line": 8,
+    "lineBreaks": 0,
+    "offset": 401,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 407,
+    "text": "remove",
+    "type": "Word",
+    "value": "remove"
+  },
+  {
+    "col": 12,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 414,
+    "text": "paralysis",
+    "type": "Word",
+    "value": "paralysis"
+  },
+  {
+    "col": 21,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 423,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 23,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 425,
+    "text": "spiritual",
+    "type": "Word",
+    "value": "spiritual"
+  },
+  {
+    "col": 33,
+    "line": 9,
+    "lineBreaks": 0,
+    "offset": 435,
+    "text": "weapon",
+    "type": "Word",
+    "value": "weapon"
+  },
+  {
+    "col": 5,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 446,
+    "text": "1st",
+    "type": "Level",
+    "value": "1st"
+  },
+  {
+    "col": 8,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 449,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 9,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 450,
+    "text": "bless",
+    "type": "Word",
+    "value": "bless"
+  },
+  {
+    "col": 14,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 455,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 16,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 457,
+    "text": "comprehend",
+    "type": "Word",
+    "value": "comprehend"
+  },
+  {
+    "col": 27,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 468,
+    "text": "languagesD",
+    "type": "Word",
+    "value": "languagesD"
+  },
+  {
+    "col": 37,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 478,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 39,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 480,
+    "text": "divine",
+    "type": "Word",
+    "value": "divine"
+  },
+  {
+    "col": 46,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 487,
+    "text": "favor",
+    "type": "Word",
+    "value": "favor"
+  },
+  {
+    "col": 51,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 492,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 53,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 494,
+    "text": "hide",
+    "type": "Word",
+    "value": "hide"
+  },
+  {
+    "col": 58,
+    "line": 10,
+    "lineBreaks": 0,
+    "offset": 499,
+    "text": "from",
+    "type": "Word",
+    "value": "from"
+  },
+  {
+    "col": 5,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 508,
+    "text": "undead",
+    "type": "CreatureType",
+    "value": "undead"
+  },
+  {
+    "col": 11,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 514,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 13,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 516,
+    "text": "sanctify",
+    "type": "Word",
+    "value": "sanctify"
+  },
+  {
+    "col": 22,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 525,
+    "text": "corpseUM",
+    "type": "Word",
+    "value": "corpseUM"
+  },
+  {
+    "col": 30,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 533,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 32,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 535,
+    "text": "shield",
+    "type": "Word",
+    "value": "shield"
+  },
+  {
+    "col": 39,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 542,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 42,
+    "line": 11,
+    "lineBreaks": 0,
+    "offset": 545,
+    "text": "faith",
+    "type": "Word",
+    "value": "faith"
+  },
+  {
+    "col": 5,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 555,
+    "text": "0",
+    "type": "NumberWhole",
+    "value": "0"
+  },
+  {
+    "col": 7,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 557,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 8,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 558,
+    "text": "at",
+    "type": "Word",
+    "value": "at"
+  },
+  {
+    "col": 11,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 561,
+    "text": "will",
+    "type": "Word",
+    "value": "will"
+  },
+  {
+    "col": 15,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 565,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 16,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 566,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 17,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 567,
+    "text": "detect",
+    "type": "Word",
+    "value": "detect"
+  },
+  {
+    "col": 24,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 574,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 29,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 579,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 31,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 581,
+    "text": "light",
+    "type": "Word",
+    "value": "light"
+  },
+  {
+    "col": 36,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 586,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 38,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 588,
+    "text": "read",
+    "type": "Word",
+    "value": "read"
+  },
+  {
+    "col": 43,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 593,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 48,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 598,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 50,
+    "line": 12,
+    "lineBreaks": 0,
+    "offset": 600,
+    "text": "stabilize",
+    "type": "Word",
+    "value": "stabilize"
+  },
+  {
+    "col": 5,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 614,
+    "text": "D",
+    "type": "Word",
+    "value": "D"
+  },
+  {
+    "col": 7,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 616,
+    "text": "domain",
+    "type": "Word",
+    "value": "domain"
+  },
+  {
+    "col": 14,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 623,
+    "text": "spell",
+    "type": "Word",
+    "value": "spell"
+  },
+  {
+    "col": 19,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 628,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 21,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 630,
+    "text": "Domains",
+    "type": "Word",
+    "value": "Domains"
+  },
+  {
+    "col": 29,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 638,
+    "text": "Knowledge",
+    "type": "Word",
+    "value": "Knowledge"
+  },
+  {
+    "col": 38,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 647,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 40,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 649,
+    "text": "Repose",
+    "type": "Word",
+    "value": "Repose"
+  },
+  {
+    "col": 47,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 656,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 48,
+    "line": 13,
+    "lineBreaks": 0,
+    "offset": 657,
+    "text": "Ancestors",
+    "type": "Word",
+    "value": "Ancestors"
+  },
+  {
+    "col": 5,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 671,
+    "text": "subdomainAPG",
+    "type": "Word",
+    "value": "subdomainAPG"
+  },
+  {
+    "col": 17,
+    "line": 14,
+    "lineBreaks": 0,
+    "offset": 683,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 15,
+    "lineBreaks": 0,
+    "offset": 689,
+    "text": "TACTICS",
+    "type": "TacticsKey",
+    "value": "TACTICS"
+  }
+]

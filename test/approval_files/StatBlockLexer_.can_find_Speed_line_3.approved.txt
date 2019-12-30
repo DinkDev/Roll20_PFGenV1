@@ -1,0 +1,47 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Speed",
+    "type": "SpeedKey",
+    "value": "Speed"
+  },
+  {
+    "col": 7,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 6,
+    "text": "10 ft.",
+    "type": "SizeValue",
+    "value": "10 ft."
+  },
+  {
+    "col": 13,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 12,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 15,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 14,
+    "text": "swim",
+    "type": "Word",
+    "value": "swim"
+  },
+  {
+    "col": 20,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 19,
+    "text": "60 ft.",
+    "type": "SizeValue",
+    "value": "60 ft."
+  }
+]

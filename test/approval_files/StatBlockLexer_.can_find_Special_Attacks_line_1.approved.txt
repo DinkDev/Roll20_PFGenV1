@@ -1,0 +1,101 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Special Attacks",
+    "type": "AttackType",
+    "value": "Special Attacks"
+  },
+  {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "constrict",
+    "type": "Word",
+    "value": "constrict"
+  },
+  {
+    "col": 27,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 26,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 28,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 27,
+    "text": "3d6",
+    "type": "DiceRoll",
+    "value": "3d6"
+  },
+  {
+    "col": 32,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 31,
+    "text": "plus",
+    "type": "Word",
+    "value": "plus"
+  },
+  {
+    "col": 37,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 36,
+    "text": "withering",
+    "type": "Word",
+    "value": "withering"
+  },
+  {
+    "col": 46,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 45,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 47,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 46,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 49,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 48,
+    "text": "gnaw",
+    "type": "Word",
+    "value": "gnaw"
+  },
+  {
+    "col": 53,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 52,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 55,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 54,
+    "text": "pull",
+    "type": "Word",
+    "value": "pull"
+  }
+]

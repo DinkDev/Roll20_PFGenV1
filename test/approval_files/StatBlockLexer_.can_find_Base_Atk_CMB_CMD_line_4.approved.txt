@@ -1,0 +1,191 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Base Atk",
+    "type": "BaseAtkKey",
+    "value": "Base Atk"
+  },
+  {
+    "col": 10,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 9,
+    "text": "+9",
+    "type": "NumberSigned",
+    "value": "+9"
+  },
+  {
+    "col": 12,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 11,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "CMB",
+    "type": "CmbKey",
+    "value": "CMB"
+  },
+  {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": "+9",
+    "type": "NumberSigned",
+    "value": "+9"
+  },
+  {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "+21",
+    "type": "NumberSigned",
+    "value": "+21"
+  },
+  {
+    "col": 26,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 25,
+    "text": "grapple",
+    "type": "Word",
+    "value": "grapple"
+  },
+  {
+    "col": 33,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 32,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 34,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 33,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 36,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 35,
+    "text": "CMD",
+    "type": "CmdKey",
+    "value": "CMD"
+  },
+  {
+    "col": 40,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 39,
+    "text": "24",
+    "type": "NumberWhole",
+    "value": "24"
+  },
+  {
+    "col": 43,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 42,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 44,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 43,
+    "text": "32",
+    "type": "NumberWhole",
+    "value": "32"
+  },
+  {
+    "col": 47,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 46,
+    "text": "vs.",
+    "type": "Versus",
+    "value": "vs."
+  },
+  {
+    "col": 1,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 50,
+    "text": "grapple",
+    "type": "Word",
+    "value": "grapple"
+  },
+  {
+    "col": 8,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 57,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 10,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 59,
+    "text": "can’t",
+    "type": "Word",
+    "value": "can’t"
+  },
+  {
+    "col": 16,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 65,
+    "text": "be",
+    "type": "Word",
+    "value": "be"
+  },
+  {
+    "col": 19,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 68,
+    "text": "tripped",
+    "type": "Word",
+    "value": "tripped"
+  },
+  {
+    "col": 26,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 75,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

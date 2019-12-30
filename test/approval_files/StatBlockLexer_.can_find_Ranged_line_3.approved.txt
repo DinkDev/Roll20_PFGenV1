@@ -1,0 +1,110 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Ranged",
+    "type": "AttackType",
+    "value": "Ranged"
+  },
+  {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "light",
+    "type": "Word",
+    "value": "light"
+  },
+  {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "crossbow",
+    "type": "Word",
+    "value": "crossbow"
+  },
+  {
+    "col": 23,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 22,
+    "text": "+2",
+    "type": "NumberSigned",
+    "value": "+2"
+  },
+  {
+    "col": 26,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 25,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 27,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 26,
+    "text": "1d8",
+    "type": "DiceRoll",
+    "value": "1d8"
+  },
+  {
+    "col": 30,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 29,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 32,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 31,
+    "text": "19",
+    "type": "NumberWhole",
+    "value": "19"
+  },
+  {
+    "col": 34,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 33,
+    "text": "–20",
+    "type": "NumberSigned",
+    "value": "–20"
+  },
+  {
+    "col": 37,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 36,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 38,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 37,
+    "text": "x2",
+    "type": "Multiplier",
+    "value": "x2"
+  },
+  {
+    "col": 40,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 39,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Str",
+    "type": "Ability",
+    "value": "Str"
+  },
+  {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "31",
+    "type": "NumberWhole",
+    "value": "31"
+  },
+  {
+    "col": 7,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 6,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "Dex",
+    "type": "Ability",
+    "value": "Dex"
+  },
+  {
+    "col": 13,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 12,
+    "text": "14",
+    "type": "NumberWhole",
+    "value": "14"
+  },
+  {
+    "col": 15,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 14,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "Con",
+    "type": "Ability",
+    "value": "Con"
+  },
+  {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": "28",
+    "type": "NumberWhole",
+    "value": "28"
+  },
+  {
+    "col": 23,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 22,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 25,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 24,
+    "text": "Int",
+    "type": "Ability",
+    "value": "Int"
+  },
+  {
+    "col": 29,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 28,
+    "text": "16",
+    "type": "NumberWhole",
+    "value": "16"
+  },
+  {
+    "col": 31,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 30,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 33,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 32,
+    "text": "Wis",
+    "type": "Ability",
+    "value": "Wis"
+  },
+  {
+    "col": 37,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 36,
+    "text": "18",
+    "type": "NumberWhole",
+    "value": "18"
+  },
+  {
+    "col": 39,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 38,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 41,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 40,
+    "text": "Cha",
+    "type": "Ability",
+    "value": "Cha"
+  },
+  {
+    "col": 45,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 44,
+    "text": "20",
+    "type": "NumberWhole",
+    "value": "20"
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "SQ",
+    "type": "SqKey",
+    "value": "SQ"
+  },
+  {
+    "col": 4,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 3,
+    "text": "speak",
+    "type": "Word",
+    "value": "speak"
+  },
+  {
+    "col": 10,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 9,
+    "text": "with",
+    "type": "Word",
+    "value": "with"
+  },
+  {
+    "col": 15,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 14,
+    "text": "dead",
+    "type": "Word",
+    "value": "dead"
+  },
+  {
+    "col": 20,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 19,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": "8",
+    "type": "NumberWhole",
+    "value": "8"
+  },
+  {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 23,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 22,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 26,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 25,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

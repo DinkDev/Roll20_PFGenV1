@@ -1,0 +1,101 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Defensive Abilities",
+    "type": "DefensiveAbilitiesKey",
+    "value": "Defensive Abilities"
+  },
+  {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": "blessing",
+    "type": "Word",
+    "value": "blessing"
+  },
+  {
+    "col": 30,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 29,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 33,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 32,
+    "text": "Orcus",
+    "type": "Word",
+    "value": "Orcus"
+  },
+  {
+    "col": 38,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 37,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 40,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 39,
+    "text": "ferocity",
+    "type": "Word",
+    "value": "ferocity"
+  },
+  {
+    "col": 48,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 47,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 50,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 49,
+    "text": "DR",
+    "type": "DrKey",
+    "value": "DR"
+  },
+  {
+    "col": 53,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 52,
+    "text": "1",
+    "type": "NumberWhole",
+    "value": "1"
+  },
+  {
+    "col": 54,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 53,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 55,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 54,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  }
+]

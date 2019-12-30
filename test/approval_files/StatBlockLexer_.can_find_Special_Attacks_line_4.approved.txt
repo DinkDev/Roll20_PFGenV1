@@ -1,0 +1,119 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Special Attacks",
+    "type": "AttackType",
+    "value": "Special Attacks"
+  },
+  {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "channel",
+    "type": "Word",
+    "value": "channel"
+  },
+  {
+    "col": 25,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 24,
+    "text": "positive",
+    "type": "Word",
+    "value": "positive"
+  },
+  {
+    "col": 34,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 33,
+    "text": "energy",
+    "type": "Word",
+    "value": "energy"
+  },
+  {
+    "col": 41,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 40,
+    "text": "5",
+    "type": "NumberWhole",
+    "value": "5"
+  },
+  {
+    "col": 42,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 41,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 43,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 42,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 47,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 46,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 48,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 47,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 51,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 50,
+    "text": "18",
+    "type": "NumberWhole",
+    "value": "18"
+  },
+  {
+    "col": 53,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 52,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 55,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 54,
+    "text": "4d6",
+    "type": "DiceRoll",
+    "value": "4d6"
+  },
+  {
+    "col": 58,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 57,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

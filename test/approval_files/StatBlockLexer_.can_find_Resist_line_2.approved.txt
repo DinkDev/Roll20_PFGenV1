@@ -1,0 +1,137 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "DR",
+    "type": "DrKey",
+    "value": "DR"
+  },
+  {
+    "col": 4,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 3,
+    "text": "5",
+    "type": "NumberWhole",
+    "value": "5"
+  },
+  {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "adamantine",
+    "type": "Word",
+    "value": "adamantine"
+  },
+  {
+    "col": 16,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 15,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": "Immune",
+    "type": "ImmuneKey",
+    "value": "Immune"
+  },
+  {
+    "col": 25,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 24,
+    "text": "construct",
+    "type": "CreatureType",
+    "value": "construct"
+  },
+  {
+    "col": 35,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 34,
+    "text": "traits",
+    "type": "Word",
+    "value": "traits"
+  },
+  {
+    "col": 41,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 40,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 43,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 42,
+    "text": "Resist",
+    "type": "ResistKey",
+    "value": "Resist"
+  },
+  {
+    "col": 50,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 49,
+    "text": "cold",
+    "type": "Word",
+    "value": "cold"
+  },
+  {
+    "col": 55,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 54,
+    "text": "10",
+    "type": "NumberWhole",
+    "value": "10"
+  },
+  {
+    "col": 57,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 56,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 59,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 58,
+    "text": "fire",
+    "type": "Word",
+    "value": "fire"
+  },
+  {
+    "col": 64,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 63,
+    "text": "10",
+    "type": "NumberWhole",
+    "value": "10"
+  }
+]

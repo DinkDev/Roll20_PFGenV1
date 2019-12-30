@@ -1,0 +1,308 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Skills",
+    "type": "SkillsKey",
+    "value": "Skills"
+  },
+  {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "Bluff",
+    "type": "Word",
+    "value": "Bluff"
+  },
+  {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "+21",
+    "type": "NumberSigned",
+    "value": "+21"
+  },
+  {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": "Diplomacy",
+    "type": "Word",
+    "value": "Diplomacy"
+  },
+  {
+    "col": 29,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 28,
+    "text": "+21",
+    "type": "NumberSigned",
+    "value": "+21"
+  },
+  {
+    "col": 32,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 31,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 34,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 33,
+    "text": "Fly",
+    "type": "Word",
+    "value": "Fly"
+  },
+  {
+    "col": 38,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 37,
+    "text": "+16",
+    "type": "NumberSigned",
+    "value": "+16"
+  },
+  {
+    "col": 41,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 40,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 43,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 42,
+    "text": "Intimidate",
+    "type": "Word",
+    "value": "Intimidate"
+  },
+  {
+    "col": 54,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 53,
+    "text": "+21",
+    "type": "NumberSigned",
+    "value": "+21"
+  },
+  {
+    "col": 57,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 56,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 62,
+    "text": "Knowledge",
+    "type": "Word",
+    "value": "Knowledge"
+  },
+  {
+    "col": 15,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 72,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 16,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 73,
+    "text": "arcana",
+    "type": "Word",
+    "value": "arcana"
+  },
+  {
+    "col": 22,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 79,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 24,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 81,
+    "text": "+20",
+    "type": "NumberSigned",
+    "value": "+20"
+  },
+  {
+    "col": 27,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 84,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 29,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 86,
+    "text": "Knowledge",
+    "type": "Word",
+    "value": "Knowledge"
+  },
+  {
+    "col": 39,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 96,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 40,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 97,
+    "text": "nature",
+    "type": "Word",
+    "value": "nature"
+  },
+  {
+    "col": 46,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 103,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 48,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 105,
+    "text": "+20",
+    "type": "NumberSigned",
+    "value": "+20"
+  },
+  {
+    "col": 51,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 108,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 114,
+    "text": "Perception",
+    "type": "PerceptionKey",
+    "value": "Perception"
+  },
+  {
+    "col": 16,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 125,
+    "text": "+25",
+    "type": "NumberSigned",
+    "value": "+25"
+  },
+  {
+    "col": 19,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 128,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 21,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 130,
+    "text": "Sense",
+    "type": "Word",
+    "value": "Sense"
+  },
+  {
+    "col": 27,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 136,
+    "text": "Motive",
+    "type": "Word",
+    "value": "Motive"
+  },
+  {
+    "col": 34,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 143,
+    "text": "+25",
+    "type": "NumberSigned",
+    "value": "+25"
+  },
+  {
+    "col": 37,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 146,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 39,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 148,
+    "text": "Spellcraft",
+    "type": "Word",
+    "value": "Spellcraft"
+  },
+  {
+    "col": 50,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 159,
+    "text": "+20",
+    "type": "NumberSigned",
+    "value": "+20"
+  }
+]

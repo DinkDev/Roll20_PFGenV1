@@ -1,0 +1,74 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Fort",
+    "type": "FortSaveKey",
+    "value": "Fort"
+  },
+  {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "+6",
+    "type": "NumberSigned",
+    "value": "+6"
+  },
+  {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 10,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 9,
+    "text": "Ref",
+    "type": "RefSaveKey",
+    "value": "Ref"
+  },
+  {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "+9",
+    "type": "NumberSigned",
+    "value": "+9"
+  },
+  {
+    "col": 16,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 15,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": "Will",
+    "type": "WillSaveKey",
+    "value": "Will"
+  },
+  {
+    "col": 23,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 22,
+    "text": "+8",
+    "type": "NumberSigned",
+    "value": "+8"
+  }
+]

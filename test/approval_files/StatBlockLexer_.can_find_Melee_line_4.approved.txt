@@ -1,0 +1,65 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Melee",
+    "type": "AttackType",
+    "value": "Melee"
+  },
+  {
+    "col": 7,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 6,
+    "text": "sickle",
+    "type": "Word",
+    "value": "sickle"
+  },
+  {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "–1",
+    "type": "NumberSigned",
+    "value": "–1"
+  },
+  {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": "1d4",
+    "type": "DiceRoll",
+    "value": "1d4"
+  },
+  {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": "–2",
+    "type": "NumberSigned",
+    "value": "–2"
+  },
+  {
+    "col": 23,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 22,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

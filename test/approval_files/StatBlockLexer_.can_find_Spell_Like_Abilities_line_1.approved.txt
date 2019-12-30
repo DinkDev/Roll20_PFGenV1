@@ -1,0 +1,596 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Spell-Like Abilities",
+    "type": "SpellLikeAbilityKey",
+    "value": "Spell-Like Abilities"
+  },
+  {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 23,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 22,
+    "text": "CL",
+    "type": "ClKey",
+    "value": "CL"
+  },
+  {
+    "col": 26,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 25,
+    "text": "16th",
+    "type": "Level",
+    "value": "16th"
+  },
+  {
+    "col": 30,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 29,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 36,
+    "text": "At",
+    "type": "Word",
+    "value": "At"
+  },
+  {
+    "col": 8,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 39,
+    "text": "will",
+    "type": "Word",
+    "value": "will"
+  },
+  {
+    "col": 12,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 43,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 13,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 44,
+    "text": "hypnotic",
+    "type": "Word",
+    "value": "hypnotic"
+  },
+  {
+    "col": 22,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 53,
+    "text": "pattern",
+    "type": "Word",
+    "value": "pattern"
+  },
+  {
+    "col": 30,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 61,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 31,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 62,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 34,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 65,
+    "text": "15",
+    "type": "NumberWhole",
+    "value": "15"
+  },
+  {
+    "col": 36,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 67,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 37,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 68,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 39,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 70,
+    "text": "illusory",
+    "type": "Word",
+    "value": "illusory"
+  },
+  {
+    "col": 48,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 79,
+    "text": "wall",
+    "type": "Word",
+    "value": "wall"
+  },
+  {
+    "col": 53,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 84,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 54,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 85,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 57,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 88,
+    "text": "17",
+    "type": "NumberWhole",
+    "value": "17"
+  },
+  {
+    "col": 59,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 90,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 60,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 91,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 62,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 93,
+    "text": "mirage",
+    "type": "Word",
+    "value": "mirage"
+  },
+  {
+    "col": 69,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 100,
+    "text": "arcana",
+    "type": "Word",
+    "value": "arcana"
+  },
+  {
+    "col": 76,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 107,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 77,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 108,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 80,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 111,
+    "text": "18",
+    "type": "NumberWhole",
+    "value": "18"
+  },
+  {
+    "col": 82,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 113,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 83,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 114,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 85,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 116,
+    "text": "persistent",
+    "type": "Word",
+    "value": "persistent"
+  },
+  {
+    "col": 96,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 127,
+    "text": "image",
+    "type": "Word",
+    "value": "image"
+  },
+  {
+    "col": 102,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 133,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 103,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 134,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 106,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 137,
+    "text": "18",
+    "type": "NumberWhole",
+    "value": "18"
+  },
+  {
+    "col": 108,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 139,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 109,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 140,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 111,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 142,
+    "text": "programmed",
+    "type": "Word",
+    "value": "programmed"
+  },
+  {
+    "col": 122,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 153,
+    "text": "image",
+    "type": "Word",
+    "value": "image"
+  },
+  {
+    "col": 128,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 159,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 129,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 160,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 132,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 163,
+    "text": "19",
+    "type": "NumberWhole",
+    "value": "19"
+  },
+  {
+    "col": 134,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 165,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 135,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 166,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 137,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 168,
+    "text": "project",
+    "type": "Word",
+    "value": "project"
+  },
+  {
+    "col": 145,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 176,
+    "text": "image",
+    "type": "Word",
+    "value": "image"
+  },
+  {
+    "col": 151,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 182,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 152,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 183,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 155,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 186,
+    "text": "20",
+    "type": "NumberWhole",
+    "value": "20"
+  },
+  {
+    "col": 157,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 188,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 158,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 189,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 160,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 191,
+    "text": "veil",
+    "type": "Word",
+    "value": "veil"
+  },
+  {
+    "col": 165,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 196,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 166,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 197,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 169,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 200,
+    "text": "19",
+    "type": "NumberWhole",
+    "value": "19"
+  },
+  {
+    "col": 171,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 202,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 208,
+    "text": "3",
+    "type": "NumberWhole",
+    "value": "3"
+  },
+  {
+    "col": 6,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 209,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 7,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 210,
+    "text": "day",
+    "type": "Word",
+    "value": "day"
+  },
+  {
+    "col": 10,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 213,
+    "text": "—",
+    "type": "MDash",
+    "value": "—"
+  },
+  {
+    "col": 11,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 214,
+    "text": "dominate",
+    "type": "Word",
+    "value": "dominate"
+  },
+  {
+    "col": 20,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 223,
+    "text": "monster",
+    "type": "Word",
+    "value": "monster"
+  },
+  {
+    "col": 28,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 231,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 29,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 232,
+    "text": "DC",
+    "type": "DcKey",
+    "value": "DC"
+  },
+  {
+    "col": 32,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 235,
+    "text": "22",
+    "type": "NumberWhole",
+    "value": "22"
+  },
+  {
+    "col": 34,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 237,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 5,
+    "line": 6,
+    "lineBreaks": 0,
+    "offset": 244,
+    "text": "STATISTICS",
+    "type": "StatisticsKey",
+    "value": "STATISTICS"
+  }
+]

@@ -1,0 +1,299 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "DR",
+    "type": "DrKey",
+    "value": "DR"
+  },
+  {
+    "col": 4,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 3,
+    "text": "10",
+    "type": "NumberWhole",
+    "value": "10"
+  },
+  {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 7,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 6,
+    "text": "adamantine",
+    "type": "Word",
+    "value": "adamantine"
+  },
+  {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": "and",
+    "type": "Word",
+    "value": "and"
+  },
+  {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "magic",
+    "type": "Word",
+    "value": "magic"
+  },
+  {
+    "col": 27,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 26,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 29,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 28,
+    "text": "Immune",
+    "type": "ImmuneKey",
+    "value": "Immune"
+  },
+  {
+    "col": 36,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 35,
+    "text": "fire",
+    "type": "Word",
+    "value": "fire"
+  },
+  {
+    "col": 40,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 39,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 42,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 41,
+    "text": "mind",
+    "type": "Word",
+    "value": "mind"
+  },
+  {
+    "col": 46,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 45,
+    "text": "-",
+    "type": "Dash",
+    "value": "-"
+  },
+  {
+    "col": 47,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 46,
+    "text": "affecting",
+    "type": "Word",
+    "value": "affecting"
+  },
+  {
+    "col": 1,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 56,
+    "text": "effects",
+    "type": "Word",
+    "value": "effects"
+  },
+  {
+    "col": 8,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 63,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 10,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 65,
+    "text": "Resist",
+    "type": "ResistKey",
+    "value": "Resist"
+  },
+  {
+    "col": 17,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 72,
+    "text": "cold",
+    "type": "Word",
+    "value": "cold"
+  },
+  {
+    "col": 22,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 77,
+    "text": "20",
+    "type": "NumberWhole",
+    "value": "20"
+  },
+  {
+    "col": 24,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 79,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 26,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 81,
+    "text": "electricity",
+    "type": "Word",
+    "value": "electricity"
+  },
+  {
+    "col": 38,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 93,
+    "text": "20",
+    "type": "NumberWhole",
+    "value": "20"
+  },
+  {
+    "col": 40,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 95,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 42,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 97,
+    "text": "sonic",
+    "type": "Word",
+    "value": "sonic"
+  },
+  {
+    "col": 48,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 103,
+    "text": "20",
+    "type": "NumberWhole",
+    "value": "20"
+  },
+  {
+    "col": 50,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 105,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 52,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 107,
+    "text": "SR",
+    "type": "SrKey",
+    "value": "SR"
+  },
+  {
+    "col": 55,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 110,
+    "text": "23",
+    "type": "NumberWhole",
+    "value": "23"
+  },
+  {
+    "col": 1,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 113,
+    "text": "Weaknesses",
+    "type": "WeaknessesKey",
+    "value": "Weaknesses"
+  },
+  {
+    "col": 12,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 124,
+    "text": "vulnerability",
+    "type": "Word",
+    "value": "vulnerability"
+  },
+  {
+    "col": 26,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 138,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 29,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 141,
+    "text": "protection",
+    "type": "Word",
+    "value": "protection"
+  },
+  {
+    "col": 40,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 152,
+    "text": "from",
+    "type": "Word",
+    "value": "from"
+  },
+  {
+    "col": 45,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 157,
+    "text": "evil",
+    "type": "Word",
+    "value": "evil"
+  }
+]

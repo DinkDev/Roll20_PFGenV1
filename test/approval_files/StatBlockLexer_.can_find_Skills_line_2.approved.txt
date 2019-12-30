@@ -1,0 +1,335 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Skills",
+    "type": "SkillsKey",
+    "value": "Skills"
+  },
+  {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "Acrobatics",
+    "type": "Word",
+    "value": "Acrobatics"
+  },
+  {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": "+21",
+    "type": "NumberSigned",
+    "value": "+21"
+  },
+  {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 24,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 23,
+    "text": "Diplomacy",
+    "type": "Word",
+    "value": "Diplomacy"
+  },
+  {
+    "col": 34,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 33,
+    "text": "+17",
+    "type": "NumberSigned",
+    "value": "+17"
+  },
+  {
+    "col": 37,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 36,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 39,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 38,
+    "text": "Fly",
+    "type": "Word",
+    "value": "Fly"
+  },
+  {
+    "col": 43,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 42,
+    "text": "+20",
+    "type": "NumberSigned",
+    "value": "+20"
+  },
+  {
+    "col": 46,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 45,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 51,
+    "text": "Knowledge",
+    "type": "Word",
+    "value": "Knowledge"
+  },
+  {
+    "col": 15,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 61,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 16,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 62,
+    "text": "arcana",
+    "type": "Word",
+    "value": "arcana"
+  },
+  {
+    "col": 22,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 68,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 24,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 70,
+    "text": "+14",
+    "type": "NumberSigned",
+    "value": "+14"
+  },
+  {
+    "col": 27,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 73,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 29,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 75,
+    "text": "Perception",
+    "type": "PerceptionKey",
+    "value": "Perception"
+  },
+  {
+    "col": 40,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 86,
+    "text": "+28",
+    "type": "NumberSigned",
+    "value": "+28"
+  },
+  {
+    "col": 43,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 89,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 45,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 91,
+    "text": "Sense",
+    "type": "Word",
+    "value": "Sense"
+  },
+  {
+    "col": 5,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 101,
+    "text": "Motive",
+    "type": "Word",
+    "value": "Motive"
+  },
+  {
+    "col": 12,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 108,
+    "text": "+13",
+    "type": "NumberSigned",
+    "value": "+13"
+  },
+  {
+    "col": 15,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 111,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 17,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 113,
+    "text": "Spellcraft",
+    "type": "Word",
+    "value": "Spellcraft"
+  },
+  {
+    "col": 28,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 124,
+    "text": "+15",
+    "type": "NumberSigned",
+    "value": "+15"
+  },
+  {
+    "col": 31,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 127,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 33,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 129,
+    "text": "Stealth",
+    "type": "Word",
+    "value": "Stealth"
+  },
+  {
+    "col": 41,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 137,
+    "text": "+21",
+    "type": "NumberSigned",
+    "value": "+21"
+  },
+  {
+    "col": 44,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 140,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 46,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 142,
+    "text": "Use",
+    "type": "Word",
+    "value": "Use"
+  },
+  {
+    "col": 50,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 146,
+    "text": "Magic",
+    "type": "Word",
+    "value": "Magic"
+  },
+  {
+    "col": 5,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 156,
+    "text": "Device",
+    "type": "Word",
+    "value": "Device"
+  },
+  {
+    "col": 12,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 163,
+    "text": "+17",
+    "type": "NumberSigned",
+    "value": "+17"
+  },
+  {
+    "col": 15,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 166,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 17,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 168,
+    "text": "Racial Modifiers",
+    "type": "RacialModifiersKey",
+    "value": "Racial Modifiers"
+  },
+  {
+    "col": 34,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 185,
+    "text": "+6",
+    "type": "NumberSigned",
+    "value": "+6"
+  },
+  {
+    "col": 37,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 188,
+    "text": "Perception",
+    "type": "PerceptionKey",
+    "value": "Perception"
+  }
+]

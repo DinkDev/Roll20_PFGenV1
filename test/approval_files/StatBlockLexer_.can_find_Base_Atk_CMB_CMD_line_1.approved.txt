@@ -1,0 +1,74 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Base Atk",
+    "type": "BaseAtkKey",
+    "value": "Base Atk"
+  },
+  {
+    "col": 10,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 9,
+    "text": "+6",
+    "type": "NumberSigned",
+    "value": "+6"
+  },
+  {
+    "col": 12,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 11,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "CMB",
+    "type": "CmbKey",
+    "value": "CMB"
+  },
+  {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": "+5",
+    "type": "NumberSigned",
+    "value": "+5"
+  },
+  {
+    "col": 20,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 19,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "CMD",
+    "type": "CmdKey",
+    "value": "CMD"
+  },
+  {
+    "col": 26,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 25,
+    "text": "18",
+    "type": "NumberWhole",
+    "value": "18"
+  }
+]

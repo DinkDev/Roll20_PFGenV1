@@ -1,0 +1,839 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "TACTICS",
+    "type": "TacticsKey",
+    "value": "TACTICS"
+  },
+  {
+    "col": 5,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 12,
+    "text": "Before",
+    "type": "Word",
+    "value": "Before"
+  },
+  {
+    "col": 12,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 19,
+    "text": "Combat",
+    "type": "Word",
+    "value": "Combat"
+  },
+  {
+    "col": 19,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 26,
+    "text": "If",
+    "type": "Word",
+    "value": "If"
+  },
+  {
+    "col": 22,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 29,
+    "text": "he’s",
+    "type": "Word",
+    "value": "he’s"
+  },
+  {
+    "col": 27,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 34,
+    "text": "able",
+    "type": "Word",
+    "value": "able"
+  },
+  {
+    "col": 31,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 38,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 33,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 40,
+    "text": "Ptemenib",
+    "type": "Word",
+    "value": "Ptemenib"
+  },
+  {
+    "col": 42,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 49,
+    "text": "casts",
+    "type": "Word",
+    "value": "casts"
+  },
+  {
+    "col": 48,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 55,
+    "text": "shield",
+    "type": "Word",
+    "value": "shield"
+  },
+  {
+    "col": 55,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 62,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 58,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 65,
+    "text": "faith",
+    "type": "Word",
+    "value": "faith"
+  },
+  {
+    "col": 64,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 71,
+    "text": "before",
+    "type": "Word",
+    "value": "before"
+  },
+  {
+    "col": 71,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 78,
+    "text": "combat",
+    "type": "Word",
+    "value": "combat"
+  },
+  {
+    "col": 77,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 84,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 5,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 90,
+    "text": "During",
+    "type": "Word",
+    "value": "During"
+  },
+  {
+    "col": 12,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 97,
+    "text": "Combat",
+    "type": "Word",
+    "value": "Combat"
+  },
+  {
+    "col": 19,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 104,
+    "text": "Ptemenib",
+    "type": "Word",
+    "value": "Ptemenib"
+  },
+  {
+    "col": 28,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 113,
+    "text": "prefers",
+    "type": "Word",
+    "value": "prefers"
+  },
+  {
+    "col": 36,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 121,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 38,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 123,
+    "text": "supporting",
+    "type": "Word",
+    "value": "supporting"
+  },
+  {
+    "col": 49,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 134,
+    "text": "role",
+    "type": "Word",
+    "value": "role"
+  },
+  {
+    "col": 54,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 139,
+    "text": "in",
+    "type": "Word",
+    "value": "in"
+  },
+  {
+    "col": 57,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 142,
+    "text": "combat",
+    "type": "Word",
+    "value": "combat"
+  },
+  {
+    "col": 63,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 148,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 65,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 150,
+    "text": "using",
+    "type": "Word",
+    "value": "using"
+  },
+  {
+    "col": 71,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 156,
+    "text": "his",
+    "type": "Word",
+    "value": "his"
+  },
+  {
+    "col": 75,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 160,
+    "text": "spells",
+    "type": "Word",
+    "value": "spells"
+  },
+  {
+    "col": 82,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 167,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 85,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 170,
+    "text": "heal",
+    "type": "Word",
+    "value": "heal"
+  },
+  {
+    "col": 90,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 175,
+    "text": "and",
+    "type": "Word",
+    "value": "and"
+  },
+  {
+    "col": 94,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 179,
+    "text": "bolster",
+    "type": "Word",
+    "value": "bolster"
+  },
+  {
+    "col": 102,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 187,
+    "text": "his",
+    "type": "Word",
+    "value": "his"
+  },
+  {
+    "col": 106,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 191,
+    "text": "allies",
+    "type": "Word",
+    "value": "allies"
+  },
+  {
+    "col": 112,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 197,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 114,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 199,
+    "text": "If",
+    "type": "Word",
+    "value": "If"
+  },
+  {
+    "col": 117,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 202,
+    "text": "he",
+    "type": "Word",
+    "value": "he"
+  },
+  {
+    "col": 120,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 205,
+    "text": "has",
+    "type": "Word",
+    "value": "has"
+  },
+  {
+    "col": 124,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 209,
+    "text": "no",
+    "type": "Word",
+    "value": "no"
+  },
+  {
+    "col": 127,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 212,
+    "text": "other",
+    "type": "Word",
+    "value": "other"
+  },
+  {
+    "col": 133,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 218,
+    "text": "options",
+    "type": "Word",
+    "value": "options"
+  },
+  {
+    "col": 140,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 225,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 142,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 227,
+    "text": "however",
+    "type": "Word",
+    "value": "however"
+  },
+  {
+    "col": 149,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 234,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 151,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 236,
+    "text": "Ptemenib",
+    "type": "Word",
+    "value": "Ptemenib"
+  },
+  {
+    "col": 160,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 245,
+    "text": "joins",
+    "type": "Word",
+    "value": "joins"
+  },
+  {
+    "col": 166,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 251,
+    "text": "combat",
+    "type": "Word",
+    "value": "combat"
+  },
+  {
+    "col": 173,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 258,
+    "text": "with",
+    "type": "Word",
+    "value": "with"
+  },
+  {
+    "col": 178,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 263,
+    "text": "his",
+    "type": "Word",
+    "value": "his"
+  },
+  {
+    "col": 182,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 267,
+    "text": "few",
+    "type": "Word",
+    "value": "few"
+  },
+  {
+    "col": 186,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 271,
+    "text": "offensive",
+    "type": "Word",
+    "value": "offensive"
+  },
+  {
+    "col": 196,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 281,
+    "text": "spells",
+    "type": "Word",
+    "value": "spells"
+  },
+  {
+    "col": 202,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 287,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 5,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 293,
+    "text": "Morale",
+    "type": "Word",
+    "value": "Morale"
+  },
+  {
+    "col": 12,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 300,
+    "text": "Ptemenib",
+    "type": "Word",
+    "value": "Ptemenib"
+  },
+  {
+    "col": 21,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 309,
+    "text": "is",
+    "type": "Word",
+    "value": "is"
+  },
+  {
+    "col": 24,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 312,
+    "text": "good",
+    "type": "Word",
+    "value": "good"
+  },
+  {
+    "col": 28,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 316,
+    "text": "-",
+    "type": "Dash",
+    "value": "-"
+  },
+  {
+    "col": 29,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 317,
+    "text": "hearted",
+    "type": "Word",
+    "value": "hearted"
+  },
+  {
+    "col": 37,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 325,
+    "text": "and",
+    "type": "Word",
+    "value": "and"
+  },
+  {
+    "col": 41,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 329,
+    "text": "dedicated",
+    "type": "Word",
+    "value": "dedicated"
+  },
+  {
+    "col": 50,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 338,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 52,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 340,
+    "text": "but",
+    "type": "Word",
+    "value": "but"
+  },
+  {
+    "col": 56,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 344,
+    "text": "not",
+    "type": "Word",
+    "value": "not"
+  },
+  {
+    "col": 60,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 348,
+    "text": "foolish",
+    "type": "Word",
+    "value": "foolish"
+  },
+  {
+    "col": 67,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 355,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 69,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 357,
+    "text": "If",
+    "type": "Word",
+    "value": "If"
+  },
+  {
+    "col": 72,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 360,
+    "text": "a",
+    "type": "Word",
+    "value": "a"
+  },
+  {
+    "col": 74,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 362,
+    "text": "battle",
+    "type": "Word",
+    "value": "battle"
+  },
+  {
+    "col": 81,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 369,
+    "text": "seems",
+    "type": "Word",
+    "value": "seems"
+  },
+  {
+    "col": 87,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 375,
+    "text": "lost",
+    "type": "Word",
+    "value": "lost"
+  },
+  {
+    "col": 91,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 379,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 93,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 381,
+    "text": "he’s",
+    "type": "Word",
+    "value": "he’s"
+  },
+  {
+    "col": 98,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 386,
+    "text": "not",
+    "type": "Word",
+    "value": "not"
+  },
+  {
+    "col": 102,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 390,
+    "text": "above",
+    "type": "Word",
+    "value": "above"
+  },
+  {
+    "col": 108,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 396,
+    "text": "fleeing",
+    "type": "Word",
+    "value": "fleeing"
+  },
+  {
+    "col": 116,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 404,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 119,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 407,
+    "text": "heal",
+    "type": "Word",
+    "value": "heal"
+  },
+  {
+    "col": 124,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 412,
+    "text": "himself",
+    "type": "Word",
+    "value": "himself"
+  },
+  {
+    "col": 131,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 419,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 133,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 421,
+    "text": "though",
+    "type": "Word",
+    "value": "though"
+  },
+  {
+    "col": 140,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 428,
+    "text": "he",
+    "type": "Word",
+    "value": "he"
+  },
+  {
+    "col": 143,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 431,
+    "text": "will",
+    "type": "Word",
+    "value": "will"
+  },
+  {
+    "col": 148,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 436,
+    "text": "return",
+    "type": "Word",
+    "value": "return"
+  },
+  {
+    "col": 155,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 443,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 158,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 446,
+    "text": "rescue",
+    "type": "Word",
+    "value": "rescue"
+  },
+  {
+    "col": 165,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 453,
+    "text": "any",
+    "type": "Word",
+    "value": "any"
+  },
+  {
+    "col": 169,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 457,
+    "text": "comrades",
+    "type": "Word",
+    "value": "comrades"
+  },
+  {
+    "col": 178,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 466,
+    "text": "who",
+    "type": "Word",
+    "value": "who"
+  },
+  {
+    "col": 182,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 470,
+    "text": "are",
+    "type": "Word",
+    "value": "are"
+  },
+  {
+    "col": 186,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 474,
+    "text": "captured",
+    "type": "Word",
+    "value": "captured"
+  },
+  {
+    "col": 194,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 482,
+    "text": ".",
+    "type": "Period",
+    "value": "."
+  },
+  {
+    "col": 5,
+    "line": 5,
+    "lineBreaks": 0,
+    "offset": 488,
+    "text": "STATISTICS",
+    "type": "StatisticsKey",
+    "value": "STATISTICS"
+  }
+]

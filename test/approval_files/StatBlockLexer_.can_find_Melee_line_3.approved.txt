@@ -1,0 +1,128 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Melee",
+    "type": "AttackType",
+    "value": "Melee"
+  },
+  {
+    "col": 7,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 6,
+    "text": "mwk",
+    "type": "Word",
+    "value": "mwk"
+  },
+  {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": "silver",
+    "type": "Word",
+    "value": "silver"
+  },
+  {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": "dagger",
+    "type": "Word",
+    "value": "dagger"
+  },
+  {
+    "col": 25,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 24,
+    "text": "+6",
+    "type": "NumberSigned",
+    "value": "+6"
+  },
+  {
+    "col": 27,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 26,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 28,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 27,
+    "text": "+1",
+    "type": "NumberSigned",
+    "value": "+1"
+  },
+  {
+    "col": 31,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 30,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 32,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 31,
+    "text": "1d4",
+    "type": "DiceRoll",
+    "value": "1d4"
+  },
+  {
+    "col": 35,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 34,
+    "text": "–1",
+    "type": "NumberSigned",
+    "value": "–1"
+  },
+  {
+    "col": 37,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 36,
+    "text": "/",
+    "type": "ForwardSlash",
+    "value": "/"
+  },
+  {
+    "col": 38,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 37,
+    "text": "19",
+    "type": "NumberWhole",
+    "value": "19"
+  },
+  {
+    "col": 40,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 39,
+    "text": "–20",
+    "type": "NumberSigned",
+    "value": "–20"
+  },
+  {
+    "col": 43,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 42,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

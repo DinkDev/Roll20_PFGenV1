@@ -1,0 +1,83 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Languages",
+    "type": "LanguagesKey",
+    "value": "Languages"
+  },
+  {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": "Ancient",
+    "type": "Word",
+    "value": "Ancient"
+  },
+  {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": "Osiriani",
+    "type": "Word",
+    "value": "Osiriani"
+  },
+  {
+    "col": 27,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 26,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 29,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 28,
+    "text": "Celestial",
+    "type": "Word",
+    "value": "Celestial"
+  },
+  {
+    "col": 38,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 37,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 40,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 39,
+    "text": "Common",
+    "type": "Word",
+    "value": "Common"
+  },
+  {
+    "col": 46,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 45,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 48,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 47,
+    "text": "Osiriani",
+    "type": "Word",
+    "value": "Osiriani"
+  }
+]

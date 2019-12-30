@@ -1,0 +1,452 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Combat Gear",
+    "type": "GearKey",
+    "value": "Combat Gear"
+  },
+  {
+    "col": 13,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 12,
+    "text": "goodberries",
+    "type": "Word",
+    "value": "goodberries"
+  },
+  {
+    "col": 25,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 24,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 26,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 25,
+    "text": "5",
+    "type": "NumberWhole",
+    "value": "5"
+  },
+  {
+    "col": 27,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 26,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 28,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 27,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 30,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 29,
+    "text": "scroll",
+    "type": "Word",
+    "value": "scroll"
+  },
+  {
+    "col": 37,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 36,
+    "text": "of",
+    "type": "Word",
+    "value": "of"
+  },
+  {
+    "col": 40,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 39,
+    "text": "cure",
+    "type": "Word",
+    "value": "cure"
+  },
+  {
+    "col": 45,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 44,
+    "text": "light",
+    "type": "Word",
+    "value": "light"
+  },
+  {
+    "col": 51,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 50,
+    "text": "wounds",
+    "type": "Word",
+    "value": "wounds"
+  },
+  {
+    "col": 57,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 56,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 59,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 58,
+    "text": "acid",
+    "type": "Word",
+    "value": "acid"
+  },
+  {
+    "col": 63,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 62,
+    "text": ";",
+    "type": "SemiColon",
+    "value": ";"
+  },
+  {
+    "col": 5,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 68,
+    "text": "Other Gear",
+    "type": "GearKey",
+    "value": "Other Gear"
+  },
+  {
+    "col": 16,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 79,
+    "text": "leather",
+    "type": "Word",
+    "value": "leather"
+  },
+  {
+    "col": 24,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 87,
+    "text": "armor",
+    "type": "Word",
+    "value": "armor"
+  },
+  {
+    "col": 29,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 92,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 31,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 94,
+    "text": "sickle",
+    "type": "Word",
+    "value": "sickle"
+  },
+  {
+    "col": 37,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 100,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 39,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 102,
+    "text": "sling",
+    "type": "Word",
+    "value": "sling"
+  },
+  {
+    "col": 45,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 108,
+    "text": "with",
+    "type": "Word",
+    "value": "with"
+  },
+  {
+    "col": 50,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 113,
+    "text": "10",
+    "type": "NumberWhole",
+    "value": "10"
+  },
+  {
+    "col": 53,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 116,
+    "text": "bullets",
+    "type": "Word",
+    "value": "bullets"
+  },
+  {
+    "col": 60,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 123,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 62,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 125,
+    "text": "belt",
+    "type": "Word",
+    "value": "belt"
+  },
+  {
+    "col": 67,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 130,
+    "text": "pouch",
+    "type": "Word",
+    "value": "pouch"
+  },
+  {
+    "col": 72,
+    "line": 2,
+    "lineBreaks": 0,
+    "offset": 135,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 141,
+    "text": "mistletoe",
+    "type": "Word",
+    "value": "mistletoe"
+  },
+  {
+    "col": 14,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 150,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 16,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 152,
+    "text": "spell",
+    "type": "Word",
+    "value": "spell"
+  },
+  {
+    "col": 22,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 158,
+    "text": "component",
+    "type": "Word",
+    "value": "component"
+  },
+  {
+    "col": 32,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 168,
+    "text": "pouch",
+    "type": "Word",
+    "value": "pouch"
+  },
+  {
+    "col": 37,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 173,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 39,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 175,
+    "text": "stick",
+    "type": "Word",
+    "value": "stick"
+  },
+  {
+    "col": 45,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 181,
+    "text": "collection",
+    "type": "Word",
+    "value": "collection"
+  },
+  {
+    "col": 55,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 191,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 57,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 193,
+    "text": "sunrods",
+    "type": "Word",
+    "value": "sunrods"
+  },
+  {
+    "col": 65,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 201,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 66,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 202,
+    "text": "2",
+    "type": "NumberWhole",
+    "value": "2"
+  },
+  {
+    "col": 67,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 203,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 68,
+    "line": 3,
+    "lineBreaks": 0,
+    "offset": 204,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 5,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 210,
+    "text": "trail",
+    "type": "Word",
+    "value": "trail"
+  },
+  {
+    "col": 11,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 216,
+    "text": "rations",
+    "type": "Word",
+    "value": "rations"
+  },
+  {
+    "col": 19,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 224,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 20,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 225,
+    "text": "2",
+    "type": "NumberWhole",
+    "value": "2"
+  },
+  {
+    "col": 21,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 226,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  },
+  {
+    "col": 22,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 227,
+    "text": ",",
+    "type": "Comma",
+    "value": ","
+  },
+  {
+    "col": 24,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 229,
+    "text": "8",
+    "type": "NumberWhole",
+    "value": "8"
+  },
+  {
+    "col": 26,
+    "line": 4,
+    "lineBreaks": 0,
+    "offset": 231,
+    "text": "gp",
+    "type": "Word",
+    "value": "gp"
+  }
+]

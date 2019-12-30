@@ -1,0 +1,110 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Defensive Abilities",
+    "type": "DefensiveAbilitiesKey",
+    "value": "Defensive Abilities"
+  },
+  {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": "defensive",
+    "type": "Word",
+    "value": "defensive"
+  },
+  {
+    "col": 31,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 30,
+    "text": "training",
+    "type": "Word",
+    "value": "training"
+  },
+  {
+    "col": 40,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 39,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 41,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 40,
+    "text": "+4",
+    "type": "NumberSigned",
+    "value": "+4"
+  },
+  {
+    "col": 44,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 43,
+    "text": "dodge",
+    "type": "Word",
+    "value": "dodge"
+  },
+  {
+    "col": 50,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 49,
+    "text": "bonus",
+    "type": "Word",
+    "value": "bonus"
+  },
+  {
+    "col": 56,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 55,
+    "text": "to",
+    "type": "Word",
+    "value": "to"
+  },
+  {
+    "col": 59,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 58,
+    "text": "AC",
+    "type": "AcKey",
+    "value": "AC"
+  },
+  {
+    "col": 62,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 61,
+    "text": "vs.",
+    "type": "Versus",
+    "value": "vs."
+  },
+  {
+    "col": 66,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 65,
+    "text": "giants",
+    "type": "Word",
+    "value": "giants"
+  },
+  {
+    "col": 72,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 71,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]

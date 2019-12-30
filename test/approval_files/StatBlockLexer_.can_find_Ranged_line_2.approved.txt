@@ -1,0 +1,65 @@
+[
+  {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "Ranged",
+    "type": "AttackType",
+    "value": "Ranged"
+  },
+  {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "sling",
+    "type": "Word",
+    "value": "sling"
+  },
+  {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "+2",
+    "type": "NumberSigned",
+    "value": "+2"
+  },
+  {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "(",
+    "type": "LParen",
+    "value": "("
+  },
+  {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": "1d3",
+    "type": "DiceRoll",
+    "value": "1d3"
+  },
+  {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": "–2",
+    "type": "NumberSigned",
+    "value": "–2"
+  },
+  {
+    "col": 23,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 22,
+    "text": ")",
+    "type": "RParen",
+    "value": ")"
+  }
+]
