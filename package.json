@@ -28,7 +28,7 @@
     "@types/underscore": "^1.8.18",
     "approvals": "^3.0.5",
     "chai": "^4.2.0",
-    "mocha": "^6.1.4",
+    "mocha": "^7.1.2",
     "moo": "^0.5.0",
     "nearley": "^2.16.0",
     "ts-node": "^8.1.0",
